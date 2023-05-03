@@ -51,7 +51,8 @@ group = True
 useLean = False
 
 # Pathnames
-d4Program = "d4"
+d4Home = "../tools"         # Yun-Rong Luo modified
+d4Program = d4Home + "/d4"
 
 genHome = "../src"
 genProgram = genHome + "/cpog-gen"
