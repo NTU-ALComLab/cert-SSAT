@@ -41,7 +41,7 @@ typedef enum {
     COUNT_NUM
 } counter_t;
 
-typedef enum { TIME_TOTAL, TIME_SAT, TIME_NUM } timer_t;
+typedef enum { TIME_TOTAL, TIME_SAT, TIME_NUM } timer__t;   // Yun-Rong Luo: modified "timer_t" to avoid conflicting declaration
 
 typedef enum { HISTO_PROBLEM, HISTO_PROOF, HISTO_NUM } histogram_t;
 
@@ -58,8 +58,8 @@ void incr_count(counter_t counter);
 void incr_count_by(counter_t counter, int val);
 int get_count(counter_t counter);
 
-void incr_timer(timer_t timer, double secs);
-double get_timer(timer_t timer);
+void incr_timer(timer__t timer, double secs);   // Yun-Rong Luo: modified "timer_t" to avoid conflicting declaration
+double get_timer(timer__t timer);               // Yun-Rong Luo: modified "timer_t" to avoid conflicting declaration
 
 void incr_histo(histogram_t h, int datum);
 ilist get_histo(histogram_t h);
