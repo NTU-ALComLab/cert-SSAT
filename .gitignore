@@ -34,3 +34,14 @@
 # Lean packages
 lake-packages/
 build/
+
+## Yun-Rong Luo added
+# Binaries
+src/cadical
+src/cpog-check
+src/cpog-gen
+src/drat-trim
+tools/d4
+
+# test files
+test*/
