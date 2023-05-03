@@ -63,7 +63,7 @@ static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
 // runCheck
 void run(char *cnf_name, char *cpog_name) {
     cnf_read(cnf_name);
-    cpog_read(cpog_name);
+    cpog_read(cpog_name);               
     int root = cpog_final_root();
 	if (one_sided)
 	    data_printf(0, "ONE-SIDED VALID.  CPOG representation partially verified\n");
@@ -73,7 +73,14 @@ void run(char *cnf_name, char *cpog_name) {
 
 }
 ```
+Proving lies in `cpog_read()` and `cpog_final_root()`
 
 ```
 // runCount
 ```
+
+## TODOs
+1. Understand CPOG format and its generation
+2. Find forward & backward checking
+3. See cpog-count.py
+
