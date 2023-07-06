@@ -298,10 +298,13 @@ Justify `POG_OR`
 		int lhints[2][2];
 		int hcount[2] = {0,0};
 		int jcount = 0;                         // Yun-Rong Luo: count of non-trivial children justification
+
+        // Yun-Rong Luo: Assume u = u_0 + u_1, asserting literals: P=l_1, ..., l_n
 		for (int i = 0; i < 2; i++) {
-		    clit[i] = (*rnp)[i];
-		    lhints[i][hcount[i]++] = rnp->get_defining_cid()+i+1;
-		    jid = justify(clit[i], true, true);
+		    clit[i] = (*rnp)[i];                // Yun-Rong Luo: u_i
+		    lhints[i][hcount[i]++] = rnp->get_defining_cid()+i+1;   // Yun-Rong Luo: (u + ~u_i) 
+
+		    jid = justify(clit[i], true, true); // Yun-Rong Luo: parent_or=true, use_lemma=true
 		    if (jid == 0) {
 			    cnf->pwriter->diagnose("Justification of node %s failed.  Couldn't validate %s child %d.  Splitting literal = %d",
 					       rnp->name(), i == 0 ? "first" : "second", clit[i], first_literal(clit[i]));
@@ -309,8 +312,38 @@ Justify `POG_OR`
 		    } 
             else if (jid != TRIVIAL_ARGUMENT) {
 			    jcount++;
-			    lhints[i][hcount[i]++] = jid;
+			    lhints[i][hcount[i]++] = jid;   // Yun-Rong Luo: (u_0 + x + ~l_1 + .... + ~l_n ) 
+                                                // Yun-Rong Luo: (u_1 + ~x + ~l_1 + .... + ~l_n ) 
 		    }
+		}
+
+        if (jcount > 1) 
+        {
+		    // Must prove in two steps
+		    int slit = first_literal(clit[0]);
+		    Clause *jclause0 = new Clause();
+		    jclause0->add(-slit);
+		    jclause0->add(xvar);
+		    for (int alit : *cnf->get_assigned_literals())
+			jclause0->add(-alit);
+		    cnf->pwriter->comment("Justify node %s", rnp->name());
+		    int cid0 = cnf->start_assertion(jclause0);
+		    for (int h = 0; h < hcount[0]; h++)
+			cnf->add_hint(lhints[0][h]);
+		    cnf->finish_command(true);
+		    incr_count(COUNT_OR_JUSTIFICATION_CLAUSE);
+		    hints.push_back(cid0);
+		    for (int h = 0; h < hcount[1]; h++)
+			hints.push_back(lhints[1][h]);
+		    jtype = COUNT_OR_JUSTIFICATION_CLAUSE;
+		} 
+        else 
+        {
+		    // Can do with single proof step
+		    incr_count(COUNT_OR_JUSTIFICATION_CLAUSE);
+		    for (int i = 0; i < 2; i++)
+			for (int h = 0; h < hcount[i]; h++)
+			    hints.push_back(lhints[i][h]);
 		}
 
         
