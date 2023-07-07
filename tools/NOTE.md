@@ -301,6 +301,7 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 		int jcount = 0;                         // Yun-Rong Luo: count of non-trivial children justification
 
         // Yun-Rong Luo: Assume u = u_0 + u_1, asserting literals: P=l_1, ..., l_n
+        // YUN-RONG Luo: Assume u_0 contains ~x, u_1 contains x
 		for (int i = 0; i < 2; i++) {
 		    clit[i] = (*rnp)[i];                // Yun-Rong Luo: u_i
 		    lhints[i][hcount[i]++] = rnp->get_defining_cid()+i+1;   // Yun-Rong Luo: (u + ~u_i) 
@@ -313,16 +314,16 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 		    } 
             else if (jid != TRIVIAL_ARGUMENT) {
 			    jcount++;
-			    lhints[i][hcount[i]++] = jid;   // Yun-Rong Luo: (u_0 + x + ~l_1 + .... + ~l_n ) 
-                                                // Yun-Rong Luo: (u_1 + ~x + ~l_1 + .... + ~l_n ) 
+			    lhints[i][hcount[i]++] = jid;   // Yun-Rong Luo: (u_0 + x  +  ~l_1 + .... + ~l_n ) TODO???
+                                                // Yun-Rong Luo: (u_1 + ~x +  ~l_1 + .... + ~l_n ) TODO???
 		    }
 		}
 
         if (jcount > 1) 
         {
 		    // Must prove in two steps
-		    int slit = first_literal(clit[0]);
-		    Clause *jclause0 = new Clause();
+		    int slit = first_literal(clit[0]);          // Yun-Rong Luo: u_0 contains ~x
+		    Clause *jclause0 = new Clause();            // Yun-Rong Luo: (x + u + ~l_1 + .... + ~l_n ) 
 		    jclause0->add(-slit);
 		    jclause0->add(xvar);
 		    for (int alit : *cnf->get_assigned_literals())
@@ -330,10 +331,11 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 		    cnf->pwriter->comment("Justify node %s", rnp->name());
 		    int cid0 = cnf->start_assertion(jclause0);
 		    for (int h = 0; h < hcount[0]; h++)
-			cnf->add_hint(lhints[0][h]);
+			cnf->add_hint(lhints[0][h]);                // Yun-Rong Luo: hints for jclause0 are: (u + ~u_0), (u_0 + x  +  ~l_1 + .... + ~l_n )
 		    cnf->finish_command(true);
 		    incr_count(COUNT_OR_JUSTIFICATION_CLAUSE);
-		    hints.push_back(cid0);
+
+		    hints.push_back(cid0);                      // Yun-Rong Luo: hints for jclause: jclause0 (x + u + ~l_1 + .. + ~l_n), (u + ~u_1), (u_1 + ~x +  ~l_1 + .... + ~l_n )
 		    for (int h = 0; h < hcount[1]; h++)
 			hints.push_back(lhints[1][h]);
 		    jtype = COUNT_OR_JUSTIFICATION_CLAUSE;
@@ -341,13 +343,116 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
         else 
         {
 		    // Can do with single proof step
-		    incr_count(COUNT_OR_JUSTIFICATION_CLAUSE);
-		    for (int i = 0; i < 2; i++)
+		    incr_count(COUNT_OR_JUSTIFICATION_CLAUSE);  
+		    for (int i = 0; i < 2; i++)                 // Yun-Rong Luo: u = u_0 (no branching decision)
 			for (int h = 0; h < hcount[i]; h++)
-			    hints.push_back(lhints[i][h]);
+			    hints.push_back(lhints[i][h]);          // Yun-Rong Luo: hints for jclause: (u + ~u_0), (u_0 + ~l_1, ..., ~l_n)
+		}
+```
+
+##### Justify `POG_AND`
+```cpp
+        incr_count(COUNT_VISIT_AND);
+		int cnext = 0;
+		// If parent is OR, first argument is splitting literal
+		if (parent_or) 
+        {
+		    int clit0 = (*rnp)[cnext++];
+		    cnf->push_assigned_literal(clit0);          // Yun-Rong Luo: OR node calls: validate(u_0, P \cup ~x, \psi) and validate(u_1, P \cup x, \psi)
+		    jclause->add(-clit0);
+		    cnf->pwriter->comment("Justify node %s, assuming literal %d",
+					  rnp->name(), clit0);
+		    // Assertion may enable BCP, but it shouldn't lead to a conflict
+		    if (cnf->bcp(false) > 0) {
+			cnf->pwriter->diagnose("BCP encountered conflict when attempting to justify node %s with assigned literal %d\n",
+					       rnp->name(), clit0);
+			return 0;
+		    }
+		} 
+        else {
+		    cnf->pwriter->comment("Justify node %s", rnp->name());
 		}
 
-        
+		// Bundle up the literals and justify them with single call
+		std::vector<int> lits;              
+		std::vector<int> jids;
+		for (; cnext < rnp->get_degree(); cnext++) {        // Yun-Rong Luo: lits exclude clit0
+		    int clit = (*rnp)[cnext];
+		    if (is_node(clit))
+			break;
+		    lits.push_back(clit);
+		}
+		if (lits.size() > 0) {
+#if DEBUG
+		    cnf->pwriter->comment("Justification of node %s includes justifying %d literals",
+					  rnp->name(), lits.size());
+		    cnf->pwriter->comment_container("  Literals", lits);
+#endif
+		    report(4, "Justify node %s, starting with %d literals\n", rnp->name(), lits.size());
+		    // Hack to detect whether SAT call was made
+		    int prev_sat_calls = get_count(COUNT_SAT_CALL);
+		    if (!cnf->validate_literals(lits, jids)) {
+			cnf->pwriter->diagnose("Was attempting to validate node %s", rnp->name());
+			report(1, "  Arguments:");
+			for (int i = 0; i < rnp->get_degree(); i++)
+			    lprintf(" %d", (*rnp)[i]);
+			lprintf("\n");
+			cnf->pwriter->diagnose("Justification of node %s failed", rnp->name());
+			return 0;
+		    }
+		    if (get_count(COUNT_SAT_CALL) > prev_sat_calls)
+			incr_count(COUNT_VISIT_AND_SAT);
+		    for (int jid : jids)
+			hints.push_back(jid);
+		}
+
+		// Now deal with the node arguments
+		bool partition = false;
+		std::unordered_map<int,int> var2rvar;
+		std::unordered_map<int,std::set<int>*> rvar2cset;
+		std::set<int> *save_clauses = NULL;
+		std::set<int> *pset = NULL;
+		for (; cnext < rnp->get_degree(); cnext++) {
+		    int clit = (*rnp)[cnext];
+		    if (!partition && cnext < rnp->get_degree()-1 && is_node(clit)) {
+			// Must partition clauses
+			cnf->partition_clauses(var2rvar, rvar2cset);
+			partition = true;
+			save_clauses = new std::set<int>;
+			cnf->extract_active_clauses(save_clauses);
+			report(4, "Justifying node %s.  Partitioned clauses into %d sets\n", rnp->name(), rvar2cset.size());
+		    }
+		    if (partition) {
+			int llit = first_literal(clit);
+			auto fid = var2rvar.find(IABS(llit));
+			if (fid == var2rvar.end()) {
+			    // This shouldn't happen
+			    cnf->pwriter->diagnose("Partitioning error.  Couldn't find representative for variable %d, representing first child of N%d",
+				IABS(llit), IABS(clit));
+			    err(true, "Cannot recover from partitioning error.  Node %s has %d children.  Partitioner found %d partitions.\n",
+				rnp->name(), rnp->get_degree(), rvar2cset.size());
+			}
+			int rvar = fid->second;
+			pset = rvar2cset.find(rvar)->second;
+			// Restrict clauses to those relevant to this partition
+			cnf->set_active_clauses(pset);
+		    } 
+		    int jid = justify(clit, false, true);
+		    if (jid == 0) {
+			cnf->pwriter->diagnose("Justification of node %s failed.  Argument = %d", rnp->name(), clit);
+			if (partition)
+			    cnf->pwriter->diagnose(" Clauses were split into %d partitions", rvar2cset.size());
+			return 0;
+		    }
+		    hints.push_back(jid);
+		    if (pset != NULL)
+			delete pset;
+		}
+		hints.push_back(rnp->get_defining_cid());
+		if (save_clauses != NULL)
+		    cnf->set_active_clauses(save_clauses);
+		jtype = COUNT_AND_JUSTIFICATION_CLAUSE;
+
 ```
 
 
