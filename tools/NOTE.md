@@ -44,12 +44,12 @@ static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
     if (unit_cid == 0) // Undercount
 	    return 10;
 
-    // For one-sided, may need to delete clauses added by initial BCP
-    cnf.delete_assertions();                                        // Yun-Rong Luo: print "Delete all but final asserted clause"
+    // For one-sided, may need to delete clauses added by initial BCP   // Yun-Rong Luo: reverse implication proof or one-sided proof
+    cnf.delete_assertions();                                            // Yun-Rong Luo: print "Delete all but final asserted clause"
     std::vector<int> overcount_literals;
     bool overcount = false;
     for (int cid = 1; !overcount && cid <= cnf.clause_count(); cid++) {
-	    bool deleted = pog.delete_input_clause(cid, unit_cid, overcount_literals);
+	    bool deleted = pog.delete_input_clause(cid, unit_cid, overcount_literals); // Yun-Rong Luo: delete ith clause
 	    if (!deleted)
 	        overcount = true;
     }
@@ -493,7 +493,78 @@ int Pog::apply_lemma(Pog_node *rp, bool parent_or) {
 }
 ```
 
-#### One-sided proof
+#### Delete input clauses 
+```cpp
+bool Pog::delete_input_clause(int cid, int unit_cid, std::vector<int> &overcount_literals) {
+    Clause *cp = cnf->get_input_clause(cid);
+    // Label each node by whether or not it is guaranteed to imply the clause
+    std::vector<bool> implies_clause;
+    implies_clause.resize(nodes.size());
+    // Vector starting with clause ID and then having hints for deletion
+    std::vector<int> *dvp = new std::vector<int>;
+    dvp->push_back(cid);
+    if (cp->tautology()) {
+	    cnf->pwriter->clause_deletion(dvp);
+	    delete dvp;
+	    return true;
+    }
+    dvp->push_back(unit_cid);
+
+    // Yun-Rong Luo: bottom up one pass of the POG
+    for (int nidx = 0; nidx < nodes.size(); nidx++) {
+	Pog_node *np = nodes[nidx];
+	bool implies = false;
+	switch (np->get_type()) {
+	case POG_AND:
+	    implies = false;
+	    // Must have at least one child implying the clause
+	    for (int i = 0; i < np->get_degree(); i++) {
+		int clit = (*np)[i];
+		if (is_node(clit)) {
+		    implies = implies_clause[clit-max_input_var-1];
+		    if (implies) {
+			    dvp->push_back(np->get_defining_cid()+i+1);
+			    break;
+		    }
+		} else {
+		    implies = cp->contains(clit);               // Yun-Rong Luo: if clit \in cp, then ~cp \implies ~clit
+		    if (implies) {
+			dvp->push_back(np->get_defining_cid()+i+1);
+			break;
+		    }
+		}
+	    }
+	    break;
+	case POG_OR:
+	    // Must have all children implying the clause
+	    implies = true;
+	    for (int i = 0; i < np->get_degree(); i++) {
+		int clit = (*np)[i];
+		if (is_node(clit)) {
+		    implies &= implies_clause[clit-max_input_var-1];
+		} else
+		    implies &= cp->contains(clit);
+	    }
+	    if (implies)
+		dvp->push_back(np->get_defining_cid());
+	    break;
+	default:
+	    err(true, "Unknown POG type %d for node N%d\n", (int) np->get_type(), np->get_xvar());
+	}
+	implies_clause[nidx] = implies;	    
+    }
+    bool proved = implies_clause[nodes.size()-1];
+    if (proved)
+	cnf->pwriter->clause_deletion(dvp);
+    else {
+	cp->show(stdout);
+	if (get_deletion_counterexample(cid, implies_clause, overcount_literals))
+	    err(false, "Error attempting to delete clause.  Prover failed to generate proof, but also couldn't generate counterexample\n");
+    }
+    delete dvp;
+    return proved;
+}
+```
 
 
 ## TODOs
