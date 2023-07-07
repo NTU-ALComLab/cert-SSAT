@@ -254,7 +254,7 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
     else {
 	    jcid = cnf->validate_literal(rlit, Cnf_reasoner::MODE_FULL);
     }
-    return jcid;
+    return jcid;            // Yun-Rong Luo: jcid is the id of the target clause
 }
 ```
 
@@ -264,6 +264,12 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 	Pog_node *rnp = get_node(rvar);
 
     // use lemma ....
+    if (use_lemma && cnf->use_lemmas && rnp->want_lemma()) {
+	    int jid = apply_lemma(rnp, parent_or);
+	    if (jid == 0)
+		    cnf->pwriter->diagnose("Failed lemma.  Giving up on validation of node %s", rnp->name());
+	    return jid;                                 // Yun-Rong Luo: If lemma applied, jcid returned here
+	}
 
     int xvar = rnp->get_xvar();
 	Clause *jclause = new Clause();                 // Yun-Rong Luo: jclause is target clause in the paper
@@ -391,15 +397,9 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 		    report(4, "Justify node %s, starting with %d literals\n", rnp->name(), lits.size());
 		    // Hack to detect whether SAT call was made
 		    int prev_sat_calls = get_count(COUNT_SAT_CALL);
-		    if (!cnf->validate_literals(lits, jids)) {
-			cnf->pwriter->diagnose("Was attempting to validate node %s", rnp->name());
-			report(1, "  Arguments:");
-			for (int i = 0; i < rnp->get_degree(); i++)
-			    lprintf(" %d", (*rnp)[i]);
-			lprintf("\n");
-			cnf->pwriter->diagnose("Justification of node %s failed", rnp->name());
-			return 0;
-		    }
+
+		    cnf->validate_literals(lits, jids)              // Yun-Rong Luo: literals validated here
+
 		    if (get_count(COUNT_SAT_CALL) > prev_sat_calls)
 			incr_count(COUNT_VISIT_AND_SAT);
 		    for (int jid : jids)
@@ -452,11 +452,48 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 		if (save_clauses != NULL)
 		    cnf->set_active_clauses(save_clauses);
 		jtype = COUNT_AND_JUSTIFICATION_CLAUSE;
-
 ```
 
+##### Lemma 
+```cpp
+int Pog::apply_lemma(Pog_node *rp, bool parent_or) {
+    report(3, "Attempting to prove/apply lemma for node .\n", rp->name());
+    Lemma_instance *instance = cnf->extract_lemma(rp->get_xvar(), parent_or);   // Yun-Rong Luo: extract lemma of current active clauses
 
+    // Search for compatible lemma
+    Lemma_instance *lemma = rp->get_lemma();    // Yun-Rong Luo: retrieve the lemma of node rp
+    while (lemma != NULL) {
+	if (lemma->signature == instance->signature)
+	    break;
+	lemma = lemma->next;
+    }
 
+    if (lemma == NULL) {
+	// The instance becomes the new lemma.  Must prove it
+	lemma = instance;
+	rp->add_lemma(lemma);                       // Yun-Rong Luo: set the node's lemma
+
+	cnf->setup_proof(lemma);
+	lemma->jid = justify(lemma->xvar, lemma->parent_or, false); // Yun-Rong Luo: prove lemma
+
+    if (lemma->jid == 0)
+	    return 0;
+
+	cnf->restore_from_proof(lemma);                             // Yun-Rong Luo: restore context
+	incr_count(COUNT_LEMMA_DEFINITION);
+    }
+
+    if (lemma->jid == 0)
+	    return 0;
+
+    // Yun-Rong Luo: lemma is previously proved, now apply it
+    incr_count(COUNT_LEMMA_APPLICATION);
+    int jid = cnf->apply_lemma(lemma, instance);
+    return jid;     
+}
+```
+
+#### One-sided proof
 
 
 ## TODOs
