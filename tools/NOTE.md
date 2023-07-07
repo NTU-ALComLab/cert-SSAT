@@ -63,16 +63,38 @@ static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
 // runCheck in cpog-check.cpp
 void run(char *cnf_name, char *cpog_name) {
     cnf_read(cnf_name);
-    cpog_read(cpog_name);               
-    int root = cpog_final_root();
+	cpog_read(cpog_name);                                   // Yun-Rong Luo: read cpog while proving it
+
+	int root = cpog_final_root();                           // Yun-Rong Luo: 
+	data_printf(1, "Final root literal %d\n", root);
 	if (one_sided)
 	    data_printf(0, "ONE-SIDED VALID.  CPOG representation partially verified\n");
 	else
 	    data_printf(0, "FULL-PROOF SUCCESS.  CPOG representation verified\n");
     }
 
+    q25_ptr mc = count_regular();                           // Yun-Rong Luo: counting
+    if (mc && q25_is_valid(mc)) {
+	data_printf(0, "Regular model count = ");
+	q25_write(mc, stdout);
+	printf("\n");
+    }
+    q25_free(mc);
+    q25_ptr wmc = count_weighted(cnf_name);
+    if (wmc && q25_is_valid(wmc)) {
+	data_printf(0, "Weighted model count = ");
+	q25_write(wmc, stdout);
+	printf("\n");
+    }
+    q25_free(wmc);
+    double secs = tod() - post_check;
+    data_printf(1, "Time to compute model counts: %.3f\n", secs);
+    secs = tod() - start;
+    data_printf(1, "Elapsed seconds: %.3f\n", secs);
 }
+
 ```
+
 Proving lies in `cpog_read()` and `cpog_final_root()`
 
 ## Gen
@@ -565,7 +587,7 @@ bool Pog::delete_input_clause(int cid, int unit_cid, std::vector<int> &overcount
     return proved;
 }
 ```
-
+## Check 
 
 ## TODOs
 1. See what is or node additional hints for 
