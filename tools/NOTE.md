@@ -1,6 +1,6 @@
 # Notes for code tracing
 ## Global Paremeters
-```
+```cpp
 verbLevel = 1
 
 oneSided = False
@@ -23,7 +23,8 @@ useLean = False
     - runLeanCheck: VerifiedChecker/build/bin/checker
 - not useLean:
     - runCheck: cpog-check, code in src/
-```
+
+```cpp
 // runGen in cpog-gen.cpp
 static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
     Cnf_reasoner cnf(cnf_file);
@@ -58,7 +59,7 @@ static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
 }
 ```
 
-```
+```cpp
 // runCheck in cpog-check.cpp
 void run(char *cnf_name, char *cpog_name) {
     cnf_read(cnf_name);
@@ -76,7 +77,7 @@ Proving lies in `cpog_read()` and `cpog_final_root()`
 
 ## Gen
 #### Read D4 d-DNNNF
-```
+```cpp
 bool Pog::read_d4ddnnf(FILE *infile) {
     // Mapping from NNF ID to POG Node ID
     std::map<int,int> nnf_idmap;
@@ -172,7 +173,7 @@ bool Pog::read_d4ddnnf(FILE *infile) {
 }
 ```
 #### Concretize POG
-```
+```cpp
 // in pog.cpp
 bool Pog::concretize() {
 
@@ -241,7 +242,7 @@ Assertion is in the form: `a <justify clause> 0 <hints> 0`
 `justify` is a recursive function. It is called `validate` in the paper. 
 
 ##### No Lemma Version
-```
+```cpp
 int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
     if (is_node(rlit)) {
         // main justify body 
@@ -257,8 +258,8 @@ int Pog::justify(int rlit, bool parent_or, bool use_lemma) {
 }
 ```
 
-Main justify body
-```
+##### Main justify body
+```cpp
 	int rvar = IABS(rlit);
 	Pog_node *rnp = get_node(rvar);
 
@@ -290,8 +291,8 @@ Main justify body
 	incr_count(jtype);
 	cnf->pop_context();                         // Yun-Rong Luo: TODO
 ```
-Justify `POG_OR`
-```
+##### Justify `POG_OR`
+```cpp
         incr_count(COUNT_VISIT_OR);
 		int clit[2];                            // Yun-Rong Luo: child literal
 		int jid;                                // Yun-Rong Luo: justify clause id of the children
