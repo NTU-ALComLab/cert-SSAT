@@ -588,11 +588,137 @@ void run(char *cnf_name, char *cpog_name) {
     secs = tod() - start;
     data_printf(1, "Elapsed seconds: %.3f\n", secs);
 }
-
 ```
 
-Proving lies in `cpog_read()` and `cpog_final_root()`
+#### Read cpog while proving it
+```cpp
+void cpog_read(char *fname) {
+    token_setup(fname);
+    /* Find and parse each command */
+    while (true) {
+	int cid = 0;
+	token_t token = token_next();
+	if (token == TOK_EOF)
+	    break;
+	if (token == TOK_EOL)
+	    continue;
+	if (token == TOK_STRING && token_last[0] == 'c') {
+	    token_find_eol();
+	    continue;
+	} else if (token == TOK_INT) {
+	    cid = token_value;
+	    token = token_next();
+	} 
 
+    // Yun-Rong Luo: start proving each cpog command
+	if (token != TOK_STRING) 
+	    err_printf(__cfunc__, "Expecting CPOG command.  Got %s ('%s') instead\n", token_name[token], token_last);
+	else if (strcmp(token_last, "a") == 0)
+	    cpog_add_clause(cid);
+	else if (strcmp(token_last, "r") == 0)
+	    cpog_read_root();
+	else if (strcmp(token_last, "dc") == 0 || strcmp(token_last, "d") == 0)
+	    cpog_delete_clause();
+ 	else if (strcmp(token_last, "p") == 0)
+	    cpog_add_product(cid);
+	else if (strcmp(token_last, "s") == 0)
+	    cpog_add_sum(cid);
+	else if (strcmp(token_last, "do") == 0)
+	    cpog_delete_operation();
+	else 
+	    err_printf(__cfunc__, "Invalid CPOG command '%s'\n", token_last);
+    }
+    token_finish();
+    int all_clause_count = cpog_assertion_count + cpog_operation_clause_count;
+    data_printf(1, "Read CPOG file with %d operations,  %d asserted + %d defining = %d clauses\n",
+		cpog_operation_count, cpog_assertion_count,
+		cpog_operation_clause_count, all_clause_count);
+    data_printf(3, "Clauses divided into %d blocks\n", clause_block_count);
+    data_printf(1, "Deleted %d input and asserted clauses\n", cpog_assertion_deletion_count);
+}
+```
+
+#### Running RUP prove
+```cpp
+/* Run RUP on hints from file.  Assume already set up  */
+void rup_run(int tcid, bool defining_only) {
+    bool conflict = false;
+    int steps = 0;
+    while (true) {
+	token_t token = token_next();
+	if (token == TOK_STAR)
+	    err_printf(__cfunc__, "This checker requires explicit hints\n");
+	else if (token != TOK_INT)
+	    err_printf(__cfunc__, "RUP for clause %d.  Expecting integer hint.  Got %s ('%s') instead\n", tcid, token_name[token], token_last);
+	else if (token_value == 0) {
+	    if (!conflict)
+		err_printf(__cfunc__, "RUP failure for clause %d.  Didn't have conflict on final clause\n", tcid);
+	    info_printf(3, "RUP for clause %d.  Succeeded in %d steps\n", tcid, steps);
+	    return;
+	} else {
+	    if (conflict) {
+		if (early_rup) {
+		    while (token_value != 0) {
+			token = token_next();
+			if (token != TOK_INT)
+			    err_printf(__cfunc__, "RUP for clause %d.  Expecting integer hint.  Got %s ('%s') instead\n", tcid, token_name[token], token_last);
+		    }
+		    info_printf(3, "RUP for clause %d.  Succeeded in %d steps\n", tcid, steps);
+		    return;
+		} else
+		    err_printf(__cfunc__, 
+			       "RUP failure for clause %d.  Encountered conflict after processing %d hints.  Not at end of hints list\n", tcid, steps);
+	    }
+	    int cid = token_value;
+	    if (defining_only && !is_defining(cid)) 
+		err_printf(__cfunc__, "RUP for clause %d.  Hint %d is not from a defining clause\n", tcid, cid);
+	    int unit = rup_unit_prop(cid);
+	    steps ++;
+	    if (unit == RUP_CONFLICT)
+		conflict = true;
+	    else if (unit == RUP_STALL) {
+		fprintf(ERROUT, "FAILURE: Clause %d did not cause unit propagation\n", cid);
+		if (verb_level >= 2) {
+		    fprintf(ERROUT, "    Added literals: ");
+		    lset_show(ERROUT);
+		    fprintf(ERROUT, "\n    Clause ");
+		    clause_show(ERROUT, cid, true);
+		}
+		err_printf(__cfunc__, "RUP failure for clause %d\n", tcid);
+	    } else
+		lset_add_lit(unit);
+	}
+    }
+}
+```
+
+##### Prove `a` (learnt assertions)
+```cpp
+void cpog_add_clause(int cid) {
+    lset_clear();
+    start_clause(cid);
+    while (true) {
+	token_t token = token_next();
+	if (token != TOK_INT)
+	    err_printf(__cfunc__, "Unexpected token %s ('%s')\n", token_name[token], token_last);
+	int lit = token_value;
+	clause_add_literal(lit);
+	if (lit == 0)
+	    break;
+	else
+	    lset_add_lit(-lit);
+    }
+    finish_clause(cid);
+    if (one_sided)
+	rup_skip(cid);
+    else
+	rup_run(cid, false);
+    token_confirm_eol();
+    cpog_assertion_count ++;
+    info_printf(3, "Processed clause %d addition\n", cid);
+}
+
+```
 
 ## TODOs
 1. See what is or node additional hints for 
