@@ -38,6 +38,7 @@ void usage(char *name) {
     printf(" -h           Print this message\n");
     printf(" -v VERB      Set verbosity level\n");
     printf(" -1           Perform one-sided check (don't verify assertions)\n");
+    printf(" -S           Perform SSAT check (don't verify assertions)\n");
     printf("    FILE.cnf  Input CNF file\n");
     printf("    FILE.cpog Input CPOG file\n");
     exit(0);
@@ -72,6 +73,8 @@ int one_sided = false;
 
 /* Allow RUP proofs that encounter conflict before final hint */
 bool early_rup = true;
+
+bool cert_ssat = false;
 
 /* Information for error reporting */
 char *current_file = "";
@@ -1717,11 +1720,16 @@ void run(char *cnf_name, char *cpog_name) {
 	}
 	int root = cpog_final_root();
 	data_printf(1, "Final root literal %d\n", root);
-	if (one_sided)
+	if (one_sided && !cert_ssat)
 	    data_printf(0, "ONE-SIDED VALID.  CPOG representation partially verified\n");
+    else if(one_sided && cert_ssat)
+        data_printf(0, "LOWER-TRACE VALID.  CPOG representation partially verified\n");
+    else if(!one_sided && cert_ssat)
+        data_printf(0, "UPPER-TRACE VALID.  CPOG representation partially verified\n");
 	else
 	    data_printf(0, "FULL-PROOF SUCCESS.  CPOG representation verified\n");
     }
+    if(!cert_ssat){
     double post_check = tod();
     q25_ptr mc = count_regular();
     if (mc && q25_is_valid(mc)) {
@@ -1741,6 +1749,7 @@ void run(char *cnf_name, char *cpog_name) {
     data_printf(1, "Time to compute model counts: %.3f\n", secs);
     secs = tod() - start;
     data_printf(1, "Elapsed seconds: %.3f\n", secs);
+    }
 }
 
 int main(int argc, char *argv[]) {
@@ -1763,6 +1772,9 @@ int main(int argc, char *argv[]) {
 	case '1':
 	    one_sided = true;
 	    break;
+    case 'S':
+        cert_ssat = true;
+        break;
 	default:
 	    printf("Unknown command line option '%s'\n", argv[argi]);
 	    usage(argv[0]);

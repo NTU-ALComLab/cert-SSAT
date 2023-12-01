@@ -190,6 +190,8 @@ def runCheck(root, home, logFile):
         cmd += ['-v', str(verbLevel)]
     if oneSided:
         cmd += ['-1']
+    if certSSAT:
+        cmd += ['-S']
     cmd += [cnfName, cpogName]
     ok =  runProgram("FCHECK", root, cmd, logFile)
     return ok
