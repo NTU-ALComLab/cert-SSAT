@@ -1432,6 +1432,11 @@ int cpog_final_root() {
 	    int cid = clause_blocks[bid].start_id + i;
 	    int *lits = clause_locate(cid);
 	    if (lits != NULL) {
+        if(!one_sided && cert_ssat){    // verify ssat upper case
+            if (clause_is_unit(lits) && declared_root == *lits)
+                root = *lits;
+        }
+        else{
 		if (clause_is_unit(lits)) {
 		    if (root == 0)
 			root = *lits;
@@ -1440,6 +1445,7 @@ int cpog_final_root() {
 		} else 
 		    err_printf(__cfunc__, "Found undeleted, non-unit clause #%d\n", cid);
 	    }
+        }
 	}
     }
     if (root == 0) 
