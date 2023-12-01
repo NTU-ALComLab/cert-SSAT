@@ -10,6 +10,12 @@ ptest:
 otest:
 	cd test ; make otest
 
+lowtest:
+	cd test ; make lowtest
+
+uptest:
+	cd test ; make uptest
+
 ltest:
 	cd test ; make ltest
 

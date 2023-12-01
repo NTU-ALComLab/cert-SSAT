@@ -8,6 +8,12 @@ test:
 otest:
 	$(INTERP) $(TCHAIN) -1 -v  $(VLEVEL) *.cnf
 
+lowtest:
+	$(INTERP) $(TCHAIN) -1 -S -v  $(VLEVEL) *.cnf
+
+uptest:
+	$(INTERP) $(TCHAIN) -S -v  $(VLEVEL) *.cnf
+
 ltest:
 	$(INTERP) $(TCHAIN) -F -v $(VLEVEL) *.cnf
  
