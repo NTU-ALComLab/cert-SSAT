@@ -39,6 +39,7 @@ static bool delete_files  =  true;
 static bool early_quit = false;
 static bool one_sided = false;
 static bool monolithic = false;
+static bool cert_ssat = false;
 static int drat_threshold = 1000;
 static int bcp_limit = 1;
 static int clause_limit = INT_MAX;
@@ -311,6 +312,9 @@ int main(int argc, char *const argv[]) {
 	case 'k':
 	    delete_files = false;
 	    break;
+    case 'S':
+        cert_ssat = true;
+        break;
 	case '?':
 	default:
 	    lprintf("Unknown option '%c'\n", c);

@@ -40,6 +40,7 @@ def usage(name):
     print("  -G       Prove each literal separately, rather than grouping into single proof")
     print("  -F       Run Lean checker to formally check")
     print("  EXT      Can be any extension for wild-card matching (e.g., cnf, nnf)")
+    print("  -S       SSAT certification")
 
 # Defaults
 standardTimeLimit = 60
@@ -49,6 +50,7 @@ monolithic = False
 useLemma = True
 group = True
 useLean = False
+certSSAT = False
 
 # Pathnames
 d4Home = "../tools"         # Yun-Rong Luo modified
@@ -171,6 +173,8 @@ def runGen(root, home, logFile, force):
         cmd += ['-e']
     if not group:
         cmd += ['-s']
+    if certSSAT:
+        cmd += ['-S']
     cmd += ["-C", str(clauseLimit), "-L", extraLogName, cnfName, nnfName, cpogName]
     ok = runProgram("GEN", root, cmd, logFile, extraLogName = extraLogName)
     checkFile("GEN", cpogName, logFile)
@@ -214,6 +218,8 @@ def runSequence(root, home, force):
         extension = "split_" + extension
     if useLean:
         extension = "lean_" + extension
+    if certSSAT:
+        extension = "ssat_" + extension
     logName = root + "." + extension
     try:
         logFile = open(logName, 'w')
@@ -254,10 +260,10 @@ def runBatch(home, fileList, force):
         runSequence(r, home, force)
 
 def run(name, args):
-    global verbLevel, useLemma, group, oneSided, monolithic, useLean
+    global verbLevel, useLemma, group, oneSided, monolithic, useLean, certSSAT 
     home = "."
     force = True
-    optList, args = getopt.getopt(args, "hv:1mLGFs:")
+    optList, args = getopt.getopt(args, "hv:1mLGFSs:")
     for (opt, val) in optList:
         if opt == '-h':
             usage(name)
@@ -266,6 +272,7 @@ def run(name, args):
             verbLevel = int(val)
         elif opt == '-1':
             oneSided = True
+
         elif opt == '-m':
             monolithic = True
         elif opt == '-L':
@@ -275,6 +282,8 @@ def run(name, args):
         elif opt == '-F':
             useLean = True
             force = False
+        elif opt == '-S':
+            certSSAT = True
         else:
             print("Unknown option '%s'" % opt)
             usage(name)
