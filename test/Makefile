@@ -6,7 +6,7 @@ test:
 	$(INTERP) $(TCHAIN) -v $(VLEVEL) *.cnf
 
 otest:
-	$(INTERP) $(TCHAIN) -v -1 $(VLEVEL) *.cnf
+	$(INTERP) $(TCHAIN) -1 -v  $(VLEVEL) *.cnf
 
 ltest:
 	$(INTERP) $(TCHAIN) -F -v $(VLEVEL) *.cnf
