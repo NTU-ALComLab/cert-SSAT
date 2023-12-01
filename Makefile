@@ -7,6 +7,9 @@ linstall:
 ptest:
 	cd test ; make test
 
+otest:
+	cd test ; make otest
+
 ltest:
 	cd test ; make ltest
 
