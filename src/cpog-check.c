@@ -1473,13 +1473,13 @@ void cpog_read(char *fname) {
 	    cpog_add_clause(cid);
 	else if (strcmp(token_last, "r") == 0)
 	    cpog_read_root();
-	else if (strcmp(token_last, "dc") == 0 || strcmp(token_last, "d") == 0)
+	else if ( (strcmp(token_last, "dc") == 0 || strcmp(token_last, "d") == 0) && (one_sided || !cert_ssat) )
 	    cpog_delete_clause();
  	else if (strcmp(token_last, "p") == 0)
 	    cpog_add_product(cid);
 	else if (strcmp(token_last, "s") == 0)
 	    cpog_add_sum(cid);
-	else if (strcmp(token_last, "do") == 0)
+	else if ( (strcmp(token_last, "do") == 0) &&  (one_sided || !cert_ssat) )
 	    cpog_delete_operation();
 	else 
 	    err_printf(__cfunc__, "Invalid CPOG command '%s'\n", token_last);

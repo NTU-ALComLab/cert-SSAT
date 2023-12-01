@@ -246,7 +246,13 @@ static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
 	// Undercount
 	return 10;
     }
-    if(!cert_ssat){
+
+    //SSAT upper-trace
+    if(!one_sided && cert_ssat)  {
+        pwriter->finish_file();
+        return 0;
+    }
+
     // For one-sided, may need to delete clauses added by initial BCP
     cnf.delete_assertions();
     elapsed = get_elapsed();
@@ -265,7 +271,6 @@ static int run(FILE *cnf_file, FILE *nnf_file, Pog_writer *pwriter) {
     }
     elapsed = get_elapsed();
     lprintf("%s Time = %.2f.  Deleted input clauses\n", prefix, elapsed);
-    }
     pwriter->finish_file();
     return overcount ? 20 : 0;
 }
