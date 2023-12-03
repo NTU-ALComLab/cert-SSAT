@@ -35,6 +35,8 @@
 #include "writer.hh"
 #include "counters.h"
 
+using namespace std;
+
 enum    QType                      {UNIVERSAL=0,EXISTENTIAL=1,RANDOM=2};
 enum    FType                      {CNF=0, WCNF=1, SDIMACS=2};
 typedef vector<uint>               Vars;
