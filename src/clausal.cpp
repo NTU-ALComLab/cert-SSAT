@@ -364,7 +364,7 @@ Cnf::Cnf(FILE *infile) {
     while ((c = getc(infile)) != EOF) {
 	if (isspace(c)) 
 	    continue;
-	if (c == 'c' || c == 'd')
+	if (c == 'c' || c == 'd' || c == 'e' || c == 'r')   // ignore sdmiacs existential/radomized variables
 	    c = skip_line(infile);
 	if (c == 's') {
 	    // Failed proof
