@@ -59,6 +59,10 @@ d4Program = d4Home + "/d4"
 ssatHome = "../tools"
 ssatProgram = ssatHome + "/SharpSSAT"
 
+interpreter = "python3"
+evalHome = "../tools"
+evalProgram = evalHome + "/evalSSAT.py"
+
 genHome = "../src"
 genProgram = genHome + "/cpog-gen"
 
@@ -68,7 +72,7 @@ checkProgram = checkHome + "/cpog-check"
 leanHome =  "../VerifiedChecker"
 leanCheckProgram = leanHome + "/build/bin/checker"
 
-timeLimits = { "D4" : 4000, "GEN" : 10000, "FCHECK" : 1000, "LCHECK" : 4000 }
+timeLimits = { "D4" : 4000, "GEN" : 10000, "FCHECK" : 1000, "LCHECK" : 4000, "SSAT" : 4000, "EVAL" : 4000 }
 
 clauseLimit = (1 << 31) - 1
 
@@ -156,11 +160,20 @@ def runSharpSSAT(root, home, logFile, force):
     if not force and os.path.exists(lowNNFName):
         return True
     cmd = [ssatProgram, ssatName, "-l", "-p", "-s"]
-    ok = runProgram("SharpSSAT", root, cmd, logFile)
+    ok = runProgram("SSAT", root, cmd, logFile)
     if not ok and os.path.exists(upNNFName):
         os.remove(upNNFName)
     if not ok and os.path.exists(lowNNFName):
         os.remove(lowNNFName)
+    return ok
+
+def runEvalSSAT(root, home, logFile, force):
+    ssatName = home + "/" + root + ".sdimacs"
+    upNNFName = home + "/" + root + "_up.nnf"
+    lowNNFName = home + "/" + root + "_low.nnf"
+    probName  = home + "/" + root + ".prob"
+    cmd = [interpreter, evalProgram, ssatName, upNNFName, lowNNFName, probName]
+    ok = runProgram("EVAL", root, cmd, logFile)
     return ok
 
 def runPartialGen(root, home, logFile, force):
@@ -244,7 +257,6 @@ def runLeanCheck(root, home, logFile):
     ok =  runProgram("LCHECK", root, cmd, logFile)
     return ok
 
-
 def runSequence(root, home, force):
     result = ""
     prefix = "OVERALL"
@@ -275,9 +287,13 @@ def runSequence(root, home, force):
     else:
         ok = runD4(root, home, logFile, force)
 
-    # If ssat certification is enabled, start with proving lower trace first  
+    # SSAT
     if certSSAT:
+        # Perform SSAT evaluation and levelized checking on upper and lower traces
+        ok = ok and runEvalSSAT(root, home, logFile, force)
+        # If ssat certification is enabled, start with proving lower trace first
         oneSided = True
+
     ok = ok and runGen(root, home, logFile, force)
     if useLean and not certSSAT:
         ok = ok and runLeanCheck(root, home, logFile)
