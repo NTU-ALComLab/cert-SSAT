@@ -7,7 +7,7 @@ CPPFLAGS=-g $(OPT) -Wno-nullability-completeness -std=c++11
 
 install: all
 
-all: cpog-check cpog-gen
+all: cpog-check cpog-gen evalSSAT
 
 
 cpog-check: cpog-check.c q25.c q25.h
@@ -33,6 +33,9 @@ pog.o: pog.hh clausal.hh counters.h pog.cpp
 
 cpog-gen: cpog-gen.cpp clausal.o ilist.o report.o counters.o writer.o pog.o
 	$(CXX) $(CPPFLAGS) -o cpog-gen cpog-gen.cpp clausal.o ilist.o report.o counters.o writer.o pog.o
+
+evalSSAT: evalSSAT.cpp clausal.o ilist.o report.o counters.o writer.o pog.o
+    $(CXX) $(CPPFLAGS) -o evalSSAT evalSSAT.cpp clausal.o ilist.o report.o counters.o writer.o pog.o
 
 .SUFFIXES: .c .cpp .o
 

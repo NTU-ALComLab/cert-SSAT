@@ -59,9 +59,8 @@ d4Program = d4Home + "/d4"
 ssatHome = "../tools"
 ssatProgram = ssatHome + "/SharpSSAT"
 
-interpreter = "python3"
-evalHome = "../tools"
-evalProgram = evalHome + "/evalSSAT.py"
+evalHome = "../src"
+evalProgram = evalHome + "/evalSSAT"
 
 genHome = "../src"
 genProgram = genHome + "/cpog-gen"
@@ -172,7 +171,7 @@ def runEvalSSAT(root, home, logFile, force):
     upNNFName = home + "/" + root + "_up.nnf"
     lowNNFName = home + "/" + root + "_low.nnf"
     probName  = home + "/" + root + ".prob"
-    cmd = [interpreter, evalProgram, ssatName, upNNFName, lowNNFName, probName]
+    cmd = [evalProgram, ssatName, upNNFName, lowNNFName, probName]
     ok = runProgram("EVAL", root, cmd, logFile)
     return ok
 
