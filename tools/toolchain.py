@@ -176,9 +176,21 @@ def runPartialGen(root, home, logFile, force):
 
 def runGen(root, home, logFile, force):
     extraLogName = "d2p.log"
-    cnfName = home + "/" + root + ".cnf"
-    nnfName = home + "/" + root + ".nnf"
-    cpogName = home + "/" + root + ".cpog"
+    cnfName  = home + "/" + root
+    nnfName  = home + "/" + root
+    cpogName = home + "/" + root
+    if not certSSAT:    # model counting certification
+        cnfName  = cnfName  + ".cnf"   
+        nnfName  = nnfName  + ".nnf"
+        cpogName = cpogName + ".cpog"
+    elif not oneSided:  # verify SSAT upper trace
+        cnfName  = cnfName  + ".sdimacs"   
+        nnfName  = nnfName  + "_up.nnf"
+        cpogName = cpogName + "_up.cpog"
+    else:               # verify SSAT lower trace
+        cnfName  = cnfName  + ".sdimacs"   
+        nnfName  = nnfName  + "_low.nnf"
+        cpogName = cpogName + "_low.cpog"
     if not force and os.path.exists(cpogName):
         return True
     cmd = [genProgram]
@@ -202,8 +214,17 @@ def runGen(root, home, logFile, force):
     return ok
 
 def runCheck(root, home, logFile):
-    cnfName = home + "/" + root + ".cnf"
-    cpogName = home + "/" + root + ".cpog"
+    cnfName  = home + "/" + root 
+    cpogName = home + "/" + root 
+    if not certSSAT:    # model counting certification
+        cnfName  = cnfName  + ".cnf"   
+        cpogName = cpogName + ".cpog"
+    elif not oneSided:  # verify SSAT upper trace
+        cnfName  = cnfName  + ".sdimacs"   
+        cpogName = cpogName + "_up.cpog"
+    else:               # verify SSAT lower trace
+        cnfName  = cnfName  + ".sdimacs"   
+        cpogName = cpogName + "_low.cpog"
     cmd = [checkProgram]
     if verbLevel != 1:
         cmd += ['-v', str(verbLevel)]
@@ -249,12 +270,26 @@ def runSequence(root, home, force):
         return
     ok = False
     done = False
-    ok = runD4(root, home, logFile, force)
+    if certSSAT:
+        ok = runSharpSSAT(root, home, logFile, force)
+    else:
+        ok = runD4(root, home, logFile, force)
+
+    # If ssat certification is enabled, start with proving lower trace first  
+    if certSSAT:
+        oneSided = True
     ok = ok and runGen(root, home, logFile, force)
-    if useLean:
+    if useLean and not certSSAT:
         ok = ok and runLeanCheck(root, home, logFile)
     else:
         ok = ok and runCheck(root, home, logFile)
+
+    # Prove upper trace for ssat certification 
+    if certSSAT:
+        oneSided = False 
+        ok = ok and runGen(root, home, logFile, force)
+        ok = ok and runCheck(root, home, logFile)
+
     delta = datetime.datetime.now() - start
     seconds = delta.seconds + 1e-6 * delta.microseconds
     result += "%s LOG: Elapsed time = %.3f seconds\n" % (prefix, seconds)
@@ -293,7 +328,6 @@ def run(name, args):
             verbLevel = int(val)
         elif opt == '-1':
             oneSided = True
-
         elif opt == '-m':
             monolithic = True
         elif opt == '-L':
