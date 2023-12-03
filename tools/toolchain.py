@@ -56,6 +56,9 @@ certSSAT = False
 d4Home = "../tools"         # Yun-Rong Luo modified
 d4Program = d4Home + "/d4"
 
+ssatHome = "../tools"
+ssatProgram = ssatHome + "/SharpSSAT"
+
 genHome = "../src"
 genProgram = genHome + "/cpog-gen"
 
@@ -142,6 +145,22 @@ def runD4(root, home, logFile, force):
     ok = runProgram("D4", root, cmd, logFile)
     if not ok and os.path.exists(nnfName):
         os.remove(nnfName)
+    return ok
+
+def runSharpSSAT(root, home, logFile, force):
+    ssatName = home + "/" + root + ".sdimacs"
+    upNNFName = home + "/" + root + "_up.nnf"
+    if not force and os.path.exists(upNNFName):
+        return True
+    lowNNFName = home + "/" + root + "_low.nnf"
+    if not force and os.path.exists(lowNNFName):
+        return True
+    cmd = [ssatProgram, ssatName, "-l", "-p", "-s"]
+    ok = runProgram("SharpSSAT", root, cmd, logFile)
+    if not ok and os.path.exists(upNNFName):
+        os.remove(upNNFName)
+    if not ok and os.path.exists(lowNNFName):
+        os.remove(lowNNFName)
     return ok
 
 def runPartialGen(root, home, logFile, force):
