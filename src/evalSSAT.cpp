@@ -29,6 +29,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <iostream>
+#include <cassert>
 
 #include "report.h"
 #include "clausal.hh"
@@ -69,8 +71,8 @@ public:
 
         while (ssat_file >> c && c != 'p')
           ssat_file.ignore(max_ignore, '\n');
-        if (!(ssat_file >> idstring && idstring == "cnf" && input_file >> nVars
-            && input_file >> nCls)) {
+        if (!(ssat_file >> idstring && idstring == "cnf" && ssat_file >> nVars
+            && ssat_file >> nCls)) {
           cerr << "Invalid CNF(WCNF) file" << endl;
           exit(0);
         }
@@ -98,7 +100,7 @@ public:
             }
             else{
               qt = EXISTENTIAL;
-              while( (input_file >> var) && var!=0  ){
+              while( (ssat_file >> var) && var!=0  ){
                 vars.push_back(var);
                 var2Q_[var] = qt;
                 orderedVar_.push_back(var);
