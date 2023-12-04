@@ -31,6 +31,11 @@
 #include <string>
 #include <iostream>
 #include <cassert>
+#include <unordered_set>
+#include <map>
+#include <unordered_map>
+#include <limits>
+#include <cmath>
 
 #include "report.h"
 #include "clausal.hh"
@@ -40,10 +45,13 @@
 using namespace std;
 
 enum    QType                      {UNIVERSAL=0,EXISTENTIAL=1,RANDOM=2};
-enum    FType                      {CNF=0, WCNF=1, SDIMACS=2};
 typedef vector<uint>               Vars;
 typedef pair<QType,Vars>           QLevel;
 typedef vector<QLevel>             Prefix;
+
+typedef enum { POG_NONE, POG_TRUE, POG_FALSE, POG_AND, POG_OR } pog_type_t;
+static const char *pog_type_name[5] = { "NONE", "TRUE", "FALSE", "AND", "OR" };
+static const char pog_type_char[5] = { '\0', 't', 'f', 'a', 'o' };
 
 void usage(const char *name) {
     lprintf("Usage: %s [-h] FORMULA.sdimacs UP.nnf LOW.nnf FORMULA.prob \n", name);
@@ -55,10 +63,60 @@ void usage(const char *name) {
     exit(0);
 }
 
+static bool approximatelyEqual(double a, double b, double epsilon)
+{
+    return abs(a - b) <= ( (abs(a) < abs(b) ? abs(b) : abs(a)) * epsilon);
+}
+
+// Try to read single alphabetic character from line
+// If not found, then push back unread character and return 0
+// If hit EOF, then return this
+static int get_token(FILE* infile) {
+    int c;
+    while (true) {
+	c = fgetc(infile);
+	if (isalpha(c) || c == EOF)
+	    return c;
+	else if (isspace(c))
+	    continue;
+	else {
+	    ungetc(c, infile);
+	    return 0;
+	}
+    }
+}
+
+// Read sequence of numbers from line of input
+// Consume end of line character
+// Return false if non-numeric value encountered
+static bool read_numbers(FILE *infile, std::vector<int> &vec, int *rc) {
+    vec.resize(0);
+    while (true) {
+	int c = fgetc(infile);
+	int val;
+	if (c == '\n' || c == EOF) {
+	    *rc = c;
+	    return true;
+	} else if (isspace(c))
+	    continue;
+	else {
+	    ungetc(c, infile);
+	    if (fscanf(infile, "%d", &val) == 1) {
+		vec.push_back(val);
+	    } else
+		return false;
+	}
+    }
+    // Won't hit this
+    return false;
+}
+
 class SSAT_Header
 {
 public:
-    SSAT_Header(ifstream& ssat_file)
+    SSAT_Header() {}
+
+    bool read(ifstream & ssat_file)
     {
         int lit, var;
         double prob;
@@ -73,8 +131,8 @@ public:
           ssat_file.ignore(max_ignore, '\n');
         if (!(ssat_file >> idstring && idstring == "cnf" && ssat_file >> nVars
             && ssat_file >> nCls)) {
-          cerr << "Invalid CNF(WCNF) file" << endl;
-          exit(0);
+          err(true, "Invalid SDIMACS header.\n");
+          return false;
         }
 
         var2Prob_.clear();
@@ -92,18 +150,24 @@ public:
               qt = RANDOM;
               ssat_file >> prob;
               while ( (ssat_file >> var) && var!=0 ){
+                if ( !(var > 0 && var <= nVars ){
+                    err(true, "Invalid SDIMACS variable: %d.\n", var);
+                    return false;
+                }
                 vars.push_back(var);
                 var2Prob_[var] = prob;
                 var2Q_[var] = qt;
-                orderedVar_.push_back(var);
               }
             }
             else{
               qt = EXISTENTIAL;
               while( (ssat_file >> var) && var!=0  ){
+                if ( !(var > 0 && var <= nVars ){
+                    err(true, "Invalid SDIMACS variable: %d.\n", var);
+                    return false;
+                }
                 vars.push_back(var);
                 var2Q_[var] = qt;
-                orderedVar_.push_back(var);
               }
             }
             if(prefix_.empty()) {
@@ -124,24 +188,400 @@ public:
             }
             ++vars_added;
         }
+        if (vars_added != nVars){
+            err(true, "Number of read variables didn't match SDIMACS header\n");
+            return false;
+        }
+        return true;
     }
 
     unsigned int nVars, nCls;
     Prefix          prefix_;
-    FType           f_type_;
     vector<double>  var2Prob_;   // -1 for indicator variable (only occurs in WMC)
     vector<QType>   var2Q_;
     vector<int>     var2Lev_;
-    vector<size_t>  orderedVar_; // ordered var follows the prefix, used when certification
 };
 
-static int run( ifstream & ssat_file, ifstream & upNNF_file, ifstream & lowNNF_file, ifstream & prob_file) {
-    SSAT_Header ssat_header(ssat_file);
+// Trace Nodes
+size_t TNode::globalVisited = 0;
+class TNode {
+private:
+    // Basic representation
+    pog_type_t type;
+    // Extension variable for node
+    int xvar;
+
+    // Identify children by their representation as literals
+    // Can be variable, other Pog node, or the negation of one of these
+    // Organize so that literals representing nodes come at end
+    // AND node can have any degree >= 2
+    // OR  node must have degree 2,
+    int degree;
+    int *children;
+
+    // SSAT evaluation;
+    double          prob;
+    size_t          visited;
+    static size_t   globalVisited;
+    int             lev;
+
+public:
+    TNode(pog_type_t ntype) : type(ntype), xvar(0), degree(0), children(NULL), prob(0), visited(0), lev(numeric_limits<int>::max()) {}
+    ~TNode();
+
+    pog_type_t get_type()   { return type; }
+    void set_xvar(int var)  { xvar = var;  }
+    int  get_xvar()         { return xvar; }
+
+    // Set degree and import children
+    void add_children(vector<int> *cvec)
+    {
+        degree = cvec->size();
+        if (degree > 0) 
+        {
+	        children = new int[degree];
+	        memcpy(children, cvec->data(), degree * sizeof(int));
+        }
+    }
+
+    // Access children
+    int get_degree()        { return degree; }
+    int& operator[](int idx)    { return children[idx]; }
+
+    // SSAT evaluation;
+    bool visited()                  { return visited == globalVisited; }
+    void setVisited()               { visited = globalVisited; }
+    static void resetGlobalVisited(){ Node::globalVisited++; }
+    void setProb( double p )    { prob = p; }
+    void setLev ( int l )       { lev = l; }
+    double getProb()            { return prob; }
+    int getLev()                { return lev; }
+};
+
+
+class SSAT_Trace
+{
+public:
+    SSAT_Header * header;
+
+    SSAT_Trace( SSAT_Header * pHeader ) : header(pHeader) { 
+        max_input_var = header->nVars; 
+        nTraceVar     = header->nVars;
+    }
+
+    bool evalSSAT( double ssat_prob, double precision ) 
+    {
+        TNode::resetGlobalVisited();
+        bool ok = evalSSATRecur( get_node(root_literal) ) ;
+        if(!ok)
+        {
+            err(false, "Trace structure checking failed.\n");
+            return false;
+        }
+        double nnf_prob = get_lit_prob(root_literal);
+        ok = ok & approximatelyEqual(nnf_prob, ssat_prob, precision);
+        if(!ok)
+        {
+            err(false, "Trace probability evaluation failed.\n");
+            return false;
+        }
+        return true;
+    }
+
+    bool read(FILE* infile)
+    {
+        // Mapping from NNF ID to POG Node ID
+        map<int,int> nnf_idmap;
+        // Set of POG nodes that have at least one parent
+        unordered_set<int> node_with_parent;
+        // Vector of arguments for each POG node
+        vector<std::vector<int> *> arguments;
+        // Capture arguments for each line
+        vector<int> largs;
+        int line_number = 0;
+        // Statistics
+        int nnf_node_count = 0;
+        int nnf_explicit_node_count = 0;
+        int nnf_edge_count = 0;
+        while (true) 
+        {
+	        pog_type_t ntype = POG_NONE;
+	        line_number++;
+	        int c = get_token(infile);
+	        int rc = 0;
+	        if (c == EOF)
+	            break;
+	        if (c != 0) 
+            {
+	            for (int t = POG_TRUE; t <= POG_OR; t++)
+		            if (c == pog_type_char[t])
+		                ntype = (pog_type_t) t;
+	            if (ntype == POG_NONE)
+		            err(true, "Line #%d.  Unknown D4 NNF command '%c'\n", line_number, c);
+	            nnf_node_count++;
+	            nnf_explicit_node_count++;
+	            TNode *np = new TNode(ntype);
+	            int pid = add_node(np);
+	            arguments.push_back(new vector<int>);
+	            bool ok = read_numbers(infile, largs, &rc);
+	            if (!ok)
+		            err(true, "Line #%d.  Couldn't parse numbers\n", line_number);
+	            else if (largs.size() == 0 && rc == EOF)
+		            break;
+	            else if (largs.size() != 2)
+		            err(true, "Line #%d.  Expected 2 numbers.  Found %d\n", line_number, largs.size());
+	            else if (largs.back() != 0)
+		            err(true, "Line #%d.  Line not zero-terminated\n", line_number);
+	            else
+		            nnf_idmap[largs[0]] = pid;
+	            report(3, "Line #%d.  Created POG node %s number %d from NNF node %d\n",
+		           line_number, pog_type_name[ntype], pid, largs[0]); 
+	        } 
+            else 
+            {
+	            nnf_edge_count++;
+	            bool ok = read_numbers(infile, largs, &rc);
+	            if (!oknumeric_limits<int>::max())
+		            err(true, "Line #%d.  Couldn't parse numbers\n", line_number);
+	            else if (largs.size() == 0 && rc == EOF)
+		            break;
+	            else if (largs.size() < 3)
+		            err(true, "Line #%d.  Expected at least 3 numbers.  Found %d\n", line_number, largs.size());
+	            else if (largs.back() != 0)
+		            err(true, "Line #%d.  Line not zero-terminated\n", line_number);
+
+	            // Find parent
+	            auto fid = nnf_idmap.find(largs[0]);
+	            if (fid == nnf_idmap.end())
+		            err(true, "Line #%d.  Invalid NNF node Id %d\n", line_number, largs[0]);
+	            int ppid = fid->second;
+	            // Find second node
+	            fid = nnf_idmap.find(largs[1]);
+	            if (fid == nnf_idmap.end())
+		            err(true, "Line #%d.  Invalid NNF node Id %d\n", line_number, largs[1]);
+	            int spid = fid->second;
+	            int cpid = spid;
+
+	            if (largs.size() > 3) 
+                {
+		            // Must construct AND node to hold literals
+		            nnf_node_count++;
+		            TNode *anp = new TNode(POG_AND);
+		            cpid = add_node(anp);
+		            vector<int> *aargs = new vector<int>;
+		            arguments.push_back(aargs);
+		            for (int i = 2; i < largs.size()-1; i++)
+		                aargs->push_back(largs[i]);
+		            aargs->push_back(spid);
+		            report(3, "Line #%d. Created POG AND Node %d to hold literals between NNF nodes %d and %d\n",
+		                   line_number, cpid, largs[0], largs[1]); 
+	            }
+	            vector<int> *pargs = arguments[ppid-max_input_var-1];
+	            pargs->push_back(cpid);
+	            node_with_parent.insert(cpid);
+	            report(4, "Line #%d.  Adding edge between POG nodes %d and %d\n", line_number, ppid, cpid);
+	        }
+        }
+        // Add arguments
+        for (int pid = max_input_var + 1; pid <= max_input_var + nodes.size(); pid++) 
+        {
+	        TNode *np = get_node(pid);
+	        vector<int> *args = arguments[pid-max_input_var-1];
+            if(!np) err(true, "Invalid node Id %d.\n", pid);
+	        np->add_children(args);
+	        delete args;
+        }
+        for (auto kv : nnf_idmap) 
+        {
+	        int nid = kv.first;
+	        int pid = kv.second;
+	        TNode *np = get_node(pid);
+            if(!np) err(true, "Invalid node Id %d.\n", pid);
+	        // Check OR nodes
+	        if (np->get_type() == POG_OR) 
+            {
+	            int degree = np->get_degree();
+	            if (degree == 0 || degree > 2) 
+	        	    err(true, "NNF OR node %d.  Invalid degree %d\n", nid, degree);
+	            else if (degree == 1  && node_with_parent.find(pid) == node_with_parent.end()) 
+                {
+	        	    if (root_literal == 0) 
+                    {
+	        	        root_literal = pid;
+	        	        report(3, "Setting root literal to %d\n", root_literal);
+	        	    } 
+                    else{
+	        	        report(2, "Ambiguous root literal.  Thought it was %d.  But it might be %d\n", root_literal, pid);
+	        	    }
+	            }
+	        }
+        }
+        if (root_literal == 0)
+	        err(true, "Failed to find root node in NNF file\n");
+        report(1, "Read D4 NNF file with %d nodes (%d explicit) and %d edges\n",
+	           nnf_node_count, nnf_explicit_node_count, nnf_edge_count);
+        return true;
+    }
+
+private:
+    int max_input_var;
+    int nTraceVar;
+    vector<TNode *> nodes;
+    int root_literal;
+
+    int add_node(TNode *np)
+    {
+        nodes.push_back(np);
+        int xvar = ++nTraceVar;
+        np->set_xvar(xvar);
+        return xvar;
+    }
+    bool is_node(int lit) {    
+        int var = abs(lit);
+        return var > max_input_var && var <= max_input_var + nodes.size(); 
+    }
+    // Index POG nodes by their extension variables
+    TNode * get_node(int lit)   { 
+        if( lit == abs(lit) && is_node(lit) )
+            return nodes[id-max_input_var-1]; 
+        return NULL;
+    }
+
+    int get_lit_lev(int lit)
+    {
+        if( is_node(lit) )
+        {
+            TNode * node = get_node(lit);
+            if(!node || !node->visited())
+                err(true, "Failed in get_lit_lev(%d).\n", lit);
+            return node->getLev();
+        }
+        int var = abs(lit);
+        if(var <=0 && var > max_input_var)
+            err(true, "Failed in get_lit_lev(%d).\n", lit);
+        return header->var2Lev_[var];
+    }
+    double get_lit_prob(int lit)
+    {
+        if( is_node(lit) ){
+            TNode * node = get_node(lit);
+            if(!node || !node->visited())
+                err(true, "Failed in get_lit_prob(%d).\n", lit);
+            return node->getProb();
+        }
+        int var = abs(lit);
+        if(var <=0 && var > max_input_var)
+            err(true, "Failed in get_lit_prob(%d).\n", lit);
+        if(header->var2Q_[var] == EXISTENTIAL) return 1;
+        else return lit>0 ? var2Prob_[var] : (1-var2Prob_[var]);
+    }
+    int get_lit_decision(int lit)
+    {
+        int var = 0;
+        if( is_node(lit) ){
+            TNode * node = get_node(lit);
+            if(!node || !node->visited() || node->get_type() != POG_AND || is_node( (*node)[0]) )
+                err(true, "Failed in get_lit_decision(%d).\n", lit);
+            var = abs( (*node)[0] );
+        }
+        else var = abs(lit);
+        if(var <=0 && var > max_input_var)
+            err(true, "Failed in get_lit_decision(%d).\n", lit);
+        return var;
+    }
+
+    // SSAT evaluation
+    bool evalSSATRecur( TNode * node ) 
+    {
+	    if ( node->visited() )
+	        return true;
+
+        node->setVisited();
+        pog_type_t type = node->get_type();
+        if(type == POG_TRUE || type == POG_AND)
+            node->setProb(1.0);
+        else if( type == POG_FALSE || type == POG_OR )
+            node->setProb(0.0);
+        else{
+            err(true, "Invalid node %d.\n", node->get_xvar());
+            return false;
+        }
+        
+        bool ok = true;
+	    for (int i = 0; i < node->get_degree(); ++i)
+        {
+            int clit = (*node)[i];
+            if( is_node(clit) )
+            {
+                TNode * cnode = get_node(clit);
+                ok = ok & cnode!=NULL & evalSSATRecur(cnode);
+                if(!ok){
+                    err(true, "Failed when evaluating children of node %d.\n", node->get_xvar());
+                    return false;
+                }
+            }
+            if (type == POG_AND){
+                node->setLev( min( node->getLev(), get_lit_lev(clit) ) );
+                node->setProb( node->getProb() * get_lit_prob(clit) );
+            }
+        }
+        if(type == POG_OR)
+        {
+            double p0  = get_lit_prob(node[0]);
+            double p1  = get_lit_prob(node[1]);
+            int l0  = get_lit_lev(node[0]);
+            int l1  = get_lit_lev(node[1]);
+            int v0  = get_lit_decision(node[0]);
+            int v1  = get_lit_decision(node[1]);
+
+            if( v0 != v1 || header->var2Lev_[v0] != l0 || header->var2Lev_[v1] != l1){
+                err(true, "Failed when evaluating OR node %d.\n", node->get_xvar());
+                return false;
+            } 
+            node->setLev(l0);
+            if(var2Q_[v0] == EXISTENTIAL)
+                node->setProb( max(p0,p1) );
+            else
+                node->setProb( p0+p1 );
+        }
+        return ok;
+    }
+};
+
+static int run( ifstream & ssat_file, FILE* upNNF_file, FILE* lowNNF_file, ifstream & prob_file) {
+    SSAT_Header * ssat_header = new SSAT_Header();
+    if( !ssat_header -> read(ssat_file) )
+        err(true, "Reading SDIMACS file failed\n");
     ssat_file.close();
 
+    SSAT_Trace upTrace(ssat_header);
+    if ( !upTrace.read(upNNF_file) )
+        err(true, "Reading UPPER TRACE file failed\n");
+    upNNF_file.close();
+
+    SSAT_Trace lowTrace(ssat_header);
+    if ( !lowTrace.read(lowNNF_file) )
+        err(true, "Reading LOWER TRACE file failed\n");
+    lowNNF_file.close();
+
     double prob; 
-    assert( prob_file >> prob ); 
+    if( !(prob_file >> prob) )
+        err(true, "Reading PROB file failed\n");
     prob_file.close();
+
+    int fail=0;
+    // fail=0: pass check, fail=1: up failed, fail=2: low failed, fail=3: both failed 
+    if( !upTrace.evalSSAT(prob, 0.01) ){
+        fail += 1;
+        err(false, "Checking UPPER TRACE failed\n");
+    }
+    if( !lowTrace.evalSSAT(prob, 0.01) ){
+        fail += 2;
+        err(false, "Checking LOWER TRACE failed\n");
+    }
+
+    delete ssat_header;
+    return fail;
 }
 
 
@@ -159,55 +599,60 @@ int main(int argc, char *const argv[]) {
 	}
     }
 
+    // ssat file
     int argi = optind;
     if (argi >= argc) {
-	lprintf("Name of input SDIMACS file required\n");
-	usage(argv[0]);
+	    lprintf("Name of input SDIMACS file required\n");
+	    usage(argv[0]);
     }
     ifstream ssat_file(argv[argi]);
     if ( !ssat_file ) {
-	lprintf("Can't open '%s'\n", argv[argi]);
-	exit(1);
+	    lprintf("Can't open '%s'\n", argv[argi]);
+	    exit(1);
     }
 
+    // upper trace
     argi++;
     if (argi >= argc) {
-	lprintf("Name of input UPPER TRACE file required\n");
-	usage(argv[0]);
+	    lprintf("Name of input UPPER TRACE file required\n");
+	    usage(argv[0]);
     }
-    ifstream upNNF_file(argv[argi]);
+    FILE *upNNF_file = fopen(argv[argi], "r");
     if ( !upNNF_file ) {
-	fprintf(stderr, "Can't open '%s'\n", argv[argi]);
-	exit(1);
+	    fprintf(stderr, "Can't open '%s'\n", argv[argi]);
+	    exit(1);
     }
 
+    // lower trace
     argi++;
     if (argi >= argc) {
-	lprintf("Name of input LOWER TRACE file required\n");
-	usage(argv[0]);
+	    lprintf("Name of input LOWER TRACE file required\n");
+	    usage(argv[0]);
     }
-    ifstream lowNNF_file(argv[argi]);
+    FILE *lowNNF_file = fopen(argv[argi], "r");
     if ( !lowNNF_file ) {
-	fprintf(stderr, "Can't open '%s'\n", argv[argi]);
-	exit(1);
+	    fprintf(stderr, "Can't open '%s'\n", argv[argi]);
+	    exit(1);
     }
 
+    // probability file
     argi++;
     if (argi >= argc) {
-	lprintf("Name of input PROB file required\n");
-	usage(argv[0]);
+	    lprintf("Name of input PROB file required\n");
+	    usage(argv[0]);
     }
     ifstream prob_file(argv[argi]);
     if ( !prob_file ) {
-	fprintf(stderr, "Can't open '%s'\n", argv[argi]);
-	exit(1);
+	    fprintf(stderr, "Can't open '%s'\n", argv[argi]);
+	    exit(1);
     }
 
     int return_code = 0;
     try {
-	return_code = run(ssat_file, upNNF_file, lowNNF_file, prob_file);
-    } catch (const std::bad_alloc &e) {
-	err(true, "Memory allocation error\n");
+	    return_code = run(ssat_file, upNNF_file, lowNNF_file, prob_file);
+    } 
+    catch (const std::bad_alloc &e) {
+	    err(true, "Memory allocation error\n");
     }
     
     return return_code;
