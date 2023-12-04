@@ -36,7 +36,7 @@
 #include <unordered_map>
 #include <limits>
 #include <cmath>
-#include <ctype>
+#include <string.h>
 
 #include "report.h"
 #include "clausal.hh"
@@ -539,7 +539,7 @@ private:
                 return false;
             } 
             node->setLev(l0);
-            if(var2Q_[v0] == EXISTENTIAL)
+            if(header->var2Q_[v0] == EXISTENTIAL)
                 node->setProb( max(p0,p1) );
             else
                 node->setProb( p0+p1 );
