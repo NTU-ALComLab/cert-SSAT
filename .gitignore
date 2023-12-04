@@ -40,8 +40,11 @@ build/
 src/cadical
 src/cpog-check
 src/cpog-gen
+src/evalSSAT
 src/drat-trim
 tools/d4
+tools/SharpSSAT
 
 # test files
 test*/
+*test/
