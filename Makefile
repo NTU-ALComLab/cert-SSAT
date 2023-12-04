@@ -26,6 +26,9 @@ run:
 lrun:
 	cd benchmarks ; make lrun
 
+srun:
+	cd ssat_benchmarks ; make srun
+
 clean:
 	rm -f *~
 	cd benchmarks; make clean
