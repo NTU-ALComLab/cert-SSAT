@@ -36,6 +36,7 @@
 #include <unordered_map>
 #include <limits>
 #include <cmath>
+#include <ctype>
 
 #include "report.h"
 #include "clausal.hh"
@@ -220,12 +221,12 @@ private:
 
     // SSAT evaluation;
     double          prob;
-    size_t          visited;
+    size_t          visit;
     static size_t   globalVisited;
     int             lev;
 
 public:
-    TNode(pog_type_t ntype) : type(ntype), xvar(0), degree(0), children(NULL), prob(0), visited(0), lev(numeric_limits<int>::max()) {}
+    TNode(pog_type_t ntype) : type(ntype), xvar(0), degree(0), children(NULL), prob(0), visit(0), lev(numeric_limits<int>::max()) {}
     ~TNode();
 
     pog_type_t get_type()   { return type; }
@@ -248,9 +249,9 @@ public:
     int& operator[](int idx)    { return children[idx]; }
 
     // SSAT evaluation;
-    bool visited()                  { return visited == globalVisited; }
-    void setVisited()               { visited = globalVisited; }
-    static void resetGlobalVisited(){ Node::globalVisited++; }
+    bool visited()                  { return visit == globalVisited; }
+    void setVisited()               { visit = globalVisited; }
+    static void resetGlobalVisited(){ TNode::globalVisited++; }
     void setProb( double p )    { prob = p; }
     void setLev ( int l )       { lev = l; }
     double getProb()            { return prob; }
