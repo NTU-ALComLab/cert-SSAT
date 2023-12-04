@@ -150,7 +150,7 @@ public:
               qt = RANDOM;
               ssat_file >> prob;
               while ( (ssat_file >> var) && var!=0 ){
-                if ( !(var > 0 && var <= nVars ){
+                if ( !(var > 0 && var <= nVars) ) {
                     err(true, "Invalid SDIMACS variable: %d.\n", var);
                     return false;
                 }
@@ -162,7 +162,7 @@ public:
             else{
               qt = EXISTENTIAL;
               while( (ssat_file >> var) && var!=0  ){
-                if ( !(var > 0 && var <= nVars ){
+                if ( !(var > 0 && var <= nVars) ){
                     err(true, "Invalid SDIMACS variable: %d.\n", var);
                     return false;
                 }
@@ -203,7 +203,6 @@ public:
 };
 
 // Trace Nodes
-size_t TNode::globalVisited = 0;
 class TNode {
 private:
     // Basic representation
@@ -257,7 +256,7 @@ public:
     double getProb()            { return prob; }
     int getLev()                { return lev; }
 };
-
+size_t TNode::globalVisited = 0;
 
 class SSAT_Trace
 {
@@ -341,7 +340,7 @@ public:
             {
 	            nnf_edge_count++;
 	            bool ok = read_numbers(infile, largs, &rc);
-	            if (!oknumeric_limits<int>::max())
+	            if (!ok)
 		            err(true, "Line #%d.  Couldn't parse numbers\n", line_number);
 	            else if (largs.size() == 0 && rc == EOF)
 		            break;
@@ -443,7 +442,7 @@ private:
     // Index POG nodes by their extension variables
     TNode * get_node(int lit)   { 
         if( lit == abs(lit) && is_node(lit) )
-            return nodes[id-max_input_var-1]; 
+            return nodes[lit-max_input_var-1]; 
         return NULL;
     }
 
@@ -473,7 +472,7 @@ private:
         if(var <=0 && var > max_input_var)
             err(true, "Failed in get_lit_prob(%d).\n", lit);
         if(header->var2Q_[var] == EXISTENTIAL) return 1;
-        else return lit>0 ? var2Prob_[var] : (1-var2Prob_[var]);
+        else return lit>0 ? header->var2Prob_[var] : (1-header->var2Prob_[var]);
     }
     int get_lit_decision(int lit)
     {
@@ -527,12 +526,12 @@ private:
         }
         if(type == POG_OR)
         {
-            double p0  = get_lit_prob(node[0]);
-            double p1  = get_lit_prob(node[1]);
-            int l0  = get_lit_lev(node[0]);
-            int l1  = get_lit_lev(node[1]);
-            int v0  = get_lit_decision(node[0]);
-            int v1  = get_lit_decision(node[1]);
+            double p0  = get_lit_prob   ((*node)[0]);
+            double p1  = get_lit_prob   ((*node)[1]);
+            int l0  = get_lit_lev       ((*node)[0]);
+            int l1  = get_lit_lev       ((*node)[1]);
+            int v0  = get_lit_decision  ((*node)[0]);
+            int v1  = get_lit_decision  ((*node)[1]);
 
             if( v0 != v1 || header->var2Lev_[v0] != l0 || header->var2Lev_[v1] != l1){
                 err(true, "Failed when evaluating OR node %d.\n", node->get_xvar());
@@ -557,12 +556,12 @@ static int run( ifstream & ssat_file, FILE* upNNF_file, FILE* lowNNF_file, ifstr
     SSAT_Trace upTrace(ssat_header);
     if ( !upTrace.read(upNNF_file) )
         err(true, "Reading UPPER TRACE file failed\n");
-    upNNF_file.close();
+    fclose(upNNF_file);
 
     SSAT_Trace lowTrace(ssat_header);
     if ( !lowTrace.read(lowNNF_file) )
         err(true, "Reading LOWER TRACE file failed\n");
-    lowNNF_file.close();
+    fclose(lowNNF_file);
 
     double prob; 
     if( !(prob_file >> prob) )
