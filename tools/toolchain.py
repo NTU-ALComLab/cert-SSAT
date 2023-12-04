@@ -31,7 +31,7 @@ import datetime
 import time
 
 def usage(name):
-    print("Usage: %s [-h] [-v VERB] [-1] [-m] [-L] [-G] [-F] FILE.EXT ..." % name)
+    print("Usage: %s [-h] [-v VERB] [-1] [-m] [-L] [-G] [-F] [-S] FILE.EXT ..." % name)
     print("  -h       Print this message")
     print("  -v VERB  Set verbosity level.  Level 2 causes comments in .cpog file")
     print("  -1       Generate one-sided proof (don't validate assertions)")
@@ -39,8 +39,8 @@ def usage(name):
     print("  -L       Expand each node, rather than using lemmas")
     print("  -G       Prove each literal separately, rather than grouping into single proof")
     print("  -F       Run Lean checker to formally check")
-    print("  EXT      Can be any extension for wild-card matching (e.g., cnf, nnf)")
     print("  -S       SSAT certification")
+    print("  EXT      Can be any extension for wild-card matching (e.g., cnf, nnf, sdimacs)")
 
 # Defaults
 standardTimeLimit = 60
