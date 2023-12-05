@@ -9,7 +9,7 @@ lrun:
 	$(INTERP) $(TCHAIN) -F -v $(VLEVEL) *.cnf
 
 srun:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tlc/*.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) sand-castle/*.sdimacs
 
 .SUFFIXES: .cnf .log .lean_log
 
@@ -25,5 +25,6 @@ clean:
 superclean: clean
 	rm -f tlc/*.nnf tlc/*.cpog tlc/*log tlc/*.prob
 	rm -f gttt_3x3/*.nnf gttt_3x3/*.cpog gttt_3x3/*log gttt_3x3/*.prob
+	rm -f sand-castle/*.nnf sand-castle/*.cpog sand-castle/*log sand-castle/*.prob
 	rm -f *.nnf *.cpog *log
 

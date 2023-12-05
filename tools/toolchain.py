@@ -173,7 +173,7 @@ def runEvalSSAT(root, home, logFile, force):
     lowNNFName = home + "/" + root + "_low.nnf"
     probName  = home + "/" + root + ".prob"
     cmd = [evalProgram, ssatName, upNNFName, lowNNFName, probName]
-    ok = runProgram("EVAL", root, cmd, logFile)
+    #ok = runProgram("EVAL", root, cmd, logFile)
     return ok
 
 def runPartialGen(root, home, logFile, force):
