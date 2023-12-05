@@ -167,6 +167,15 @@ def runSharpSSAT(root, home, logFile, force):
         os.remove(lowNNFName)
     return ok
 
+def runEvalSSAT(root, home, logFile, force):
+    ssatName = home + "/" + root + ".sdimacs"
+    upNNFName = home + "/" + root + "_up.nnf"
+    lowNNFName = home + "/" + root + "_low.nnf"
+    probName  = home + "/" + root + ".prob"
+    cmd = [evalProgram, ssatName, upNNFName, lowNNFName, probName]
+    ok = runProgram("EVAL", root, cmd, logFile)
+    return ok
+
 def runPartialGen(root, home, logFile, force):
     cnfName = home + "/" + root + ".cnf"
     nnfName = home + "/" + root + ".nnf"
@@ -250,6 +259,7 @@ def runLeanCheck(root, home, logFile):
 
 
 def runSequence(root, home, force):
+    global oneSided
     result = ""
     prefix = "OVERALL"
     start = datetime.datetime.now()
@@ -280,12 +290,21 @@ def runSequence(root, home, force):
         ok = runD4(root, home, logFile, force)
     # SSAT
     if certSSAT:
-        oneSided = True #If ssat certification is enabled, start with proving lower trace first
+        # Perform SSAT evaluation and levelized checking on upper and lower traces
+        ok = ok and runEvalSSAT(root, home, logFile, force)
+        #If ssat certification is enabled, start with proving lower trace first
+        oneSided = True 
     ok = ok and runGen(root, home, logFile, force)
     if useLean and not certSSAT:
         ok = ok and runLeanCheck(root, home, logFile)
     else:
         ok = ok and runCheck(root, home, logFile)
+    # Prove upper trace for ssat certification 
+    if certSSAT:
+        oneSided = False 
+        ok = ok and runGen(root, home, logFile, force)
+        ok = ok and runCheck(root, home, logFile)
+
     delta = datetime.datetime.now() - start
     seconds = delta.seconds + 1e-6 * delta.microseconds
     result += "%s LOG: Elapsed time = %.3f seconds\n" % (prefix, seconds)
