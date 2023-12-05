@@ -291,7 +291,7 @@ def runSequence(root, home, force):
     # SSAT
     if certSSAT:
         # Perform SSAT evaluation and levelized checking on upper and lower traces
-        #ok = ok and runEvalSSAT(root, home, logFile, force)
+        ok = ok and runEvalSSAT(root, home, logFile, force)
         #If ssat certification is enabled, start with proving lower trace first
         oneSided = True 
     ok = ok and runGen(root, home, logFile, force)
