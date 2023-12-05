@@ -165,6 +165,7 @@ public:
                 vars.push_back(var);
                 var2Prob_[var] = prob;
                 var2Q_[var] = qt;
+                ++vars_added;
               }
             }
             else{
@@ -176,6 +177,7 @@ public:
                 }
                 vars.push_back(var);
                 var2Q_[var] = qt;
+                ++vars_added;
               }
             }
             if(prefix_.empty()) {
@@ -193,8 +195,7 @@ public:
                 last.second.insert(last.second.end(), vars.begin(), vars.end());
                 for(auto& v : vars) var2Lev_[v] = qlev;
               }
-            }
-            ++vars_added;
+            } 
             ssat_file.ignore(max_ignore, '\n');
         }
         if (vars_added != nVars){
