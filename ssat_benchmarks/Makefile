@@ -1,6 +1,6 @@
 INTERP = python3
 TCHAIN = ../tools/toolchain.py
-VLEVEL=1
+VLEVEL=3
 
 run:
 	$(INTERP) $(TCHAIN) -v $(VLEVEL) *.cnf
@@ -23,5 +23,6 @@ clean:
 	rm -f *~ d2p.log
 
 superclean: clean
+	rm -f tlc/*.nnf tlc/*.cpog tlc/*log tlc/*.prob
 	rm -f *.nnf *.cpog *log
 
