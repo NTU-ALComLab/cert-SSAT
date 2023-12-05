@@ -9,8 +9,8 @@ lrun:
 	$(INTERP) $(TCHAIN) -F -v $(VLEVEL) *.cnf
 
 srun:
-	cd tlc; $(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.cnf
-	cd ev-pr-4x4-log; $(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.cnf
+	cd tlc; $(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
+	cd ev-pr-4x4-log; $(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
 .SUFFIXES: .cnf .log .lean_log
 
