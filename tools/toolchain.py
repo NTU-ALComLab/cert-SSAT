@@ -274,9 +274,15 @@ def runSequence(root, home, force):
         return
     ok = False
     done = False
-    ok = runD4(root, home, logFile, force)
+    if certSSAT:
+        ok = runSharpSSAT(root, home, logFile, force)
+    else:
+        ok = runD4(root, home, logFile, force)
+    # SSAT
+    if certSSAT:
+        oneSided = True #If ssat certification is enabled, start with proving lower trace first
     ok = ok and runGen(root, home, logFile, force)
-    if useLean:
+    if useLean and not certSSAT:
         ok = ok and runLeanCheck(root, home, logFile)
     else:
         ok = ok and runCheck(root, home, logFile)
