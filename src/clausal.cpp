@@ -364,10 +364,8 @@ Cnf::Cnf(FILE *infile) {
     while ((c = getc(infile)) != EOF) {
 	if (isspace(c)) 
 	    continue;
-	if (c == 'c' || c == 'd' || c == 'e' || c == 'r')   {// ignore sdmiacs existential/radomized variables
+	if (c == 'c' || c == 'd' )   
 	    c = skip_line(infile);
-        continue;
-    }
 	if (c == 's') {
 	    // Failed proof
 	    proof_failed = true;
@@ -415,6 +413,24 @@ Cnf::Cnf(FILE *infile) {
 	read_failed = true;
 	return;
     }
+
+    // skip sdimacs 'r' and 'e'
+    while ((c = getc(infile)) != EOF) {
+	    if (isspace(c)) 
+	        continue;
+        else if (c == 'e' || c == 'r' )   
+	        c = skip_line(infile);
+        else if (isdigit(c) || c == '-') {
+	        ungetc(c, infile);
+	        break;
+        }
+        else {
+	        err(false, "Encounter invalid character\n");
+	        read_failed = true;
+	        return;
+	    }
+    }
+
     while (1) {
 	bool eof = false;
 	Clause *clp = new Clause(infile, !got_header, &eof);
