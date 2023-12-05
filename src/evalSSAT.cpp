@@ -273,7 +273,7 @@ class SSAT_Trace
 public:
     SSAT_Header * header;
 
-    SSAT_Trace( SSAT_Header * pHeader ) : header(pHeader) { 
+    SSAT_Trace( SSAT_Header * pHeader ) : header(pHeader), root_literal(0) { 
         max_input_var = header->nVars; 
         nTraceVar     = header->nVars;
     }
