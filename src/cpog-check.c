@@ -495,6 +495,15 @@ bool skip_space() {
     return true;
 }
 
+int skip_line() {
+    int c;
+    while ((c = getc(token_file)) != EOF) {
+	if (c == '\n')
+	    return c;
+    }
+    return c;
+}
+
 token_t token_next() {
     int sign = 1;
     int mag = 0;
@@ -1057,6 +1066,24 @@ void cnf_read(char *fname) {
 	} else
 	    err_printf(__cfunc__, "Unexpected token %s ('%s') while reading CNF header\n", token_name[token], token_last);
     }
+
+    // skip sdimacs 'r' and 'e'
+    int c;
+    while ((c = getc(token_file)) != EOF) {
+	    if (isspace(c)) 
+	        continue;
+        else if (c == 'e' || c == 'r' )   
+	        c = skip_line(token_file);
+        else if (isdigit(c) || c == '-') {
+	        ungetc(c, token_file);
+	        break;
+        }
+        else {
+            err_printf(__cfunc__, "Unexpected token.");
+	        return;
+	    }
+    }
+
     /* Read clauses */
     int found_clause_count = 0;
     bool within_clause = false;
