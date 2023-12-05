@@ -516,15 +516,13 @@ private:
             return false;
         }
         
-        bool ok = true;
 	    for (int i = 0; i < node->get_degree(); ++i)
         {
             int clit = (*node)[i];
             if( is_node(clit) )
             {
                 TNode * cnode = get_node(clit);
-                ok = ok & cnode!=NULL & evalSSATRecur(cnode);
-                if(!ok){
+                if( cnode == NULL || !evalSSATRecur(cnode) ){
                     err(true, "Failed when evaluating children of node %d.\n", node->get_xvar());
                     return false;
                 }
@@ -553,7 +551,7 @@ private:
             else
                 node->setProb( p0+p1 );
         }
-        return ok;
+        return true;
     }
 };
 
