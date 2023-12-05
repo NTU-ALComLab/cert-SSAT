@@ -534,12 +534,13 @@ private:
         }
         if(type == POG_OR)
         {
-            double p0  = get_lit_prob   ((*node)[0]);
-            double p1  = get_lit_prob   ((*node)[1]);
-            int l0  = get_lit_lev       ((*node)[0]);
-            int l1  = get_lit_lev       ((*node)[1]);
-            int v0  = get_lit_decision  ((*node)[0]);
-            int v1  = get_lit_decision  ((*node)[1]);
+            int deg = node->get_degree();
+            double p0  =                    get_lit_prob    ((*node)[0]);
+            double p1  = (deg == 1) ? 0 :   get_lit_prob    ((*node)[1]);
+            int l0     =                    get_lit_lev     ((*node)[0]);
+            int l1     = (deg == 1) ? l0 :  get_lit_lev     ((*node)[1]);
+            int v0     =                    get_lit_decision((*node)[0]);
+            int v1     = (deg == 1) ? v0 :  get_lit_decision((*node)[1]);
 
             if( v0 != v1 || header->var2Lev_[v0] != l0 || header->var2Lev_[v1] != l1){
                 err(true, "Failed when evaluating OR node %d.\n", node->get_xvar());
