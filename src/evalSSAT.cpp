@@ -542,7 +542,8 @@ private:
             int v0     =                    get_lit_decision((*node)[0]);
             int v1     = (deg == 1) ? v0 :  get_lit_decision((*node)[1]);
 
-            if( v0 != v1 || header->var2Lev_[v0] != l0 || header->var2Lev_[v1] != l1){
+            // allow root to perform unit propagation 
+            if( deg != 1 && (v0 != v1 || header->var2Lev_[v0] != l0 || header->var2Lev_[v1] != l1) ){
                 err(true, "Failed when evaluating OR node %d.\n", node->get_xvar());
                 return false;
             } 
