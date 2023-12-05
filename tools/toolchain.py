@@ -60,6 +60,9 @@ d4Program = d4Home + "/d4"
 ssatHome = "../tools"
 ssatProgram = ssatHome + "/SharpSSAT"
 
+evalHome = "../src"
+evalProgram = evalHome + "/evalSSAT"
+
 genHome = "../src"
 genProgram = genHome + "/cpog-gen"
 
@@ -69,7 +72,7 @@ checkProgram = checkHome + "/cpog-check"
 leanHome =  "../VerifiedChecker"
 leanCheckProgram = leanHome + "/build/bin/checker"
 
-timeLimits = { "D4" : 4000, "GEN" : 10000, "FCHECK" : 1000, "LCHECK" : 4000 }
+timeLimits = { "D4" : 4000, "GEN" : 10000, "FCHECK" : 1000, "LCHECK" : 4000, "SSAT" : 4000, "EVAL" : 4000 }
 
 clauseLimit = (1 << 31) - 1
 
@@ -157,7 +160,7 @@ def runSharpSSAT(root, home, logFile, force):
     if not force and os.path.exists(lowNNFName):
         return True
     cmd = [ssatProgram, ssatName, "-l", "-p", "-s"]
-    ok = runProgram("SharpSSAT", root, cmd, logFile)
+    ok = runProgram("SSAT", root, cmd, logFile)
     if not ok and os.path.exists(upNNFName):
         os.remove(upNNFName)
     if not ok and os.path.exists(lowNNFName):
@@ -177,9 +180,21 @@ def runPartialGen(root, home, logFile, force):
 
 def runGen(root, home, logFile, force):
     extraLogName = "d2p.log"
-    cnfName = home + "/" + root + ".cnf"
-    nnfName = home + "/" + root + ".nnf"
-    cpogName = home + "/" + root + ".cpog"
+    cnfName  = home + "/" + root
+    nnfName  = home + "/" + root
+    cpogName = home + "/" + root
+    if not certSSAT:    # model counting certification
+        cnfName  = cnfName  + ".cnf"   
+        nnfName  = nnfName  + ".nnf"
+        cpogName = cpogName + ".cpog"
+    elif not oneSided:  # verify SSAT upper trace
+        cnfName  = cnfName  + ".sdimacs"   
+        nnfName  = nnfName  + "_up.nnf"
+        cpogName = cpogName + "_up.cpog"
+    else:               # verify SSAT lower trace
+        cnfName  = cnfName  + ".sdimacs"   
+        nnfName  = nnfName  + "_low.nnf"
+        cpogName = cpogName + "_low.cpog"
     if not force and os.path.exists(cpogName):
         return True
     cmd = [genProgram]
@@ -203,8 +218,17 @@ def runGen(root, home, logFile, force):
     return ok
 
 def runCheck(root, home, logFile):
-    cnfName = home + "/" + root + ".cnf"
-    cpogName = home + "/" + root + ".cpog"
+    cnfName  = home + "/" + root 
+    cpogName = home + "/" + root 
+    if not certSSAT:    # model counting certification
+        cnfName  = cnfName  + ".cnf"   
+        cpogName = cpogName + ".cpog"
+    elif not oneSided:  # verify SSAT upper trace
+        cnfName  = cnfName  + ".sdimacs"   
+        cpogName = cpogName + "_up.cpog"
+    else:               # verify SSAT lower trace
+        cnfName  = cnfName  + ".sdimacs"   
+        cpogName = cpogName + "_low.cpog"
     cmd = [checkProgram]
     if verbLevel != 1:
         cmd += ['-v', str(verbLevel)]
