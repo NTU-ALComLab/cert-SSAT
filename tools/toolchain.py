@@ -31,7 +31,7 @@ import datetime
 import time
 
 def usage(name):
-    print("Usage: %s [-h] [-v VERB] [-1] [-m] [-L] [-G] [-F] [-S] FILE.EXT ..." % name)
+    print("Usage: %s [-h] [-v VERB] [-1] [-m] [-L] [-G] [-F] FILE.EXT ..." % name)
     print("  -h       Print this message")
     print("  -v VERB  Set verbosity level.  Level 2 causes comments in .cpog file")
     print("  -1       Generate one-sided proof (don't validate assertions)")
@@ -39,8 +39,8 @@ def usage(name):
     print("  -L       Expand each node, rather than using lemmas")
     print("  -G       Prove each literal separately, rather than grouping into single proof")
     print("  -F       Run Lean checker to formally check")
+    print("  EXT      Can be any extension for wild-card matching (e.g., cnf, nnf)")
     print("  -S       SSAT certification")
-    print("  EXT      Can be any extension for wild-card matching (e.g., cnf, nnf, sdimacs)")
 
 # Defaults
 standardTimeLimit = 60
@@ -59,9 +59,6 @@ d4Program = d4Home + "/d4"
 ssatHome = "../tools"
 ssatProgram = ssatHome + "/SharpSSAT"
 
-evalHome = "../src"
-evalProgram = evalHome + "/evalSSAT"
-
 genHome = "../src"
 genProgram = genHome + "/cpog-gen"
 
@@ -71,7 +68,7 @@ checkProgram = checkHome + "/cpog-check"
 leanHome =  "../VerifiedChecker"
 leanCheckProgram = leanHome + "/build/bin/checker"
 
-timeLimits = { "D4" : 4000, "GEN" : 10000, "FCHECK" : 1000, "LCHECK" : 4000, "SSAT" : 4000, "EVAL" : 4000 }
+timeLimits = { "D4" : 4000, "GEN" : 10000, "FCHECK" : 1000, "LCHECK" : 4000 }
 
 clauseLimit = (1 << 31) - 1
 
@@ -159,20 +156,11 @@ def runSharpSSAT(root, home, logFile, force):
     if not force and os.path.exists(lowNNFName):
         return True
     cmd = [ssatProgram, ssatName, "-l", "-p", "-s"]
-    ok = runProgram("SSAT", root, cmd, logFile)
+    ok = runProgram("SharpSSAT", root, cmd, logFile)
     if not ok and os.path.exists(upNNFName):
         os.remove(upNNFName)
     if not ok and os.path.exists(lowNNFName):
         os.remove(lowNNFName)
-    return ok
-
-def runEvalSSAT(root, home, logFile, force):
-    ssatName = home + "/" + root + ".sdimacs"
-    upNNFName = home + "/" + root + "_up.nnf"
-    lowNNFName = home + "/" + root + "_low.nnf"
-    probName  = home + "/" + root + ".prob"
-    cmd = [evalProgram, ssatName, upNNFName, lowNNFName, probName]
-    ok = runProgram("EVAL", root, cmd, logFile)
     return ok
 
 def runPartialGen(root, home, logFile, force):
@@ -188,21 +176,9 @@ def runPartialGen(root, home, logFile, force):
 
 def runGen(root, home, logFile, force):
     extraLogName = "d2p.log"
-    cnfName  = home + "/" + root
-    nnfName  = home + "/" + root
-    cpogName = home + "/" + root
-    if not certSSAT:    # model counting certification
-        cnfName  = cnfName  + ".cnf"   
-        nnfName  = nnfName  + ".nnf"
-        cpogName = cpogName + ".cpog"
-    elif not oneSided:  # verify SSAT upper trace
-        cnfName  = cnfName  + ".sdimacs"   
-        nnfName  = nnfName  + "_up.nnf"
-        cpogName = cpogName + "_up.cpog"
-    else:               # verify SSAT lower trace
-        cnfName  = cnfName  + ".sdimacs"   
-        nnfName  = nnfName  + "_low.nnf"
-        cpogName = cpogName + "_low.cpog"
+    cnfName = home + "/" + root + ".cnf"
+    nnfName = home + "/" + root + ".nnf"
+    cpogName = home + "/" + root + ".cpog"
     if not force and os.path.exists(cpogName):
         return True
     cmd = [genProgram]
@@ -226,17 +202,8 @@ def runGen(root, home, logFile, force):
     return ok
 
 def runCheck(root, home, logFile):
-    cnfName  = home + "/" + root 
-    cpogName = home + "/" + root 
-    if not certSSAT:    # model counting certification
-        cnfName  = cnfName  + ".cnf"   
-        cpogName = cpogName + ".cpog"
-    elif not oneSided:  # verify SSAT upper trace
-        cnfName  = cnfName  + ".sdimacs"   
-        cpogName = cpogName + "_up.cpog"
-    else:               # verify SSAT lower trace
-        cnfName  = cnfName  + ".sdimacs"   
-        cpogName = cpogName + "_low.cpog"
+    cnfName = home + "/" + root + ".cnf"
+    cpogName = home + "/" + root + ".cpog"
     cmd = [checkProgram]
     if verbLevel != 1:
         cmd += ['-v', str(verbLevel)]
@@ -255,6 +222,7 @@ def runLeanCheck(root, home, logFile):
     cmd += ["-c", cnfName, cpogName]
     ok =  runProgram("LCHECK", root, cmd, logFile)
     return ok
+
 
 def runSequence(root, home, force):
     result = ""
@@ -281,30 +249,12 @@ def runSequence(root, home, force):
         return
     ok = False
     done = False
-    if certSSAT:
-        ok = runSharpSSAT(root, home, logFile, force)
-    else:
-        ok = runD4(root, home, logFile, force)
-
-    # SSAT
-    if certSSAT:
-        # Perform SSAT evaluation and levelized checking on upper and lower traces
-        ok = ok and runEvalSSAT(root, home, logFile, force)
-        # If ssat certification is enabled, start with proving lower trace first
-        oneSided = True
-
+    ok = runD4(root, home, logFile, force)
     ok = ok and runGen(root, home, logFile, force)
-    if useLean and not certSSAT:
+    if useLean:
         ok = ok and runLeanCheck(root, home, logFile)
     else:
         ok = ok and runCheck(root, home, logFile)
-
-    # Prove upper trace for ssat certification 
-    if certSSAT:
-        oneSided = False 
-        ok = ok and runGen(root, home, logFile, force)
-        ok = ok and runCheck(root, home, logFile)
-
     delta = datetime.datetime.now() - start
     seconds = delta.seconds + 1e-6 * delta.microseconds
     result += "%s LOG: Elapsed time = %.3f seconds\n" % (prefix, seconds)
@@ -343,6 +293,7 @@ def run(name, args):
             verbLevel = int(val)
         elif opt == '-1':
             oneSided = True
+
         elif opt == '-m':
             monolithic = True
         elif opt == '-L':
