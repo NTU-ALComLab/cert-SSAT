@@ -195,6 +195,7 @@ public:
               }
             }
             ++vars_added;
+            ssat_file.ignore(max_ignore, '\n');
         }
         if (vars_added != nVars){
             err(true, "Number of read variables didn't match SDIMACS header\n");
