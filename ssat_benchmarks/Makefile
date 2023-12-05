@@ -1,6 +1,6 @@
 INTERP = python3
 TCHAIN = ../tools/toolchain.py
-VLEVEL=3
+VLEVEL=5
 
 run:
 	$(INTERP) $(TCHAIN) -v $(VLEVEL) *.cnf
@@ -24,5 +24,6 @@ clean:
 
 superclean: clean
 	rm -f tlc/*.nnf tlc/*.cpog tlc/*log tlc/*.prob
+	rm -f gttt_3x3/*.nnf gttt_3x3/*.cpog gttt_3x3/*log gttt_3x3/*.prob
 	rm -f *.nnf *.cpog *log
 
