@@ -112,6 +112,13 @@ static bool read_numbers(FILE *infile, std::vector<int> &vec, int *rc) {
     return false;
 }
 
+// file parsing utility
+float parseFloat(ifstream& in){
+  string buf;
+  in >> buf;
+  return stof(buf);
+}
+
 class SSAT_Header
 {
 public:
@@ -149,7 +156,7 @@ public:
             QType qt;
             if(c=='r'){
               qt = RANDOM;
-              ssat_file >> prob;
+              prob = parseFloat(ssat_file);
               while ( (ssat_file >> var) && var!=0 ){
                 if ( !(var > 0 && var <= nVars) ) {
                     err(true, "Invalid SDIMACS variable: %d.\n", var);
