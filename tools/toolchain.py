@@ -318,7 +318,6 @@ def run(name, args):
             verbLevel = int(val)
         elif opt == '-1':
             oneSided = True
-
         elif opt == '-m':
             monolithic = True
         elif opt == '-L':
