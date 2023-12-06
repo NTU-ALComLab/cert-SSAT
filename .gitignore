@@ -44,6 +44,7 @@ src/evalSSAT
 src/drat-trim
 tools/d4
 tools/SharpSSAT
+tools/cadical
 
 # test files
 test*/
