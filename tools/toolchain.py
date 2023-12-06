@@ -57,10 +57,10 @@ certSSAT = False
 d4Home = "../tools"         # Yun-Rong Luo modified
 d4Program = d4Home + "/d4"
 
-ssatHome = "../tools"
+ssatHome = "../../tools"
 ssatProgram = ssatHome + "/SharpSSAT"
 
-evalHome = "../src"
+evalHome = "../../src"
 evalProgram = evalHome + "/evalSSAT"
 
 genHome = "../src"
@@ -206,7 +206,10 @@ def runGen(root, home, logFile, force):
         cpogName = cpogName + "_low.cpog"
     if not force and os.path.exists(cpogName):
         return True
-    cmd = [genProgram]
+    progPrefix = ""
+    if certSSAT:
+        progPrefix = "../"
+    cmd = [progPrefix + genProgram]
     if verbLevel != 1:
         cmd += ['-v', str(verbLevel)]
     if oneSided:
@@ -238,7 +241,10 @@ def runCheck(root, home, logFile):
     else:               # verify SSAT lower trace
         cnfName  = cnfName  + ".sdimacs"   
         cpogName = cpogName + "_low.cpog"
-    cmd = [checkProgram]
+    progPrefix = ""
+    if certSSAT:
+        progPrefix = "../"
+    cmd = [progPrefix + checkProgram]
     if verbLevel != 1:
         cmd += ['-v', str(verbLevel)]
     if oneSided:
