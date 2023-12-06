@@ -1,5 +1,5 @@
 INTERP = python3
-TCHAIN = ../tools/toolchain.py
+TCHAIN = ../../tools/toolchain.py
 VLEVEL=5
 
 run:
@@ -9,8 +9,7 @@ lrun:
 	$(INTERP) $(TCHAIN) -F -v $(VLEVEL) *.cnf
 
 srun:
-	cd sand-castle_easy; make srun
-	cd Counter_easy; make srun
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
 .SUFFIXES: .cnf .log .lean_log
 
@@ -24,7 +23,5 @@ clean:
 	rm -f *~ d2p.log
 
 superclean: clean
-	cd sand-castle_easy; make superclean
-	cd Counter_easy; make superclean
-	rm -f *.nnf *.cpog *log *cnf
+	rm -f *.nnf *.cpog *log *.cnf *.prob
 
