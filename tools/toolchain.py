@@ -72,7 +72,7 @@ checkProgram = checkHome + "/cpog-check"
 leanHome =  "../VerifiedChecker"
 leanCheckProgram = leanHome + "/build/bin/checker"
 
-timeLimits = { "D4" : 4000, "GEN" : 360, "FCHECK" : 360 , "LCHECK" : 4000, "SSAT" : 60, "EVAL" : 60 }
+timeLimits = { "D4" : 4000, "GEN" : 60, "FCHECK" : 60 , "LCHECK" : 4000, "SSAT" : 30, "EVAL" : 30 }
 
 clauseLimit = (1 << 31) - 1
 
