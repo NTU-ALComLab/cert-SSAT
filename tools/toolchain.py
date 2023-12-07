@@ -180,7 +180,7 @@ def lowBound_isOne(root, home, logFile):
     probName  = home + "/" + root + ".prob"
     probVal = []
     with open(probName) as probFile:
-        for line in probFiles.readlines():
+        for line in probFile.readlines():
             probVal.append(float(line))
     if probVal[0] == 1.0:
         logFile.write("LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND\n")
