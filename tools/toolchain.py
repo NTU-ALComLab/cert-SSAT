@@ -176,6 +176,17 @@ def runEvalSSAT(root, home, logFile, force):
     ok = runProgram("EVAL", root, cmd, logFile)
     return ok
 
+def lowBound_isOne(root, home, logFile):
+    probName  = home + "/" + root + ".prob"
+    probVal = []
+    with open(probName) as probFile:
+        for line in probFiles.readlines():
+            probVal.append(float(line))
+    if probVal[0] == 1.0:
+        logFile.write("LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND\n")
+        return True 
+    return False
+
 def runPartialGen(root, home, logFile, force):
     cnfName = home + "/" + root + ".cnf"
     nnfName = home + "/" + root + ".nnf"
@@ -306,7 +317,7 @@ def runSequence(root, home, force):
     else:
         ok = ok and runCheck(root, home, logFile)
     # Prove upper trace for ssat certification 
-    if certSSAT:
+    if certSSAT and not lowBound_isOne(root, home, logFile):
         oneSided = False 
         ok = ok and runGen(root, home, logFile, force)
         ok = ok and runCheck(root, home, logFile)
