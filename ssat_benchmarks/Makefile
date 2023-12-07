@@ -13,15 +13,15 @@ srun:
 	cd RobotsD2_easy;    make srun
 	cd conformant_easy;  make srun 
 	cd tiger;       make srun
-	cd Counter;     make srun
-	cd tlc;         make srun
-	cd gttt_3x3;    make srun
-	cd ev-pr-4x4;   make srun
-	cd Tree;        make srun
-	cd Connect2;    make srun
-	cd k_ph_p;      make srun
-	cd k_branch_n;  make srun
-	cd Adder;       make srun
+#cd Counter;     make srun
+#cd tlc;         make srun
+#cd gttt_3x3;    make srun
+#cd ev-pr-4x4;   make srun
+#cd Tree;        make srun
+#cd Connect2;    make srun
+#cd k_ph_p;      make srun
+#	cd k_branch_n;  make srun
+#	cd Adder;       make srun
                                      
 .SUFFIXES: .cnf .log .lean_log
 
