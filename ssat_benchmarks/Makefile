@@ -9,7 +9,7 @@ lrun:
 	$(INTERP) $(TCHAIN) -F -v $(VLEVEL) *.cnf
 
 srun:
-	cd sand-castle; make srun
+	cd sand-castle_easy; make srun
 	cd RobotsD2_easy;    make srun
 	cd conformant_easy;  make srun 
 	cd tiger;       make srun
@@ -45,6 +45,7 @@ superclean: clean
 	cd ToiletA;     make superclean 
 	cd ev-pr-4x4;   make superclean 
 	cd sand-castle; make superclean 
+	cd sand-castle_easy; make superclean 
 	cd tlc;         make superclean 
 	cd Counter;     make superclean 
 	cd PEC;         make superclean 
