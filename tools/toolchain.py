@@ -159,12 +159,17 @@ def runSharpSSAT(root, home, logFile, force):
     lowNNFName = home + "/" + root + "_low.nnf"
     if not force and os.path.exists(lowNNFName):
         return True
+    probName = home + "/" + root + ".prob"
+    if not force and os.path.exists(probName):
+        return True
     cmd = [ssatProgram, "-l", "-p", "-s", ssatName]
     ok = runProgram("SSAT", root, cmd, logFile)
     if not ok and os.path.exists(upNNFName):
         os.remove(upNNFName)
     if not ok and os.path.exists(lowNNFName):
         os.remove(lowNNFName)
+    if not ok and os.path.exists(probName):
+        os.remove(probName)
     return ok
 
 def runEvalSSAT(root, home, logFile, force):
