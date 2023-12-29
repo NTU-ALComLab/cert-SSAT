@@ -113,7 +113,7 @@ static bool read_numbers(FILE *infile, std::vector<int> &vec, int *rc) {
 }
 
 // file parsing utility
-float parseFloat(ifstream& in){
+static float parseFloat(ifstream& in){
   string buf;
   in >> buf;
   return stof(buf);
@@ -152,55 +152,55 @@ public:
 
         while ((ssat_file >> c) && vars_added < nVars)
         {
-            vars.clear();
-            QType qt;
-            if(c=='r'){
-              qt = RANDOM;
-              prob = parseFloat(ssat_file);
-              while ( (ssat_file >> var) && var!=0 ){
-                if ( !(var > 0 && var <= nVars) ) {
-                    err(true, "Invalid SDIMACS variable: %d.\n", var);
-                    return false;
+            if( c == 'r' || c == 'e' )
+            {
+                vars.clear();
+                QType qt;
+                if(c=='r'){
+                  qt = RANDOM;
+                  prob = parseFloat(ssat_file);
+                  while ( (ssat_file >> var) && var!=0 ){
+                    if ( !(var > 0 && var <= nVars) ) {
+                        err(true, "Invalid SDIMACS variable: %d.\n", var);
+                        return false;
+                    }
+                    vars.push_back(var);
+                    var2Prob_[var] = prob;
+                    var2Q_[var] = qt;
+                    ++vars_added;
+                  }
                 }
-                vars.push_back(var);
-                var2Prob_[var] = prob;
-                var2Q_[var] = qt;
-                ++vars_added;
-              }
-            }
-            else{
-              qt = EXISTENTIAL;
-              while( (ssat_file >> var) && var!=0  ){
-                if ( !(var > 0 && var <= nVars) ){
-                    err(true, "Invalid SDIMACS variable: %d.\n", var);
-                    return false;
+                else{
+                  qt = EXISTENTIAL;
+                  while( (ssat_file >> var) && var!=0  ){
+                    if ( !(var > 0 && var <= nVars) ){
+                        err(true, "Invalid SDIMACS variable: %d.\n", var);
+                        return false;
+                    }
+                    vars.push_back(var);
+                    var2Q_[var] = qt;
+                    ++vars_added;
+                  }
                 }
-                vars.push_back(var);
-                var2Q_[var] = qt;
-                ++vars_added;
-              }
+                if(prefix_.empty()) {
+                  prefix_.push_back(QLevel(qt, vars));
+                  for(auto& v : vars) var2Lev_[v] = qlev;
+                }
+                else{
+                  QLevel& last = prefix_.back();
+                  if(last.first!=qt){
+                    prefix_.push_back( QLevel(qt, vars) );
+                    ++qlev;
+                    for(auto& v : vars) var2Lev_[v] = qlev;
+                  }
+                  else{
+                    last.second.insert(last.second.end(), vars.begin(), vars.end());
+                    for(auto& v : vars) var2Lev_[v] = qlev;
+                  }
+                } 
             }
-            if(prefix_.empty()) {
-              prefix_.push_back(QLevel(qt, vars));
-              for(auto& v : vars) var2Lev_[v] = qlev;
-            }
-            else{
-              QLevel& last = prefix_.back();
-              if(last.first!=qt){
-                prefix_.push_back( QLevel(qt, vars) );
-                ++qlev;
-                for(auto& v : vars) var2Lev_[v] = qlev;
-              }
-              else{
-                last.second.insert(last.second.end(), vars.begin(), vars.end());
-                for(auto& v : vars) var2Lev_[v] = qlev;
-              }
-            } 
-            ssat_file.ignore(max_ignore, '\n');
-        }
-        if (vars_added != nVars){
-            err(true, "Number of read variables didn't match SDIMACS header\n");
-            return false;
+            else
+                ssat_file.ignore(max_ignore, '\n');
         }
         return true;
     }
