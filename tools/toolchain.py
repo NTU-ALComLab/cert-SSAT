@@ -286,6 +286,9 @@ def runSequence(root, home, force):
     prefix = "OVERALL"
     start = datetime.datetime.now()
     extension = "log"
+    if certSSAT:
+        extension = "ssat_" + extension
+        oneSided = False
     if oneSided:
         extension = "onesided_" + extension
     if monolithic:
@@ -296,8 +299,6 @@ def runSequence(root, home, force):
         extension = "split_" + extension
     if useLean:
         extension = "lean_" + extension
-    if certSSAT:
-        extension = "ssat_" + extension
     logName = root + "." + extension
     try:
         logFile = open(logName, 'w')
