@@ -996,7 +996,7 @@ bool Pog::get_deletion_counterexample(int cid, std::vector<bool> &implies_clause
 		}
 		if (!found) {
 		    // Failure
-		    err(false, "Couldn't generate counterexample at Pog node N%s. Couldn't satisfy either child\n",
+		    err(false, "Couldn't generate counterexample at Pog node %s. Couldn't satisfy either child\n",
 			np->name());
 		    return false;
 		}
