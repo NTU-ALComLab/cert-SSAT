@@ -527,7 +527,12 @@ private:
                     return false;
                 }
             }
-            if (type == POG_AND){
+        }
+        if (type == POG_AND)
+        {
+            for (int i = 0; i < node->get_degree(); ++i)
+            {
+                int clit = (*node)[i];
                 node->setLev( min( node->getLev(), get_lit_lev(clit) ) );
                 node->setProb( node->getProb() * get_lit_prob(clit) );
             }
@@ -544,7 +549,7 @@ private:
 
             // allow root to perform unit propagation 
             if( deg != 1 && (v0 != v1 || header->var2Lev_[v0] != l0 || header->var2Lev_[v1] != l1) ){
-                err(true, "Failed when evaluating OR node %d.\n", node->get_xvar());
+                err(true, "Failed when evaluating OR node %d, with v0 %d, v1 %d, l0 %d, l1 %d, lev(v0) %d, lev(v1) %d.\n", node->get_xvar(), v0, v1, l0, l1, header->var2Lev_[v0], header->var2Lev_[v1]);
                 return false;
             } 
             node->setLev(l0);
