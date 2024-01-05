@@ -1319,8 +1319,8 @@ void cpog_add_product(int cid) {
 	ilist_free(save);
     }
     ilist_free(local_dependency_list);
-    if (ilist_length(node->children) < 2) 
-	err_printf(__cfunc__, "Sum node %d has %d childen.  Must have >= 2\n", nid, ilist_length(node->children));
+    //if (ilist_length(node->children) < 2) 	// laurenl: removed
+	//err_printf(__cfunc__, "Sum node %d has %d childen.  Must have >= 2\n", nid, ilist_length(node->children));
 
     /* Done */
     token = token_next();
