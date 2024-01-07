@@ -1390,8 +1390,10 @@ void cpog_add_sum(int cid) {
     /* Prove mutual exclusion */
     lset_clear();
     lset_add_lit(node->children[0]);
-    lset_add_lit(node->children[1]);
-    rup_run(cid, true);
+    if ( lset_add_lit(node->children[1]) )	// laurenl fixed: allow the case s x y -y 0 no hints
+    	rup_run(cid, true);
+	else
+		rup_skip(cid);
 
     token_confirm_eol();
     /* Add sum clause */
