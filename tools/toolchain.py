@@ -315,7 +315,7 @@ def runSequence(root, home, force):
     else:
         ok = ok and runCheck(root, home, logFile)
     # Prove upper trace for ssat certification 
-    if certSSAT and not lowBound_isOne(root, home, logFile):
+    if certSSAT and ok and not lowBound_isOne(root, home, logFile):
         oneSided = False 
         ok = ok and runGen(root, home, logFile, force)
         ok = ok and runCheck(root, home, logFile)
