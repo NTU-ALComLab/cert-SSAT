@@ -72,7 +72,7 @@ checkProgram = checkHome + "/cpog-check"
 leanHome =  "../VerifiedChecker"
 leanCheckProgram = leanHome + "/build/bin/checker"
 
-timeLimits = { "D4" : 4000, "GEN" : 600, "FCHECK" : 600 , "LCHECK" : 4000, "SSAT" : 360, "EVAL" : 360 }
+timeLimits = { "D4" : 4000, "GEN" : 2500, "FCHECK" : 2500 , "LCHECK" : 4000, "SSAT" : 1000, "EVAL" : 1000 }
 
 clauseLimit = (1 << 31) - 1
 
@@ -164,12 +164,6 @@ def runSharpSSAT(root, home, logFile, force):
         return True
     cmd = [ssatProgram, "-l", "-p", "-s", ssatName]
     ok = runProgram("SSAT", root, cmd, logFile)
-    if not ok and os.path.exists(upNNFName):
-        os.remove(upNNFName)
-    if not ok and os.path.exists(lowNNFName):
-        os.remove(lowNNFName)
-    if not ok and os.path.exists(probName):
-        os.remove(probName)
     return ok
 
 def runEvalSSAT(root, home, logFile, force):
@@ -241,8 +235,6 @@ def runGen(root, home, logFile, force):
     cmd += ["-C", str(clauseLimit), "-L", extraLogName, cnfName, nnfName, cpogName]
     ok = runProgram("GEN", root, cmd, logFile, extraLogName = extraLogName)
     checkFile("GEN", cpogName, logFile)
-    if not ok and os.path.exists(cpogName):
-        os.remove(cpogName)
     return ok
 
 def runCheck(root, home, logFile):
