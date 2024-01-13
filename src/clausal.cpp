@@ -692,7 +692,7 @@ bool Cnf_reduced::run_hinting_solver() {
     file_names.push_back(lratname);
 
     double start = tod();
-    snprintf(cmd, 350, "../../tools/cadical --no-binary --unsat -q %s - | drat-trim %s -L %s > /dev/null", cnfname, cnfname, lratname);
+    snprintf(cmd, 350, "../../tools/cadical --no-binary --unsat -q %s - | ../../tools/drat-trim %s -L %s > /dev/null", cnfname, cnfname, lratname);
     //snprintf(cmd, 350, "cadical --unsat -q %s - | drat-trim %s -L %s > /dev/null", cnfname, cnfname, lratname);
     int rc = system(cmd);
     incr_timer(TIME_SAT, tod()-start);
@@ -2220,7 +2220,7 @@ int Cnf_reasoner::monolithic_validate_root(int root_literal) {
     fclose(cnf_out);
     
     double start = tod();
-    snprintf(cmd, 350, "../../tools/cadical --no-binary --unsat -q %s - | drat-trim %s -L %s > /dev/null", cnf_name, cnf_name, lrat_name);
+    snprintf(cmd, 350, "../../tools/cadical --no-binary --unsat -q %s - | ../../tools/drat-trim %s -L %s > /dev/null", cnf_name, cnf_name, lrat_name);
     int rc = system(cmd);
     incr_timer(TIME_SAT, tod()-start);
     if (rc != 0) {
