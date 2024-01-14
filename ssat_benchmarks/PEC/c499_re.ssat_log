@@ -1,0 +1,180 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./c499_re.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./c499_re.sdimacs
+variables (all/used/free): 	217/217/0
+clauses (all/long/binary/unit): 522/173/348/1
+
+Preprocessing .. DONE
+variables (all/used/free): 	217/217/0
+clauses (all/long/binary/unit): 518/172/346/0
+Maximum cache size:	102339 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	217/217/0
+clauses (removed) 			522 (18446744073709551584)
+decisions 				47
+conflicts 				41
+conflict clauses (all/bin/unit) 	3/1/36
+
+cache size 7MB	
+cache (stores / hits) 			41/0
+cache miss rate 0%
+avg. variable count (stores / hits) 	168.244/0
+
+number of nodes in trace 	46
+number of edges in trace 	81
+
+# satisfying probability = 3.410605e-12
+
+# END
+
+time: 0.00634s
+
+upper trace written to ./c499_re_up.nnf
+lower trace written to ./c499_re_low.nnf
+maximum satisfying probability written to ./c499_re.prob
+SSAT LOG: Elapsed time = 0.008 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./c499_re.sdimacs ./c499_re_up.nnf ./c499_re_low.nnf ./c499_re.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 124 nodes (43 explicit) and 81 edges
+c Read D4 NNF file with 124 nodes (43 explicit) and 81 edges
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./c499_re.sdimacs ./c499_re_low.nnf ./c499_re_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 217 variables and 522 clauses
+c Read D4 NNF file with 124 nodes (43 explicit) and 81 edges
+c Compressed POG has 45 nodes, root literal 262, and 517 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c GEN: Time = 0.00.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 217
+c GEN:    input clauses  : 522
+c GEN: POG nodes
+c GEN:    product   : 42
+c GEN:    sum       : 2
+c GEN:    node TOTAL: 44
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 517
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 2
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 519
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+GEN LOG: Elapsed time = 0.002 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./c499_re_low.cpog 571 lines 85828 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./c499_re.sdimacs ./c499_re_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 217 variables and 522 clauses
+CHECK: Read CPOG file with 45 operations,  2 asserted + 517 defining = 519 clauses
+CHECK: Deleted 523 input and asserted clauses
+CHECK: Final root literal 262
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./c499_re.sdimacs ./c499_re_up.nnf ./c499_re_up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 217 variables and 522 clauses
+c Read D4 NNF file with 124 nodes (43 explicit) and 81 edges
+c Compressed POG has 49 nodes, root literal 266, and 529 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c Time = 0.01.  Justifications of 49 nodes, including root, completed.  4568 total clauses
+c GEN: Formula
+c GEN:    input variables: 217
+c GEN:    input clauses  : 522
+c GEN: POG nodes
+c GEN:    product   : 42
+c GEN:    sum       : 6
+c GEN:    node TOTAL: 48
+c GEN: Other nodes
+c GEN:    aux product: 1
+c GEN: Node visits
+c GEN:    product/BCP: 42
+c GEN:    product/SAT: 1
+c GEN:    sum        : 6
+c GEN:    visit TOTAL: 49
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (1 instances)
+c GEN:    PROBLEM TOTAL : 278
+c GEN:    PROBLEM MIN   : 278
+c GEN:    PROBLEM AVG   : 278.00
+c GEN:    PROBLEM MAX   : 278
+c GEN: SAT Proof Clause Counts
+c GEN:    PROOF TOTAL : 116
+c GEN:    PROOF MIN   : 116
+c GEN:    PROOF AVG   : 116.00
+c GEN:    PROOF MAX   : 116
+c GEN: Clauses
+c GEN:    POG definition       : 529
+c GEN:    AUX definition       : 3
+c GEN:    product justification: 43
+c GEN:    sum justification    : 8
+c GEN:    literal justification: 3989
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 4572
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.01
+c GEN:   time TOTAL     : 0.01
+GEN LOG: Elapsed time = 0.012 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./c499_re_up.cpog 4087 lines 135626 bytes
+FCHECK LOG: Running ../../src/cpog-check -S ./c499_re.sdimacs ./c499_re_up.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 217 variables and 522 clauses
+CHECK: Read CPOG file with 50 operations,  4036 asserted + 532 defining = 4568 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 266
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.026 seconds
+OVERALL OUTCOME: normal
