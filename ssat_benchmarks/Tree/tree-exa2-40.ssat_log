@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 42/38/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	80/80/0
 clauses (all/long/binary/unit): 41/38/3/0
-Maximum cache size:	44922 MB
+Maximum cache size:	100381 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	343
 
 # END
 
-time: 0.002509s
+time: 0.001935s
 
 upper trace written to ./tree-exa2-40_up.nnf
 lower trace written to ./tree-exa2-40_low.nnf
 maximum satisfying probability written to ./tree-exa2-40.prob
-SSAT LOG: Elapsed time = 0.004 seconds
+SSAT LOG: Elapsed time = 0.003 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./tree-exa2-40.sdimacs ./tree-exa2-40_up.nnf ./tree-exa2-40_low.nnf ./tree-exa2-40.prob
 EVAL LOG: Time limit 1000 seconds

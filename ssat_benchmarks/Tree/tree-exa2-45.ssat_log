@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 47/43/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	90/90/0
 clauses (all/long/binary/unit): 46/43/3/0
-Maximum cache size:	44921 MB
+Maximum cache size:	100379 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	369
 
 # END
 
-time: 0.002117s
+time: 0.002778s
 
 upper trace written to ./tree-exa2-45_up.nnf
 lower trace written to ./tree-exa2-45_low.nnf
 maximum satisfying probability written to ./tree-exa2-45.prob
-SSAT LOG: Elapsed time = 0.003 seconds
+SSAT LOG: Elapsed time = 0.004 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./tree-exa2-45.sdimacs ./tree-exa2-45_up.nnf ./tree-exa2-45_low.nnf ./tree-exa2-45.prob
 EVAL LOG: Time limit 1000 seconds
@@ -2861,7 +2861,7 @@ c GEN: Time
 c GEN:   SAT execution  : 0.00
 c GEN:   other execution: 0.01
 c GEN:   time TOTAL     : 0.01
-GEN LOG: Elapsed time = 0.009 seconds
+GEN LOG: Elapsed time = 0.010 seconds
 GEN OUTCOME: normal
 GEN: LOG: size ./tree-exa2-45_low.cpog 545 lines 61028 bytes
 FCHECK LOG: Running ../../src/cpog-check -v 5 -1 -S ./tree-exa2-45.sdimacs ./tree-exa2-45_low.cpog
@@ -3391,5 +3391,5 @@ ERROR. File ./tree-exa2-45_low.cpog. Line 51. Function node_new. Invalid operati
 FCHECK ERROR: Return code = 1
 FCHECK LOG: Elapsed time = 0.000 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.014 seconds
+OVERALL LOG: Elapsed time = 0.016 seconds
 OVERALL OUTCOME: failed

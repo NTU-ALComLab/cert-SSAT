@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 32/28/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	60/60/0
 clauses (all/long/binary/unit): 31/28/3/0
-Maximum cache size:	44925 MB
+Maximum cache size:	100381 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	265
 
 # END
 
-time: 0.001817s
+time: 0.002596s
 
 upper trace written to ./tree-exa2-30_up.nnf
 lower trace written to ./tree-exa2-30_low.nnf
 maximum satisfying probability written to ./tree-exa2-30.prob
-SSAT LOG: Elapsed time = 0.003 seconds
+SSAT LOG: Elapsed time = 0.004 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./tree-exa2-30.sdimacs ./tree-exa2-30_up.nnf ./tree-exa2-30_low.nnf ./tree-exa2-30.prob
 EVAL LOG: Time limit 1000 seconds
@@ -2469,5 +2469,5 @@ ERROR. File ./tree-exa2-30_low.cpog. Line 36. Function node_new. Invalid operati
 FCHECK ERROR: Return code = 1
 FCHECK LOG: Elapsed time = 0.000 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.011 seconds
+OVERALL LOG: Elapsed time = 0.013 seconds
 OVERALL OUTCOME: failed

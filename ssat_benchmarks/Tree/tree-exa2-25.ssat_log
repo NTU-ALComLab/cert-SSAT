@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 27/23/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	50/50/0
 clauses (all/long/binary/unit): 26/23/3/0
-Maximum cache size:	44927 MB
+Maximum cache size:	100388 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	221
 
 # END
 
-time: 0.002565s
+time: 0.001759s
 
 upper trace written to ./tree-exa2-25_up.nnf
 lower trace written to ./tree-exa2-25_low.nnf
 maximum satisfying probability written to ./tree-exa2-25.prob
-SSAT LOG: Elapsed time = 0.004 seconds
+SSAT LOG: Elapsed time = 0.003 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./tree-exa2-25.sdimacs ./tree-exa2-25_up.nnf ./tree-exa2-25_low.nnf ./tree-exa2-25.prob
 EVAL LOG: Time limit 1000 seconds
@@ -1742,7 +1742,7 @@ ROOT 375
 c GEN: Time = 0.00.  Generated POG representation
 c Justifying root literal 375
 c GEN: Time = 0.00.  Deleted asserted clauses
-c GEN: Time = 0.00.  Deleted input clauses
+c GEN: Time = 0.01.  Deleted input clauses
 c 1011 lines written
 c GEN: Formula
 c GEN:    input variables: 49
@@ -1775,8 +1775,8 @@ c GEN:    monolithic proof     : 0
 c GEN:    clause TOTAL         : 1236
 c GEN: Time
 c GEN:   SAT execution  : 0.00
-c GEN:   other execution: 0.00
-c GEN:   time TOTAL     : 0.00
+c GEN:   other execution: 0.01
+c GEN:   time TOTAL     : 0.01
 GEN LOG: Elapsed time = 0.006 seconds
 GEN OUTCOME: normal
 GEN: LOG: size ./tree-exa2-25_low.cpog 355 lines 25728 bytes
