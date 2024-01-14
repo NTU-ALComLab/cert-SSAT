@@ -1,0 +1,2473 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./tree-exa2-30.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./tree-exa2-30.sdimacs
+variables (all/used/free): 	60/60/0
+clauses (all/long/binary/unit): 32/28/3/1
+
+Preprocessing .. DONE
+variables (all/used/free): 	60/60/0
+clauses (all/long/binary/unit): 31/28/3/0
+Maximum cache size:	44925 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	60/60/0
+clauses (removed) 			32 (0)
+decisions 				132
+conflicts 				1
+conflict clauses (all/bin/unit) 	0/0/1
+
+cache size 7MB	
+cache (stores / hits) 			133/122
+cache miss rate 0%
+avg. variable count (stores / hits) 	28.2406/24.5
+
+number of nodes in trace 	138
+number of edges in trace 	265
+
+# satisfying probability = 1
+
+# END
+
+time: 0.001817s
+
+upper trace written to ./tree-exa2-30_up.nnf
+lower trace written to ./tree-exa2-30_low.nnf
+maximum satisfying probability written to ./tree-exa2-30.prob
+SSAT LOG: Elapsed time = 0.003 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa2-30.sdimacs ./tree-exa2-30_up.nnf ./tree-exa2-30_low.nnf ./tree-exa2-30.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 400 nodes (135 explicit) and 265 edges
+c Read D4 NNF file with 400 nodes (135 explicit) and 265 edges
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -v 5 -1 -S -C 2147483647 -L d2p.log ./tree-exa2-30.sdimacs ./tree-exa2-30_low.nnf ./tree-exa2-30_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 59 variables and 32 clauses
+c Unit literal -30 justified by input clause #1
+c BCP Pass 1.  Active clauses:c  2c  3c  4c  5c  6c  7c  8c  9c  10c  11c  12c  13c  14c  15c  16c  17c  18c  19c  20c  21c  22c  23c  24c  25c  26c  27c  28c  29c  30c  31c  32c 
+c   Checking clause #2: -28 -29 30 -58 59 0
+c   Unit literals:c  -30c 
+c     Potential unit -28
+c     Additional unassigned literal -29
+c     Still active
+c   Checking clause #3: -27 -28 29 -57 58 0
+c   Unit literals:c  -30c 
+c     Potential unit -27
+c     Additional unassigned literal -28
+c     Still active
+c   Checking clause #4: -26 -27 28 -56 57 0
+c   Unit literals:c  -30c 
+c     Potential unit -26
+c     Additional unassigned literal -27
+c     Still active
+c   Checking clause #5: -25 -26 27 -55 56 0
+c   Unit literals:c  -30c 
+c     Potential unit -25
+c     Additional unassigned literal -26
+c     Still active
+c   Checking clause #6: -24 -25 26 -54 55 0
+c   Unit literals:c  -30c 
+c     Potential unit -24
+c     Additional unassigned literal -25
+c     Still active
+c   Checking clause #7: -23 -24 25 -53 54 0
+c   Unit literals:c  -30c 
+c     Potential unit -23
+c     Additional unassigned literal -24
+c     Still active
+c   Checking clause #8: -22 -23 24 -52 53 0
+c   Unit literals:c  -30c 
+c     Potential unit -22
+c     Additional unassigned literal -23
+c     Still active
+c   Checking clause #9: -21 -22 23 -51 52 0
+c   Unit literals:c  -30c 
+c     Potential unit -21
+c     Additional unassigned literal -22
+c     Still active
+c   Checking clause #10: -20 -21 22 -50 51 0
+c   Unit literals:c  -30c 
+c     Potential unit -20
+c     Additional unassigned literal -21
+c     Still active
+c   Checking clause #11: -19 -20 21 -49 50 0
+c   Unit literals:c  -30c 
+c     Potential unit -19
+c     Additional unassigned literal -20
+c     Still active
+c   Checking clause #12: -18 -19 20 -48 49 0
+c   Unit literals:c  -30c 
+c     Potential unit -18
+c     Additional unassigned literal -19
+c     Still active
+c   Checking clause #13: -17 -18 19 -47 48 0
+c   Unit literals:c  -30c 
+c     Potential unit -17
+c     Additional unassigned literal -18
+c     Still active
+c   Checking clause #14: -16 -17 18 -46 47 0
+c   Unit literals:c  -30c 
+c     Potential unit -16
+c     Additional unassigned literal -17
+c     Still active
+c   Checking clause #15: -15 -16 17 -45 46 0
+c   Unit literals:c  -30c 
+c     Potential unit -15
+c     Additional unassigned literal -16
+c     Still active
+c   Checking clause #16: -14 -15 16 -44 45 0
+c   Unit literals:c  -30c 
+c     Potential unit -14
+c     Additional unassigned literal -15
+c     Still active
+c   Checking clause #17: -13 -14 15 -43 44 0
+c   Unit literals:c  -30c 
+c     Potential unit -13
+c     Additional unassigned literal -14
+c     Still active
+c   Checking clause #18: -12 -13 14 -42 43 0
+c   Unit literals:c  -30c 
+c     Potential unit -12
+c     Additional unassigned literal -13
+c     Still active
+c   Checking clause #19: -11 -12 13 -41 42 0
+c   Unit literals:c  -30c 
+c     Potential unit -11
+c     Additional unassigned literal -12
+c     Still active
+c   Checking clause #20: -10 -11 12 -40 41 0
+c   Unit literals:c  -30c 
+c     Potential unit -10
+c     Additional unassigned literal -11
+c     Still active
+c   Checking clause #21: -9 -10 11 -39 40 0
+c   Unit literals:c  -30c 
+c     Potential unit -9
+c     Additional unassigned literal -10
+c     Still active
+c   Checking clause #22: -8 -9 10 -38 39 0
+c   Unit literals:c  -30c 
+c     Potential unit -8
+c     Additional unassigned literal -9
+c     Still active
+c   Checking clause #23: -7 -8 9 -37 38 0
+c   Unit literals:c  -30c 
+c     Potential unit -7
+c     Additional unassigned literal -8
+c     Still active
+c   Checking clause #24: -6 -7 8 -36 37 0
+c   Unit literals:c  -30c 
+c     Potential unit -6
+c     Additional unassigned literal -7
+c     Still active
+c   Checking clause #25: -5 -6 7 -35 36 0
+c   Unit literals:c  -30c 
+c     Potential unit -5
+c     Additional unassigned literal -6
+c     Still active
+c   Checking clause #26: -4 -5 6 -34 35 0
+c   Unit literals:c  -30c 
+c     Potential unit -4
+c     Additional unassigned literal -5
+c     Still active
+c   Checking clause #27: -3 -4 5 -33 34 0
+c   Unit literals:c  -30c 
+c     Potential unit -3
+c     Additional unassigned literal -4
+c     Still active
+c   Checking clause #28: -2 -3 4 -32 33 0
+c   Unit literals:c  -30c 
+c     Potential unit -2
+c     Additional unassigned literal -3
+c     Still active
+c   Checking clause #29: -1 -2 3 -31 32 0
+c   Unit literals:c  -30c 
+c     Potential unit -1
+c     Additional unassigned literal -2
+c     Still active
+c   Checking clause #30: 1 2 0
+c   Unit literals:c  -30c 
+c     Potential unit 1
+c     Additional unassigned literal 2
+c     Still active
+c   Checking clause #31: -1 2 0
+c   Unit literals:c  -30c 
+c     Potential unit -1
+c     Additional unassigned literal 2
+c     Still active
+c   Checking clause #32: 1 -2 0
+c   Unit literals:c  -30c 
+c     Potential unit 1
+c     Additional unassigned literal -2
+c     Still active
+c Line #1.  Created POG node FALSE number 60 from NNF node 1
+c Line #2.  Created POG node TRUE number 61 from NNF node 2
+c Line #3.  Created POG node OR number 62 from NNF node 3
+c Line #4.  Created POG node OR number 63 from NNF node 4
+c Line #5.  Created POG node OR number 64 from NNF node 5
+c Line #6.  Created POG node OR number 65 from NNF node 6
+c Line #7.  Created POG node OR number 66 from NNF node 7
+c Line #8.  Created POG node OR number 67 from NNF node 8
+c Line #9.  Created POG node OR number 68 from NNF node 9
+c Line #10.  Created POG node OR number 69 from NNF node 10
+c Line #11.  Created POG node OR number 70 from NNF node 11
+c Line #12.  Created POG node OR number 71 from NNF node 12
+c Line #13.  Created POG node OR number 72 from NNF node 13
+c Line #14.  Created POG node OR number 73 from NNF node 14
+c Line #15.  Created POG node OR number 74 from NNF node 15
+c Line #16.  Created POG node OR number 75 from NNF node 16
+c Line #17.  Created POG node OR number 76 from NNF node 17
+c Line #18.  Created POG node OR number 77 from NNF node 18
+c Line #19.  Created POG node OR number 78 from NNF node 19
+c Line #20.  Created POG node OR number 79 from NNF node 20
+c Line #21.  Created POG node OR number 80 from NNF node 21
+c Line #22.  Created POG node OR number 81 from NNF node 22
+c Line #23.  Created POG node OR number 82 from NNF node 23
+c Line #24.  Created POG node OR number 83 from NNF node 24
+c Line #25.  Created POG node OR number 84 from NNF node 25
+c Line #26.  Created POG node OR number 85 from NNF node 26
+c Line #27.  Created POG node OR number 86 from NNF node 27
+c Line #28.  Created POG node OR number 87 from NNF node 28
+c Line #29.  Created POG node OR number 88 from NNF node 29
+c Line #30.  Created POG node OR number 89 from NNF node 30
+c Line #31.  Created POG node OR number 90 from NNF node 31
+c Line #32.  Created POG node OR number 91 from NNF node 32
+c Line #33.  Created POG node OR number 92 from NNF node 33
+c Line #34.  Created POG node OR number 93 from NNF node 34
+c Line #35.  Created POG node OR number 94 from NNF node 35
+c Line #36.  Created POG node OR number 95 from NNF node 36
+c Line #37.  Created POG node OR number 96 from NNF node 37
+c Line #38.  Created POG node OR number 97 from NNF node 38
+c Line #39.  Created POG node OR number 98 from NNF node 39
+c Line #40.  Created POG node OR number 99 from NNF node 40
+c Line #41.  Created POG node OR number 100 from NNF node 41
+c Line #42.  Created POG node OR number 101 from NNF node 42
+c Line #43.  Created POG node OR number 102 from NNF node 43
+c Line #44.  Created POG node OR number 103 from NNF node 44
+c Line #45.  Created POG node OR number 104 from NNF node 45
+c Line #46.  Created POG node OR number 105 from NNF node 46
+c Line #47.  Created POG node OR number 106 from NNF node 47
+c Line #48.  Created POG node OR number 107 from NNF node 48
+c Line #49.  Created POG node OR number 108 from NNF node 49
+c Line #50.  Created POG node OR number 109 from NNF node 50
+c Line #51.  Created POG node OR number 110 from NNF node 51
+c Line #52.  Created POG node OR number 111 from NNF node 52
+c Line #53.  Created POG node OR number 112 from NNF node 53
+c Line #54.  Created POG node OR number 113 from NNF node 54
+c Line #55.  Created POG node OR number 114 from NNF node 55
+c Line #56.  Created POG node OR number 115 from NNF node 56
+c Line #57.  Created POG node OR number 116 from NNF node 57
+c Line #58.  Created POG node OR number 117 from NNF node 58
+c Line #59. Created POG AND Node 118 to hold literals between NNF nodes 58 and 2
+c Line #59.  Adding edge between POG nodes 117 and 118
+c Line #60. Created POG AND Node 119 to hold literals between NNF nodes 58 and 2
+c Line #60.  Adding edge between POG nodes 117 and 119
+c Line #61. Created POG AND Node 120 to hold literals between NNF nodes 57 and 58
+c Line #61.  Adding edge between POG nodes 116 and 120
+c Line #62. Created POG AND Node 121 to hold literals between NNF nodes 57 and 2
+c Line #62.  Adding edge between POG nodes 116 and 121
+c Line #63. Created POG AND Node 122 to hold literals between NNF nodes 56 and 57
+c Line #63.  Adding edge between POG nodes 115 and 122
+c Line #64.  Created POG node OR number 123 from NNF node 59
+c Line #65. Created POG AND Node 124 to hold literals between NNF nodes 59 and 2
+c Line #65.  Adding edge between POG nodes 123 and 124
+c Line #66. Created POG AND Node 125 to hold literals between NNF nodes 59 and 2
+c Line #66.  Adding edge between POG nodes 123 and 125
+c Line #67. Created POG AND Node 126 to hold literals between NNF nodes 56 and 59
+c Line #67.  Adding edge between POG nodes 115 and 126
+c Line #68. Created POG AND Node 127 to hold literals between NNF nodes 55 and 56
+c Line #68.  Adding edge between POG nodes 114 and 127
+c Line #69.  Created POG node OR number 128 from NNF node 60
+c Line #70. Created POG AND Node 129 to hold literals between NNF nodes 60 and 59
+c Line #70.  Adding edge between POG nodes 128 and 129
+c Line #71. Created POG AND Node 130 to hold literals between NNF nodes 60 and 58
+c Line #71.  Adding edge between POG nodes 128 and 130
+c Line #72. Created POG AND Node 131 to hold literals between NNF nodes 55 and 60
+c Line #72.  Adding edge between POG nodes 114 and 131
+c Line #73. Created POG AND Node 132 to hold literals between NNF nodes 54 and 55
+c Line #73.  Adding edge between POG nodes 113 and 132
+c Line #74.  Created POG node OR number 133 from NNF node 61
+c Line #75. Created POG AND Node 134 to hold literals between NNF nodes 61 and 59
+c Line #75.  Adding edge between POG nodes 133 and 134
+c Line #76. Created POG AND Node 135 to hold literals between NNF nodes 61 and 59
+c Line #76.  Adding edge between POG nodes 133 and 135
+c Line #77. Created POG AND Node 136 to hold literals between NNF nodes 54 and 61
+c Line #77.  Adding edge between POG nodes 113 and 136
+c Line #78. Created POG AND Node 137 to hold literals between NNF nodes 53 and 54
+c Line #78.  Adding edge between POG nodes 112 and 137
+c Line #79.  Created POG node OR number 138 from NNF node 62
+c Line #80. Created POG AND Node 139 to hold literals between NNF nodes 62 and 61
+c Line #80.  Adding edge between POG nodes 138 and 139
+c Line #81. Created POG AND Node 140 to hold literals between NNF nodes 62 and 56
+c Line #81.  Adding edge between POG nodes 138 and 140
+c Line #82. Created POG AND Node 141 to hold literals between NNF nodes 53 and 62
+c Line #82.  Adding edge between POG nodes 112 and 141
+c Line #83. Created POG AND Node 142 to hold literals between NNF nodes 52 and 53
+c Line #83.  Adding edge between POG nodes 111 and 142
+c Line #84.  Created POG node OR number 143 from NNF node 63
+c Line #85. Created POG AND Node 144 to hold literals between NNF nodes 63 and 59
+c Line #85.  Adding edge between POG nodes 143 and 144
+c Line #86. Created POG AND Node 145 to hold literals between NNF nodes 63 and 59
+c Line #86.  Adding edge between POG nodes 143 and 145
+c Line #87. Created POG AND Node 146 to hold literals between NNF nodes 52 and 63
+c Line #87.  Adding edge between POG nodes 111 and 146
+c Line #88. Created POG AND Node 147 to hold literals between NNF nodes 51 and 52
+c Line #88.  Adding edge between POG nodes 110 and 147
+c Line #89.  Created POG node OR number 148 from NNF node 64
+c Line #90. Created POG AND Node 149 to hold literals between NNF nodes 64 and 63
+c Line #90.  Adding edge between POG nodes 148 and 149
+c Line #91. Created POG AND Node 150 to hold literals between NNF nodes 64 and 54
+c Line #91.  Adding edge between POG nodes 148 and 150
+c Line #92. Created POG AND Node 151 to hold literals between NNF nodes 51 and 64
+c Line #92.  Adding edge between POG nodes 110 and 151
+c Line #93. Created POG AND Node 152 to hold literals between NNF nodes 50 and 51
+c Line #93.  Adding edge between POG nodes 109 and 152
+c Line #94.  Created POG node OR number 153 from NNF node 65
+c Line #95. Created POG AND Node 154 to hold literals between NNF nodes 65 and 63
+c Line #95.  Adding edge between POG nodes 153 and 154
+c Line #96. Created POG AND Node 155 to hold literals between NNF nodes 65 and 63
+c Line #96.  Adding edge between POG nodes 153 and 155
+c Line #97. Created POG AND Node 156 to hold literals between NNF nodes 50 and 65
+c Line #97.  Adding edge between POG nodes 109 and 156
+c Line #98. Created POG AND Node 157 to hold literals between NNF nodes 49 and 50
+c Line #98.  Adding edge between POG nodes 108 and 157
+c Line #99.  Created POG node OR number 158 from NNF node 66
+c Line #100. Created POG AND Node 159 to hold literals between NNF nodes 66 and 65
+c Line #100.  Adding edge between POG nodes 158 and 159
+c Line #101. Created POG AND Node 160 to hold literals between NNF nodes 66 and 52
+c Line #101.  Adding edge between POG nodes 158 and 160
+c Line #102. Created POG AND Node 161 to hold literals between NNF nodes 49 and 66
+c Line #102.  Adding edge between POG nodes 108 and 161
+c Line #103. Created POG AND Node 162 to hold literals between NNF nodes 48 and 49
+c Line #103.  Adding edge between POG nodes 107 and 162
+c Line #104.  Created POG node OR number 163 from NNF node 67
+c Line #105. Created POG AND Node 164 to hold literals between NNF nodes 67 and 63
+c Line #105.  Adding edge between POG nodes 163 and 164
+c Line #106. Created POG AND Node 165 to hold literals between NNF nodes 67 and 63
+c Line #106.  Adding edge between POG nodes 163 and 165
+c Line #107. Created POG AND Node 166 to hold literals between NNF nodes 48 and 67
+c Line #107.  Adding edge between POG nodes 107 and 166
+c Line #108. Created POG AND Node 167 to hold literals between NNF nodes 47 and 48
+c Line #108.  Adding edge between POG nodes 106 and 167
+c Line #109.  Created POG node OR number 168 from NNF node 68
+c Line #110. Created POG AND Node 169 to hold literals between NNF nodes 68 and 67
+c Line #110.  Adding edge between POG nodes 168 and 169
+c Line #111. Created POG AND Node 170 to hold literals between NNF nodes 68 and 50
+c Line #111.  Adding edge between POG nodes 168 and 170
+c Line #112. Created POG AND Node 171 to hold literals between NNF nodes 47 and 68
+c Line #112.  Adding edge between POG nodes 106 and 171
+c Line #113. Created POG AND Node 172 to hold literals between NNF nodes 46 and 47
+c Line #113.  Adding edge between POG nodes 105 and 172
+c Line #114.  Created POG node OR number 173 from NNF node 69
+c Line #115. Created POG AND Node 174 to hold literals between NNF nodes 69 and 67
+c Line #115.  Adding edge between POG nodes 173 and 174
+c Line #116. Created POG AND Node 175 to hold literals between NNF nodes 69 and 67
+c Line #116.  Adding edge between POG nodes 173 and 175
+c Line #117. Created POG AND Node 176 to hold literals between NNF nodes 46 and 69
+c Line #117.  Adding edge between POG nodes 105 and 176
+c Line #118. Created POG AND Node 177 to hold literals between NNF nodes 45 and 46
+c Line #118.  Adding edge between POG nodes 104 and 177
+c Line #119.  Created POG node OR number 178 from NNF node 70
+c Line #120. Created POG AND Node 179 to hold literals between NNF nodes 70 and 69
+c Line #120.  Adding edge between POG nodes 178 and 179
+c Line #121. Created POG AND Node 180 to hold literals between NNF nodes 70 and 48
+c Line #121.  Adding edge between POG nodes 178 and 180
+c Line #122. Created POG AND Node 181 to hold literals between NNF nodes 45 and 70
+c Line #122.  Adding edge between POG nodes 104 and 181
+c Line #123. Created POG AND Node 182 to hold literals between NNF nodes 44 and 45
+c Line #123.  Adding edge between POG nodes 103 and 182
+c Line #124.  Created POG node OR number 183 from NNF node 71
+c Line #125. Created POG AND Node 184 to hold literals between NNF nodes 71 and 67
+c Line #125.  Adding edge between POG nodes 183 and 184
+c Line #126. Created POG AND Node 185 to hold literals between NNF nodes 71 and 67
+c Line #126.  Adding edge between POG nodes 183 and 185
+c Line #127. Created POG AND Node 186 to hold literals between NNF nodes 44 and 71
+c Line #127.  Adding edge between POG nodes 103 and 186
+c Line #128. Created POG AND Node 187 to hold literals between NNF nodes 43 and 44
+c Line #128.  Adding edge between POG nodes 102 and 187
+c Line #129.  Created POG node OR number 188 from NNF node 72
+c Line #130. Created POG AND Node 189 to hold literals between NNF nodes 72 and 71
+c Line #130.  Adding edge between POG nodes 188 and 189
+c Line #131. Created POG AND Node 190 to hold literals between NNF nodes 72 and 46
+c Line #131.  Adding edge between POG nodes 188 and 190
+c Line #132. Created POG AND Node 191 to hold literals between NNF nodes 43 and 72
+c Line #132.  Adding edge between POG nodes 102 and 191
+c Line #133. Created POG AND Node 192 to hold literals between NNF nodes 42 and 43
+c Line #133.  Adding edge between POG nodes 101 and 192
+c Line #134.  Created POG node OR number 193 from NNF node 73
+c Line #135. Created POG AND Node 194 to hold literals between NNF nodes 73 and 71
+c Line #135.  Adding edge between POG nodes 193 and 194
+c Line #136. Created POG AND Node 195 to hold literals between NNF nodes 73 and 71
+c Line #136.  Adding edge between POG nodes 193 and 195
+c Line #137. Created POG AND Node 196 to hold literals between NNF nodes 42 and 73
+c Line #137.  Adding edge between POG nodes 101 and 196
+c Line #138. Created POG AND Node 197 to hold literals between NNF nodes 41 and 42
+c Line #138.  Adding edge between POG nodes 100 and 197
+c Line #139.  Created POG node OR number 198 from NNF node 74
+c Line #140. Created POG AND Node 199 to hold literals between NNF nodes 74 and 73
+c Line #140.  Adding edge between POG nodes 198 and 199
+c Line #141. Created POG AND Node 200 to hold literals between NNF nodes 74 and 44
+c Line #141.  Adding edge between POG nodes 198 and 200
+c Line #142. Created POG AND Node 201 to hold literals between NNF nodes 41 and 74
+c Line #142.  Adding edge between POG nodes 100 and 201
+c Line #143. Created POG AND Node 202 to hold literals between NNF nodes 40 and 41
+c Line #143.  Adding edge between POG nodes 99 and 202
+c Line #144.  Created POG node OR number 203 from NNF node 75
+c Line #145. Created POG AND Node 204 to hold literals between NNF nodes 75 and 71
+c Line #145.  Adding edge between POG nodes 203 and 204
+c Line #146. Created POG AND Node 205 to hold literals between NNF nodes 75 and 71
+c Line #146.  Adding edge between POG nodes 203 and 205
+c Line #147. Created POG AND Node 206 to hold literals between NNF nodes 40 and 75
+c Line #147.  Adding edge between POG nodes 99 and 206
+c Line #148. Created POG AND Node 207 to hold literals between NNF nodes 39 and 40
+c Line #148.  Adding edge between POG nodes 98 and 207
+c Line #149.  Created POG node OR number 208 from NNF node 76
+c Line #150. Created POG AND Node 209 to hold literals between NNF nodes 76 and 75
+c Line #150.  Adding edge between POG nodes 208 and 209
+c Line #151. Created POG AND Node 210 to hold literals between NNF nodes 76 and 42
+c Line #151.  Adding edge between POG nodes 208 and 210
+c Line #152. Created POG AND Node 211 to hold literals between NNF nodes 39 and 76
+c Line #152.  Adding edge between POG nodes 98 and 211
+c Line #153. Created POG AND Node 212 to hold literals between NNF nodes 38 and 39
+c Line #153.  Adding edge between POG nodes 97 and 212
+c Line #154.  Created POG node OR number 213 from NNF node 77
+c Line #155. Created POG AND Node 214 to hold literals between NNF nodes 77 and 75
+c Line #155.  Adding edge between POG nodes 213 and 214
+c Line #156. Created POG AND Node 215 to hold literals between NNF nodes 77 and 75
+c Line #156.  Adding edge between POG nodes 213 and 215
+c Line #157. Created POG AND Node 216 to hold literals between NNF nodes 38 and 77
+c Line #157.  Adding edge between POG nodes 97 and 216
+c Line #158. Created POG AND Node 217 to hold literals between NNF nodes 37 and 38
+c Line #158.  Adding edge between POG nodes 96 and 217
+c Line #159.  Created POG node OR number 218 from NNF node 78
+c Line #160. Created POG AND Node 219 to hold literals between NNF nodes 78 and 77
+c Line #160.  Adding edge between POG nodes 218 and 219
+c Line #161. Created POG AND Node 220 to hold literals between NNF nodes 78 and 40
+c Line #161.  Adding edge between POG nodes 218 and 220
+c Line #162. Created POG AND Node 221 to hold literals between NNF nodes 37 and 78
+c Line #162.  Adding edge between POG nodes 96 and 221
+c Line #163. Created POG AND Node 222 to hold literals between NNF nodes 36 and 37
+c Line #163.  Adding edge between POG nodes 95 and 222
+c Line #164.  Created POG node OR number 223 from NNF node 79
+c Line #165. Created POG AND Node 224 to hold literals between NNF nodes 79 and 75
+c Line #165.  Adding edge between POG nodes 223 and 224
+c Line #166. Created POG AND Node 225 to hold literals between NNF nodes 79 and 75
+c Line #166.  Adding edge between POG nodes 223 and 225
+c Line #167. Created POG AND Node 226 to hold literals between NNF nodes 36 and 79
+c Line #167.  Adding edge between POG nodes 95 and 226
+c Line #168. Created POG AND Node 227 to hold literals between NNF nodes 35 and 36
+c Line #168.  Adding edge between POG nodes 94 and 227
+c Line #169.  Created POG node OR number 228 from NNF node 80
+c Line #170. Created POG AND Node 229 to hold literals between NNF nodes 80 and 79
+c Line #170.  Adding edge between POG nodes 228 and 229
+c Line #171. Created POG AND Node 230 to hold literals between NNF nodes 80 and 38
+c Line #171.  Adding edge between POG nodes 228 and 230
+c Line #172. Created POG AND Node 231 to hold literals between NNF nodes 35 and 80
+c Line #172.  Adding edge between POG nodes 94 and 231
+c Line #173. Created POG AND Node 232 to hold literals between NNF nodes 34 and 35
+c Line #173.  Adding edge between POG nodes 93 and 232
+c Line #174.  Created POG node OR number 233 from NNF node 81
+c Line #175. Created POG AND Node 234 to hold literals between NNF nodes 81 and 79
+c Line #175.  Adding edge between POG nodes 233 and 234
+c Line #176. Created POG AND Node 235 to hold literals between NNF nodes 81 and 79
+c Line #176.  Adding edge between POG nodes 233 and 235
+c Line #177. Created POG AND Node 236 to hold literals between NNF nodes 34 and 81
+c Line #177.  Adding edge between POG nodes 93 and 236
+c Line #178. Created POG AND Node 237 to hold literals between NNF nodes 33 and 34
+c Line #178.  Adding edge between POG nodes 92 and 237
+c Line #179.  Created POG node OR number 238 from NNF node 82
+c Line #180. Created POG AND Node 239 to hold literals between NNF nodes 82 and 81
+c Line #180.  Adding edge between POG nodes 238 and 239
+c Line #181. Created POG AND Node 240 to hold literals between NNF nodes 82 and 36
+c Line #181.  Adding edge between POG nodes 238 and 240
+c Line #182. Created POG AND Node 241 to hold literals between NNF nodes 33 and 82
+c Line #182.  Adding edge between POG nodes 92 and 241
+c Line #183. Created POG AND Node 242 to hold literals between NNF nodes 32 and 33
+c Line #183.  Adding edge between POG nodes 91 and 242
+c Line #184.  Created POG node OR number 243 from NNF node 83
+c Line #185. Created POG AND Node 244 to hold literals between NNF nodes 83 and 79
+c Line #185.  Adding edge between POG nodes 243 and 244
+c Line #186. Created POG AND Node 245 to hold literals between NNF nodes 83 and 79
+c Line #186.  Adding edge between POG nodes 243 and 245
+c Line #187. Created POG AND Node 246 to hold literals between NNF nodes 32 and 83
+c Line #187.  Adding edge between POG nodes 91 and 246
+c Line #188. Created POG AND Node 247 to hold literals between NNF nodes 31 and 32
+c Line #188.  Adding edge between POG nodes 90 and 247
+c Line #189.  Created POG node OR number 248 from NNF node 84
+c Line #190. Created POG AND Node 249 to hold literals between NNF nodes 84 and 83
+c Line #190.  Adding edge between POG nodes 248 and 249
+c Line #191. Created POG AND Node 250 to hold literals between NNF nodes 84 and 34
+c Line #191.  Adding edge between POG nodes 248 and 250
+c Line #192. Created POG AND Node 251 to hold literals between NNF nodes 31 and 84
+c Line #192.  Adding edge between POG nodes 90 and 251
+c Line #193. Created POG AND Node 252 to hold literals between NNF nodes 30 and 31
+c Line #193.  Adding edge between POG nodes 89 and 252
+c Line #194.  Created POG node OR number 253 from NNF node 85
+c Line #195. Created POG AND Node 254 to hold literals between NNF nodes 85 and 83
+c Line #195.  Adding edge between POG nodes 253 and 254
+c Line #196. Created POG AND Node 255 to hold literals between NNF nodes 85 and 83
+c Line #196.  Adding edge between POG nodes 253 and 255
+c Line #197. Created POG AND Node 256 to hold literals between NNF nodes 30 and 85
+c Line #197.  Adding edge between POG nodes 89 and 256
+c Line #198. Created POG AND Node 257 to hold literals between NNF nodes 29 and 30
+c Line #198.  Adding edge between POG nodes 88 and 257
+c Line #199.  Created POG node OR number 258 from NNF node 86
+c Line #200. Created POG AND Node 259 to hold literals between NNF nodes 86 and 85
+c Line #200.  Adding edge between POG nodes 258 and 259
+c Line #201. Created POG AND Node 260 to hold literals between NNF nodes 86 and 32
+c Line #201.  Adding edge between POG nodes 258 and 260
+c Line #202. Created POG AND Node 261 to hold literals between NNF nodes 29 and 86
+c Line #202.  Adding edge between POG nodes 88 and 261
+c Line #203. Created POG AND Node 262 to hold literals between NNF nodes 28 and 29
+c Line #203.  Adding edge between POG nodes 87 and 262
+c Line #204.  Created POG node OR number 263 from NNF node 87
+c Line #205. Created POG AND Node 264 to hold literals between NNF nodes 87 and 83
+c Line #205.  Adding edge between POG nodes 263 and 264
+c Line #206. Created POG AND Node 265 to hold literals between NNF nodes 87 and 83
+c Line #206.  Adding edge between POG nodes 263 and 265
+c Line #207. Created POG AND Node 266 to hold literals between NNF nodes 28 and 87
+c Line #207.  Adding edge between POG nodes 87 and 266
+c Line #208. Created POG AND Node 267 to hold literals between NNF nodes 27 and 28
+c Line #208.  Adding edge between POG nodes 86 and 267
+c Line #209.  Created POG node OR number 268 from NNF node 88
+c Line #210. Created POG AND Node 269 to hold literals between NNF nodes 88 and 87
+c Line #210.  Adding edge between POG nodes 268 and 269
+c Line #211. Created POG AND Node 270 to hold literals between NNF nodes 88 and 30
+c Line #211.  Adding edge between POG nodes 268 and 270
+c Line #212. Created POG AND Node 271 to hold literals between NNF nodes 27 and 88
+c Line #212.  Adding edge between POG nodes 86 and 271
+c Line #213. Created POG AND Node 272 to hold literals between NNF nodes 26 and 27
+c Line #213.  Adding edge between POG nodes 85 and 272
+c Line #214.  Created POG node OR number 273 from NNF node 89
+c Line #215. Created POG AND Node 274 to hold literals between NNF nodes 89 and 87
+c Line #215.  Adding edge between POG nodes 273 and 274
+c Line #216. Created POG AND Node 275 to hold literals between NNF nodes 89 and 87
+c Line #216.  Adding edge between POG nodes 273 and 275
+c Line #217. Created POG AND Node 276 to hold literals between NNF nodes 26 and 89
+c Line #217.  Adding edge between POG nodes 85 and 276
+c Line #218. Created POG AND Node 277 to hold literals between NNF nodes 25 and 26
+c Line #218.  Adding edge between POG nodes 84 and 277
+c Line #219.  Created POG node OR number 278 from NNF node 90
+c Line #220. Created POG AND Node 279 to hold literals between NNF nodes 90 and 89
+c Line #220.  Adding edge between POG nodes 278 and 279
+c Line #221. Created POG AND Node 280 to hold literals between NNF nodes 90 and 28
+c Line #221.  Adding edge between POG nodes 278 and 280
+c Line #222. Created POG AND Node 281 to hold literals between NNF nodes 25 and 90
+c Line #222.  Adding edge between POG nodes 84 and 281
+c Line #223. Created POG AND Node 282 to hold literals between NNF nodes 24 and 25
+c Line #223.  Adding edge between POG nodes 83 and 282
+c Line #224.  Created POG node OR number 283 from NNF node 91
+c Line #225. Created POG AND Node 284 to hold literals between NNF nodes 91 and 87
+c Line #225.  Adding edge between POG nodes 283 and 284
+c Line #226. Created POG AND Node 285 to hold literals between NNF nodes 91 and 87
+c Line #226.  Adding edge between POG nodes 283 and 285
+c Line #227. Created POG AND Node 286 to hold literals between NNF nodes 24 and 91
+c Line #227.  Adding edge between POG nodes 83 and 286
+c Line #228. Created POG AND Node 287 to hold literals between NNF nodes 23 and 24
+c Line #228.  Adding edge between POG nodes 82 and 287
+c Line #229.  Created POG node OR number 288 from NNF node 92
+c Line #230. Created POG AND Node 289 to hold literals between NNF nodes 92 and 91
+c Line #230.  Adding edge between POG nodes 288 and 289
+c Line #231. Created POG AND Node 290 to hold literals between NNF nodes 92 and 26
+c Line #231.  Adding edge between POG nodes 288 and 290
+c Line #232. Created POG AND Node 291 to hold literals between NNF nodes 23 and 92
+c Line #232.  Adding edge between POG nodes 82 and 291
+c Line #233. Created POG AND Node 292 to hold literals between NNF nodes 22 and 23
+c Line #233.  Adding edge between POG nodes 81 and 292
+c Line #234.  Created POG node OR number 293 from NNF node 93
+c Line #235. Created POG AND Node 294 to hold literals between NNF nodes 93 and 91
+c Line #235.  Adding edge between POG nodes 293 and 294
+c Line #236. Created POG AND Node 295 to hold literals between NNF nodes 93 and 91
+c Line #236.  Adding edge between POG nodes 293 and 295
+c Line #237. Created POG AND Node 296 to hold literals between NNF nodes 22 and 93
+c Line #237.  Adding edge between POG nodes 81 and 296
+c Line #238. Created POG AND Node 297 to hold literals between NNF nodes 21 and 22
+c Line #238.  Adding edge between POG nodes 80 and 297
+c Line #239.  Created POG node OR number 298 from NNF node 94
+c Line #240. Created POG AND Node 299 to hold literals between NNF nodes 94 and 93
+c Line #240.  Adding edge between POG nodes 298 and 299
+c Line #241. Created POG AND Node 300 to hold literals between NNF nodes 94 and 24
+c Line #241.  Adding edge between POG nodes 298 and 300
+c Line #242. Created POG AND Node 301 to hold literals between NNF nodes 21 and 94
+c Line #242.  Adding edge between POG nodes 80 and 301
+c Line #243. Created POG AND Node 302 to hold literals between NNF nodes 20 and 21
+c Line #243.  Adding edge between POG nodes 79 and 302
+c Line #244.  Created POG node OR number 303 from NNF node 95
+c Line #245. Created POG AND Node 304 to hold literals between NNF nodes 95 and 91
+c Line #245.  Adding edge between POG nodes 303 and 304
+c Line #246. Created POG AND Node 305 to hold literals between NNF nodes 95 and 91
+c Line #246.  Adding edge between POG nodes 303 and 305
+c Line #247. Created POG AND Node 306 to hold literals between NNF nodes 20 and 95
+c Line #247.  Adding edge between POG nodes 79 and 306
+c Line #248. Created POG AND Node 307 to hold literals between NNF nodes 19 and 20
+c Line #248.  Adding edge between POG nodes 78 and 307
+c Line #249.  Created POG node OR number 308 from NNF node 96
+c Line #250. Created POG AND Node 309 to hold literals between NNF nodes 96 and 95
+c Line #250.  Adding edge between POG nodes 308 and 309
+c Line #251. Created POG AND Node 310 to hold literals between NNF nodes 96 and 22
+c Line #251.  Adding edge between POG nodes 308 and 310
+c Line #252. Created POG AND Node 311 to hold literals between NNF nodes 19 and 96
+c Line #252.  Adding edge between POG nodes 78 and 311
+c Line #253. Created POG AND Node 312 to hold literals between NNF nodes 18 and 19
+c Line #253.  Adding edge between POG nodes 77 and 312
+c Line #254.  Created POG node OR number 313 from NNF node 97
+c Line #255. Created POG AND Node 314 to hold literals between NNF nodes 97 and 95
+c Line #255.  Adding edge between POG nodes 313 and 314
+c Line #256. Created POG AND Node 315 to hold literals between NNF nodes 97 and 95
+c Line #256.  Adding edge between POG nodes 313 and 315
+c Line #257. Created POG AND Node 316 to hold literals between NNF nodes 18 and 97
+c Line #257.  Adding edge between POG nodes 77 and 316
+c Line #258. Created POG AND Node 317 to hold literals between NNF nodes 17 and 18
+c Line #258.  Adding edge between POG nodes 76 and 317
+c Line #259.  Created POG node OR number 318 from NNF node 98
+c Line #260. Created POG AND Node 319 to hold literals between NNF nodes 98 and 97
+c Line #260.  Adding edge between POG nodes 318 and 319
+c Line #261. Created POG AND Node 320 to hold literals between NNF nodes 98 and 20
+c Line #261.  Adding edge between POG nodes 318 and 320
+c Line #262. Created POG AND Node 321 to hold literals between NNF nodes 17 and 98
+c Line #262.  Adding edge between POG nodes 76 and 321
+c Line #263. Created POG AND Node 322 to hold literals between NNF nodes 16 and 17
+c Line #263.  Adding edge between POG nodes 75 and 322
+c Line #264.  Created POG node OR number 323 from NNF node 99
+c Line #265. Created POG AND Node 324 to hold literals between NNF nodes 99 and 95
+c Line #265.  Adding edge between POG nodes 323 and 324
+c Line #266. Created POG AND Node 325 to hold literals between NNF nodes 99 and 95
+c Line #266.  Adding edge between POG nodes 323 and 325
+c Line #267. Created POG AND Node 326 to hold literals between NNF nodes 16 and 99
+c Line #267.  Adding edge between POG nodes 75 and 326
+c Line #268. Created POG AND Node 327 to hold literals between NNF nodes 15 and 16
+c Line #268.  Adding edge between POG nodes 74 and 327
+c Line #269.  Created POG node OR number 328 from NNF node 100
+c Line #270. Created POG AND Node 329 to hold literals between NNF nodes 100 and 99
+c Line #270.  Adding edge between POG nodes 328 and 329
+c Line #271. Created POG AND Node 330 to hold literals between NNF nodes 100 and 18
+c Line #271.  Adding edge between POG nodes 328 and 330
+c Line #272. Created POG AND Node 331 to hold literals between NNF nodes 15 and 100
+c Line #272.  Adding edge between POG nodes 74 and 331
+c Line #273. Created POG AND Node 332 to hold literals between NNF nodes 14 and 15
+c Line #273.  Adding edge between POG nodes 73 and 332
+c Line #274.  Created POG node OR number 333 from NNF node 101
+c Line #275. Created POG AND Node 334 to hold literals between NNF nodes 101 and 99
+c Line #275.  Adding edge between POG nodes 333 and 334
+c Line #276. Created POG AND Node 335 to hold literals between NNF nodes 101 and 99
+c Line #276.  Adding edge between POG nodes 333 and 335
+c Line #277. Created POG AND Node 336 to hold literals between NNF nodes 14 and 101
+c Line #277.  Adding edge between POG nodes 73 and 336
+c Line #278. Created POG AND Node 337 to hold literals between NNF nodes 13 and 14
+c Line #278.  Adding edge between POG nodes 72 and 337
+c Line #279.  Created POG node OR number 338 from NNF node 102
+c Line #280. Created POG AND Node 339 to hold literals between NNF nodes 102 and 101
+c Line #280.  Adding edge between POG nodes 338 and 339
+c Line #281. Created POG AND Node 340 to hold literals between NNF nodes 102 and 16
+c Line #281.  Adding edge between POG nodes 338 and 340
+c Line #282. Created POG AND Node 341 to hold literals between NNF nodes 13 and 102
+c Line #282.  Adding edge between POG nodes 72 and 341
+c Line #283. Created POG AND Node 342 to hold literals between NNF nodes 12 and 13
+c Line #283.  Adding edge between POG nodes 71 and 342
+c Line #284.  Created POG node OR number 343 from NNF node 103
+c Line #285. Created POG AND Node 344 to hold literals between NNF nodes 103 and 99
+c Line #285.  Adding edge between POG nodes 343 and 344
+c Line #286. Created POG AND Node 345 to hold literals between NNF nodes 103 and 99
+c Line #286.  Adding edge between POG nodes 343 and 345
+c Line #287. Created POG AND Node 346 to hold literals between NNF nodes 12 and 103
+c Line #287.  Adding edge between POG nodes 71 and 346
+c Line #288. Created POG AND Node 347 to hold literals between NNF nodes 11 and 12
+c Line #288.  Adding edge between POG nodes 70 and 347
+c Line #289.  Created POG node OR number 348 from NNF node 104
+c Line #290. Created POG AND Node 349 to hold literals between NNF nodes 104 and 103
+c Line #290.  Adding edge between POG nodes 348 and 349
+c Line #291. Created POG AND Node 350 to hold literals between NNF nodes 104 and 14
+c Line #291.  Adding edge between POG nodes 348 and 350
+c Line #292. Created POG AND Node 351 to hold literals between NNF nodes 11 and 104
+c Line #292.  Adding edge between POG nodes 70 and 351
+c Line #293. Created POG AND Node 352 to hold literals between NNF nodes 10 and 11
+c Line #293.  Adding edge between POG nodes 69 and 352
+c Line #294.  Created POG node OR number 353 from NNF node 105
+c Line #295. Created POG AND Node 354 to hold literals between NNF nodes 105 and 103
+c Line #295.  Adding edge between POG nodes 353 and 354
+c Line #296. Created POG AND Node 355 to hold literals between NNF nodes 105 and 103
+c Line #296.  Adding edge between POG nodes 353 and 355
+c Line #297. Created POG AND Node 356 to hold literals between NNF nodes 10 and 105
+c Line #297.  Adding edge between POG nodes 69 and 356
+c Line #298. Created POG AND Node 357 to hold literals between NNF nodes 9 and 10
+c Line #298.  Adding edge between POG nodes 68 and 357
+c Line #299. Created POG AND Node 358 to hold literals between NNF nodes 9 and 1
+c Line #299.  Adding edge between POG nodes 68 and 358
+c Line #300. Created POG AND Node 359 to hold literals between NNF nodes 8 and 9
+c Line #300.  Adding edge between POG nodes 67 and 359
+c Line #301.  Created POG node OR number 360 from NNF node 106
+c Line #302. Created POG AND Node 361 to hold literals between NNF nodes 106 and 103
+c Line #302.  Adding edge between POG nodes 360 and 361
+c Line #303. Created POG AND Node 362 to hold literals between NNF nodes 106 and 103
+c Line #303.  Adding edge between POG nodes 360 and 362
+c Line #304. Created POG AND Node 363 to hold literals between NNF nodes 8 and 106
+c Line #304.  Adding edge between POG nodes 67 and 363
+c Line #305. Created POG AND Node 364 to hold literals between NNF nodes 7 and 8
+c Line #305.  Adding edge between POG nodes 66 and 364
+c Line #306. Created POG AND Node 365 to hold literals between NNF nodes 7 and 1
+c Line #306.  Adding edge between POG nodes 66 and 365
+c Line #307. Created POG AND Node 366 to hold literals between NNF nodes 6 and 7
+c Line #307.  Adding edge between POG nodes 65 and 366
+c Line #308.  Created POG node OR number 367 from NNF node 107
+c Line #309. Created POG AND Node 368 to hold literals between NNF nodes 107 and 106
+c Line #309.  Adding edge between POG nodes 367 and 368
+c Line #310. Created POG AND Node 369 to hold literals between NNF nodes 107 and 106
+c Line #310.  Adding edge between POG nodes 367 and 369
+c Line #311. Created POG AND Node 370 to hold literals between NNF nodes 6 and 107
+c Line #311.  Adding edge between POG nodes 65 and 370
+c Line #312. Created POG AND Node 371 to hold literals between NNF nodes 5 and 6
+c Line #312.  Adding edge between POG nodes 64 and 371
+c Line #313. Created POG AND Node 372 to hold literals between NNF nodes 5 and 1
+c Line #313.  Adding edge between POG nodes 64 and 372
+c Line #314. Created POG AND Node 373 to hold literals between NNF nodes 4 and 5
+c Line #314.  Adding edge between POG nodes 63 and 373
+c Line #315.  Created POG node OR number 374 from NNF node 108
+c Line #316.  Created POG node OR number 375 from NNF node 109
+c Line #317.  Created POG node OR number 376 from NNF node 110
+c Line #318.  Created POG node OR number 377 from NNF node 111
+c Line #319.  Created POG node OR number 378 from NNF node 112
+c Line #320.  Created POG node OR number 379 from NNF node 113
+c Line #321.  Created POG node OR number 380 from NNF node 114
+c Line #322.  Created POG node OR number 381 from NNF node 115
+c Line #323.  Created POG node OR number 382 from NNF node 116
+c Line #324.  Created POG node OR number 383 from NNF node 117
+c Line #325.  Created POG node OR number 384 from NNF node 118
+c Line #326.  Created POG node OR number 385 from NNF node 119
+c Line #327.  Created POG node OR number 386 from NNF node 120
+c Line #328.  Created POG node OR number 387 from NNF node 121
+c Line #329.  Created POG node OR number 388 from NNF node 122
+c Line #330.  Created POG node OR number 389 from NNF node 123
+c Line #331.  Created POG node OR number 390 from NNF node 124
+c Line #332.  Created POG node OR number 391 from NNF node 125
+c Line #333.  Created POG node OR number 392 from NNF node 126
+c Line #334.  Created POG node OR number 393 from NNF node 127
+c Line #335.  Created POG node OR number 394 from NNF node 128
+c Line #336.  Created POG node OR number 395 from NNF node 129
+c Line #337.  Created POG node OR number 396 from NNF node 130
+c Line #338.  Created POG node OR number 397 from NNF node 131
+c Line #339.  Created POG node OR number 398 from NNF node 132
+c Line #340.  Created POG node OR number 399 from NNF node 133
+c Line #341.  Created POG node OR number 400 from NNF node 134
+c Line #342.  Created POG node OR number 401 from NNF node 135
+c Line #343. Created POG AND Node 402 to hold literals between NNF nodes 135 and 1
+c Line #343.  Adding edge between POG nodes 401 and 402
+c Line #344. Created POG AND Node 403 to hold literals between NNF nodes 135 and 2
+c Line #344.  Adding edge between POG nodes 401 and 403
+c Line #345. Created POG AND Node 404 to hold literals between NNF nodes 134 and 135
+c Line #345.  Adding edge between POG nodes 400 and 404
+c Line #346. Created POG AND Node 405 to hold literals between NNF nodes 134 and 2
+c Line #346.  Adding edge between POG nodes 400 and 405
+c Line #347. Created POG AND Node 406 to hold literals between NNF nodes 133 and 134
+c Line #347.  Adding edge between POG nodes 399 and 406
+c Line #348. Created POG AND Node 407 to hold literals between NNF nodes 133 and 59
+c Line #348.  Adding edge between POG nodes 399 and 407
+c Line #349. Created POG AND Node 408 to hold literals between NNF nodes 132 and 133
+c Line #349.  Adding edge between POG nodes 398 and 408
+c Line #350. Created POG AND Node 409 to hold literals between NNF nodes 132 and 61
+c Line #350.  Adding edge between POG nodes 398 and 409
+c Line #351. Created POG AND Node 410 to hold literals between NNF nodes 131 and 132
+c Line #351.  Adding edge between POG nodes 397 and 410
+c Line #352. Created POG AND Node 411 to hold literals between NNF nodes 131 and 63
+c Line #352.  Adding edge between POG nodes 397 and 411
+c Line #353. Created POG AND Node 412 to hold literals between NNF nodes 130 and 131
+c Line #353.  Adding edge between POG nodes 396 and 412
+c Line #354. Created POG AND Node 413 to hold literals between NNF nodes 130 and 65
+c Line #354.  Adding edge between POG nodes 396 and 413
+c Line #355. Created POG AND Node 414 to hold literals between NNF nodes 129 and 130
+c Line #355.  Adding edge between POG nodes 395 and 414
+c Line #356. Created POG AND Node 415 to hold literals between NNF nodes 129 and 67
+c Line #356.  Adding edge between POG nodes 395 and 415
+c Line #357. Created POG AND Node 416 to hold literals between NNF nodes 128 and 129
+c Line #357.  Adding edge between POG nodes 394 and 416
+c Line #358. Created POG AND Node 417 to hold literals between NNF nodes 128 and 69
+c Line #358.  Adding edge between POG nodes 394 and 417
+c Line #359. Created POG AND Node 418 to hold literals between NNF nodes 127 and 128
+c Line #359.  Adding edge between POG nodes 393 and 418
+c Line #360. Created POG AND Node 419 to hold literals between NNF nodes 127 and 71
+c Line #360.  Adding edge between POG nodes 393 and 419
+c Line #361. Created POG AND Node 420 to hold literals between NNF nodes 126 and 127
+c Line #361.  Adding edge between POG nodes 392 and 420
+c Line #362. Created POG AND Node 421 to hold literals between NNF nodes 126 and 73
+c Line #362.  Adding edge between POG nodes 392 and 421
+c Line #363. Created POG AND Node 422 to hold literals between NNF nodes 125 and 126
+c Line #363.  Adding edge between POG nodes 391 and 422
+c Line #364. Created POG AND Node 423 to hold literals between NNF nodes 125 and 75
+c Line #364.  Adding edge between POG nodes 391 and 423
+c Line #365. Created POG AND Node 424 to hold literals between NNF nodes 124 and 125
+c Line #365.  Adding edge between POG nodes 390 and 424
+c Line #366. Created POG AND Node 425 to hold literals between NNF nodes 124 and 77
+c Line #366.  Adding edge between POG nodes 390 and 425
+c Line #367. Created POG AND Node 426 to hold literals between NNF nodes 123 and 124
+c Line #367.  Adding edge between POG nodes 389 and 426
+c Line #368. Created POG AND Node 427 to hold literals between NNF nodes 123 and 79
+c Line #368.  Adding edge between POG nodes 389 and 427
+c Line #369. Created POG AND Node 428 to hold literals between NNF nodes 122 and 123
+c Line #369.  Adding edge between POG nodes 388 and 428
+c Line #370. Created POG AND Node 429 to hold literals between NNF nodes 122 and 81
+c Line #370.  Adding edge between POG nodes 388 and 429
+c Line #371. Created POG AND Node 430 to hold literals between NNF nodes 121 and 122
+c Line #371.  Adding edge between POG nodes 387 and 430
+c Line #372. Created POG AND Node 431 to hold literals between NNF nodes 121 and 83
+c Line #372.  Adding edge between POG nodes 387 and 431
+c Line #373. Created POG AND Node 432 to hold literals between NNF nodes 120 and 121
+c Line #373.  Adding edge between POG nodes 386 and 432
+c Line #374. Created POG AND Node 433 to hold literals between NNF nodes 120 and 85
+c Line #374.  Adding edge between POG nodes 386 and 433
+c Line #375. Created POG AND Node 434 to hold literals between NNF nodes 119 and 120
+c Line #375.  Adding edge between POG nodes 385 and 434
+c Line #376. Created POG AND Node 435 to hold literals between NNF nodes 119 and 87
+c Line #376.  Adding edge between POG nodes 385 and 435
+c Line #377. Created POG AND Node 436 to hold literals between NNF nodes 118 and 119
+c Line #377.  Adding edge between POG nodes 384 and 436
+c Line #378. Created POG AND Node 437 to hold literals between NNF nodes 118 and 89
+c Line #378.  Adding edge between POG nodes 384 and 437
+c Line #379. Created POG AND Node 438 to hold literals between NNF nodes 117 and 118
+c Line #379.  Adding edge between POG nodes 383 and 438
+c Line #380. Created POG AND Node 439 to hold literals between NNF nodes 117 and 91
+c Line #380.  Adding edge between POG nodes 383 and 439
+c Line #381. Created POG AND Node 440 to hold literals between NNF nodes 116 and 117
+c Line #381.  Adding edge between POG nodes 382 and 440
+c Line #382. Created POG AND Node 441 to hold literals between NNF nodes 116 and 93
+c Line #382.  Adding edge between POG nodes 382 and 441
+c Line #383. Created POG AND Node 442 to hold literals between NNF nodes 115 and 116
+c Line #383.  Adding edge between POG nodes 381 and 442
+c Line #384. Created POG AND Node 443 to hold literals between NNF nodes 115 and 95
+c Line #384.  Adding edge between POG nodes 381 and 443
+c Line #385. Created POG AND Node 444 to hold literals between NNF nodes 114 and 115
+c Line #385.  Adding edge between POG nodes 380 and 444
+c Line #386. Created POG AND Node 445 to hold literals between NNF nodes 114 and 97
+c Line #386.  Adding edge between POG nodes 380 and 445
+c Line #387. Created POG AND Node 446 to hold literals between NNF nodes 113 and 114
+c Line #387.  Adding edge between POG nodes 379 and 446
+c Line #388. Created POG AND Node 447 to hold literals between NNF nodes 113 and 99
+c Line #388.  Adding edge between POG nodes 379 and 447
+c Line #389. Created POG AND Node 448 to hold literals between NNF nodes 112 and 113
+c Line #389.  Adding edge between POG nodes 378 and 448
+c Line #390. Created POG AND Node 449 to hold literals between NNF nodes 112 and 101
+c Line #390.  Adding edge between POG nodes 378 and 449
+c Line #391. Created POG AND Node 450 to hold literals between NNF nodes 111 and 112
+c Line #391.  Adding edge between POG nodes 377 and 450
+c Line #392. Created POG AND Node 451 to hold literals between NNF nodes 111 and 103
+c Line #392.  Adding edge between POG nodes 377 and 451
+c Line #393. Created POG AND Node 452 to hold literals between NNF nodes 110 and 111
+c Line #393.  Adding edge between POG nodes 376 and 452
+c Line #394. Created POG AND Node 453 to hold literals between NNF nodes 110 and 105
+c Line #394.  Adding edge between POG nodes 376 and 453
+c Line #395. Created POG AND Node 454 to hold literals between NNF nodes 109 and 110
+c Line #395.  Adding edge between POG nodes 375 and 454
+c Line #396. Created POG AND Node 455 to hold literals between NNF nodes 109 and 106
+c Line #396.  Adding edge between POG nodes 375 and 455
+c Line #397. Created POG AND Node 456 to hold literals between NNF nodes 108 and 109
+c Line #397.  Adding edge between POG nodes 374 and 456
+c Line #398. Created POG AND Node 457 to hold literals between NNF nodes 108 and 107
+c Line #398.  Adding edge between POG nodes 374 and 457
+c Line #399. Created POG AND Node 458 to hold literals between NNF nodes 4 and 108
+c Line #399.  Adding edge between POG nodes 63 and 458
+c Line #400. Created POG AND Node 459 to hold literals between NNF nodes 3 and 4
+c Line #400.  Adding edge between POG nodes 62 and 459
+c Setting root literal to 62
+c Read D4 NNF file with 400 nodes (135 explicit) and 265 edges
+c Before optimization:
+N60_FALSE()
+N61_TRUE()
+N62_OR(459)
+N63_OR(373,458)
+N64_OR(371,372)
+N65_OR(366,370)
+N66_OR(364,365)
+N67_OR(359,363)
+N68_OR(357,358)
+N69_OR(352,356)
+N70_OR(347,351)
+N71_OR(342,346)
+N72_OR(337,341)
+N73_OR(332,336)
+N74_OR(327,331)
+N75_OR(322,326)
+N76_OR(317,321)
+N77_OR(312,316)
+N78_OR(307,311)
+N79_OR(302,306)
+N80_OR(297,301)
+N81_OR(292,296)
+N82_OR(287,291)
+N83_OR(282,286)
+N84_OR(277,281)
+N85_OR(272,276)
+N86_OR(267,271)
+N87_OR(262,266)
+N88_OR(257,261)
+N89_OR(252,256)
+N90_OR(247,251)
+N91_OR(242,246)
+N92_OR(237,241)
+N93_OR(232,236)
+N94_OR(227,231)
+N95_OR(222,226)
+N96_OR(217,221)
+N97_OR(212,216)
+N98_OR(207,211)
+N99_OR(202,206)
+N100_OR(197,201)
+N101_OR(192,196)
+N102_OR(187,191)
+N103_OR(182,186)
+N104_OR(177,181)
+N105_OR(172,176)
+N106_OR(167,171)
+N107_OR(162,166)
+N108_OR(157,161)
+N109_OR(152,156)
+N110_OR(147,151)
+N111_OR(142,146)
+N112_OR(137,141)
+N113_OR(132,136)
+N114_OR(127,131)
+N115_OR(122,126)
+N116_OR(120,121)
+N117_OR(118,119)
+N118_AND(-32,-31,61)
+N119_AND(32,61)
+N120_AND(-3,117)
+N121_AND(3,-32,61)
+N122_AND(-33,116)
+N123_OR(124,125)
+N124_AND(-32,61)
+N125_AND(32,61)
+N126_AND(33,3,123)
+N127_AND(-4,115)
+N128_OR(129,130)
+N129_AND(-33,3,123)
+N130_AND(33,-3,117)
+N131_AND(4,128)
+N132_AND(-34,114)
+N133_OR(134,135)
+N134_AND(-33,3,123)
+N135_AND(33,3,123)
+N136_AND(34,4,133)
+N137_AND(-5,113)
+N138_OR(139,140)
+N139_AND(-34,4,133)
+N140_AND(34,-4,115)
+N141_AND(5,138)
+N142_AND(-35,112)
+N143_OR(144,145)
+N144_AND(-34,3,123)
+N145_AND(34,3,123)
+N146_AND(35,5,4,143)
+N147_AND(-6,111)
+N148_OR(149,150)
+N149_AND(-35,5,4,143)
+N150_AND(35,-5,113)
+N151_AND(6,148)
+N152_AND(-36,110)
+N153_OR(154,155)
+N154_AND(-35,5,4,143)
+N155_AND(35,5,4,143)
+N156_AND(36,6,153)
+N157_AND(-7,109)
+N158_OR(159,160)
+N159_AND(-36,6,153)
+N160_AND(36,-6,111)
+N161_AND(7,158)
+N162_AND(-37,108)
+N163_OR(164,165)
+N164_AND(-36,5,4,143)
+N165_AND(36,5,4,143)
+N166_AND(37,7,6,163)
+N167_AND(-8,107)
+N168_OR(169,170)
+N169_AND(-37,7,6,163)
+N170_AND(37,-7,109)
+N171_AND(8,168)
+N172_AND(-38,106)
+N173_OR(174,175)
+N174_AND(-37,7,6,163)
+N175_AND(37,7,6,163)
+N176_AND(38,8,173)
+N177_AND(-9,105)
+N178_OR(179,180)
+N179_AND(-38,8,173)
+N180_AND(38,-8,107)
+N181_AND(9,178)
+N182_AND(-39,104)
+N183_OR(184,185)
+N184_AND(-38,7,6,163)
+N185_AND(38,7,6,163)
+N186_AND(39,9,8,183)
+N187_AND(-10,103)
+N188_OR(189,190)
+N189_AND(-39,9,8,183)
+N190_AND(39,-9,105)
+N191_AND(10,188)
+N192_AND(-40,102)
+N193_OR(194,195)
+N194_AND(-39,9,8,183)
+N195_AND(39,9,8,183)
+N196_AND(40,10,193)
+N197_AND(-11,101)
+N198_OR(199,200)
+N199_AND(-40,10,193)
+N200_AND(40,-10,103)
+N201_AND(11,198)
+N202_AND(-41,100)
+N203_OR(204,205)
+N204_AND(-40,9,8,183)
+N205_AND(40,9,8,183)
+N206_AND(41,11,10,203)
+N207_AND(-12,99)
+N208_OR(209,210)
+N209_AND(-41,11,10,203)
+N210_AND(41,-11,101)
+N211_AND(12,208)
+N212_AND(-42,98)
+N213_OR(214,215)
+N214_AND(-41,11,10,203)
+N215_AND(41,11,10,203)
+N216_AND(42,12,213)
+N217_AND(-13,97)
+N218_OR(219,220)
+N219_AND(-42,12,213)
+N220_AND(42,-12,99)
+N221_AND(13,218)
+N222_AND(-43,96)
+N223_OR(224,225)
+N224_AND(-42,11,10,203)
+N225_AND(42,11,10,203)
+N226_AND(43,13,12,223)
+N227_AND(-14,95)
+N228_OR(229,230)
+N229_AND(-43,13,12,223)
+N230_AND(43,-13,97)
+N231_AND(14,228)
+N232_AND(-44,94)
+N233_OR(234,235)
+N234_AND(-43,13,12,223)
+N235_AND(43,13,12,223)
+N236_AND(44,14,233)
+N237_AND(-15,93)
+N238_OR(239,240)
+N239_AND(-44,14,233)
+N240_AND(44,-14,95)
+N241_AND(15,238)
+N242_AND(-45,92)
+N243_OR(244,245)
+N244_AND(-44,13,12,223)
+N245_AND(44,13,12,223)
+N246_AND(45,15,14,243)
+N247_AND(-16,91)
+N248_OR(249,250)
+N249_AND(-45,15,14,243)
+N250_AND(45,-15,93)
+N251_AND(16,248)
+N252_AND(-46,90)
+N253_OR(254,255)
+N254_AND(-45,15,14,243)
+N255_AND(45,15,14,243)
+N256_AND(46,16,253)
+N257_AND(-17,89)
+N258_OR(259,260)
+N259_AND(-46,16,253)
+N260_AND(46,-16,91)
+N261_AND(17,258)
+N262_AND(-47,88)
+N263_OR(264,265)
+N264_AND(-46,15,14,243)
+N265_AND(46,15,14,243)
+N266_AND(47,17,16,263)
+N267_AND(-18,87)
+N268_OR(269,270)
+N269_AND(-47,17,16,263)
+N270_AND(47,-17,89)
+N271_AND(18,268)
+N272_AND(-48,86)
+N273_OR(274,275)
+N274_AND(-47,17,16,263)
+N275_AND(47,17,16,263)
+N276_AND(48,18,273)
+N277_AND(-19,85)
+N278_OR(279,280)
+N279_AND(-48,18,273)
+N280_AND(48,-18,87)
+N281_AND(19,278)
+N282_AND(-49,84)
+N283_OR(284,285)
+N284_AND(-48,17,16,263)
+N285_AND(48,17,16,263)
+N286_AND(49,19,18,283)
+N287_AND(-20,83)
+N288_OR(289,290)
+N289_AND(-49,19,18,283)
+N290_AND(49,-19,85)
+N291_AND(20,288)
+N292_AND(-50,82)
+N293_OR(294,295)
+N294_AND(-49,19,18,283)
+N295_AND(49,19,18,283)
+N296_AND(50,20,293)
+N297_AND(-21,81)
+N298_OR(299,300)
+N299_AND(-50,20,293)
+N300_AND(50,-20,83)
+N301_AND(21,298)
+N302_AND(-51,80)
+N303_OR(304,305)
+N304_AND(-50,19,18,283)
+N305_AND(50,19,18,283)
+N306_AND(51,21,20,303)
+N307_AND(-22,79)
+N308_OR(309,310)
+N309_AND(-51,21,20,303)
+N310_AND(51,-21,81)
+N311_AND(22,308)
+N312_AND(-52,78)
+N313_OR(314,315)
+N314_AND(-51,21,20,303)
+N315_AND(51,21,20,303)
+N316_AND(52,22,313)
+N317_AND(-23,77)
+N318_OR(319,320)
+N319_AND(-52,22,313)
+N320_AND(52,-22,79)
+N321_AND(23,318)
+N322_AND(-53,76)
+N323_OR(324,325)
+N324_AND(-52,21,20,303)
+N325_AND(52,21,20,303)
+N326_AND(53,23,22,323)
+N327_AND(-24,75)
+N328_OR(329,330)
+N329_AND(-53,23,22,323)
+N330_AND(53,-23,77)
+N331_AND(24,328)
+N332_AND(-54,74)
+N333_OR(334,335)
+N334_AND(-53,23,22,323)
+N335_AND(53,23,22,323)
+N336_AND(54,24,333)
+N337_AND(-25,73)
+N338_OR(339,340)
+N339_AND(-54,24,333)
+N340_AND(54,-24,75)
+N341_AND(25,338)
+N342_AND(-55,72)
+N343_OR(344,345)
+N344_AND(-54,23,22,323)
+N345_AND(54,23,22,323)
+N346_AND(55,25,24,343)
+N347_AND(-26,71)
+N348_OR(349,350)
+N349_AND(-55,25,24,343)
+N350_AND(55,-25,73)
+N351_AND(26,348)
+N352_AND(-56,70)
+N353_OR(354,355)
+N354_AND(-55,25,24,343)
+N355_AND(55,25,24,343)
+N356_AND(56,26,353)
+N357_AND(-27,69)
+N358_AND(27,60)
+N359_AND(-57,68)
+N360_OR(361,362)
+N361_AND(-56,25,24,343)
+N362_AND(56,25,24,343)
+N363_AND(57,27,26,360)
+N364_AND(-28,67)
+N365_AND(28,60)
+N366_AND(-58,66)
+N367_OR(368,369)
+N368_AND(-57,27,26,360)
+N369_AND(57,27,26,360)
+N370_AND(58,28,367)
+N371_AND(-29,65)
+N372_AND(29,60)
+N373_AND(-59,2,1,64)
+N374_OR(456,457)
+N375_OR(454,455)
+N376_OR(452,453)
+N377_OR(450,451)
+N378_OR(448,449)
+N379_OR(446,447)
+N380_OR(444,445)
+N381_OR(442,443)
+N382_OR(440,441)
+N383_OR(438,439)
+N384_OR(436,437)
+N385_OR(434,435)
+N386_OR(432,433)
+N387_OR(430,431)
+N388_OR(428,429)
+N389_OR(426,427)
+N390_OR(424,425)
+N391_OR(422,423)
+N392_OR(420,421)
+N393_OR(418,419)
+N394_OR(416,417)
+N395_OR(414,415)
+N396_OR(412,413)
+N397_OR(410,411)
+N398_OR(408,409)
+N399_OR(406,407)
+N400_OR(404,405)
+N401_OR(402,403)
+N402_AND(-2,60)
+N403_AND(2,1,61)
+N404_AND(-32,401)
+N405_AND(32,2,1,61)
+N406_AND(-33,3,400)
+N407_AND(33,2,1,3,123)
+N408_AND(-34,4,399)
+N409_AND(34,2,1,4,133)
+N410_AND(-35,5,398)
+N411_AND(35,2,1,5,4,143)
+N412_AND(-36,6,397)
+N413_AND(36,2,1,6,153)
+N414_AND(-37,7,396)
+N415_AND(37,2,1,7,6,163)
+N416_AND(-38,8,395)
+N417_AND(38,2,1,8,173)
+N418_AND(-39,9,394)
+N419_AND(39,2,1,9,8,183)
+N420_AND(-40,10,393)
+N421_AND(40,2,1,10,193)
+N422_AND(-41,11,392)
+N423_AND(41,2,1,11,10,203)
+N424_AND(-42,12,391)
+N425_AND(42,2,1,12,213)
+N426_AND(-43,13,390)
+N427_AND(43,2,1,13,12,223)
+N428_AND(-44,14,389)
+N429_AND(44,2,1,14,233)
+N430_AND(-45,15,388)
+N431_AND(45,2,1,15,14,243)
+N432_AND(-46,16,387)
+N433_AND(46,2,1,16,253)
+N434_AND(-47,17,386)
+N435_AND(47,2,1,17,16,263)
+N436_AND(-48,18,385)
+N437_AND(48,2,1,18,273)
+N438_AND(-49,19,384)
+N439_AND(49,2,1,19,18,283)
+N440_AND(-50,20,383)
+N441_AND(50,2,1,20,293)
+N442_AND(-51,21,382)
+N443_AND(51,2,1,21,20,303)
+N444_AND(-52,22,381)
+N445_AND(52,2,1,22,313)
+N446_AND(-53,23,380)
+N447_AND(53,2,1,23,22,323)
+N448_AND(-54,24,379)
+N449_AND(54,2,1,24,333)
+N450_AND(-55,25,378)
+N451_AND(55,2,1,25,24,343)
+N452_AND(-56,26,377)
+N453_AND(56,2,1,26,353)
+N454_AND(-57,27,376)
+N455_AND(57,2,1,27,26,360)
+N456_AND(-58,28,375)
+N457_AND(58,2,1,28,367)
+N458_AND(59,29,374)
+N459_AND(-30,63)
+ROOT 62
+c Compressing POG with 400 nodes (400 accessible from root) and root literal 62
+c   Converted node N118_AND(-32,-31,61) to N60_AND(-32,-31)
+c   Converted node N117_OR(118,119) to N61_OR(60,32)
+c   Converted node N120_AND(-3,117) to N62_AND(-3,61)
+c   Converted node N121_AND(3,-32,61) to N63_AND(3,-32)
+c   Converted node N116_OR(120,121) to N64_OR(62,63)
+c   Converted node N122_AND(-33,116) to N65_AND(-33,64)
+c   Converted node N123_OR(124,125) to N66_OR(-32,32)
+c   Converted node N126_AND(33,3,123) to N67_AND(33,3,66)
+c   Converted node N115_OR(122,126) to N68_OR(65,67)
+c   Converted node N127_AND(-4,115) to N69_AND(-4,68)
+c   Converted node N129_AND(-33,3,123) to N70_AND(-33,3,66)
+c   Converted node N130_AND(33,-3,117) to N71_AND(33,-3,61)
+c   Converted node N128_OR(129,130) to N72_OR(70,71)
+c   Converted node N131_AND(4,128) to N73_AND(4,72)
+c   Converted node N114_OR(127,131) to N74_OR(69,73)
+c   Converted node N132_AND(-34,114) to N75_AND(-34,74)
+c   Converted node N134_AND(-33,3,123) to N76_AND(-33,3,66)
+c   Converted node N135_AND(33,3,123) to N77_AND(33,3,66)
+c   Converted node N133_OR(134,135) to N78_OR(76,77)
+c   Converted node N136_AND(34,4,133) to N79_AND(34,4,78)
+c   Converted node N113_OR(132,136) to N80_OR(75,79)
+c   Converted node N137_AND(-5,113) to N81_AND(-5,80)
+c   Converted node N139_AND(-34,4,133) to N82_AND(-34,4,78)
+c   Converted node N140_AND(34,-4,115) to N83_AND(34,-4,68)
+c   Converted node N138_OR(139,140) to N84_OR(82,83)
+c   Converted node N141_AND(5,138) to N85_AND(5,84)
+c   Converted node N112_OR(137,141) to N86_OR(81,85)
+c   Converted node N142_AND(-35,112) to N87_AND(-35,86)
+c   Converted node N144_AND(-34,3,123) to N88_AND(-34,3,66)
+c   Converted node N145_AND(34,3,123) to N89_AND(34,3,66)
+c   Converted node N143_OR(144,145) to N90_OR(88,89)
+c   Converted node N146_AND(35,5,4,143) to N91_AND(35,5,4,90)
+c   Converted node N111_OR(142,146) to N92_OR(87,91)
+c   Converted node N147_AND(-6,111) to N93_AND(-6,92)
+c   Converted node N149_AND(-35,5,4,143) to N94_AND(-35,5,4,90)
+c   Converted node N150_AND(35,-5,113) to N95_AND(35,-5,80)
+c   Converted node N148_OR(149,150) to N96_OR(94,95)
+c   Converted node N151_AND(6,148) to N97_AND(6,96)
+c   Converted node N110_OR(147,151) to N98_OR(93,97)
+c   Converted node N152_AND(-36,110) to N99_AND(-36,98)
+c   Converted node N154_AND(-35,5,4,143) to N100_AND(-35,5,4,90)
+c   Converted node N155_AND(35,5,4,143) to N101_AND(35,5,4,90)
+c   Converted node N153_OR(154,155) to N102_OR(100,101)
+c   Converted node N156_AND(36,6,153) to N103_AND(36,6,102)
+c   Converted node N109_OR(152,156) to N104_OR(99,103)
+c   Converted node N157_AND(-7,109) to N105_AND(-7,104)
+c   Converted node N159_AND(-36,6,153) to N106_AND(-36,6,102)
+c   Converted node N160_AND(36,-6,111) to N107_AND(36,-6,92)
+c   Converted node N158_OR(159,160) to N108_OR(106,107)
+c   Converted node N161_AND(7,158) to N109_AND(7,108)
+c   Converted node N108_OR(157,161) to N110_OR(105,109)
+c   Converted node N162_AND(-37,108) to N111_AND(-37,110)
+c   Converted node N164_AND(-36,5,4,143) to N112_AND(-36,5,4,90)
+c   Converted node N165_AND(36,5,4,143) to N113_AND(36,5,4,90)
+c   Converted node N163_OR(164,165) to N114_OR(112,113)
+c   Converted node N166_AND(37,7,6,163) to N115_AND(37,7,6,114)
+c   Converted node N107_OR(162,166) to N116_OR(111,115)
+c   Converted node N167_AND(-8,107) to N117_AND(-8,116)
+c   Converted node N169_AND(-37,7,6,163) to N118_AND(-37,7,6,114)
+c   Converted node N170_AND(37,-7,109) to N119_AND(37,-7,104)
+c   Converted node N168_OR(169,170) to N120_OR(118,119)
+c   Converted node N171_AND(8,168) to N121_AND(8,120)
+c   Converted node N106_OR(167,171) to N122_OR(117,121)
+c   Converted node N172_AND(-38,106) to N123_AND(-38,122)
+c   Converted node N174_AND(-37,7,6,163) to N124_AND(-37,7,6,114)
+c   Converted node N175_AND(37,7,6,163) to N125_AND(37,7,6,114)
+c   Converted node N173_OR(174,175) to N126_OR(124,125)
+c   Converted node N176_AND(38,8,173) to N127_AND(38,8,126)
+c   Converted node N105_OR(172,176) to N128_OR(123,127)
+c   Converted node N177_AND(-9,105) to N129_AND(-9,128)
+c   Converted node N179_AND(-38,8,173) to N130_AND(-38,8,126)
+c   Converted node N180_AND(38,-8,107) to N131_AND(38,-8,116)
+c   Converted node N178_OR(179,180) to N132_OR(130,131)
+c   Converted node N181_AND(9,178) to N133_AND(9,132)
+c   Converted node N104_OR(177,181) to N134_OR(129,133)
+c   Converted node N182_AND(-39,104) to N135_AND(-39,134)
+c   Converted node N184_AND(-38,7,6,163) to N136_AND(-38,7,6,114)
+c   Converted node N185_AND(38,7,6,163) to N137_AND(38,7,6,114)
+c   Converted node N183_OR(184,185) to N138_OR(136,137)
+c   Converted node N186_AND(39,9,8,183) to N139_AND(39,9,8,138)
+c   Converted node N103_OR(182,186) to N140_OR(135,139)
+c   Converted node N187_AND(-10,103) to N141_AND(-10,140)
+c   Converted node N189_AND(-39,9,8,183) to N142_AND(-39,9,8,138)
+c   Converted node N190_AND(39,-9,105) to N143_AND(39,-9,128)
+c   Converted node N188_OR(189,190) to N144_OR(142,143)
+c   Converted node N191_AND(10,188) to N145_AND(10,144)
+c   Converted node N102_OR(187,191) to N146_OR(141,145)
+c   Converted node N192_AND(-40,102) to N147_AND(-40,146)
+c   Converted node N194_AND(-39,9,8,183) to N148_AND(-39,9,8,138)
+c   Converted node N195_AND(39,9,8,183) to N149_AND(39,9,8,138)
+c   Converted node N193_OR(194,195) to N150_OR(148,149)
+c   Converted node N196_AND(40,10,193) to N151_AND(40,10,150)
+c   Converted node N101_OR(192,196) to N152_OR(147,151)
+c   Converted node N197_AND(-11,101) to N153_AND(-11,152)
+c   Converted node N199_AND(-40,10,193) to N154_AND(-40,10,150)
+c   Converted node N200_AND(40,-10,103) to N155_AND(40,-10,140)
+c   Converted node N198_OR(199,200) to N156_OR(154,155)
+c   Converted node N201_AND(11,198) to N157_AND(11,156)
+c   Converted node N100_OR(197,201) to N158_OR(153,157)
+c   Converted node N202_AND(-41,100) to N159_AND(-41,158)
+c   Converted node N204_AND(-40,9,8,183) to N160_AND(-40,9,8,138)
+c   Converted node N205_AND(40,9,8,183) to N161_AND(40,9,8,138)
+c   Converted node N203_OR(204,205) to N162_OR(160,161)
+c   Converted node N206_AND(41,11,10,203) to N163_AND(41,11,10,162)
+c   Converted node N99_OR(202,206) to N164_OR(159,163)
+c   Converted node N207_AND(-12,99) to N165_AND(-12,164)
+c   Converted node N209_AND(-41,11,10,203) to N166_AND(-41,11,10,162)
+c   Converted node N210_AND(41,-11,101) to N167_AND(41,-11,152)
+c   Converted node N208_OR(209,210) to N168_OR(166,167)
+c   Converted node N211_AND(12,208) to N169_AND(12,168)
+c   Converted node N98_OR(207,211) to N170_OR(165,169)
+c   Converted node N212_AND(-42,98) to N171_AND(-42,170)
+c   Converted node N214_AND(-41,11,10,203) to N172_AND(-41,11,10,162)
+c   Converted node N215_AND(41,11,10,203) to N173_AND(41,11,10,162)
+c   Converted node N213_OR(214,215) to N174_OR(172,173)
+c   Converted node N216_AND(42,12,213) to N175_AND(42,12,174)
+c   Converted node N97_OR(212,216) to N176_OR(171,175)
+c   Converted node N217_AND(-13,97) to N177_AND(-13,176)
+c   Converted node N219_AND(-42,12,213) to N178_AND(-42,12,174)
+c   Converted node N220_AND(42,-12,99) to N179_AND(42,-12,164)
+c   Converted node N218_OR(219,220) to N180_OR(178,179)
+c   Converted node N221_AND(13,218) to N181_AND(13,180)
+c   Converted node N96_OR(217,221) to N182_OR(177,181)
+c   Converted node N222_AND(-43,96) to N183_AND(-43,182)
+c   Converted node N224_AND(-42,11,10,203) to N184_AND(-42,11,10,162)
+c   Converted node N225_AND(42,11,10,203) to N185_AND(42,11,10,162)
+c   Converted node N223_OR(224,225) to N186_OR(184,185)
+c   Converted node N226_AND(43,13,12,223) to N187_AND(43,13,12,186)
+c   Converted node N95_OR(222,226) to N188_OR(183,187)
+c   Converted node N227_AND(-14,95) to N189_AND(-14,188)
+c   Converted node N229_AND(-43,13,12,223) to N190_AND(-43,13,12,186)
+c   Converted node N230_AND(43,-13,97) to N191_AND(43,-13,176)
+c   Converted node N228_OR(229,230) to N192_OR(190,191)
+c   Converted node N231_AND(14,228) to N193_AND(14,192)
+c   Converted node N94_OR(227,231) to N194_OR(189,193)
+c   Converted node N232_AND(-44,94) to N195_AND(-44,194)
+c   Converted node N234_AND(-43,13,12,223) to N196_AND(-43,13,12,186)
+c   Converted node N235_AND(43,13,12,223) to N197_AND(43,13,12,186)
+c   Converted node N233_OR(234,235) to N198_OR(196,197)
+c   Converted node N236_AND(44,14,233) to N199_AND(44,14,198)
+c   Converted node N93_OR(232,236) to N200_OR(195,199)
+c   Converted node N237_AND(-15,93) to N201_AND(-15,200)
+c   Converted node N239_AND(-44,14,233) to N202_AND(-44,14,198)
+c   Converted node N240_AND(44,-14,95) to N203_AND(44,-14,188)
+c   Converted node N238_OR(239,240) to N204_OR(202,203)
+c   Converted node N241_AND(15,238) to N205_AND(15,204)
+c   Converted node N92_OR(237,241) to N206_OR(201,205)
+c   Converted node N242_AND(-45,92) to N207_AND(-45,206)
+c   Converted node N244_AND(-44,13,12,223) to N208_AND(-44,13,12,186)
+c   Converted node N245_AND(44,13,12,223) to N209_AND(44,13,12,186)
+c   Converted node N243_OR(244,245) to N210_OR(208,209)
+c   Converted node N246_AND(45,15,14,243) to N211_AND(45,15,14,210)
+c   Converted node N91_OR(242,246) to N212_OR(207,211)
+c   Converted node N247_AND(-16,91) to N213_AND(-16,212)
+c   Converted node N249_AND(-45,15,14,243) to N214_AND(-45,15,14,210)
+c   Converted node N250_AND(45,-15,93) to N215_AND(45,-15,200)
+c   Converted node N248_OR(249,250) to N216_OR(214,215)
+c   Converted node N251_AND(16,248) to N217_AND(16,216)
+c   Converted node N90_OR(247,251) to N218_OR(213,217)
+c   Converted node N252_AND(-46,90) to N219_AND(-46,218)
+c   Converted node N254_AND(-45,15,14,243) to N220_AND(-45,15,14,210)
+c   Converted node N255_AND(45,15,14,243) to N221_AND(45,15,14,210)
+c   Converted node N253_OR(254,255) to N222_OR(220,221)
+c   Converted node N256_AND(46,16,253) to N223_AND(46,16,222)
+c   Converted node N89_OR(252,256) to N224_OR(219,223)
+c   Converted node N257_AND(-17,89) to N225_AND(-17,224)
+c   Converted node N259_AND(-46,16,253) to N226_AND(-46,16,222)
+c   Converted node N260_AND(46,-16,91) to N227_AND(46,-16,212)
+c   Converted node N258_OR(259,260) to N228_OR(226,227)
+c   Converted node N261_AND(17,258) to N229_AND(17,228)
+c   Converted node N88_OR(257,261) to N230_OR(225,229)
+c   Converted node N262_AND(-47,88) to N231_AND(-47,230)
+c   Converted node N264_AND(-46,15,14,243) to N232_AND(-46,15,14,210)
+c   Converted node N265_AND(46,15,14,243) to N233_AND(46,15,14,210)
+c   Converted node N263_OR(264,265) to N234_OR(232,233)
+c   Converted node N266_AND(47,17,16,263) to N235_AND(47,17,16,234)
+c   Converted node N87_OR(262,266) to N236_OR(231,235)
+c   Converted node N267_AND(-18,87) to N237_AND(-18,236)
+c   Converted node N269_AND(-47,17,16,263) to N238_AND(-47,17,16,234)
+c   Converted node N270_AND(47,-17,89) to N239_AND(47,-17,224)
+c   Converted node N268_OR(269,270) to N240_OR(238,239)
+c   Converted node N271_AND(18,268) to N241_AND(18,240)
+c   Converted node N86_OR(267,271) to N242_OR(237,241)
+c   Converted node N272_AND(-48,86) to N243_AND(-48,242)
+c   Converted node N274_AND(-47,17,16,263) to N244_AND(-47,17,16,234)
+c   Converted node N275_AND(47,17,16,263) to N245_AND(47,17,16,234)
+c   Converted node N273_OR(274,275) to N246_OR(244,245)
+c   Converted node N276_AND(48,18,273) to N247_AND(48,18,246)
+c   Converted node N85_OR(272,276) to N248_OR(243,247)
+c   Converted node N277_AND(-19,85) to N249_AND(-19,248)
+c   Converted node N279_AND(-48,18,273) to N250_AND(-48,18,246)
+c   Converted node N280_AND(48,-18,87) to N251_AND(48,-18,236)
+c   Converted node N278_OR(279,280) to N252_OR(250,251)
+c   Converted node N281_AND(19,278) to N253_AND(19,252)
+c   Converted node N84_OR(277,281) to N254_OR(249,253)
+c   Converted node N282_AND(-49,84) to N255_AND(-49,254)
+c   Converted node N284_AND(-48,17,16,263) to N256_AND(-48,17,16,234)
+c   Converted node N285_AND(48,17,16,263) to N257_AND(48,17,16,234)
+c   Converted node N283_OR(284,285) to N258_OR(256,257)
+c   Converted node N286_AND(49,19,18,283) to N259_AND(49,19,18,258)
+c   Converted node N83_OR(282,286) to N260_OR(255,259)
+c   Converted node N287_AND(-20,83) to N261_AND(-20,260)
+c   Converted node N289_AND(-49,19,18,283) to N262_AND(-49,19,18,258)
+c   Converted node N290_AND(49,-19,85) to N263_AND(49,-19,248)
+c   Converted node N288_OR(289,290) to N264_OR(262,263)
+c   Converted node N291_AND(20,288) to N265_AND(20,264)
+c   Converted node N82_OR(287,291) to N266_OR(261,265)
+c   Converted node N292_AND(-50,82) to N267_AND(-50,266)
+c   Converted node N294_AND(-49,19,18,283) to N268_AND(-49,19,18,258)
+c   Converted node N295_AND(49,19,18,283) to N269_AND(49,19,18,258)
+c   Converted node N293_OR(294,295) to N270_OR(268,269)
+c   Converted node N296_AND(50,20,293) to N271_AND(50,20,270)
+c   Converted node N81_OR(292,296) to N272_OR(267,271)
+c   Converted node N297_AND(-21,81) to N273_AND(-21,272)
+c   Converted node N299_AND(-50,20,293) to N274_AND(-50,20,270)
+c   Converted node N300_AND(50,-20,83) to N275_AND(50,-20,260)
+c   Converted node N298_OR(299,300) to N276_OR(274,275)
+c   Converted node N301_AND(21,298) to N277_AND(21,276)
+c   Converted node N80_OR(297,301) to N278_OR(273,277)
+c   Converted node N302_AND(-51,80) to N279_AND(-51,278)
+c   Converted node N304_AND(-50,19,18,283) to N280_AND(-50,19,18,258)
+c   Converted node N305_AND(50,19,18,283) to N281_AND(50,19,18,258)
+c   Converted node N303_OR(304,305) to N282_OR(280,281)
+c   Converted node N306_AND(51,21,20,303) to N283_AND(51,21,20,282)
+c   Converted node N79_OR(302,306) to N284_OR(279,283)
+c   Converted node N307_AND(-22,79) to N285_AND(-22,284)
+c   Converted node N309_AND(-51,21,20,303) to N286_AND(-51,21,20,282)
+c   Converted node N310_AND(51,-21,81) to N287_AND(51,-21,272)
+c   Converted node N308_OR(309,310) to N288_OR(286,287)
+c   Converted node N311_AND(22,308) to N289_AND(22,288)
+c   Converted node N78_OR(307,311) to N290_OR(285,289)
+c   Converted node N312_AND(-52,78) to N291_AND(-52,290)
+c   Converted node N314_AND(-51,21,20,303) to N292_AND(-51,21,20,282)
+c   Converted node N315_AND(51,21,20,303) to N293_AND(51,21,20,282)
+c   Converted node N313_OR(314,315) to N294_OR(292,293)
+c   Converted node N316_AND(52,22,313) to N295_AND(52,22,294)
+c   Converted node N77_OR(312,316) to N296_OR(291,295)
+c   Converted node N317_AND(-23,77) to N297_AND(-23,296)
+c   Converted node N319_AND(-52,22,313) to N298_AND(-52,22,294)
+c   Converted node N320_AND(52,-22,79) to N299_AND(52,-22,284)
+c   Converted node N318_OR(319,320) to N300_OR(298,299)
+c   Converted node N321_AND(23,318) to N301_AND(23,300)
+c   Converted node N76_OR(317,321) to N302_OR(297,301)
+c   Converted node N322_AND(-53,76) to N303_AND(-53,302)
+c   Converted node N324_AND(-52,21,20,303) to N304_AND(-52,21,20,282)
+c   Converted node N325_AND(52,21,20,303) to N305_AND(52,21,20,282)
+c   Converted node N323_OR(324,325) to N306_OR(304,305)
+c   Converted node N326_AND(53,23,22,323) to N307_AND(53,23,22,306)
+c   Converted node N75_OR(322,326) to N308_OR(303,307)
+c   Converted node N327_AND(-24,75) to N309_AND(-24,308)
+c   Converted node N329_AND(-53,23,22,323) to N310_AND(-53,23,22,306)
+c   Converted node N330_AND(53,-23,77) to N311_AND(53,-23,296)
+c   Converted node N328_OR(329,330) to N312_OR(310,311)
+c   Converted node N331_AND(24,328) to N313_AND(24,312)
+c   Converted node N74_OR(327,331) to N314_OR(309,313)
+c   Converted node N332_AND(-54,74) to N315_AND(-54,314)
+c   Converted node N334_AND(-53,23,22,323) to N316_AND(-53,23,22,306)
+c   Converted node N335_AND(53,23,22,323) to N317_AND(53,23,22,306)
+c   Converted node N333_OR(334,335) to N318_OR(316,317)
+c   Converted node N336_AND(54,24,333) to N319_AND(54,24,318)
+c   Converted node N73_OR(332,336) to N320_OR(315,319)
+c   Converted node N337_AND(-25,73) to N321_AND(-25,320)
+c   Converted node N339_AND(-54,24,333) to N322_AND(-54,24,318)
+c   Converted node N340_AND(54,-24,75) to N323_AND(54,-24,308)
+c   Converted node N338_OR(339,340) to N324_OR(322,323)
+c   Converted node N341_AND(25,338) to N325_AND(25,324)
+c   Converted node N72_OR(337,341) to N326_OR(321,325)
+c   Converted node N342_AND(-55,72) to N327_AND(-55,326)
+c   Converted node N344_AND(-54,23,22,323) to N328_AND(-54,23,22,306)
+c   Converted node N345_AND(54,23,22,323) to N329_AND(54,23,22,306)
+c   Converted node N343_OR(344,345) to N330_OR(328,329)
+c   Converted node N346_AND(55,25,24,343) to N331_AND(55,25,24,330)
+c   Converted node N71_OR(342,346) to N332_OR(327,331)
+c   Converted node N347_AND(-26,71) to N333_AND(-26,332)
+c   Converted node N349_AND(-55,25,24,343) to N334_AND(-55,25,24,330)
+c   Converted node N350_AND(55,-25,73) to N335_AND(55,-25,320)
+c   Converted node N348_OR(349,350) to N336_OR(334,335)
+c   Converted node N351_AND(26,348) to N337_AND(26,336)
+c   Converted node N70_OR(347,351) to N338_OR(333,337)
+c   Converted node N352_AND(-56,70) to N339_AND(-56,338)
+c   Converted node N354_AND(-55,25,24,343) to N340_AND(-55,25,24,330)
+c   Converted node N355_AND(55,25,24,343) to N341_AND(55,25,24,330)
+c   Converted node N353_OR(354,355) to N342_OR(340,341)
+c   Converted node N356_AND(56,26,353) to N343_AND(56,26,342)
+c   Converted node N69_OR(352,356) to N344_OR(339,343)
+c   Converted node N357_AND(-27,69) to N345_AND(-27,344)
+c   Converted node N358_AND(27,60) to FALSE
+c   Node N68_OR(357,358)  maps to 345
+c   Converted node N359_AND(-57,68) to N346_AND(-57,345)
+c   Converted node N361_AND(-56,25,24,343) to N347_AND(-56,25,24,330)
+c   Converted node N362_AND(56,25,24,343) to N348_AND(56,25,24,330)
+c   Converted node N360_OR(361,362) to N349_OR(347,348)
+c   Converted node N363_AND(57,27,26,360) to N350_AND(57,27,26,349)
+c   Converted node N67_OR(359,363) to N351_OR(346,350)
+c   Converted node N364_AND(-28,67) to N352_AND(-28,351)
+c   Converted node N365_AND(28,60) to FALSE
+c   Node N66_OR(364,365)  maps to 352
+c   Converted node N366_AND(-58,66) to N353_AND(-58,352)
+c   Converted node N368_AND(-57,27,26,360) to N354_AND(-57,27,26,349)
+c   Converted node N369_AND(57,27,26,360) to N355_AND(57,27,26,349)
+c   Converted node N367_OR(368,369) to N356_OR(354,355)
+c   Converted node N370_AND(58,28,367) to N357_AND(58,28,356)
+c   Converted node N65_OR(366,370) to N358_OR(353,357)
+c   Converted node N371_AND(-29,65) to N359_AND(-29,358)
+c   Converted node N372_AND(29,60) to FALSE
+c   Node N64_OR(371,372)  maps to 359
+c   Converted node N373_AND(-59,2,1,64) to N360_AND(-59,2,1,359)
+c   Converted node N402_AND(-2,60) to FALSE
+c   Converted node N403_AND(2,1,61) to N361_AND(2,1)
+c   Node N401_OR(402,403)  maps to 361
+c   Converted node N404_AND(-32,401) to N362_AND(-32,361)
+c   Converted node N405_AND(32,2,1,61) to N363_AND(32,2,1)
+c   Converted node N400_OR(404,405) to N364_OR(362,363)
+c   Converted node N406_AND(-33,3,400) to N365_AND(-33,3,364)
+c   Converted node N407_AND(33,2,1,3,123) to N366_AND(33,2,1,3,66)
+c   Converted node N399_OR(406,407) to N367_OR(365,366)
+c   Converted node N408_AND(-34,4,399) to N368_AND(-34,4,367)
+c   Converted node N409_AND(34,2,1,4,133) to N369_AND(34,2,1,4,78)
+c   Converted node N398_OR(408,409) to N370_OR(368,369)
+c   Converted node N410_AND(-35,5,398) to N371_AND(-35,5,370)
+c   Converted node N411_AND(35,2,1,5,4,143) to N372_AND(35,2,1,5,4,90)
+c   Converted node N397_OR(410,411) to N373_OR(371,372)
+c   Converted node N412_AND(-36,6,397) to N374_AND(-36,6,373)
+c   Converted node N413_AND(36,2,1,6,153) to N375_AND(36,2,1,6,102)
+c   Converted node N396_OR(412,413) to N376_OR(374,375)
+c   Converted node N414_AND(-37,7,396) to N377_AND(-37,7,376)
+c   Converted node N415_AND(37,2,1,7,6,163) to N378_AND(37,2,1,7,6,114)
+c   Converted node N395_OR(414,415) to N379_OR(377,378)
+c   Converted node N416_AND(-38,8,395) to N380_AND(-38,8,379)
+c   Converted node N417_AND(38,2,1,8,173) to N381_AND(38,2,1,8,126)
+c   Converted node N394_OR(416,417) to N382_OR(380,381)
+c   Converted node N418_AND(-39,9,394) to N383_AND(-39,9,382)
+c   Converted node N419_AND(39,2,1,9,8,183) to N384_AND(39,2,1,9,8,138)
+c   Converted node N393_OR(418,419) to N385_OR(383,384)
+c   Converted node N420_AND(-40,10,393) to N386_AND(-40,10,385)
+c   Converted node N421_AND(40,2,1,10,193) to N387_AND(40,2,1,10,150)
+c   Converted node N392_OR(420,421) to N388_OR(386,387)
+c   Converted node N422_AND(-41,11,392) to N389_AND(-41,11,388)
+c   Converted node N423_AND(41,2,1,11,10,203) to N390_AND(41,2,1,11,10,162)
+c   Converted node N391_OR(422,423) to N391_OR(389,390)
+c   Converted node N424_AND(-42,12,391) to N392_AND(-42,12,391)
+c   Converted node N425_AND(42,2,1,12,213) to N393_AND(42,2,1,12,174)
+c   Converted node N390_OR(424,425) to N394_OR(392,393)
+c   Converted node N426_AND(-43,13,390) to N395_AND(-43,13,394)
+c   Converted node N427_AND(43,2,1,13,12,223) to N396_AND(43,2,1,13,12,186)
+c   Converted node N389_OR(426,427) to N397_OR(395,396)
+c   Converted node N428_AND(-44,14,389) to N398_AND(-44,14,397)
+c   Converted node N429_AND(44,2,1,14,233) to N399_AND(44,2,1,14,198)
+c   Converted node N388_OR(428,429) to N400_OR(398,399)
+c   Converted node N430_AND(-45,15,388) to N401_AND(-45,15,400)
+c   Converted node N431_AND(45,2,1,15,14,243) to N402_AND(45,2,1,15,14,210)
+c   Converted node N387_OR(430,431) to N403_OR(401,402)
+c   Converted node N432_AND(-46,16,387) to N404_AND(-46,16,403)
+c   Converted node N433_AND(46,2,1,16,253) to N405_AND(46,2,1,16,222)
+c   Converted node N386_OR(432,433) to N406_OR(404,405)
+c   Converted node N434_AND(-47,17,386) to N407_AND(-47,17,406)
+c   Converted node N435_AND(47,2,1,17,16,263) to N408_AND(47,2,1,17,16,234)
+c   Converted node N385_OR(434,435) to N409_OR(407,408)
+c   Converted node N436_AND(-48,18,385) to N410_AND(-48,18,409)
+c   Converted node N437_AND(48,2,1,18,273) to N411_AND(48,2,1,18,246)
+c   Converted node N384_OR(436,437) to N412_OR(410,411)
+c   Converted node N438_AND(-49,19,384) to N413_AND(-49,19,412)
+c   Converted node N439_AND(49,2,1,19,18,283) to N414_AND(49,2,1,19,18,258)
+c   Converted node N383_OR(438,439) to N415_OR(413,414)
+c   Converted node N440_AND(-50,20,383) to N416_AND(-50,20,415)
+c   Converted node N441_AND(50,2,1,20,293) to N417_AND(50,2,1,20,270)
+c   Converted node N382_OR(440,441) to N418_OR(416,417)
+c   Converted node N442_AND(-51,21,382) to N419_AND(-51,21,418)
+c   Converted node N443_AND(51,2,1,21,20,303) to N420_AND(51,2,1,21,20,282)
+c   Converted node N381_OR(442,443) to N421_OR(419,420)
+c   Converted node N444_AND(-52,22,381) to N422_AND(-52,22,421)
+c   Converted node N445_AND(52,2,1,22,313) to N423_AND(52,2,1,22,294)
+c   Converted node N380_OR(444,445) to N424_OR(422,423)
+c   Converted node N446_AND(-53,23,380) to N425_AND(-53,23,424)
+c   Converted node N447_AND(53,2,1,23,22,323) to N426_AND(53,2,1,23,22,306)
+c   Converted node N379_OR(446,447) to N427_OR(425,426)
+c   Converted node N448_AND(-54,24,379) to N428_AND(-54,24,427)
+c   Converted node N449_AND(54,2,1,24,333) to N429_AND(54,2,1,24,318)
+c   Converted node N378_OR(448,449) to N430_OR(428,429)
+c   Converted node N450_AND(-55,25,378) to N431_AND(-55,25,430)
+c   Converted node N451_AND(55,2,1,25,24,343) to N432_AND(55,2,1,25,24,330)
+c   Converted node N377_OR(450,451) to N433_OR(431,432)
+c   Converted node N452_AND(-56,26,377) to N434_AND(-56,26,433)
+c   Converted node N453_AND(56,2,1,26,353) to N435_AND(56,2,1,26,342)
+c   Converted node N376_OR(452,453) to N436_OR(434,435)
+c   Converted node N454_AND(-57,27,376) to N437_AND(-57,27,436)
+c   Converted node N455_AND(57,2,1,27,26,360) to N438_AND(57,2,1,27,26,349)
+c   Converted node N375_OR(454,455) to N439_OR(437,438)
+c   Converted node N456_AND(-58,28,375) to N440_AND(-58,28,439)
+c   Converted node N457_AND(58,2,1,28,367) to N441_AND(58,2,1,28,356)
+c   Converted node N374_OR(456,457) to N442_OR(440,441)
+c   Converted node N458_AND(59,29,374) to N443_AND(59,29,442)
+c   Converted node N63_OR(373,458) to N444_OR(360,443)
+c   Converted node N459_AND(-30,63) to N445_AND(-30,444)
+c Compressed POG has 386 nodes, root literal 445, and 1469 defining clauses
+c Before concretizing:
+N60_AND(-32,-31)
+N61_OR(60,32)
+N62_AND(-3,61)
+N63_AND(3,-32)
+N64_OR(62,63)
+N65_AND(-33,64)
+N66_OR(-32,32)
+N67_AND(33,3,66)
+N68_OR(65,67)
+N69_AND(-4,68)
+N70_AND(-33,3,66)
+N71_AND(33,-3,61)
+N72_OR(70,71)
+N73_AND(4,72)
+N74_OR(69,73)
+N75_AND(-34,74)
+N76_AND(-33,3,66)
+N77_AND(33,3,66)
+N78_OR(76,77)
+N79_AND(34,4,78)
+N80_OR(75,79)
+N81_AND(-5,80)
+N82_AND(-34,4,78)
+N83_AND(34,-4,68)
+N84_OR(82,83)
+N85_AND(5,84)
+N86_OR(81,85)
+N87_AND(-35,86)
+N88_AND(-34,3,66)
+N89_AND(34,3,66)
+N90_OR(88,89)
+N91_AND(35,5,4,90)
+N92_OR(87,91)
+N93_AND(-6,92)
+N94_AND(-35,5,4,90)
+N95_AND(35,-5,80)
+N96_OR(94,95)
+N97_AND(6,96)
+N98_OR(93,97)
+N99_AND(-36,98)
+N100_AND(-35,5,4,90)
+N101_AND(35,5,4,90)
+N102_OR(100,101)
+N103_AND(36,6,102)
+N104_OR(99,103)
+N105_AND(-7,104)
+N106_AND(-36,6,102)
+N107_AND(36,-6,92)
+N108_OR(106,107)
+N109_AND(7,108)
+N110_OR(105,109)
+N111_AND(-37,110)
+N112_AND(-36,5,4,90)
+N113_AND(36,5,4,90)
+N114_OR(112,113)
+N115_AND(37,7,6,114)
+N116_OR(111,115)
+N117_AND(-8,116)
+N118_AND(-37,7,6,114)
+N119_AND(37,-7,104)
+N120_OR(118,119)
+N121_AND(8,120)
+N122_OR(117,121)
+N123_AND(-38,122)
+N124_AND(-37,7,6,114)
+N125_AND(37,7,6,114)
+N126_OR(124,125)
+N127_AND(38,8,126)
+N128_OR(123,127)
+N129_AND(-9,128)
+N130_AND(-38,8,126)
+N131_AND(38,-8,116)
+N132_OR(130,131)
+N133_AND(9,132)
+N134_OR(129,133)
+N135_AND(-39,134)
+N136_AND(-38,7,6,114)
+N137_AND(38,7,6,114)
+N138_OR(136,137)
+N139_AND(39,9,8,138)
+N140_OR(135,139)
+N141_AND(-10,140)
+N142_AND(-39,9,8,138)
+N143_AND(39,-9,128)
+N144_OR(142,143)
+N145_AND(10,144)
+N146_OR(141,145)
+N147_AND(-40,146)
+N148_AND(-39,9,8,138)
+N149_AND(39,9,8,138)
+N150_OR(148,149)
+N151_AND(40,10,150)
+N152_OR(147,151)
+N153_AND(-11,152)
+N154_AND(-40,10,150)
+N155_AND(40,-10,140)
+N156_OR(154,155)
+N157_AND(11,156)
+N158_OR(153,157)
+N159_AND(-41,158)
+N160_AND(-40,9,8,138)
+N161_AND(40,9,8,138)
+N162_OR(160,161)
+N163_AND(41,11,10,162)
+N164_OR(159,163)
+N165_AND(-12,164)
+N166_AND(-41,11,10,162)
+N167_AND(41,-11,152)
+N168_OR(166,167)
+N169_AND(12,168)
+N170_OR(165,169)
+N171_AND(-42,170)
+N172_AND(-41,11,10,162)
+N173_AND(41,11,10,162)
+N174_OR(172,173)
+N175_AND(42,12,174)
+N176_OR(171,175)
+N177_AND(-13,176)
+N178_AND(-42,12,174)
+N179_AND(42,-12,164)
+N180_OR(178,179)
+N181_AND(13,180)
+N182_OR(177,181)
+N183_AND(-43,182)
+N184_AND(-42,11,10,162)
+N185_AND(42,11,10,162)
+N186_OR(184,185)
+N187_AND(43,13,12,186)
+N188_OR(183,187)
+N189_AND(-14,188)
+N190_AND(-43,13,12,186)
+N191_AND(43,-13,176)
+N192_OR(190,191)
+N193_AND(14,192)
+N194_OR(189,193)
+N195_AND(-44,194)
+N196_AND(-43,13,12,186)
+N197_AND(43,13,12,186)
+N198_OR(196,197)
+N199_AND(44,14,198)
+N200_OR(195,199)
+N201_AND(-15,200)
+N202_AND(-44,14,198)
+N203_AND(44,-14,188)
+N204_OR(202,203)
+N205_AND(15,204)
+N206_OR(201,205)
+N207_AND(-45,206)
+N208_AND(-44,13,12,186)
+N209_AND(44,13,12,186)
+N210_OR(208,209)
+N211_AND(45,15,14,210)
+N212_OR(207,211)
+N213_AND(-16,212)
+N214_AND(-45,15,14,210)
+N215_AND(45,-15,200)
+N216_OR(214,215)
+N217_AND(16,216)
+N218_OR(213,217)
+N219_AND(-46,218)
+N220_AND(-45,15,14,210)
+N221_AND(45,15,14,210)
+N222_OR(220,221)
+N223_AND(46,16,222)
+N224_OR(219,223)
+N225_AND(-17,224)
+N226_AND(-46,16,222)
+N227_AND(46,-16,212)
+N228_OR(226,227)
+N229_AND(17,228)
+N230_OR(225,229)
+N231_AND(-47,230)
+N232_AND(-46,15,14,210)
+N233_AND(46,15,14,210)
+N234_OR(232,233)
+N235_AND(47,17,16,234)
+N236_OR(231,235)
+N237_AND(-18,236)
+N238_AND(-47,17,16,234)
+N239_AND(47,-17,224)
+N240_OR(238,239)
+N241_AND(18,240)
+N242_OR(237,241)
+N243_AND(-48,242)
+N244_AND(-47,17,16,234)
+N245_AND(47,17,16,234)
+N246_OR(244,245)
+N247_AND(48,18,246)
+N248_OR(243,247)
+N249_AND(-19,248)
+N250_AND(-48,18,246)
+N251_AND(48,-18,236)
+N252_OR(250,251)
+N253_AND(19,252)
+N254_OR(249,253)
+N255_AND(-49,254)
+N256_AND(-48,17,16,234)
+N257_AND(48,17,16,234)
+N258_OR(256,257)
+N259_AND(49,19,18,258)
+N260_OR(255,259)
+N261_AND(-20,260)
+N262_AND(-49,19,18,258)
+N263_AND(49,-19,248)
+N264_OR(262,263)
+N265_AND(20,264)
+N266_OR(261,265)
+N267_AND(-50,266)
+N268_AND(-49,19,18,258)
+N269_AND(49,19,18,258)
+N270_OR(268,269)
+N271_AND(50,20,270)
+N272_OR(267,271)
+N273_AND(-21,272)
+N274_AND(-50,20,270)
+N275_AND(50,-20,260)
+N276_OR(274,275)
+N277_AND(21,276)
+N278_OR(273,277)
+N279_AND(-51,278)
+N280_AND(-50,19,18,258)
+N281_AND(50,19,18,258)
+N282_OR(280,281)
+N283_AND(51,21,20,282)
+N284_OR(279,283)
+N285_AND(-22,284)
+N286_AND(-51,21,20,282)
+N287_AND(51,-21,272)
+N288_OR(286,287)
+N289_AND(22,288)
+N290_OR(285,289)
+N291_AND(-52,290)
+N292_AND(-51,21,20,282)
+N293_AND(51,21,20,282)
+N294_OR(292,293)
+N295_AND(52,22,294)
+N296_OR(291,295)
+N297_AND(-23,296)
+N298_AND(-52,22,294)
+N299_AND(52,-22,284)
+N300_OR(298,299)
+N301_AND(23,300)
+N302_OR(297,301)
+N303_AND(-53,302)
+N304_AND(-52,21,20,282)
+N305_AND(52,21,20,282)
+N306_OR(304,305)
+N307_AND(53,23,22,306)
+N308_OR(303,307)
+N309_AND(-24,308)
+N310_AND(-53,23,22,306)
+N311_AND(53,-23,296)
+N312_OR(310,311)
+N313_AND(24,312)
+N314_OR(309,313)
+N315_AND(-54,314)
+N316_AND(-53,23,22,306)
+N317_AND(53,23,22,306)
+N318_OR(316,317)
+N319_AND(54,24,318)
+N320_OR(315,319)
+N321_AND(-25,320)
+N322_AND(-54,24,318)
+N323_AND(54,-24,308)
+N324_OR(322,323)
+N325_AND(25,324)
+N326_OR(321,325)
+N327_AND(-55,326)
+N328_AND(-54,23,22,306)
+N329_AND(54,23,22,306)
+N330_OR(328,329)
+N331_AND(55,25,24,330)
+N332_OR(327,331)
+N333_AND(-26,332)
+N334_AND(-55,25,24,330)
+N335_AND(55,-25,320)
+N336_OR(334,335)
+N337_AND(26,336)
+N338_OR(333,337)
+N339_AND(-56,338)
+N340_AND(-55,25,24,330)
+N341_AND(55,25,24,330)
+N342_OR(340,341)
+N343_AND(56,26,342)
+N344_OR(339,343)
+N345_AND(-27,344)
+N346_AND(-57,345)
+N347_AND(-56,25,24,330)
+N348_AND(56,25,24,330)
+N349_OR(347,348)
+N350_AND(57,27,26,349)
+N351_OR(346,350)
+N352_AND(-28,351)
+N353_AND(-58,352)
+N354_AND(-57,27,26,349)
+N355_AND(57,27,26,349)
+N356_OR(354,355)
+N357_AND(58,28,356)
+N358_OR(353,357)
+N359_AND(-29,358)
+N360_AND(-59,2,1,359)
+N361_AND(2,1)
+N362_AND(-32,361)
+N363_AND(32,2,1)
+N364_OR(362,363)
+N365_AND(-33,3,364)
+N366_AND(33,2,1,3,66)
+N367_OR(365,366)
+N368_AND(-34,4,367)
+N369_AND(34,2,1,4,78)
+N370_OR(368,369)
+N371_AND(-35,5,370)
+N372_AND(35,2,1,5,4,90)
+N373_OR(371,372)
+N374_AND(-36,6,373)
+N375_AND(36,2,1,6,102)
+N376_OR(374,375)
+N377_AND(-37,7,376)
+N378_AND(37,2,1,7,6,114)
+N379_OR(377,378)
+N380_AND(-38,8,379)
+N381_AND(38,2,1,8,126)
+N382_OR(380,381)
+N383_AND(-39,9,382)
+N384_AND(39,2,1,9,8,138)
+N385_OR(383,384)
+N386_AND(-40,10,385)
+N387_AND(40,2,1,10,150)
+N388_OR(386,387)
+N389_AND(-41,11,388)
+N390_AND(41,2,1,11,10,162)
+N391_OR(389,390)
+N392_AND(-42,12,391)
+N393_AND(42,2,1,12,174)
+N394_OR(392,393)
+N395_AND(-43,13,394)
+N396_AND(43,2,1,13,12,186)
+N397_OR(395,396)
+N398_AND(-44,14,397)
+N399_AND(44,2,1,14,198)
+N400_OR(398,399)
+N401_AND(-45,15,400)
+N402_AND(45,2,1,15,14,210)
+N403_OR(401,402)
+N404_AND(-46,16,403)
+N405_AND(46,2,1,16,222)
+N406_OR(404,405)
+N407_AND(-47,17,406)
+N408_AND(47,2,1,17,16,234)
+N409_OR(407,408)
+N410_AND(-48,18,409)
+N411_AND(48,2,1,18,246)
+N412_OR(410,411)
+N413_AND(-49,19,412)
+N414_AND(49,2,1,19,18,258)
+N415_OR(413,414)
+N416_AND(-50,20,415)
+N417_AND(50,2,1,20,270)
+N418_OR(416,417)
+N419_AND(-51,21,418)
+N420_AND(51,2,1,21,20,282)
+N421_OR(419,420)
+N422_AND(-52,22,421)
+N423_AND(52,2,1,22,294)
+N424_OR(422,423)
+N425_AND(-53,23,424)
+N426_AND(53,2,1,23,22,306)
+N427_OR(425,426)
+N428_AND(-54,24,427)
+N429_AND(54,2,1,24,318)
+N430_OR(428,429)
+N431_AND(-55,25,430)
+N432_AND(55,2,1,25,24,330)
+N433_OR(431,432)
+N434_AND(-56,26,433)
+N435_AND(56,2,1,26,342)
+N436_OR(434,435)
+N437_AND(-57,27,436)
+N438_AND(57,2,1,27,26,349)
+N439_OR(437,438)
+N440_AND(-58,28,439)
+N441_AND(58,2,1,28,356)
+N442_OR(440,441)
+N443_AND(59,29,442)
+N444_OR(360,443)
+N445_AND(-30,444)
+ROOT 445
+c GEN: Time = 0.01.  Generated POG representation
+c Justifying root literal 445
+c GEN: Time = 0.01.  Deleted asserted clauses
+c GEN: Time = 0.01.  Deleted input clauses
+c 1196 lines written
+c GEN: Formula
+c GEN:    input variables: 59
+c GEN:    input clauses  : 32
+c GEN: POG nodes
+c GEN:    product   : 257
+c GEN:    sum       : 128
+c GEN:    node TOTAL: 385
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 1469
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 1
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 1470
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.01
+c GEN:   time TOTAL     : 0.01
+GEN LOG: Elapsed time = 0.007 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./tree-exa2-30_low.cpog 420 lines 34953 bytes
+FCHECK LOG: Running ../../src/cpog-check -v 5 -1 -S ./tree-exa2-30.sdimacs ./tree-exa2-30_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+File ./tree-exa2-30.sdimacs. Line 1:Read token.  Token = 'p'.  Type = string
+File ./tree-exa2-30.sdimacs. Line 1:Read token.  Token = 'cnf'.  Type = string
+File ./tree-exa2-30.sdimacs. Line 1:Read token.  Token = '60'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 1:Read token.  Token = '32'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 2:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 2:Read token.  Token = '-30'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 2:Starting clause 1
+File ./tree-exa2-30.sdimacs. Line 2:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 2:Finished clause.  Full length 2.  Chunk ID 0.  Offset 0 1: -30
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = '30'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 3:Starting clause 2
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = '59'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = '-29'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = '-58'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = '-28'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 3:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 3:Finished clause.  Full length 6.  Chunk ID 0.  Offset 2 2: 30 59 -29 -58 -28
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = '29'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 4:Starting clause 3
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = '58'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = '-28'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = '-57'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = '-27'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 4:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 4:Finished clause.  Full length 6.  Chunk ID 0.  Offset 8 3: 29 58 -28 -57 -27
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = '28'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 5:Starting clause 4
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = '57'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = '-27'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = '-56'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = '-26'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 5:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 5:Finished clause.  Full length 6.  Chunk ID 0.  Offset 14 4: 28 57 -27 -56 -26
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = '27'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 6:Starting clause 5
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = '56'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = '-26'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = '-55'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = '-25'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 6:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 6:Finished clause.  Full length 6.  Chunk ID 0.  Offset 20 5: 27 56 -26 -55 -25
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = '26'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 7:Starting clause 6
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = '55'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = '-25'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = '-54'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = '-24'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 7:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 7:Finished clause.  Full length 6.  Chunk ID 0.  Offset 26 6: 26 55 -25 -54 -24
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = '25'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 8:Starting clause 7
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = '54'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = '-24'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = '-53'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = '-23'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 8:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 8:Finished clause.  Full length 6.  Chunk ID 0.  Offset 32 7: 25 54 -24 -53 -23
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = '24'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 9:Starting clause 8
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = '53'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = '-23'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = '-52'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = '-22'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 9:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 9:Finished clause.  Full length 6.  Chunk ID 0.  Offset 38 8: 24 53 -23 -52 -22
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = '23'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 10:Starting clause 9
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = '52'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = '-22'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = '-51'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = '-21'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 10:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 10:Finished clause.  Full length 6.  Chunk ID 0.  Offset 44 9: 23 52 -22 -51 -21
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = '22'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 11:Starting clause 10
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = '51'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = '-21'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = '-50'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = '-20'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 11:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 11:Finished clause.  Full length 6.  Chunk ID 0.  Offset 50 10: 22 51 -21 -50 -20
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = '21'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 12:Starting clause 11
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = '50'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = '-20'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = '-49'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = '-19'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 12:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 12:Finished clause.  Full length 6.  Chunk ID 0.  Offset 56 11: 21 50 -20 -49 -19
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = '20'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 13:Starting clause 12
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = '49'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = '-19'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = '-48'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = '-18'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 13:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 13:Finished clause.  Full length 6.  Chunk ID 0.  Offset 62 12: 20 49 -19 -48 -18
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = '19'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 14:Starting clause 13
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = '48'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = '-18'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = '-47'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = '-17'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 14:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 14:Finished clause.  Full length 6.  Chunk ID 0.  Offset 68 13: 19 48 -18 -47 -17
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = '18'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 15:Starting clause 14
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = '47'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = '-17'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = '-46'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = '-16'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 15:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 15:Finished clause.  Full length 6.  Chunk ID 0.  Offset 74 14: 18 47 -17 -46 -16
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = '17'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 16:Starting clause 15
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = '46'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = '-16'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = '-45'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = '-15'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 16:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 16:Finished clause.  Full length 6.  Chunk ID 0.  Offset 80 15: 17 46 -16 -45 -15
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = '16'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 17:Starting clause 16
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = '45'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = '-15'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = '-44'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = '-14'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 17:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 17:Finished clause.  Full length 6.  Chunk ID 0.  Offset 86 16: 16 45 -15 -44 -14
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = '15'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 18:Starting clause 17
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = '44'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = '-14'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = '-43'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = '-13'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 18:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 18:Finished clause.  Full length 6.  Chunk ID 0.  Offset 92 17: 15 44 -14 -43 -13
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = '14'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 19:Starting clause 18
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = '43'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = '-13'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = '-42'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = '-12'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 19:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 19:Finished clause.  Full length 6.  Chunk ID 0.  Offset 98 18: 14 43 -13 -42 -12
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = '13'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 20:Starting clause 19
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = '42'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = '-12'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = '-41'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = '-11'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 20:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 20:Finished clause.  Full length 6.  Chunk ID 0.  Offset 104 19: 13 42 -12 -41 -11
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = '12'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 21:Starting clause 20
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = '41'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = '-11'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = '-40'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = '-10'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 21:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 21:Finished clause.  Full length 6.  Chunk ID 0.  Offset 110 20: 12 41 -11 -40 -10
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = '11'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 22:Starting clause 21
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = '40'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = '-10'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = '-39'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = '-9'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 22:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 22:Finished clause.  Full length 6.  Chunk ID 0.  Offset 116 21: 11 40 -10 -39 -9
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = '10'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 23:Starting clause 22
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = '39'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = '-9'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = '-38'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = '-8'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 23:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 23:Finished clause.  Full length 6.  Chunk ID 0.  Offset 122 22: 10 39 -9 -38 -8
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = '9'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 24:Starting clause 23
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = '38'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = '-8'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = '-37'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = '-7'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 24:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 24:Finished clause.  Full length 6.  Chunk ID 0.  Offset 128 23: 9 38 -8 -37 -7
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = '8'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 25:Starting clause 24
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = '37'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = '-7'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = '-36'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = '-6'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 25:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 25:Finished clause.  Full length 6.  Chunk ID 0.  Offset 134 24: 8 37 -7 -36 -6
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = '7'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 26:Starting clause 25
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = '36'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = '-6'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = '-35'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = '-5'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 26:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 26:Finished clause.  Full length 6.  Chunk ID 0.  Offset 140 25: 7 36 -6 -35 -5
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = '6'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 27:Starting clause 26
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = '35'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = '-5'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = '-34'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = '-4'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 27:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 27:Finished clause.  Full length 6.  Chunk ID 0.  Offset 146 26: 6 35 -5 -34 -4
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = '5'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 28:Starting clause 27
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = '34'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = '-4'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = '-33'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = '-3'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 28:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 28:Finished clause.  Full length 6.  Chunk ID 0.  Offset 152 27: 5 34 -4 -33 -3
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = '4'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 29:Starting clause 28
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = '33'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = '-3'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = '-32'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = '-2'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 29:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 29:Finished clause.  Full length 6.  Chunk ID 0.  Offset 158 28: 4 33 -3 -32 -2
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = '3'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 30:Starting clause 29
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = '32'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = '-2'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = '-31'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = '-1'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 30:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 30:Finished clause.  Full length 6.  Chunk ID 0.  Offset 164 29: 3 32 -2 -31 -1
+File ./tree-exa2-30.sdimacs. Line 31:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 31:Read token.  Token = '2'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 31:Starting clause 30
+File ./tree-exa2-30.sdimacs. Line 31:Read token.  Token = '1'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 31:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 31:Finished clause.  Full length 3.  Chunk ID 0.  Offset 170 30: 2 1
+File ./tree-exa2-30.sdimacs. Line 32:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 32:Read token.  Token = '2'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 32:Starting clause 31
+File ./tree-exa2-30.sdimacs. Line 32:Read token.  Token = '-1'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 32:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 32:Finished clause.  Full length 3.  Chunk ID 0.  Offset 173 31: 2 -1
+File ./tree-exa2-30.sdimacs. Line 33:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 33:Read token.  Token = '-2'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 33:Starting clause 32
+File ./tree-exa2-30.sdimacs. Line 33:Read token.  Token = '1'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 33:Read token.  Token = '0'.  Type = integer
+File ./tree-exa2-30.sdimacs. Line 33:Finished clause.  Full length 3.  Chunk ID 0.  Offset 176 32: -2 1
+File ./tree-exa2-30.sdimacs. Line 34:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30.sdimacs. Line 34:Read token.  Token = ''.  Type = EOF
+CHECK: Read CNF file with 60 variables and 32 clauses
+CNF File.  32 clauses
+1: -30
+2: 30 59 -29 -58 -28
+3: 29 58 -28 -57 -27
+4: 28 57 -27 -56 -26
+5: 27 56 -26 -55 -25
+6: 26 55 -25 -54 -24
+7: 25 54 -24 -53 -23
+8: 24 53 -23 -52 -22
+9: 23 52 -22 -51 -21
+10: 22 51 -21 -50 -20
+11: 21 50 -20 -49 -19
+12: 20 49 -19 -48 -18
+13: 19 48 -18 -47 -17
+14: 18 47 -17 -46 -16
+15: 17 46 -16 -45 -15
+16: 16 45 -15 -44 -14
+17: 15 44 -14 -43 -13
+18: 14 43 -13 -42 -12
+19: 13 42 -12 -41 -11
+20: 12 41 -11 -40 -10
+21: 11 40 -10 -39 -9
+22: 10 39 -9 -38 -8
+23: 9 38 -8 -37 -7
+24: 8 37 -7 -36 -6
+25: 7 36 -6 -35 -5
+26: 6 35 -5 -34 -4
+27: 5 34 -4 -33 -3
+28: 4 33 -3 -32 -2
+29: 3 32 -2 -31 -1
+30: 2 1
+31: 2 -1
+32: -2 1
+File ./tree-exa2-30_low.cpog. Line 1:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 2:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 3:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 4:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 5:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 6:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 7:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 8:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 9:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 10:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 11:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 12:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 13:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 14:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 15:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 16:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 17:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 18:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 19:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 20:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 21:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 22:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 23:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 24:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 25:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 26:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 27:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 28:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 29:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 30:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 31:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 32:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 33:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 34:Read token.  Token = 'r'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 34:Read token.  Token = '445'.  Type = integer
+File ./tree-exa2-30_low.cpog. Line 34:Root literal declared as 445
+File ./tree-exa2-30_low.cpog. Line 35:Read token.  Token = ''.  Type = EOL
+File ./tree-exa2-30_low.cpog. Line 35:Read token.  Token = 'c'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 36:Read token.  Token = '33'.  Type = integer
+File ./tree-exa2-30_low.cpog. Line 36:Read token.  Token = 'p'.  Type = string
+File ./tree-exa2-30_low.cpog. Line 36:Read token.  Token = '60'.  Type = integer
+ERROR. File ./tree-exa2-30_low.cpog. Line 36. Function node_new. Invalid operation id 60
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.011 seconds
+OVERALL OUTCOME: failed
