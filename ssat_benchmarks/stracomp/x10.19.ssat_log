@@ -1,0 +1,50 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x10.19.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./x10.19.sdimacs
+variables (all/used/free): 	314/314/0
+clauses (all/long/binary/unit): 862/143/719/0
+
+Preprocessing .. DONE
+variables (all/used/free): 	314/314/0
+clauses (all/long/binary/unit): 862/143/719/0
+Maximum cache size:	28258 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	314/314/0
+clauses (removed) 			862 (0)
+decisions 				286
+conflicts 				5
+conflict clauses (all/bin/unit) 	3/0/0
+
+cache size 7MB	
+cache (stores / hits) 			283/318
+cache miss rate 0%
+avg. variable count (stores / hits) 	59.4276/2.9717
+
+number of nodes in trace 	288
+number of edges in trace 	691
+
+# satisfying probability = 0.9990234
+
+# END
+
+time: 0.004081s
+
+upper trace written to ./x10.19_up.nnf
+lower trace written to ./x10.19_low.nnf
+maximum satisfying probability written to ./x10.19.prob
+SSAT LOG: Elapsed time = 0.006 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./x10.19.sdimacs ./x10.19_up.nnf ./x10.19_low.nnf ./x10.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 903 nodes (339 explicit) and 745 edges
+c Read D4 NNF file with 903 nodes (339 explicit) and 745 edges
+c ERROR: Failed in get_lit_decision(318).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.002 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.009 seconds
+OVERALL OUTCOME: failed

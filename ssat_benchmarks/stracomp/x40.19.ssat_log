@@ -1,0 +1,7 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x40.19.sdimacs
+SSAT LOG: Time limit 1000 seconds
+SSAT ERROR: Timeout after 1000 seconds
+SSAT LOG: Elapsed time = 1002.085 seconds
+SSAT OUTCOME: Timeout
+OVERALL LOG: Elapsed time = 1002.086 seconds
+OVERALL OUTCOME: failed
