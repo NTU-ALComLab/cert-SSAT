@@ -1,0 +1,171 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./cf_2_2x2_w_.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./cf_2_2x2_w_.sdimacs
+variables (all/used/free): 	93204/93204/0
+clauses (all/long/binary/unit): 631/589/16/26
+
+Preprocessing .. DONE
+variables (all/used/free): 	93204/93204/0
+clauses (all/long/binary/unit): 282/234/48/0
+Maximum cache size:	83630 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	93204/93204/0
+clauses (removed) 			631 (348)
+decisions 				5
+conflicts 				3
+conflict clauses (all/bin/unit) 	2/0/1
+
+cache size 7MB	
+cache (stores / hits) 			6/0
+cache miss rate 0%
+avg. variable count (stores / hits) 	15569.3/0
+
+number of nodes in trace 	11
+number of edges in trace 	11
+
+# satisfying probability = 0.1166754
+
+# END
+
+time: 0.021907s
+
+upper trace written to ./cf_2_2x2_w__up.nnf
+lower trace written to ./cf_2_2x2_w__low.nnf
+maximum satisfying probability written to ./cf_2_2x2_w_.prob
+SSAT LOG: Elapsed time = 0.027 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./cf_2_2x2_w_.sdimacs ./cf_2_2x2_w__up.nnf ./cf_2_2x2_w__low.nnf ./cf_2_2x2_w_.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 19 nodes (8 explicit) and 11 edges
+c Read D4 NNF file with 19 nodes (8 explicit) and 11 edges
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./cf_2_2x2_w_.sdimacs ./cf_2_2x2_w__low.nnf ./cf_2_2x2_w__low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 93204 variables and 631 clauses
+c Read D4 NNF file with 19 nodes (8 explicit) and 11 edges
+c Compressed POG has 10 nodes, root literal 93214, and 268 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c GEN: Time = 0.00.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 93204
+c GEN:    input clauses  : 631
+c GEN: POG nodes
+c GEN:    product   : 7
+c GEN:    sum       : 2
+c GEN:    node TOTAL: 9
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 268
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 79
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 347
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+GEN LOG: Elapsed time = 0.002 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./cf_2_2x2_w__low.cpog 799 lines 25012 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_2x2_w_.sdimacs ./cf_2_2x2_w__low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 93204 variables and 631 clauses
+CHECK: Read CPOG file with 10 operations,  79 asserted + 268 defining = 347 clauses
+CHECK: Deleted 709 input and asserted clauses
+CHECK: Final root literal 93214
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./cf_2_2x2_w_.sdimacs ./cf_2_2x2_w__up.nnf ./cf_2_2x2_w__up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 93204 variables and 631 clauses
+c Read D4 NNF file with 19 nodes (8 explicit) and 11 edges
+c Compressed POG has 10 nodes, root literal 93214, and 235 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c Time = 0.00.  Justifications of 10 nodes, including root, completed.  582 total clauses
+c GEN: Formula
+c GEN:    input variables: 93204
+c GEN:    input clauses  : 631
+c GEN: POG nodes
+c GEN:    product   : 7
+c GEN:    sum       : 2
+c GEN:    node TOTAL: 9
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 8
+c GEN:    product/SAT: 0
+c GEN:    sum        : 2
+c GEN:    visit TOTAL: 10
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 235
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 8
+c GEN:    sum justification    : 4
+c GEN:    literal justification: 335
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 582
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+GEN LOG: Elapsed time = 0.003 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./cf_2_2x2_w__up.cpog 358 lines 15106 bytes
+FCHECK LOG: Running ../../src/cpog-check -S ./cf_2_2x2_w_.sdimacs ./cf_2_2x2_w__up.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 93204 variables and 631 clauses
+CHECK: Read CPOG file with 10 operations,  347 asserted + 235 defining = 582 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 93214
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.037 seconds
+OVERALL OUTCOME: normal

@@ -1,0 +1,108 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./cf_2_3x3_w_.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./cf_2_3x3_w_.sdimacs
+variables (all/used/free): 	94309/94309/0
+clauses (all/long/binary/unit): 3330/3229/31/70
+
+Preprocessing .. DONE
+variables (all/used/free): 	94309/94309/0
+clauses (all/long/binary/unit): 2599/2391/208/0
+Maximum cache size:	83624 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	94309/94309/0
+clauses (removed) 			3330 (731)
+decisions 				44
+conflicts 				5
+conflict clauses (all/bin/unit) 	3/0/0
+
+cache size 7MB	
+cache (stores / hits) 			43/2
+cache miss rate 0%
+avg. variable count (stores / hits) 	2566.53/333
+
+number of nodes in trace 	48
+number of edges in trace 	85
+
+# satisfying probability = 0.2688783
+
+# END
+
+time: 0.024868s
+
+upper trace written to ./cf_2_3x3_w__up.nnf
+lower trace written to ./cf_2_3x3_w__low.nnf
+maximum satisfying probability written to ./cf_2_3x3_w_.prob
+SSAT LOG: Elapsed time = 0.030 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__up.nnf ./cf_2_3x3_w__low.nnf ./cf_2_3x3_w_.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 130 nodes (45 explicit) and 85 edges
+c Read D4 NNF file with 130 nodes (45 explicit) and 85 edges
+EVAL LOG: Elapsed time = 0.002 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__low.nnf ./cf_2_3x3_w__low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 94308 variables and 3330 clauses
+c Read D4 NNF file with 130 nodes (45 explicit) and 85 edges
+c Compressed POG has 101 nodes, root literal 94409, and 2265 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c GEN: Time = 0.03.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 94308
+c GEN:    input clauses  : 3330
+c GEN: POG nodes
+c GEN:    product   : 71
+c GEN:    sum       : 29
+c GEN:    node TOTAL: 100
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 2265
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 145
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 2410
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.03
+c GEN:   time TOTAL     : 0.03
+GEN LOG: Elapsed time = 0.031 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./cf_2_3x3_w__low.cpog 3721 lines 877201 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 94309 variables and 3330 clauses
+ERROR. File ./cf_2_3x3_w__low.cpog. Line 146. Function node_new. Invalid operation id 94309
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.065 seconds
+OVERALL OUTCOME: failed
