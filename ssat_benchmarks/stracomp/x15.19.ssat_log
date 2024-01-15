@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 1326/211/1115/0
 Preprocessing .. DONE
 variables (all/used/free): 	465/465/0
 clauses (all/long/binary/unit): 1326/211/1115/0
-Maximum cache size:	28258 MB
+Maximum cache size:	100378 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	6697
 
 # END
 
-time: 0.022953s
+time: 0.024257s
 
 upper trace written to ./x15.19_up.nnf
 lower trace written to ./x15.19_low.nnf
 maximum satisfying probability written to ./x15.19.prob
-SSAT LOG: Elapsed time = 0.032 seconds
+SSAT LOG: Elapsed time = 0.033 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./x15.19.sdimacs ./x15.19_up.nnf ./x15.19_low.nnf ./x15.19.prob
 EVAL LOG: Time limit 1000 seconds
@@ -46,5 +46,5 @@ c ERROR: Failed in get_lit_decision(469).
 EVAL ERROR: Return code = 1
 EVAL LOG: Elapsed time = 0.016 seconds
 EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.048 seconds
+OVERALL LOG: Elapsed time = 0.049 seconds
 OVERALL OUTCOME: failed

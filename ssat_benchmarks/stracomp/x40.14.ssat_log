@@ -1,7 +1,130 @@
 SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x40.14.sdimacs
 SSAT LOG: Time limit 1000 seconds
-SSAT ERROR: Timeout after 1000 seconds
-SSAT LOG: Elapsed time = 1001.043 seconds
-SSAT OUTCOME: Timeout
-OVERALL LOG: Elapsed time = 1001.043 seconds
+Solving ./x40.14.sdimacs
+variables (all/used/free): 	1244/1244/0
+clauses (all/long/binary/unit): 3692/563/3129/0
+
+Preprocessing .. DONE
+variables (all/used/free): 	1244/1244/0
+clauses (all/long/binary/unit): 3692/563/3129/0
+Maximum cache size:	60433 MB
+
+
+time elapsed: 60.9953s
+conflict clauses (all / bin / unit) 	3/0/0
+
+cache size 1345MB
+components (stored / hits) 		4760790/4111038
+avg. variable count (stored / hits) 	152.397/3.28903
+cache miss rate 48.4616%
+
+time elapsed: 121.995s
+conflict clauses (all / bin / unit) 	3/0/0
+
+cache size 2623MB
+components (stored / hits) 		9496345/7717004
+avg. variable count (stored / hits) 	149.773/3.34989
+cache miss rate 52.6952%
+
+time elapsed: 182.995s
+conflict clauses (all / bin / unit) 	4/0/0
+
+cache size 3873MB
+components (stored / hits) 		14110702/11325824
+avg. variable count (stored / hits) 	149.257/3.65438
+cache miss rate 53.8409%
+
+time elapsed: 243.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 5095MB
+components (stored / hits) 		18673970/15229550
+avg. variable count (stored / hits) 	148.296/4.14394
+cache miss rate 53.8547%
+
+time elapsed: 304.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 6309MB
+components (stored / hits) 		23145866/19591726
+avg. variable count (stored / hits) 	148.166/4.14603
+cache miss rate 53.1719%
+
+time elapsed: 365.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 7508MB
+components (stored / hits) 		27436378/23572377
+avg. variable count (stored / hits) 	149.018/4.21691
+cache miss rate 52.9575%
+
+time elapsed: 426.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 8667MB
+components (stored / hits) 		31494837/27257966
+avg. variable count (stored / hits) 	150.481/4.37386
+cache miss rate 52.8839%
+
+time elapsed: 487.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 9805MB
+components (stored / hits) 		35623171/30462978
+avg. variable count (stored / hits) 	150.907/4.55804
+cache miss rate 53.2677%
+
+time elapsed: 548.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 10949MB
+components (stored / hits) 		39744730/33514836
+avg. variable count (stored / hits) 	151.38/4.56846
+cache miss rate 53.6829%
+
+time elapsed: 609.995s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 12086MB
+components (stored / hits) 		43859130/36574949
+avg. variable count (stored / hits) 	151.622/4.4594
+cache miss rate 54.0135%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	1244/1244/0
+clauses (removed) 			3692 (0)
+decisions 				46812815
+conflicts 				8
+conflict clauses (all/bin/unit) 	5/0/0
+
+cache size 12912MB	
+cache (stores / hits) 			46812816/38946755
+cache miss rate 54.1044%
+avg. variable count (stores / hits) 	152.033/4.37906
+
+number of nodes in trace 	46812821
+number of edges in trace 	101486283
+
+# satisfying probability = 1
+
+# END
+
+time: 656.1137s
+
+upper trace written to ./x40.14_up.nnf
+lower trace written to ./x40.14_low.nnf
+maximum satisfying probability written to ./x40.14.prob
+SSAT LOG: Elapsed time = 853.018 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./x40.14.sdimacs ./x40.14_up.nnf ./x40.14_low.nnf ./x40.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 146396391 nodes (52770761 explicit) and 107444226 edges
+c Read D4 NNF file with 146396391 nodes (52770761 explicit) and 107444226 edges
+c ERROR: Failed in get_lit_decision(1248).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 429.622 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 1282.640 seconds
 OVERALL OUTCOME: failed

@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 362/68/294/0
 Preprocessing .. DONE
 variables (all/used/free): 	149/149/0
 clauses (all/long/binary/unit): 362/68/294/0
-Maximum cache size:	121098 MB
+Maximum cache size:	95591 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,7 +31,7 @@ number of edges in trace 	86
 
 # END
 
-time: 0.002919s
+time: 0.002961s
 
 upper trace written to ./x5.9_up.nnf
 lower trace written to ./x5.9_low.nnf

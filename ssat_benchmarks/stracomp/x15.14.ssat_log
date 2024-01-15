@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 1335/213/1122/0
 Preprocessing .. DONE
 variables (all/used/free): 	469/469/0
 clauses (all/long/binary/unit): 1335/213/1122/0
-Maximum cache size:	28251 MB
+Maximum cache size:	100372 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,7 +31,7 @@ number of edges in trace 	2355
 
 # END
 
-time: 0.011019s
+time: 0.010784s
 
 upper trace written to ./x15.14_up.nnf
 lower trace written to ./x15.14_low.nnf
@@ -46,5 +46,5 @@ c ERROR: Failed in get_lit_decision(473).
 EVAL ERROR: Return code = 1
 EVAL LOG: Elapsed time = 0.006 seconds
 EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.021 seconds
+OVERALL LOG: Elapsed time = 0.022 seconds
 OVERALL OUTCOME: failed

@@ -7,32 +7,32 @@ clauses (all/long/binary/unit): 3214/493/2721/0
 Preprocessing .. DONE
 variables (all/used/free): 	1089/1089/0
 clauses (all/long/binary/unit): 3214/493/2721/0
-Maximum cache size:	24616 MB
+Maximum cache size:	95335 MB
 
 
-time elapsed: 60.4951s
+time elapsed: 60.2732s
 conflict clauses (all / bin / unit) 	4/0/0
 
-cache size 1010MB
-components (stored / hits) 		3752278/4057307
-avg. variable count (stored / hits) 	146.076/4.20316
-cache miss rate 41.4186%
+cache size 1248MB
+components (stored / hits) 		4650568/4933871
+avg. variable count (stored / hits) 	146.864/4.25215
+cache miss rate 43.2293%
 
-time elapsed: 121.495s
+time elapsed: 121.273s
 conflict clauses (all / bin / unit) 	4/0/0
 
-cache size 1958MB
-components (stored / hits) 		7310827/7406071
-avg. variable count (stored / hits) 	148.961/4.20518
-cache miss rate 46.3999%
+cache size 2425MB
+components (stored / hits) 		9120321/9376375
+avg. variable count (stored / hits) 	147.619/4.35931
+cache miss rate 46.7153%
 
-time elapsed: 182.495s
+time elapsed: 182.273s
 conflict clauses (all / bin / unit) 	5/0/0
 
-cache size 2962MB
-components (stored / hits) 		11163724/11273428
-avg. variable count (stored / hits) 	147.858/4.39828
-cache miss rate 47.6559%
+cache size 3585MB
+components (stored / hits) 		13526877/13320498
+avg. variable count (stored / hits) 	148.44/4.52528
+cache miss rate 48.6634%
 End of Solving
 Start Generating Certificate...
 
@@ -55,12 +55,12 @@ number of edges in trace 	31790966
 
 # END
 
-time: 225.4177s
+time: 186.368s
 
 upper trace written to ./x35.19_up.nnf
 lower trace written to ./x35.19_low.nnf
 maximum satisfying probability written to ./x35.19.prob
-SSAT LOG: Elapsed time = 379.242 seconds
+SSAT LOG: Elapsed time = 247.708 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./x35.19.sdimacs ./x35.19_up.nnf ./x35.19_low.nnf ./x35.19.prob
 EVAL LOG: Time limit 1000 seconds
@@ -68,7 +68,7 @@ c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
 c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
 c ERROR: Failed in get_lit_decision(1093).
 EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 172.563 seconds
+EVAL LOG: Elapsed time = 129.989 seconds
 EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 551.805 seconds
+OVERALL LOG: Elapsed time = 377.696 seconds
 OVERALL OUTCOME: failed

@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 2754/423/2331/0
 Preprocessing .. DONE
 variables (all/used/free): 	934/934/0
 clauses (all/long/binary/unit): 2754/423/2331/0
-Maximum cache size:	21653 MB
+Maximum cache size:	98593 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	4544088
 
 # END
 
-time: 25.18666s
+time: 20.18976s
 
 upper trace written to ./x30.9_up.nnf
 lower trace written to ./x30.9_low.nnf
 maximum satisfying probability written to ./x30.9.prob
-SSAT LOG: Elapsed time = 34.051 seconds
+SSAT LOG: Elapsed time = 28.196 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./x30.9.sdimacs ./x30.9_up.nnf ./x30.9_low.nnf ./x30.9.prob
 EVAL LOG: Time limit 1000 seconds
@@ -44,7 +44,7 @@ c Read D4 NNF file with 6347608 nodes (2630900 explicit) and 5316631 edges
 c Read D4 NNF file with 6347608 nodes (2630900 explicit) and 5316631 edges
 c ERROR: Failed in get_lit_decision(938).
 EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 20.654 seconds
+EVAL LOG: Elapsed time = 16.521 seconds
 EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 54.705 seconds
+OVERALL LOG: Elapsed time = 44.718 seconds
 OVERALL OUTCOME: failed
