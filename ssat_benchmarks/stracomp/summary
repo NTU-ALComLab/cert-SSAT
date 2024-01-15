@@ -1,0 +1,368 @@
+x10.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x10.14.sdimacs ./x10.14_up.nnf ./x10.14_low.nnf ./x10.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 1771 nodes (607 explicit) and 1211 edges
+c Read D4 NNF file with 1771 nodes (607 explicit) and 1211 edges
+c ERROR: Failed in get_lit_decision(318).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.003 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.012 seconds
+OVERALL OUTCOME: failed
+
+x10.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x10.19.sdimacs ./x10.19_up.nnf ./x10.19_low.nnf ./x10.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 903 nodes (339 explicit) and 745 edges
+c Read D4 NNF file with 903 nodes (339 explicit) and 745 edges
+c ERROR: Failed in get_lit_decision(318).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.002 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: failed
+
+x10.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x10.4.sdimacs ./x10.4_up.nnf ./x10.4_low.nnf ./x10.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 627 nodes (211 explicit) and 417 edges
+c Read D4 NNF file with 627 nodes (211 explicit) and 417 edges
+c ERROR: Failed in get_lit_decision(314).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: failed
+
+x10.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x10.9.sdimacs ./x10.9_up.nnf ./x10.9_low.nnf ./x10.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 1563 nodes (565 explicit) and 1201 edges
+c Read D4 NNF file with 1563 nodes (565 explicit) and 1201 edges
+c ERROR: Failed in get_lit_decision(318).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.003 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.009 seconds
+OVERALL OUTCOME: failed
+
+x15.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x15.14.sdimacs ./x15.14_up.nnf ./x15.14_low.nnf ./x15.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3447 nodes (1251 explicit) and 2505 edges
+c Read D4 NNF file with 3447 nodes (1251 explicit) and 2505 edges
+c ERROR: Failed in get_lit_decision(473).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.006 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.020 seconds
+OVERALL OUTCOME: failed
+
+x15.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x15.19.sdimacs ./x15.19_up.nnf ./x15.19_low.nnf ./x15.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 9536 nodes (3440 explicit) and 7086 edges
+c Read D4 NNF file with 9536 nodes (3440 explicit) and 7086 edges
+c ERROR: Failed in get_lit_decision(469).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.016 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.047 seconds
+OVERALL OUTCOME: failed
+
+x15.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x15.4.sdimacs ./x15.4_up.nnf ./x15.4_low.nnf ./x15.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 13836 nodes (5012 explicit) and 10391 edges
+c Read D4 NNF file with 13836 nodes (5012 explicit) and 10391 edges
+c ERROR: Failed in get_lit_decision(473).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.022 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.063 seconds
+OVERALL OUTCOME: failed
+
+x15.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x15.9.sdimacs ./x15.9_up.nnf ./x15.9_low.nnf ./x15.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
+c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
+c ERROR: Failed in get_lit_decision(473).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.033 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.086 seconds
+OVERALL OUTCOME: failed
+
+x20.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x20.14.sdimacs ./x20.14_up.nnf ./x20.14_low.nnf ./x20.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 24870 nodes (9292 explicit) and 18757 edges
+c Read D4 NNF file with 24870 nodes (9292 explicit) and 18757 edges
+c ERROR: Failed in get_lit_decision(628).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.041 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.125 seconds
+OVERALL OUTCOME: failed
+
+x20.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x20.19.sdimacs ./x20.19_up.nnf ./x20.19_low.nnf ./x20.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 80231 nodes (28793 explicit) and 58395 edges
+c Read D4 NNF file with 80231 nodes (28793 explicit) and 58395 edges
+c ERROR: Failed in get_lit_decision(628).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.137 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.401 seconds
+OVERALL OUTCOME: failed
+
+x20.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x20.4.sdimacs ./x20.4_up.nnf ./x20.4_low.nnf ./x20.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 36844 nodes (13784 explicit) and 27828 edges
+c Read D4 NNF file with 36844 nodes (13784 explicit) and 27828 edges
+c ERROR: Failed in get_lit_decision(628).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.056 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.159 seconds
+OVERALL OUTCOME: failed
+
+x20.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x20.9.sdimacs ./x20.9_up.nnf ./x20.9_low.nnf ./x20.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 41586 nodes (14380 explicit) and 30368 edges
+c Read D4 NNF file with 41586 nodes (14380 explicit) and 30368 edges
+c ERROR: Failed in get_lit_decision(626).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.075 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.232 seconds
+OVERALL OUTCOME: failed
+
+x25.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x25.14.sdimacs ./x25.14_up.nnf ./x25.14_low.nnf ./x25.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 362624 nodes (124422 explicit) and 251420 edges
+c Read D4 NNF file with 362624 nodes (124422 explicit) and 251420 edges
+c ERROR: Failed in get_lit_decision(783).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.661 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 1.845 seconds
+OVERALL OUTCOME: failed
+
+x25.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x25.19.sdimacs ./x25.19_up.nnf ./x25.19_low.nnf ./x25.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 651673 nodes (247315 explicit) and 507850 edges
+c Read D4 NNF file with 651673 nodes (247315 explicit) and 507850 edges
+c ERROR: Failed in get_lit_decision(783).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 1.494 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 4.045 seconds
+OVERALL OUTCOME: failed
+
+x25.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x25.4.sdimacs ./x25.4_up.nnf ./x25.4_low.nnf ./x25.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 1343642 nodes (527700 explicit) and 1079096 edges
+c Read D4 NNF file with 1343642 nodes (527700 explicit) and 1079096 edges
+c ERROR: Failed in get_lit_decision(783).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 2.989 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 7.726 seconds
+OVERALL OUTCOME: failed
+
+x25.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x25.9.sdimacs ./x25.9_up.nnf ./x25.9_low.nnf ./x25.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 843976 nodes (319364 explicit) and 664957 edges
+c Read D4 NNF file with 843976 nodes (319364 explicit) and 664957 edges
+c ERROR: Failed in get_lit_decision(783).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 1.947 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 5.293 seconds
+OVERALL OUTCOME: failed
+
+x30.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x30.14.sdimacs ./x30.14_up.nnf ./x30.14_low.nnf ./x30.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 1840441 nodes (721059 explicit) and 1450934 edges
+c Read D4 NNF file with 1840441 nodes (721059 explicit) and 1450934 edges
+c ERROR: Failed in get_lit_decision(938).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 4.508 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 12.358 seconds
+OVERALL OUTCOME: failed
+
+x30.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x30.19.sdimacs ./x30.19_up.nnf ./x30.19_low.nnf ./x30.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 2568829 nodes (858015 explicit) and 1717834 edges
+c Read D4 NNF file with 2568829 nodes (858015 explicit) and 1717834 edges
+c ERROR: Failed in get_lit_decision(938).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 5.057 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 13.259 seconds
+OVERALL OUTCOME: failed
+
+x30.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x30.4.sdimacs ./x30.4_up.nnf ./x30.4_low.nnf ./x30.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3701607 nodes (1448441 explicit) and 2910818 edges
+c Read D4 NNF file with 3701607 nodes (1448441 explicit) and 2910818 edges
+c ERROR: Failed in get_lit_decision(938).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 9.050 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 23.993 seconds
+OVERALL OUTCOME: failed
+
+x30.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x30.9.sdimacs ./x30.9_up.nnf ./x30.9_low.nnf ./x30.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 6347608 nodes (2630900 explicit) and 5316631 edges
+c Read D4 NNF file with 6347608 nodes (2630900 explicit) and 5316631 edges
+c ERROR: Failed in get_lit_decision(938).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 16.331 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 43.926 seconds
+OVERALL OUTCOME: failed
+
+x35.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x35.14.sdimacs ./x35.14_up.nnf ./x35.14_low.nnf ./x35.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 16696831 nodes (5566035 explicit) and 11132542 edges
+c Read D4 NNF file with 16696831 nodes (5566035 explicit) and 11132542 edges
+c ERROR: Failed in get_lit_decision(1093).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 33.584 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 92.844 seconds
+OVERALL OUTCOME: failed
+
+x35.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x35.19.sdimacs ./x35.19_up.nnf ./x35.19_low.nnf ./x35.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
+c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
+c ERROR: Failed in get_lit_decision(1093).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 128.969 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 374.148 seconds
+OVERALL OUTCOME: failed
+
+x35.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x35.4.sdimacs ./x35.4_up.nnf ./x35.4_low.nnf ./x35.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 28475733 nodes (10528895 explicit) and 22203186 edges
+c Read D4 NNF file with 28475733 nodes (10528895 explicit) and 22203186 edges
+c ERROR: Failed in get_lit_decision(1093).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 84.720 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 250.640 seconds
+OVERALL OUTCOME: failed
+
+x35.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x35.9.sdimacs ./x35.9_up.nnf ./x35.9_low.nnf ./x35.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
+c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
+c ERROR: Failed in get_lit_decision(1093).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 244.859 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 666.213 seconds
+OVERALL OUTCOME: failed
+
+x40.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x40.14.sdimacs ./x40.14_up.nnf ./x40.14_low.nnf ./x40.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 146396391 nodes (52770761 explicit) and 107444226 edges
+c Read D4 NNF file with 146396391 nodes (52770761 explicit) and 107444226 edges
+c ERROR: Failed in get_lit_decision(1248).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 429.488 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 1281.163 seconds
+OVERALL OUTCOME: failed
+
+x40.19.ssat_log
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x40.19.sdimacs
+SSAT LOG: Time limit 1000 seconds
+SSAT ERROR: Timeout after 1000 seconds
+SSAT LOG: Elapsed time = 1001.283 seconds
+SSAT OUTCOME: Timeout
+OVERALL LOG: Elapsed time = 1001.283 seconds
+OVERALL OUTCOME: failed
+
+x40.9.ssat_log
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x40.9.sdimacs
+SSAT LOG: Time limit 1000 seconds
+SSAT ERROR: Timeout after 1000 seconds
+SSAT LOG: Elapsed time = 1001.188 seconds
+SSAT OUTCOME: Timeout
+OVERALL LOG: Elapsed time = 1001.189 seconds
+OVERALL OUTCOME: failed
+
+x5.14.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x5.14.sdimacs ./x5.14_up.nnf ./x5.14_low.nnf ./x5.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 133 nodes (51 explicit) and 97 edges
+c Read D4 NNF file with 133 nodes (51 explicit) and 97 edges
+c ERROR: Failed in get_lit_decision(151).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.005 seconds
+OVERALL OUTCOME: failed
+
+x5.19.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x5.19.sdimacs ./x5.19_up.nnf ./x5.19_low.nnf ./x5.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 109 nodes (41 explicit) and 77 edges
+c Read D4 NNF file with 109 nodes (41 explicit) and 77 edges
+c ERROR: Failed in get_lit_decision(159).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.004 seconds
+OVERALL OUTCOME: failed
+
+x5.4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x5.4.sdimacs ./x5.4_up.nnf ./x5.4_low.nnf ./x5.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 105 nodes (37 explicit) and 69 edges
+c Read D4 NNF file with 105 nodes (37 explicit) and 69 edges
+c ERROR: Failed in get_lit_decision(149).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.004 seconds
+OVERALL OUTCOME: failed
+
+x5.9.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./x5.9.sdimacs ./x5.9_up.nnf ./x5.9_low.nnf ./x5.9.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
+c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
+c ERROR: Failed in get_lit_decision(153).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.004 seconds
+OVERALL OUTCOME: failed
+
+31
+31

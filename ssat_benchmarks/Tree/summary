@@ -1,0 +1,170 @@
+tree-exa10-10.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-10.sdimacs ./tree-exa10-10_up.nnf ./tree-exa10-10_low.nnf ./tree-exa10-10.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 35 nodes (15 explicit) and 25 edges
+c Read D4 NNF file with 35 nodes (15 explicit) and 25 edges
+c ERROR: Failed in get_lit_decision(24).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: failed
+
+tree-exa10-15.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-15.sdimacs ./tree-exa10-15_up.nnf ./tree-exa10-15_low.nnf ./tree-exa10-15.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 50 nodes (20 explicit) and 35 edges
+c Read D4 NNF file with 50 nodes (20 explicit) and 35 edges
+c ERROR: Failed in get_lit_decision(34).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL OUTCOME: failed
+
+tree-exa10-20.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-20.sdimacs ./tree-exa10-20_up.nnf ./tree-exa10-20_low.nnf ./tree-exa10-20.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 65 nodes (25 explicit) and 45 edges
+c Read D4 NNF file with 65 nodes (25 explicit) and 45 edges
+c ERROR: Failed in get_lit_decision(44).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL OUTCOME: failed
+
+tree-exa10-25.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-25.sdimacs ./tree-exa10-25_up.nnf ./tree-exa10-25_low.nnf ./tree-exa10-25.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 80 nodes (30 explicit) and 55 edges
+c Read D4 NNF file with 80 nodes (30 explicit) and 55 edges
+c ERROR: Failed in get_lit_decision(54).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL OUTCOME: failed
+
+tree-exa10-30.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-30.sdimacs ./tree-exa10-30_up.nnf ./tree-exa10-30_low.nnf ./tree-exa10-30.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 95 nodes (35 explicit) and 65 edges
+c Read D4 NNF file with 95 nodes (35 explicit) and 65 edges
+c ERROR: Failed in get_lit_decision(64).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-10.ssat_log
+GEN: LOG: size ./tree-exa2-10_low.cpog 115 lines 4398 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-10.sdimacs ./tree-exa2-10_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 20 variables and 12 clauses
+ERROR. File ./tree-exa2-10_low.cpog. Line 2. Function node_new. Invalid operation id 20
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.004 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-15.ssat_log
+GEN: LOG: size ./tree-exa2-15_low.cpog 195 lines 9628 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-15.sdimacs ./tree-exa2-15_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 30 variables and 17 clauses
+ERROR. File ./tree-exa2-15_low.cpog. Line 2. Function node_new. Invalid operation id 30
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.004 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-20.ssat_log
+GEN: LOG: size ./tree-exa2-20_low.cpog 275 lines 16384 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-20.sdimacs ./tree-exa2-20_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 40 variables and 22 clauses
+ERROR. File ./tree-exa2-20_low.cpog. Line 2. Function node_new. Invalid operation id 40
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.005 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-25.ssat_log
+GEN: LOG: size ./tree-exa2-25_low.cpog 355 lines 25728 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-25.sdimacs ./tree-exa2-25_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 50 variables and 27 clauses
+ERROR. File ./tree-exa2-25_low.cpog. Line 2. Function node_new. Invalid operation id 50
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-30.ssat_log
+GEN: LOG: size ./tree-exa2-30_low.cpog 420 lines 34953 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-30.sdimacs ./tree-exa2-30_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 60 variables and 32 clauses
+ERROR. File ./tree-exa2-30_low.cpog. Line 2. Function node_new. Invalid operation id 60
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-35.ssat_log
+GEN: LOG: size ./tree-exa2-35_low.cpog 495 lines 47450 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-35.sdimacs ./tree-exa2-35_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 70 variables and 37 clauses
+ERROR. File ./tree-exa2-35_low.cpog. Line 2. Function node_new. Invalid operation id 70
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-40.ssat_log
+GEN: LOG: size ./tree-exa2-40_low.cpog 525 lines 53944 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-40.sdimacs ./tree-exa2-40_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 80 variables and 42 clauses
+ERROR. File ./tree-exa2-40_low.cpog. Line 2. Function node_new. Invalid operation id 80
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-45.ssat_log
+GEN: LOG: size ./tree-exa2-45_low.cpog 545 lines 61028 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-45.sdimacs ./tree-exa2-45_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 90 variables and 47 clauses
+ERROR. File ./tree-exa2-45_low.cpog. Line 2. Function node_new. Invalid operation id 90
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: failed
+
+tree-exa2-50.ssat_log
+GEN: LOG: size ./tree-exa2-50_low.cpog 625 lines 77223 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-50.sdimacs ./tree-exa2-50_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 100 variables and 52 clauses
+ERROR. File ./tree-exa2-50_low.cpog. Line 2. Function node_new. Invalid operation id 100
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: failed
+
+14
+14

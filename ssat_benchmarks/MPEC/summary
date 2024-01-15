@@ -1,0 +1,50 @@
+c1908-er.ssat_log
+c Time = 479.55.  Justifications of 3242250 nodes completed.  345906756 total clauses.  18 SAT calls
+c Time = 631.85.  Justifications of 4323000 nodes completed.  393110662 total clauses.  20 SAT calls
+c Time = 808.74.  Justifications of 5403750 nodes completed.  444432536 total clauses.  20 SAT calls
+c Time = 960.73.  Justifications of 6484500 nodes completed.  486639559 total clauses.  20 SAT calls
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 1045.659 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./c1908-er_up.cpog 378861541 lines 97927585792 bytes
+OVERALL LOG: Elapsed time = 1876.382 seconds
+OVERALL OUTCOME: failed
+
+c3540-er.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 327 variables and 815 clauses
+CHECK: Read CPOG file with 609 operations,  19912 asserted + 5102 defining = 25014 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 791
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.008 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.150 seconds
+OVERALL OUTCOME: normal
+
+c432-er.ssat_log
+GEN: LOG: size ./c432-er_low.cpog 28539657 lines 63004013519 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./c432-er.sdimacs ./c432-er_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 333 variables and 883 clauses
+ERROR. File ./c432-er_low.cpog. Line 5346757. Function cpog_add_product. Can't add literal 5347087 to node 5347088 children.  Overlapping dependency sets
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 8.009 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 2008.503 seconds
+OVERALL OUTCOME: failed
+
+c499-er.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 223 variables and 530 clauses
+CHECK: Read CPOG file with 84 operations,  6712 asserted + 884 defining = 7596 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 307
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.002 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.028 seconds
+OVERALL OUTCOME: normal
+
+4
+4

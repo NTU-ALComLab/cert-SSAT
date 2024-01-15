@@ -1,0 +1,50 @@
+k_ph_p-2.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 44 variables and 95 clauses
+CHECK: Read CPOG file with 44 operations,  147 asserted + 205 defining = 352 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 88
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: normal
+
+k_ph_p-3.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 99 variables and 252 clauses
+CHECK: Read CPOG file with 636 operations,  5745 asserted + 3166 defining = 8911 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 661
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.004 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.034 seconds
+OVERALL OUTCOME: normal
+
+k_ph_p-4.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 180 variables and 552 clauses
+CHECK: Read CPOG file with 20415 operations,  694822 asserted + 145065 defining = 839887 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 19572
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.555 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 3.814 seconds
+OVERALL OUTCOME: normal
+
+k_ph_p-5.ssat_log
+c Time = 22.71.  Justifications of 310446 nodes completed.  36423460 total clauses.  80 SAT calls
+c Time = 42.21.  Justifications of 620892 nodes completed.  40668585 total clauses.  734 SAT calls
+c Time = 62.72.  Justifications of 931338 nodes completed.  44786297 total clauses.  880 SAT calls
+c Time = 87.11.  Justifications of 1241784 nodes completed.  48589045 total clauses.  1369 SAT calls
+GEN ERROR: Return code = -11
+GEN LOG: Elapsed time = 88.697 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./k_ph_p-5_up.cpog 18801751 lines 4292055040 bytes
+OVERALL LOG: Elapsed time = 349.546 seconds
+OVERALL OUTCOME: failed
+
+4
+4

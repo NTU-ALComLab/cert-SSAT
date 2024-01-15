@@ -1,0 +1,62 @@
+Tiger-10.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 93 variables and 304 clauses
+CHECK: Read CPOG file with 2253 operations,  41547 asserted + 16391 defining = 57938 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 2116
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.029 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 1.401 seconds
+OVERALL OUTCOME: normal
+
+Tiger-15.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 138 variables and 454 clauses
+CHECK: Read CPOG file with 25897 operations,  815275 asserted + 269556 defining = 1084831 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 25238
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.671 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 13.687 seconds
+OVERALL OUTCOME: normal
+
+Tiger-20.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 183 variables and 604 clauses
+CHECK: Read CPOG file with 64443 operations,  2246590 asserted + 655007 defining = 2901597 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 62470
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 2.049 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 35.692 seconds
+OVERALL OUTCOME: normal
+
+Tiger-25.ssat_log
+GEN: LOG: size ./Tiger-25_low.cpog 549781 lines 2162796223 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./Tiger-25.sdimacs ./Tiger-25_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 228 variables and 754 clauses
+ERROR. File ./Tiger-25_low.cpog. Line 499819. Function cpog_add_product. Can't add literal 500045 to node 500046 children.  Overlapping dependency sets
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 1.036 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 40.124 seconds
+OVERALL OUTCOME: failed
+
+Tiger-5.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 48 variables and 154 clauses
+CHECK: Read CPOG file with 271 operations,  1884 asserted + 1440 defining = 3324 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 264
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.030 seconds
+OVERALL OUTCOME: normal
+
+5
+5

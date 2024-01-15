@@ -1,0 +1,134 @@
+QIF-backdoor-2x16-8.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 200 variables and 272 clauses
+CHECK: Read CPOG file with 369 operations,  3321 asserted + 2840 defining = 6161 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 545
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.035 seconds
+OVERALL OUTCOME: normal
+
+QIF-backdoor-32-24.ssat_log
+CHECK: Read CNF file with 147 variables and 76 clauses
+CHECK: Read CPOG file with 95 operations,  4 asserted + 451 defining = 455 clauses
+CHECK: Deleted 79 input and asserted clauses
+CHECK: Final root literal 242
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: normal
+
+QIF-bin-search-16.ssat_log
+CHECK: Read CNF file with 1448 variables and 5825 clauses
+CHECK: Read CPOG file with 1017736 operations,  4 asserted + 85529017 defining = 85529021 clauses
+CHECK: Deleted 5828 input and asserted clauses
+CHECK: Final root literal 1019184
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 248.331 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 1731.990 seconds
+OVERALL OUTCOME: normal
+
+QIF-CVE-2007-2875.ssat_log
+CHECK: Read CNF file with 784 variables and 1740 clauses
+CHECK: Read CPOG file with 266 operations,  4 asserted + 1557 defining = 1561 clauses
+CHECK: Deleted 1743 input and asserted clauses
+CHECK: Final root literal 1050
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.002 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.023 seconds
+OVERALL OUTCOME: normal
+
+QIF-pwd-backdoor.ssat_log
+CHECK: Read CNF file with 400 variables and 609 clauses
+CHECK: Read CPOG file with 1798 operations,  4 asserted + 16453 defining = 16457 clauses
+CHECK: Deleted 612 input and asserted clauses
+CHECK: Final root literal 2198
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.015 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.077 seconds
+OVERALL OUTCOME: normal
+
+QIF-reverse2.ssat_log
+CHECK: Read CNF file with 333 variables and 293 clauses
+CHECK: Read CPOG file with 14437 operations,  4 asserted + 76931 defining = 76935 clauses
+CHECK: Deleted 296 input and asserted clauses
+CHECK: Final root literal 14770
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.033 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.183 seconds
+OVERALL OUTCOME: normal
+
+QIF-reverse.ssat_log
+CHECK: Read CNF file with 229 variables and 293 clauses
+CHECK: Read CPOG file with 14437 operations,  4 asserted + 76931 defining = 76935 clauses
+CHECK: Deleted 296 input and asserted clauses
+CHECK: Final root literal 14666
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.033 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.182 seconds
+OVERALL OUTCOME: normal
+
+SyGuS-GuidanceService2.ssat_log
+CHECK: Read CNF file with 3263 variables and 11616 clauses
+CHECK: Read CPOG file with 943791 operations,  1 asserted + 51814367 defining = 51814368 clauses
+CHECK: Deleted 11616 input and asserted clauses
+CHECK: Final root literal 947054
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 113.066 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 1871.719 seconds
+OVERALL OUTCOME: normal
+
+SyGuS-GuidanceService.ssat_log
+CHECK: Read CNF file with 3263 variables and 11616 clauses
+CHECK: Read CPOG file with 943791 operations,  1 asserted + 51814367 defining = 51814368 clauses
+CHECK: Deleted 11616 input and asserted clauses
+CHECK: Final root literal 947054
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 113.137 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 1868.850 seconds
+OVERALL OUTCOME: normal
+
+SyGuS-sign_correct.ssat_log
+CHECK: Read CNF file with 124 variables and 419 clauses
+CHECK: Read CPOG file with 2229789 operations,  1 asserted + 37403054 defining = 37403055 clauses
+CHECK: Deleted 419 input and asserted clauses
+CHECK: Final root literal 2229913
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 36.589 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 129.664 seconds
+OVERALL OUTCOME: normal
+
+SyGuS-sign.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 139 variables and 465 clauses
+CHECK: Read CPOG file with 2412175 operations,  67767118 asserted + 40345762 defining = 108112880 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 2411985
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 55.800 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 433.180 seconds
+OVERALL OUTCOME: normal
+
+11
+11

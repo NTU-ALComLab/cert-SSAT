@@ -1,0 +1,62 @@
+robots_1_5_2_1.1.ssat_log
+CHECK: Read CNF file with 1976 variables and 5006 clauses
+CHECK: Read CPOG file with 117 operations,  34 asserted + 15231 defining = 15265 clauses
+CHECK: Deleted 5039 input and asserted clauses
+CHECK: Final root literal 2093
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.012 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.190 seconds
+OVERALL OUTCOME: normal
+
+robots_1_5_2_1.2.ssat_log
+CHECK: Read CNF file with 2964 variables and 8640 clauses
+CHECK: Read CPOG file with 1385 operations,  34 asserted + 248911 defining = 248945 clauses
+CHECK: Deleted 8673 input and asserted clauses
+CHECK: Final root literal 4349
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.306 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 4.600 seconds
+OVERALL OUTCOME: normal
+
+robots_1_5_2_1.3.ssat_log
+CHECK: Read CNF file with 3952 variables and 12274 clauses
+CHECK: Read CPOG file with 25507 operations,  34 asserted + 4751965 defining = 4751999 clauses
+CHECK: Deleted 12307 input and asserted clauses
+CHECK: Final root literal 29459
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 11.013 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 136.818 seconds
+OVERALL OUTCOME: normal
+
+robots_1_5_2_1.4.ssat_log
+CHECK: Read CNF file with 4940 variables and 15908 clauses
+CHECK: Read CPOG file with 280415 operations,  34 asserted + 43002434 defining = 43002468 clauses
+CHECK: Deleted 15941 input and asserted clauses
+CHECK: Final root literal 285355
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 347.786 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 2415.501 seconds
+OVERALL OUTCOME: normal
+
+robots_1_5_2_1.5.ssat_log
+c Read D4 NNF file with 9619560 nodes (3206623 explicit) and 6413241 edges
+c Compressed POG has 6408673 nodes, root literal 6414601, and 566811445 defining clauses
+c GEN: Time = 75.83.  Generated POG representation
+c GEN: Time = 76.32.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2501.034 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./robots_1_5_2_1.5_low.cpog 6410018 lines 53650128896 bytes
+OVERALL LOG: Elapsed time = 3319.364 seconds
+OVERALL OUTCOME: failed
+
+5
+5

@@ -1,0 +1,158 @@
+tlc01-nonuniform-depth-10.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.02
+c GEN:   time TOTAL     : 0.02
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.021 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-10_low.cpog 5259 lines 141474 bytes
+OVERALL LOG: Elapsed time = 0.030 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-16.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.04
+c GEN:   time TOTAL     : 0.04
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.045 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-16_low.cpog 7551 lines 206316 bytes
+OVERALL LOG: Elapsed time = 0.056 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-17.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.05
+c GEN:   time TOTAL     : 0.05
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.051 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-17_low.cpog 7933 lines 217137 bytes
+OVERALL LOG: Elapsed time = 0.061 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-18.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.06
+c GEN:   time TOTAL     : 0.06
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.057 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-18_low.cpog 8315 lines 227968 bytes
+OVERALL LOG: Elapsed time = 0.067 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-19.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.06
+c GEN:   time TOTAL     : 0.06
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.063 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-19_low.cpog 8697 lines 238741 bytes
+OVERALL LOG: Elapsed time = 0.074 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-20.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.07
+c GEN:   time TOTAL     : 0.07
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.071 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-20_low.cpog 9079 lines 249573 bytes
+OVERALL LOG: Elapsed time = 0.083 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-2.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-2.sdimacs ./tlc01-nonuniform-depth-2_up.nnf ./tlc01-nonuniform-depth-2_low.nnf ./tlc01-nonuniform-depth-2.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(1055).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-3.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-3.sdimacs ./tlc01-nonuniform-depth-3_up.nnf ./tlc01-nonuniform-depth-3_low.nnf ./tlc01-nonuniform-depth-3.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(1406).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-4.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-4.sdimacs ./tlc01-nonuniform-depth-4_up.nnf ./tlc01-nonuniform-depth-4_low.nnf ./tlc01-nonuniform-depth-4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(1757).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-5.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-5.sdimacs ./tlc01-nonuniform-depth-5_up.nnf ./tlc01-nonuniform-depth-5_low.nnf ./tlc01-nonuniform-depth-5.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(2108).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-7.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-7.sdimacs ./tlc01-nonuniform-depth-7_up.nnf ./tlc01-nonuniform-depth-7_low.nnf ./tlc01-nonuniform-depth-7.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(2810).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.002 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.014 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-8.ssat_log
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-8.sdimacs ./tlc01-nonuniform-depth-8_up.nnf ./tlc01-nonuniform-depth-8_low.nnf ./tlc01-nonuniform-depth-8.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(3161).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.004 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.017 seconds
+OVERALL OUTCOME: failed
+
+tlc01-nonuniform-depth-9.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.03
+c GEN:   time TOTAL     : 0.03
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.031 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-9_low.cpog 4877 lines 127692 bytes
+OVERALL LOG: Elapsed time = 0.066 seconds
+OVERALL OUTCOME: failed
+
+13
+13
