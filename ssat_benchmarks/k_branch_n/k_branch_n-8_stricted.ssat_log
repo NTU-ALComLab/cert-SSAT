@@ -1,0 +1,111 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./k_branch_n-8_stricted.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./k_branch_n-8_stricted.sdimacs
+variables (all/used/free): 	2568/2568/0
+clauses (all/long/binary/unit): 10117/1847/8269/1
+
+Preprocessing .. DONE
+variables (all/used/free): 	2568/2568/0
+clauses (all/long/binary/unit): 10111/1844/8267/0
+Maximum cache size:	874 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	2568/2568/0
+clauses (removed) 			10117 (6)
+decisions 				162139
+conflicts 				0
+conflict clauses (all/bin/unit) 	0/0/0
+
+cache size 139MB	
+cache (stores / hits) 			162140/26038
+cache miss rate 34.3784%
+avg. variable count (stores / hits) 	383.222/177.096
+
+number of nodes in trace 	162145
+number of edges in trace 	342397
+
+# satisfying probability = 1
+
+# END
+
+time: 2.250328s
+
+upper trace written to ./k_branch_n-8_stricted_up.nnf
+lower trace written to ./k_branch_n-8_stricted_low.nnf
+maximum satisfying probability written to ./k_branch_n-8_stricted.prob
+SSAT LOG: Elapsed time = 2.427 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./k_branch_n-8_stricted.sdimacs ./k_branch_n-8_stricted_up.nnf ./k_branch_n-8_stricted_low.nnf ./k_branch_n-8_stricted.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 495296 nodes (171017 explicit) and 351272 edges
+c Read D4 NNF file with 495296 nodes (171017 explicit) and 351272 edges
+EVAL LOG: Elapsed time = 0.552 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./k_branch_n-8_stricted.sdimacs ./k_branch_n-8_stricted_low.nnf ./k_branch_n-8_stricted_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 2568 variables and 10117 clauses
+c Read D4 NNF file with 495296 nodes (171017 explicit) and 351272 edges
+c Compressed POG has 187384 nodes, root literal 189952, and 1118658 defining clauses
+c GEN: Time = 0.40.  Generated POG representation
+c GEN: Time = 0.41.  Deleted asserted clauses
+c GEN: Time = 58.76.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 2568
+c GEN:    input clauses  : 10117
+c GEN: POG nodes
+c GEN:    product   : 179198
+c GEN:    sum       : 8185
+c GEN:    node TOTAL: 187383
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 1118658
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 3
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 1118661
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 58.76
+c GEN:   time TOTAL     : 58.76
+GEN LOG: Elapsed time = 58.763 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./k_branch_n-8_stricted_low.cpog 197507 lines 1908783567 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./k_branch_n-8_stricted.sdimacs ./k_branch_n-8_stricted_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 2568 variables and 10117 clauses
+CHECK: Read CPOG file with 187384 operations,  3 asserted + 1118658 defining = 1118661 clauses
+CHECK: Deleted 10119 input and asserted clauses
+CHECK: Final root literal 189952
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 7.893 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 70.107 seconds
+OVERALL OUTCOME: normal
