@@ -1,0 +1,156 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./robots_1_5_2_1.5.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./robots_1_5_2_1.5.sdimacs
+variables (all/used/free): 	5928/5928/0
+clauses (all/long/binary/unit): 19542/18182/1356/4
+
+Preprocessing .. DONE
+variables (all/used/free): 	5928/5928/0
+clauses (all/long/binary/unit): 16611/15822/789/0
+Maximum cache size:	15702 MB
+
+
+time elapsed: 60.302s
+conflict clauses (all / bin / unit) 	138/4/2
+
+cache size 4372MB
+components (stored / hits) 		303877/161516
+avg. variable count (stored / hits) 	2887.94/1933.63
+cache miss rate 22.1861%
+
+time elapsed: 121.302s
+conflict clauses (all / bin / unit) 	233/4/2
+
+cache size 8863MB
+components (stored / hits) 		613334/299312
+avg. variable count (stored / hits) 	2674.79/1776.01
+cache miss rate 36.0955%
+
+time elapsed: 182.302s
+conflict clauses (all / bin / unit) 	255/4/3
+
+cache size 13454MB
+components (stored / hits) 		890206/432224
+avg. variable count (stored / hits) 	2711.83/1770.87
+cache miss rate 43.0044%
+
+time elapsed: 243.302s
+conflict clauses (all / bin / unit) 	261/4/3
+
+cache size 10392MB
+components (stored / hits) 		1157867/554089
+avg. variable count (stored / hits) 	1482.2/1687.38
+cache miss rate 47.8108%
+
+time elapsed: 304.302s
+conflict clauses (all / bin / unit) 	261/4/3
+
+cache size 14897MB
+components (stored / hits) 		1444394/650337
+avg. variable count (stored / hits) 	1663.91/1683.18
+cache miss rate 52.766%
+
+time elapsed: 365.302s
+conflict clauses (all / bin / unit) 	275/4/3
+
+cache size 11285MB
+components (stored / hits) 		1266264/754452
+avg. variable count (stored / hits) 	1349.95/1662.13
+cache miss rate 55.9546%
+
+time elapsed: 426.302s
+conflict clauses (all / bin / unit) 	281/4/3
+
+cache size 7960MB
+components (stored / hits) 		1037277/865901
+avg. variable count (stored / hits) 	1188.01/1673.97
+cache miss rate 57.8624%
+
+time elapsed: 487.302s
+conflict clauses (all / bin / unit) 	310/4/3
+
+cache size 12033MB
+components (stored / hits) 		1285083/976222
+avg. variable count (stored / hits) 	1475.18/1643.63
+cache miss rate 59.1489%
+
+time elapsed: 548.302s
+conflict clauses (all / bin / unit) 	310/4/3
+
+cache size 9036MB
+components (stored / hits) 		1104100/1043309
+avg. variable count (stored / hits) 	1250.05/1644.63
+cache miss rate 61.8129%
+
+time elapsed: 609.302s
+conflict clauses (all / bin / unit) 	342/4/3
+
+cache size 13159MB
+components (stored / hits) 		1336582/1163337
+avg. variable count (stored / hits) 	1533.59/1647.6
+cache miss rate 62.1392%
+
+time elapsed: 670.302s
+conflict clauses (all / bin / unit) 	360/4/3
+
+cache size 9486MB
+components (stored / hits) 		1108156/1287443
+avg. variable count (stored / hits) 	1422.44/1655.88
+cache miss rate 62.2047%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	5928/5928/0
+clauses (removed) 			19542 (2928)
+decisions 				3209370
+conflicts 				3240
+conflict clauses (all/bin/unit) 	369/4/3
+
+cache size 13417MB	
+cache (stores / hits) 			1331400/1379747
+cache miss rate 62.8571%
+avg. variable count (stores / hits) 	1680.07/1676.9
+
+number of nodes in trace 	3206474
+number of edges in trace 	6413089
+
+# satisfying probability = 1
+
+# END
+
+time: 728.9307s
+
+upper trace written to ./robots_1_5_2_1.5_up.nnf
+lower trace written to ./robots_1_5_2_1.5_low.nnf
+maximum satisfying probability written to ./robots_1_5_2_1.5.prob
+SSAT LOG: Elapsed time = 751.524 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./robots_1_5_2_1.5.sdimacs ./robots_1_5_2_1.5_up.nnf ./robots_1_5_2_1.5_low.nnf ./robots_1_5_2_1.5.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 9619560 nodes (3206623 explicit) and 6413241 edges
+c Read D4 NNF file with 9619560 nodes (3206623 explicit) and 6413241 edges
+EVAL LOG: Elapsed time = 41.378 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./robots_1_5_2_1.5.sdimacs ./robots_1_5_2_1.5_low.nnf ./robots_1_5_2_1.5_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 5928 variables and 19542 clauses
+c Read D4 NNF file with 9619560 nodes (3206623 explicit) and 6413241 edges
+c Compressed POG has 6408673 nodes, root literal 6414601, and 566811445 defining clauses
+c GEN: Time = 75.83.  Generated POG representation
+c GEN: Time = 76.32.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2501.034 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./robots_1_5_2_1.5_low.cpog 6410018 lines 53650128896 bytes
+OVERALL LOG: Elapsed time = 3319.364 seconds
+OVERALL OUTCOME: failed
