@@ -1,0 +1,48 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./tlc01-nonuniform-depth-4.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./tlc01-nonuniform-depth-4.sdimacs
+variables (all/used/free): 	1756/1756/0
+clauses (all/long/binary/unit): 4674/1370/3272/32
+
+Preprocessing .. DONE
+
+ FOUND UNSAT DURING PREPROCESSING 
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	1756/1756/0
+clauses (removed) 			4674 (0)
+decisions 				0
+conflicts 				0
+conflict clauses (all/bin/unit) 	0/0/32
+
+cache size 0MB	
+cache (stores / hits) 			0/0
+cache miss rate 0%
+avg. variable count (stores / hits) 	0/0
+
+number of nodes in trace 	3
+number of edges in trace 	1
+
+# satisfying probability = 0
+
+# END
+
+time: 0.005066s
+
+upper trace written to ./tlc01-nonuniform-depth-4_up.nnf
+lower trace written to ./tlc01-nonuniform-depth-4_low.nnf
+maximum satisfying probability written to ./tlc01-nonuniform-depth-4.prob
+SSAT LOG: Elapsed time = 0.006 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-4.sdimacs ./tlc01-nonuniform-depth-4_up.nnf ./tlc01-nonuniform-depth-4_low.nnf ./tlc01-nonuniform-depth-4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c ERROR: Failed in get_lit_decision(1757).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: failed
