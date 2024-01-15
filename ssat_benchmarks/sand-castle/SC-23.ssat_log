@@ -1,0 +1,132 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./SC-23.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./SC-23.sdimacs
+variables (all/used/free): 	209/209/0
+clauses (all/long/binary/unit): 417/368/46/3
+
+Preprocessing .. DONE
+variables (all/used/free): 	209/209/0
+clauses (all/long/binary/unit): 398/349/49/0
+Maximum cache size:	3754 MB
+
+
+time elapsed: 60.3731s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 1908MB
+components (stored / hits) 		9658357/9657953
+avg. variable count (stored / hits) 	71.6124/53.4693
+cache miss rate 47.5576%
+
+time elapsed: 121.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 3575MB
+components (stored / hits) 		17763950/17763543
+avg. variable count (stored / hits) 	75.9583/55.8133
+cache miss rate 48.701%
+
+time elapsed: 182.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 3357MB
+components (stored / hits) 		26044234/26043516
+avg. variable count (stored / hits) 	49.0989/53.7295
+cache miss rate 49.1216%
+
+time elapsed: 243.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 2941MB
+components (stored / hits) 		23708941/32979155
+avg. variable count (stored / hits) 	47.739/55.3777
+cache miss rate 49.3089%
+
+time elapsed: 304.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 2630MB
+components (stored / hits) 		22195010/40523692
+avg. variable count (stored / hits) 	46.9788/54.3153
+cache miss rate 49.4392%
+
+time elapsed: 365.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 2157MB
+components (stored / hits) 		20305089/47890256
+avg. variable count (stored / hits) 	40.4354/54.3034
+cache miss rate 49.5263%
+
+time elapsed: 426.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 3748MB
+components (stored / hits) 		27989414/55574428
+avg. variable count (stored / hits) 	52.9211/54.5936
+cache miss rate 49.5924%
+
+time elapsed: 487.373s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 3459MB
+components (stored / hits) 		26319198/63251102
+avg. variable count (stored / hits) 	52.3914/54.4485
+cache miss rate 49.6423%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	209/209/0
+clauses (removed) 			417 (19)
+decisions 				67766636
+conflicts 				0
+conflict clauses (all/bin/unit) 	0/0/0
+
+cache size 2470MB	
+cache (stores / hits) 			21703465/67764967
+cache miss rate 49.6664%
+avg. variable count (stores / hits) 	43.452/54.6821
+
+number of nodes in trace 	67766642
+number of edges in trace 	135534715
+
+# satisfying probability = 0.9996512
+
+# END
+
+time: 526.7699s
+
+upper trace written to ./SC-23_up.nnf
+lower trace written to ./SC-23_low.nnf
+maximum satisfying probability written to ./SC-23.prob
+SSAT LOG: Elapsed time = 620.560 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./SC-23.sdimacs ./SC-23_up.nnf ./SC-23_low.nnf ./SC-23.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 203301354 nodes (67768081 explicit) and 135536157 edges
+c Read D4 NNF file with 203301354 nodes (67768081 explicit) and 135536157 edges
+EVAL LOG: Elapsed time = 377.026 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./SC-23.sdimacs ./SC-23_low.nnf ./SC-23_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 209 variables and 417 clauses
+c Read D4 NNF file with 203301354 nodes (67768081 explicit) and 135536157 edges
+c Compressed POG has 203301351 nodes, root literal 203301560, and 1266396834 defining clauses
+c GEN: Time = 362.42.  Generated POG representation
+c GEN: Time = 370.03.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2504.410 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./SC-23_low.cpog 203301547 lines 181111361536 bytes
+OVERALL LOG: Elapsed time = 3681.554 seconds
+OVERALL OUTCOME: failed

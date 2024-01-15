@@ -1,0 +1,116 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./SC-22.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./SC-22.sdimacs
+variables (all/used/free): 	200/200/0
+clauses (all/long/binary/unit): 399/352/44/3
+
+Preprocessing .. DONE
+variables (all/used/free): 	200/200/0
+clauses (all/long/binary/unit): 380/333/47/0
+Maximum cache size:	730 MB
+
+
+time elapsed: 60.0291s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 719MB
+components (stored / hits) 		5725253/9330686
+avg. variable count (stored / hits) 	43.7669/49.0274
+cache miss rate 47.4697%
+
+time elapsed: 121.029s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 650MB
+components (stored / hits) 		5398218/18325430
+avg. variable count (stored / hits) 	41.6531/47.5144
+cache miss rate 48.7435%
+
+time elapsed: 182.029s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 590MB
+components (stored / hits) 		5036151/27183491
+avg. variable count (stored / hits) 	40.6658/47.6998
+cache miss rate 49.1606%
+
+time elapsed: 243.029s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 490MB
+components (stored / hits) 		4559851/36067279
+avg. variable count (stored / hits) 	36.5845/46.68
+cache miss rate 49.3706%
+
+time elapsed: 304.029s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 389MB
+components (stored / hits) 		3988210/44905638
+avg. variable count (stored / hits) 	34.1815/46.4177
+cache miss rate 49.4962%
+
+time elapsed: 365.029s
+conflict clauses (all / bin / unit) 	0/0/0
+
+cache size 598MB
+components (stored / hits) 		5105476/53474295
+avg. variable count (stored / hits) 	40.9621/46.5798
+cache miss rate 49.5779%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	200/200/0
+clauses (removed) 			399 (19)
+decisions 				57655800
+conflicts 				0
+conflict clauses (all/bin/unit) 	0/0/0
+
+cache size 677MB	
+cache (stores / hits) 			5549465/57650597
+cache miss rate 49.6089%
+avg. variable count (stores / hits) 	42.1567/46.7003
+
+number of nodes in trace 	57655806
+number of edges in trace 	115315663
+
+# satisfying probability = 0.9994943
+
+# END
+
+time: 394.7009s
+
+upper trace written to ./SC-22_up.nnf
+lower trace written to ./SC-22_low.nnf
+maximum satisfying probability written to ./SC-22.prob
+SSAT LOG: Elapsed time = 474.241 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./SC-22.sdimacs ./SC-22_up.nnf ./SC-22_low.nnf ./SC-22.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 172971466 nodes (57659865 explicit) and 115319725 edges
+c Read D4 NNF file with 172971466 nodes (57659865 explicit) and 115319725 edges
+EVAL LOG: Elapsed time = 329.259 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./SC-22.sdimacs ./SC-22_low.nnf ./SC-22_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 200 variables and 399 clauses
+c Read D4 NNF file with 172971466 nodes (57659865 explicit) and 115319725 edges
+c Compressed POG has 172971463 nodes, root literal 172971663, and 1060709069 defining clauses
+c GEN: Time = 309.42.  Generated POG representation
+c GEN: Time = 316.31.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2502.443 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./SC-22_low.cpog 172971698 lines 174465593344 bytes
+OVERALL LOG: Elapsed time = 3501.658 seconds
+OVERALL OUTCOME: failed
