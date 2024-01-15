@@ -14,40 +14,49 @@ srun:
 	cd ev-pr-4x4;           make srun 
 	cd Tree;                make srun 
 	cd Connect2;            make srun 
-	cd k_ph_p;              make srun  #killed
-	cd k_branch_n;          make srun  #killed
+	cd k_ph_p;              make srun  
+	cd k_branch_n;          make srun  
 	cd tiger;               make srun 
 	cd Adder;               make srun 
 	cd Counter;             make srun 
 	cd PEC;                 make srun 
-	cd MPEC;                make srun  #killed
+	cd MPEC;                make srun  
 	cd conformant;          make srun 
 	cd RobotsD2;            make srun 
-	cd MaxCount;            make srun  #killed 
-	cd ToiletA;             make srun  #killed
-	cd sand-castle;         make srun  #killed
+	cd MaxCount;            make srun   
+	cd ToiletA;             make srun  
+	cd sand-castle;         make srun  
 	cd stracomp;            make srun 
 
-easy1:
-	cd gttt_3x3;            make srun # 9/9 (sharpSSAT/all)
-	cd ev-pr-4x4;           make srun # 7/7
-	cd Tree;                make srun # 14/14
-	cd tiger;               make srun # 5/5
+noCL:
+	cd Adder;               make noCL
+	cd MPEC;                make noCL
+	cd Counter;             make noCL
+	cd PEC;                 make noCL
+	cd tiger;               make noCL
 
-easy2:
-	cd stracomp;            make srun # 31/60
-	cd tlc;                 make srun # 13/13
+eval:
+	cd Adder;               make eval
+	cd stracomp;            make eval
+	cd tlc;                 make eval
+	cd Tree;                make eval
 
-easy3:
-	cd Connect2;            make srun # 16/16
-	cd Adder;               make srun # 5/6
-	cd PEC;                 make srun # 4/4
+invalidOP:
+	cd Connect2;            make invalidOP
+	cd Tree;                make invalidOP
 
-undone:
-	cd RobotsD2;            make srun # 5/10
-	cd conformant;          make srun # 3/24
-	cd Counter;             make srun # 8/8
-    
+gen9:
+	cd MPEC;                make gen9
+
+gen11:
+	cd k_ph_p;              make gen11
+
+genTO:
+	cd RobotsD2;            make genTO
+	cd conformant;          make genTO
+
+genInvalid: 
+	cd tlc;                 make genInvalid
                                      
 .SUFFIXES: .cnf .log .lean_log
 
@@ -60,7 +69,7 @@ undone:
 clean:
 	rm -f *~ d2p.log
 
-superclean1:
+superclean: clean
 	cd tlc;                 make superclean 
 	cd gttt_3x3;            make superclean 
 	cd ev-pr-4x4;           make superclean 
@@ -69,21 +78,15 @@ superclean1:
 	cd k_ph_p;              make superclean 
 	cd k_branch_n;          make superclean 
 	cd tiger;               make superclean
-
-superclean2:
 	cd Adder;               make superclean 
 	cd Counter;             make superclean 
 	cd PEC;                 make superclean 
 	cd MPEC;                make superclean 
 	cd conformant;          make superclean 
 	cd RobotsD2;            make superclean 
-
-superclean3:
 	cd MaxCount;            make superclean 
 	cd ToiletA;             make superclean 
 	cd sand-castle;         make superclean 
 	cd stracomp;            make superclean
-
-superclean: clean superclean1 superclean2 superclean3
 	rm -f *.nnf *.cpog *log *cnf
 

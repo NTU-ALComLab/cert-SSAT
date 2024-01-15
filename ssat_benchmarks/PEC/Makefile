@@ -11,6 +11,9 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
+noCL:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) c432_re.sdimacs
+
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

@@ -11,6 +11,9 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
+gen11:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) k_ph_p-5.sdimacs
+
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

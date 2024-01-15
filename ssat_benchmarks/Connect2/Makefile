@@ -11,6 +11,13 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
+invalidOP:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) cf_2_3x3_w_.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) cf_2_3x5_w_.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) cf_2_3x7_w_.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) cf_2_3x7_w_.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) cf_2_3x9_w_.sdimacs
+
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:
