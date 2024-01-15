@@ -162,7 +162,7 @@ def runSharpSSAT(root, home, logFile, force):
     probName = home + "/" + root + ".prob"
     if not force and os.path.exists(probName):
         return True
-    cmd = [ssatProgram, "-l", "-p", "-s", ssatName]
+    cmd = [ssatProgram, "-l", "-p", "-s","-noCL",  ssatName]
     ok = runProgram("SSAT", root, cmd, logFile)
     return ok
 
