@@ -22,6 +22,9 @@ srun:
 clean:
 	rm -f *~ d2p.log
 
+extraclean: clean
+	rm -f *.nnf *.cpog *.prob
+
 superclean: clean
 	rm -f *.nnf *.cpog *log *.cnf *.prob
 
