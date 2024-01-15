@@ -1,0 +1,66 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x35.4.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./x35.4.sdimacs
+variables (all/used/free): 	1089/1089/0
+clauses (all/long/binary/unit): 3212/493/2719/0
+
+Preprocessing .. DONE
+variables (all/used/free): 	1089/1089/0
+clauses (all/long/binary/unit): 3212/493/2719/0
+Maximum cache size:	95313 MB
+
+
+time elapsed: 60.0643s
+conflict clauses (all / bin / unit) 	16/0/0
+
+cache size 1188MB
+components (stored / hits) 		4463394/4535843
+avg. variable count (stored / hits) 	149.42/5.29362
+cache miss rate 44.0494%
+
+time elapsed: 121.064s
+conflict clauses (all / bin / unit) 	16/0/0
+
+cache size 2323MB
+components (stored / hits) 		8634910/8597908
+avg. variable count (stored / hits) 	155.738/5.48359
+cache miss rate 47.3583%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	1089/1089/0
+clauses (removed) 			3212 (0)
+decisions 				8973443
+conflicts 				31
+conflict clauses (all/bin/unit) 	16/0/0
+
+cache size 2418MB	
+cache (stores / hits) 			8973420/8938515
+cache miss rate 47.4575%
+avg. variable count (stores / hits) 	156.369/5.44842
+
+number of nodes in trace 	8973425
+number of edges in trace 	20647713
+
+# satisfying probability = 1
+
+# END
+
+time: 126.5086s
+
+upper trace written to ./x35.4_up.nnf
+lower trace written to ./x35.4_low.nnf
+maximum satisfying probability written to ./x35.4.prob
+SSAT LOG: Elapsed time = 165.919 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./x35.4.sdimacs ./x35.4_up.nnf ./x35.4_low.nnf ./x35.4.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 28475733 nodes (10528895 explicit) and 22203186 edges
+c Read D4 NNF file with 28475733 nodes (10528895 explicit) and 22203186 edges
+c ERROR: Failed in get_lit_decision(1093).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 84.720 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 250.640 seconds
+OVERALL OUTCOME: failed

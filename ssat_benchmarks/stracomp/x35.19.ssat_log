@@ -1,0 +1,74 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x35.19.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./x35.19.sdimacs
+variables (all/used/free): 	1089/1089/0
+clauses (all/long/binary/unit): 3214/493/2721/0
+
+Preprocessing .. DONE
+variables (all/used/free): 	1089/1089/0
+clauses (all/long/binary/unit): 3214/493/2721/0
+Maximum cache size:	107859 MB
+
+
+time elapsed: 60.2124s
+conflict clauses (all / bin / unit) 	4/0/0
+
+cache size 1268MB
+components (stored / hits) 		4726037/5011900
+avg. variable count (stored / hits) 	146.94/4.24057
+cache miss rate 43.3294%
+
+time elapsed: 121.212s
+conflict clauses (all / bin / unit) 	4/0/0
+
+cache size 2476MB
+components (stored / hits) 		9313950/9550907
+avg. variable count (stored / hits) 	147.575/4.37923
+cache miss rate 46.8357%
+
+time elapsed: 182.212s
+conflict clauses (all / bin / unit) 	5/0/0
+
+cache size 3639MB
+components (stored / hits) 		13730000/13512005
+avg. variable count (stored / hits) 	148.469/4.50456
+cache miss rate 48.7054%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	1089/1089/0
+clauses (removed) 			3214 (0)
+decisions 				13789394
+conflicts 				6
+conflict clauses (all/bin/unit) 	5/0/0
+
+cache size 3655MB	
+cache (stores / hits) 			13789393/13570002
+cache miss rate 48.7138%
+avg. variable count (stores / hits) 	148.545/4.5045
+
+number of nodes in trace 	13789398
+number of edges in trace 	31790966
+
+# satisfying probability = 1
+
+# END
+
+time: 183.5059s
+
+upper trace written to ./x35.19_up.nnf
+lower trace written to ./x35.19_low.nnf
+maximum satisfying probability written to ./x35.19.prob
+SSAT LOG: Elapsed time = 245.179 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./x35.19.sdimacs ./x35.19_up.nnf ./x35.19_low.nnf ./x35.19.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
+c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
+c ERROR: Failed in get_lit_decision(1093).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 128.969 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 374.148 seconds
+OVERALL OUTCOME: failed
