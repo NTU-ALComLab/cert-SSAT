@@ -1,0 +1,50 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./tree-exa10-20.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./tree-exa10-20.sdimacs
+variables (all/used/free): 	40/40/0
+clauses (all/long/binary/unit): 38/38/0/0
+
+Preprocessing .. DONE
+variables (all/used/free): 	40/40/0
+clauses (all/long/binary/unit): 38/38/0/0
+Maximum cache size:	112932 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	40/40/0
+clauses (removed) 			38 (0)
+decisions 				20
+conflicts 				0
+conflict clauses (all/bin/unit) 	0/0/0
+
+cache size 7MB	
+cache (stores / hits) 			21/19
+cache miss rate 0%
+avg. variable count (stores / hits) 	19.2381/17.1053
+
+number of nodes in trace 	26
+number of edges in trace 	43
+
+# satisfying probability = 1
+
+# END
+
+time: 0.001485s
+
+upper trace written to ./tree-exa10-20_up.nnf
+lower trace written to ./tree-exa10-20_low.nnf
+maximum satisfying probability written to ./tree-exa10-20.prob
+SSAT LOG: Elapsed time = 0.002 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-20.sdimacs ./tree-exa10-20_up.nnf ./tree-exa10-20_low.nnf ./tree-exa10-20.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 65 nodes (25 explicit) and 45 edges
+c Read D4 NNF file with 65 nodes (25 explicit) and 45 edges
+c ERROR: Failed in get_lit_decision(44).
+EVAL ERROR: Return code = 1
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: failed
+OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL OUTCOME: failed
