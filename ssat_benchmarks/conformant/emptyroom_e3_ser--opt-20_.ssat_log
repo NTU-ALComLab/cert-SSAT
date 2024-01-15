@@ -1,0 +1,100 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./emptyroom_e3_ser--opt-20_.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./emptyroom_e3_ser--opt-20_.sdimacs
+variables (all/used/free): 	982/982/0
+clauses (all/long/binary/unit): 6286/3924/2360/2
+
+Preprocessing .. DONE
+variables (all/used/free): 	982/982/0
+clauses (all/long/binary/unit): 5158/3914/1244/0
+Maximum cache size:	36934 MB
+
+
+time elapsed: 60.551s
+conflict clauses (all / bin / unit) 	13824/4/0
+
+cache size 1948MB
+components (stored / hits) 		1406029/380735
+avg. variable count (stored / hits) 	243.644/134.396
+cache miss rate 65.8054%
+
+time elapsed: 121.551s
+conflict clauses (all / bin / unit) 	13506/4/0
+
+cache size 3690MB
+components (stored / hits) 		2762096/747328
+avg. variable count (stored / hits) 	232.58/128.845
+cache miss rate 72.5886%
+
+time elapsed: 182.551s
+conflict clauses (all / bin / unit) 	13290/4/0
+
+cache size 5387MB
+components (stored / hits) 		4069744/1152846
+avg. variable count (stored / hits) 	229.354/126.912
+cache miss rate 73.9616%
+
+time elapsed: 243.551s
+conflict clauses (all / bin / unit) 	14731/4/0
+
+cache size 7072MB
+components (stored / hits) 		5357379/1593135
+avg. variable count (stored / hits) 	228.452/126.298
+cache miss rate 74.1686%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	982/982/0
+clauses (removed) 			6286 (1128)
+decisions 				5563861
+conflicts 				318160
+conflict clauses (all/bin/unit) 	18609/4/0
+
+cache size 7185MB	
+cache (stores / hits) 			5443522/1618074
+cache miss rate 74.2495%
+avg. variable count (stores / hits) 	228.503/126.271
+
+number of nodes in trace 	5443527
+number of edges in trace 	10887043
+
+# satisfying probability = 1
+
+# END
+
+time: 247.9303s
+
+upper trace written to ./emptyroom_e3_ser--opt-20__up.nnf
+lower trace written to ./emptyroom_e3_ser--opt-20__low.nnf
+maximum satisfying probability written to ./emptyroom_e3_ser--opt-20_.prob
+SSAT LOG: Elapsed time = 304.874 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./emptyroom_e3_ser--opt-20_.sdimacs ./emptyroom_e3_ser--opt-20__up.nnf ./emptyroom_e3_ser--opt-20__low.nnf ./emptyroom_e3_ser--opt-20_.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 16330567 nodes (5443524 explicit) and 10887043 edges
+c Read D4 NNF file with 16330567 nodes (5443524 explicit) and 10887043 edges
+EVAL LOG: Elapsed time = 103.711 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./emptyroom_e3_ser--opt-20_.sdimacs ./emptyroom_e3_ser--opt-20__low.nnf ./emptyroom_e3_ser--opt-20__low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 982 variables and 6286 clauses
+c Read D4 NNF file with 16330567 nodes (5443524 explicit) and 10887043 edges
+c Compressed POG has 15934824 nodes, root literal 15935806, and 1002333628 defining clauses
+c GEN: Time = 137.17.  Generated POG representation
+c GEN: Time = 138.18.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2501.991 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./emptyroom_e3_ser--opt-20__low.cpog 15935675 lines 127290589184 bytes
+OVERALL LOG: Elapsed time = 3029.605 seconds
+OVERALL OUTCOME: failed
