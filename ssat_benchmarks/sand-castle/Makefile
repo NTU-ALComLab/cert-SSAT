@@ -11,6 +11,14 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
+gen9:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-21.sdimacs
+
+genTO:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-22.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-23.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-24.sdimacs
+
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

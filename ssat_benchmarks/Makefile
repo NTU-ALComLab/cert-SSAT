@@ -47,6 +47,7 @@ invalidOP:
 
 gen9:
 	cd MPEC;                make gen9
+	cd sand-castle;         make gen9  
 
 gen11:
 	cd k_ph_p;              make gen11
@@ -54,6 +55,7 @@ gen11:
 genTO:
 	cd RobotsD2;            make genTO
 	cd conformant;          make genTO
+	cd sand-castle;         make genTO  
 
 genInvalid: 
 	cd tlc;                 make genInvalid
