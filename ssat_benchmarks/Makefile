@@ -28,6 +28,7 @@ srun:
 	cd sand-castle;         make srun  
 	cd stracomp;            make srun 
 
+#### Check Errors
 noCL:
 	cd Adder;               make noCL
 	cd MPEC;                make noCL
@@ -44,6 +45,8 @@ eval:
 invalidOP:
 	cd Connect2;            make invalidOP
 	cd Tree;                make invalidOP
+
+#### Gen Errors
 
 gen9:
 	cd MPEC;                make gen9
