@@ -1,0 +1,111 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./QIF-pwd-backdoor.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./QIF-pwd-backdoor.sdimacs
+variables (all/used/free): 	400/400/0
+clauses (all/long/binary/unit): 609/344/262/3
+
+Preprocessing .. DONE
+variables (all/used/free): 	400/400/0
+clauses (all/long/binary/unit): 593/327/266/0
+Maximum cache size:	19729 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	400/400/0
+clauses (removed) 			609 (16)
+decisions 				1316
+conflicts 				0
+conflict clauses (all/bin/unit) 	0/0/0
+
+cache size 7MB	
+cache (stores / hits) 			1317/3875
+cache miss rate 0.0257998%
+avg. variable count (stores / hits) 	131.199/2.504
+
+number of nodes in trace 	1322
+number of edges in trace 	6572
+
+# satisfying probability = 1
+
+# END
+
+time: 0.013025s
+
+upper trace written to ./QIF-pwd-backdoor_up.nnf
+lower trace written to ./QIF-pwd-backdoor_low.nnf
+maximum satisfying probability written to ./QIF-pwd-backdoor.prob
+SSAT LOG: Elapsed time = 0.016 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./QIF-pwd-backdoor.sdimacs ./QIF-pwd-backdoor_up.nnf ./QIF-pwd-backdoor_low.nnf ./QIF-pwd-backdoor.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 4047 nodes (1414 explicit) and 6667 edges
+c Read D4 NNF file with 4047 nodes (1414 explicit) and 6667 edges
+EVAL LOG: Elapsed time = 0.005 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./QIF-pwd-backdoor.sdimacs ./QIF-pwd-backdoor_low.nnf ./QIF-pwd-backdoor_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 400 variables and 609 clauses
+c Read D4 NNF file with 4047 nodes (1414 explicit) and 6667 edges
+c Compressed POG has 1798 nodes, root literal 2198, and 16453 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c GEN: Time = 0.04.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 400
+c GEN:    input clauses  : 609
+c GEN: POG nodes
+c GEN:    product   : 1604
+c GEN:    sum       : 193
+c GEN:    node TOTAL: 1797
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 16453
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 4
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 16457
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.04
+c GEN:   time TOTAL     : 0.04
+GEN LOG: Elapsed time = 0.039 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./QIF-pwd-backdoor_low.cpog 2415 lines 2621670 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./QIF-pwd-backdoor.sdimacs ./QIF-pwd-backdoor_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 400 variables and 609 clauses
+CHECK: Read CPOG file with 1798 operations,  4 asserted + 16453 defining = 16457 clauses
+CHECK: Deleted 612 input and asserted clauses
+CHECK: Final root literal 2198
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.015 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.077 seconds
+OVERALL OUTCOME: normal
