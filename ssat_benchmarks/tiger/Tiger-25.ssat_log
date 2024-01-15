@@ -1,0 +1,108 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./Tiger-25.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./Tiger-25.sdimacs
+variables (all/used/free): 	228/228/0
+clauses (all/long/binary/unit): 754/625/125/4
+
+Preprocessing .. DONE
+variables (all/used/free): 	228/228/0
+clauses (all/long/binary/unit): 740/607/133/0
+Maximum cache size:	94884 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	228/228/0
+clauses (removed) 			754 (14)
+decisions 				227654
+conflicts 				96678
+conflict clauses (all/bin/unit) 	16829/0/0
+
+cache size 59MB	
+cache (stores / hits) 			150059/798191
+cache miss rate 3.34576%
+avg. variable count (stores / hits) 	139.405/14.4348
+
+number of nodes in trace 	150064
+number of edges in trace 	957314
+
+# satisfying probability = 0.5
+
+# END
+
+time: 3.003605s
+
+upper trace written to ./Tiger-25_up.nnf
+lower trace written to ./Tiger-25_low.nnf
+maximum satisfying probability written to ./Tiger-25.prob
+SSAT LOG: Elapsed time = 3.558 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./Tiger-25.sdimacs ./Tiger-25_up.nnf ./Tiger-25_low.nnf ./Tiger-25.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 587298 nodes (287181 explicit) and 1094434 edges
+c Read D4 NNF file with 587298 nodes (287181 explicit) and 1094434 edges
+EVAL LOG: Elapsed time = 1.554 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./Tiger-25.sdimacs ./Tiger-25_low.nnf ./Tiger-25_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 228 variables and 754 clauses
+c Read D4 NNF file with 587298 nodes (287181 explicit) and 1094434 edges
+c Compressed POG has 549025 nodes, root literal 549253, and 7610275 defining clauses
+c GEN: Time = 1.56.  Generated POG representation
+c GEN: Time = 1.59.  Deleted asserted clauses
+c GEN: Time = 33.33.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 228
+c GEN:    input clauses  : 754
+c GEN: POG nodes
+c GEN:    product   : 418101
+c GEN:    sum       : 130923
+c GEN:    node TOTAL: 549024
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 7610275
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 1
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 7610276
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 33.33
+c GEN:   time TOTAL     : 33.33
+GEN LOG: Elapsed time = 33.345 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./Tiger-25_low.cpog 549781 lines 2162796223 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./Tiger-25.sdimacs ./Tiger-25_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 228 variables and 754 clauses
+ERROR. File ./Tiger-25_low.cpog. Line 499819. Function cpog_add_product. Can't add literal 500045 to node 500046 children.  Overlapping dependency sets
+FCHECK ERROR: Return code = 1
+FCHECK LOG: Elapsed time = 1.036 seconds
+FCHECK OUTCOME: failed
+OVERALL LOG: Elapsed time = 40.124 seconds
+OVERALL OUTCOME: failed
