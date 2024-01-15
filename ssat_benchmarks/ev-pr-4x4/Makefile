@@ -1,6 +1,6 @@
 INTERP = python3
 TCHAIN = ../../tools/toolchain.py
-VLEVEL=5
+VLEVEL=1
 
 run:
 	$(INTERP) $(TCHAIN) -v $(VLEVEL) *.cnf
