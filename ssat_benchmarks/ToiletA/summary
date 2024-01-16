@@ -1,0 +1,355 @@
+toilet_a_02_01.2.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 18 variables and 39 clauses
+CHECK: Read CPOG file with 16 operations,  37 asserted + 67 defining = 104 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 34
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.009 seconds
+OVERALL OUTCOME: normal
+toilet_a_02_01.3.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 26 variables and 64 clauses
+CHECK: Read CPOG file with 37 operations,  97 asserted + 167 defining = 264 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 62
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.010 seconds
+OVERALL OUTCOME: normal
+toilet_a_02_01.4.ssat_log
+CHECK: Read CNF file with 34 variables and 89 clauses
+CHECK: Read CPOG file with 41 operations,  2 asserted + 195 defining = 197 clauses
+CHECK: Deleted 90 input and asserted clauses
+CHECK: Final root literal 75
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.005 seconds
+OVERALL OUTCOME: normal
+toilet_a_02_05.2.ssat_log
+CHECK: Read CNF file with 50 variables and 163 clauses
+CHECK: Read CPOG file with 35 operations,  6 asserted + 158 defining = 164 clauses
+CHECK: Deleted 168 input and asserted clauses
+CHECK: Final root literal 85
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.005 seconds
+OVERALL OUTCOME: normal
+toilet_a_02_10.2.ssat_log
+CHECK: Read CNF file with 90 variables and 408 clauses
+CHECK: Read CPOG file with 45 operations,  11 asserted + 213 defining = 224 clauses
+CHECK: Deleted 418 input and asserted clauses
+CHECK: Final root literal 135
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.2.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 32 variables and 129 clauses
+CHECK: Read CPOG file with 42 operations,  145 asserted + 178 defining = 323 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 73
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.017 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.3.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 46 variables and 179 clauses
+CHECK: Read CPOG file with 94 operations,  374 asserted + 459 defining = 833 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 135
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.046 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.4.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 60 variables and 229 clauses
+CHECK: Read CPOG file with 323 operations,  1467 asserted + 1676 defining = 3143 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 351
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.192 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.5.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 74 variables and 279 clauses
+CHECK: Read CPOG file with 730 operations,  3883 asserted + 4038 defining = 7921 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 733
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.092 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.6.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 88 variables and 329 clauses
+CHECK: Read CPOG file with 1904 operations,  11809 asserted + 11296 defining = 23105 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 1841
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.017 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.229 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.7.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 102 variables and 379 clauses
+CHECK: Read CPOG file with 4331 operations,  30650 asserted + 27569 defining = 58219 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 4216
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.024 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 2.000 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_01.8.ssat_log
+CHECK: Read CNF file with 116 variables and 429 clauses
+CHECK: Read CPOG file with 1650 operations,  2 asserted + 11092 defining = 11094 clauses
+CHECK: Deleted 430 input and asserted clauses
+CHECK: Final root literal 1766
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.007 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.046 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_05.2.ssat_log
+CHECK: Read CNF file with 80 variables and 389 clauses
+CHECK: Read CPOG file with 363 operations,  6 asserted + 1556 defining = 1562 clauses
+CHECK: Deleted 394 input and asserted clauses
+CHECK: Final root literal 443
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.016 seconds
+OVERALL OUTCOME: normal
+toilet_a_04_10.2.ssat_log
+CHECK: Read CNF file with 140 variables and 894 clauses
+CHECK: Read CPOG file with 383 operations,  11 asserted + 1651 defining = 1662 clauses
+CHECK: Deleted 904 input and asserted clauses
+CHECK: Final root literal 523
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.002 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.026 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.10.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 206 variables and 1123 clauses
+CHECK: Read CPOG file with 354944 operations,  7134662 asserted + 2774871 defining = 9909533 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 346698
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 9.490 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 293.482 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.11.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 226 variables and 1202 clauses
+CHECK: Read CPOG file with 853437 operations,  19284796 asserted + 7160192 defining = 26444988 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 837433
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 27.640 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 541.727 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.12.ssat_log
+CHECK: Read CNF file with 246 variables and 1281 clauses
+CHECK: Read CPOG file with 183851 operations,  2 asserted + 1595383 defining = 1595385 clauses
+CHECK: Deleted 1282 input and asserted clauses
+CHECK: Final root literal 184097
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 2.570 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 13.882 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.2.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 46 variables and 491 clauses
+CHECK: Read CPOG file with 83 operations,  561 asserted + 342 defining = 903 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 125
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.004 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.110 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.3.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 66 variables and 570 clauses
+CHECK: Read CPOG file with 173 operations,  1291 asserted + 870 defining = 2161 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 228
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.007 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.337 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.4.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 86 variables and 649 clauses
+CHECK: Read CPOG file with 783 operations,  6317 asserted + 4170 defining = 10487 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 797
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.020 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 1.536 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.5.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 106 variables and 728 clauses
+CHECK: Read CPOG file with 1823 operations,  17191 asserted + 10540 defining = 27731 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 1720
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.026 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 3.084 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.6.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 126 variables and 807 clauses
+CHECK: Read CPOG file with 6624 operations,  70004 asserted + 40157 defining = 110161 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 6198
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.058 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 8.644 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.7.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 146 variables and 886 clauses
+CHECK: Read CPOG file with 17372 operations,  222315 asserted + 114002 defining = 336317 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 16217
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.182 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 26.734 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.8.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 166 variables and 965 clauses
+CHECK: Read CPOG file with 50096 operations,  755500 asserted + 355358 defining = 1110858 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 47866
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.659 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 64.634 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_01.9.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 186 variables and 1044 clauses
+CHECK: Read CPOG file with 138120 operations,  2325566 asserted + 998351 defining = 3323917 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 134900
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 2.580 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 142.348 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_05.2.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 110 variables and 919 clauses
+CHECK: Read CPOG file with 3492 operations,  33595 asserted + 15747 defining = 49342 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 3073
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.033 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 3.536 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_05.3.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 162 variables and 1278 clauses
+CHECK: Read CPOG file with 55620 operations,  646669 asserted + 276452 defining = 923121 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 54311
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.769 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 27.364 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_05.4.ssat_log
+CHECK: Read CNF file with 214 variables and 1637 clauses
+CHECK: Read CPOG file with 4983 operations,  6 asserted + 24755 defining = 24761 clauses
+CHECK: Deleted 1642 input and asserted clauses
+CHECK: Final root literal 5197
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.061 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.310 seconds
+OVERALL OUTCOME: normal
+toilet_a_06_10.2.ssat_log
+CHECK: Read CNF file with 190 variables and 1724 clauses
+CHECK: Read CPOG file with 3106 operations,  11 asserted + 13803 defining = 13814 clauses
+CHECK: Deleted 1734 input and asserted clauses
+CHECK: Final root literal 3296
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.034 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.177 seconds
+OVERALL OUTCOME: normal
+toilet_a_08_01.10.ssat_log
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 268 variables and 3101 clauses
+CHECK: Read CPOG file with 1579927 operations,  66438587 asserted + 13270117 defining = 79708704 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 1517494
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 191.668 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 2928.915 seconds
+OVERALL OUTCOME: normal
+toilet_a_08_01.11.ssat_log
+c Time = 582.67.  Justifications of 449757 nodes completed.  54613164 total clauses.  102931 SAT calls
+c Time = 1106.32.  Justifications of 899514 nodes completed.  72908236 total clauses.  217212 SAT calls
+c Time = 1656.86.  Justifications of 1349271 nodes completed.  93202164 total clauses.  333186 SAT calls
+c Time = 2256.00.  Justifications of 1799028 nodes completed.  114572675 total clauses.  452832 SAT calls
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2502.783 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./toilet_a_08_01.11_up.cpog 86167594 lines 76628733952 bytes
+OVERALL LOG: Elapsed time = 3927.683 seconds
+OVERALL OUTCOME: failed
+toilet_a_08_01.12.ssat_log
+c Read D4 NNF file with 13084831 nodes (4703766 explicit) and 9965229 edges
+c Compressed POG has 12979831 nodes, root literal 12980151, and 119126091 defining clauses
+c GEN: Time = 28.18.  Generated POG representation
+c GEN: Time = 28.80.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2500.419 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./toilet_a_08_01.12_low.cpog 12982216 lines 194111250432 bytes
+OVERALL LOG: Elapsed time = 2830.220 seconds
+OVERALL OUTCOME: failed
+toilet_a_08_01.13.ssat_log
+67
+33
