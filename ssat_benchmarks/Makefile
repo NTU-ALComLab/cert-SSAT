@@ -37,7 +37,7 @@ ssatTO:
 
 #### Gen Errors
 
-gen1:
+gen1: # both up.nnf and low.nnf are unsat
 	cd tlc;                 make gen1
 
 gen6:
