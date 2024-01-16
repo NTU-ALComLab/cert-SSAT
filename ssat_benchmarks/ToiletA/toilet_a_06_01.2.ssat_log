@@ -1,0 +1,180 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./toilet_a_06_01.2.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./toilet_a_06_01.2.sdimacs
+variables (all/used/free): 	46/46/0
+clauses (all/long/binary/unit): 491/392/86/13
+
+Preprocessing .. DONE
+variables (all/used/free): 	46/46/0
+clauses (all/long/binary/unit): 457/379/78/0
+Maximum cache size:	2417 MB
+
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	46/46/0
+clauses (removed) 			491 (34)
+decisions 				140
+conflicts 				127
+conflict clauses (all/bin/unit) 	61/0/0
+
+cache size 7MB	
+cache (stores / hits) 			54/0
+cache miss rate 0%
+avg. variable count (stores / hits) 	6.55556/0
+
+number of nodes in trace 	59
+number of edges in trace 	108
+
+# satisfying probability = 0.03125
+
+# END
+
+time: 0.005345s
+
+upper trace written to ./toilet_a_06_01.2_up.nnf
+lower trace written to ./toilet_a_06_01.2_low.nnf
+maximum satisfying probability written to ./toilet_a_06_01.2.prob
+SSAT LOG: Elapsed time = 0.007 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./toilet_a_06_01.2.sdimacs ./toilet_a_06_01.2_up.nnf ./toilet_a_06_01.2_low.nnf ./toilet_a_06_01.2.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 164 nodes (57 explicit) and 109 edges
+c Read D4 NNF file with 164 nodes (57 explicit) and 109 edges
+EVAL LOG: Elapsed time = 0.001 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./toilet_a_06_01.2.sdimacs ./toilet_a_06_01.2_low.nnf ./toilet_a_06_01.2_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 46 variables and 491 clauses
+c Read D4 NNF file with 164 nodes (57 explicit) and 109 edges
+c Compressed POG has 78 nodes, root literal 124, and 332 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c GEN: Time = 0.00.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 46
+c GEN:    input clauses  : 491
+c GEN: POG nodes
+c GEN:    product   : 65
+c GEN:    sum       : 12
+c GEN:    node TOTAL: 77
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 332
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 2
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 334
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+GEN LOG: Elapsed time = 0.003 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./toilet_a_06_01.2_low.cpog 573 lines 120306 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./toilet_a_06_01.2.sdimacs ./toilet_a_06_01.2_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 46 variables and 491 clauses
+CHECK: Read CPOG file with 78 operations,  2 asserted + 332 defining = 334 clauses
+CHECK: Deleted 492 input and asserted clauses
+CHECK: Final root literal 124
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./toilet_a_06_01.2.sdimacs ./toilet_a_06_01.2_up.nnf ./toilet_a_06_01.2_up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 46 variables and 491 clauses
+c Read D4 NNF file with 164 nodes (57 explicit) and 109 edges
+c Compressed POG has 79 nodes, root literal 125, and 329 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c Time = 0.09.  Justifications of 79 nodes, including root, completed.  903 total clauses
+c GEN: Formula
+c GEN:    input variables: 46
+c GEN:    input clauses  : 491
+c GEN: POG nodes
+c GEN:    product   : 65
+c GEN:    sum       : 13
+c GEN:    node TOTAL: 78
+c GEN: Other nodes
+c GEN:    aux product: 4
+c GEN: Node visits
+c GEN:    product/BCP: 34
+c GEN:    product/SAT: 32
+c GEN:    sum        : 13
+c GEN:    visit TOTAL: 79
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (32 instances)
+c GEN:    PROBLEM TOTAL : 1461
+c GEN:    PROBLEM MIN   : 12
+c GEN:    PROBLEM AVG   : 45.66
+c GEN:    PROBLEM MAX   : 112
+c GEN: SAT Proof Clause Counts
+c GEN:    PROOF TOTAL : 380
+c GEN:    PROOF MIN   : 3
+c GEN:    PROOF AVG   : 11.88
+c GEN:    PROOF MAX   : 28
+c GEN: Clauses
+c GEN:    POG definition       : 329
+c GEN:    AUX definition       : 13
+c GEN:    product justification: 66
+c GEN:    sum justification    : 25
+c GEN:    literal justification: 471
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 904
+c GEN: Time
+c GEN:   SAT execution  : 0.07
+c GEN:   other execution: 0.02
+c GEN:   time TOTAL     : 0.09
+GEN LOG: Elapsed time = 0.093 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./toilet_a_06_01.2_up.cpog 645 lines 28781 bytes
+FCHECK LOG: Running ../../src/cpog-check -S ./toilet_a_06_01.2.sdimacs ./toilet_a_06_01.2_up.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 46 variables and 491 clauses
+CHECK: Read CPOG file with 83 operations,  561 asserted + 342 defining = 903 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 125
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.004 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.110 seconds
+OVERALL OUTCOME: normal
