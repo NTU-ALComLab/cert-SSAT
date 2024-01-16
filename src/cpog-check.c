@@ -1156,8 +1156,8 @@ node_t *node_find(int id) {
 }
 
 node_t *node_new(node_type_t type, int id, int cid) {
-    // if (id <= input_variable_count)
-	// err_printf(__cfunc__, "Invalid operation id %d\n", id);
+    if (id <= input_variable_count)
+	err_printf(__cfunc__, "Invalid operation id %d\n", id);
     if (id-input_variable_count > node_asize) {
 	int nasize = id-input_variable_count;
 	if (nasize < MIN_SIZE)
