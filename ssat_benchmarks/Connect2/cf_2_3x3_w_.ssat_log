@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 3330/3229/31/70
 Preprocessing .. DONE
 variables (all/used/free): 	94309/94309/0
 clauses (all/long/binary/unit): 2599/2391/208/0
-Maximum cache size:	83624 MB
+Maximum cache size:	70891 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	85
 
 # END
 
-time: 0.024868s
+time: 0.023086s
 
 upper trace written to ./cf_2_3x3_w__up.nnf
 lower trace written to ./cf_2_3x3_w__low.nnf
 maximum satisfying probability written to ./cf_2_3x3_w_.prob
-SSAT LOG: Elapsed time = 0.030 seconds
+SSAT LOG: Elapsed time = 0.028 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__up.nnf ./cf_2_3x3_w__low.nnf ./cf_2_3x3_w_.prob
 EVAL LOG: Time limit 1000 seconds
@@ -94,15 +94,13 @@ c GEN: Time
 c GEN:   SAT execution  : 0.00
 c GEN:   other execution: 0.03
 c GEN:   time TOTAL     : 0.03
-GEN LOG: Elapsed time = 0.031 seconds
+GEN LOG: Elapsed time = 0.030 seconds
 GEN OUTCOME: normal
 GEN: LOG: size ./cf_2_3x3_w__low.cpog 3721 lines 877201 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 94309 variables and 3330 clauses
-ERROR. File ./cf_2_3x3_w__low.cpog. Line 146. Function node_new. Invalid operation id 94309
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.045 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.065 seconds
+OVERALL LOG: Elapsed time = 0.106 seconds
 OVERALL OUTCOME: failed

@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 29418/29137/85/196
 Preprocessing .. DONE
 variables (all/used/free): 	910327/910327/0
 clauses (all/long/binary/unit): 26707/26211/496/0
-Maximum cache size:	82437 MB
+Maximum cache size:	70634 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	139
 
 # END
 
-time: 0.239079s
+time: 0.232488s
 
 upper trace written to ./cf_2_3x9_w__up.nnf
 lower trace written to ./cf_2_3x9_w__low.nnf
 maximum satisfying probability written to ./cf_2_3x9_w_.prob
-SSAT LOG: Elapsed time = 0.271 seconds
+SSAT LOG: Elapsed time = 0.259 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./cf_2_3x9_w_.sdimacs ./cf_2_3x9_w__up.nnf ./cf_2_3x9_w__low.nnf ./cf_2_3x9_w_.prob
 EVAL LOG: Time limit 1000 seconds
@@ -60,7 +60,7 @@ c Read D4 NNF file with 211 nodes (72 explicit) and 139 edges
 c Compressed POG has 180 nodes, root literal 910506, and 7013 defining clauses
 c GEN: Time = 0.06.  Generated POG representation
 c GEN: Time = 0.06.  Deleted asserted clauses
-c GEN: Time = 0.71.  Deleted input clauses
+c GEN: Time = 0.72.  Deleted input clauses
 c GEN: Formula
 c GEN:    input variables: 910326
 c GEN:    input clauses  : 29418
@@ -92,17 +92,15 @@ c GEN:    monolithic proof     : 0
 c GEN:    clause TOTAL         : 7536
 c GEN: Time
 c GEN:   SAT execution  : 0.00
-c GEN:   other execution: 0.71
-c GEN:   time TOTAL     : 0.71
-GEN LOG: Elapsed time = 0.710 seconds
+c GEN:   other execution: 0.72
+c GEN:   time TOTAL     : 0.72
+GEN LOG: Elapsed time = 0.720 seconds
 GEN OUTCOME: normal
 GEN: LOG: size ./cf_2_3x9_w__low.cpog 30644 lines 24192969 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x9_w_.sdimacs ./cf_2_3x9_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 910327 variables and 29418 clauses
-ERROR. File ./cf_2_3x9_w__low.cpog. Line 524. Function node_new. Invalid operation id 910327
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.005 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.051 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 1.001 seconds
+OVERALL LOG: Elapsed time = 1.045 seconds
 OVERALL OUTCOME: failed

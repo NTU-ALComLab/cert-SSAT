@@ -107,15 +107,15 @@ OVERALL LOG: Elapsed time = 0.069 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x3_w_.ssat_log
+GEN LOG: Elapsed time = 0.030 seconds
+GEN OUTCOME: normal
 GEN: LOG: size ./cf_2_3x3_w__low.cpog 3721 lines 877201 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 94309 variables and 3330 clauses
-ERROR. File ./cf_2_3x3_w__low.cpog. Line 146. Function node_new. Invalid operation id 94309
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.045 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.065 seconds
+OVERALL LOG: Elapsed time = 0.106 seconds
 OVERALL OUTCOME: failed
 
 cf_2_3x4_w_.ssat_log
@@ -131,15 +131,15 @@ OVERALL LOG: Elapsed time = 0.628 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x5_w_.ssat_log
+GEN LOG: Elapsed time = 0.126 seconds
+GEN OUTCOME: normal
 GEN: LOG: size ./cf_2_3x5_w__low.cpog 9811 lines 4166538 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x5_w_.sdimacs ./cf_2_3x5_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 96315 variables and 9146 clauses
-ERROR. File ./cf_2_3x5_w__low.cpog. Line 272. Function node_new. Invalid operation id 96315
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.002 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.046 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.168 seconds
+OVERALL LOG: Elapsed time = 0.215 seconds
 OVERALL OUTCOME: failed
 
 cf_2_3x6_w_.ssat_log
@@ -155,15 +155,15 @@ OVERALL LOG: Elapsed time = 4.220 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x7_w_.ssat_log
+GEN LOG: Elapsed time = 0.330 seconds
+GEN OUTCOME: normal
 GEN: LOG: size ./cf_2_3x7_w__low.cpog 18780 lines 10808497 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x7_w_.sdimacs ./cf_2_3x7_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 98321 variables and 17842 clauses
-ERROR. File ./cf_2_3x7_w__low.cpog. Line 398. Function node_new. Invalid operation id 98321
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.049 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.389 seconds
+OVERALL LOG: Elapsed time = 0.432 seconds
 OVERALL OUTCOME: failed
 
 cf_2_3x8_w_.ssat_log
@@ -179,15 +179,15 @@ OVERALL LOG: Elapsed time = 22.244 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x9_w_.ssat_log
+GEN LOG: Elapsed time = 0.720 seconds
+GEN OUTCOME: normal
 GEN: LOG: size ./cf_2_3x9_w__low.cpog 30644 lines 24192969 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x9_w_.sdimacs ./cf_2_3x9_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 910327 variables and 29418 clauses
-ERROR. File ./cf_2_3x9_w__low.cpog. Line 524. Function node_new. Invalid operation id 910327
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.005 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.051 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 1.001 seconds
+OVERALL LOG: Elapsed time = 1.045 seconds
 OVERALL OUTCOME: failed
 
 16

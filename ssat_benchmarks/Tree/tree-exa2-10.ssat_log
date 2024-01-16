@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 12/8/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	20/20/0
 clauses (all/long/binary/unit): 11/8/3/0
-Maximum cache size:	112931 MB
+Maximum cache size:	70880 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,12 +31,12 @@ number of edges in trace 	71
 
 # END
 
-time: 0.001473s
+time: 0.002434s
 
 upper trace written to ./tree-exa2-10_up.nnf
 lower trace written to ./tree-exa2-10_low.nnf
 maximum satisfying probability written to ./tree-exa2-10.prob
-SSAT LOG: Elapsed time = 0.002 seconds
+SSAT LOG: Elapsed time = 0.004 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./tree-exa2-10.sdimacs ./tree-exa2-10_up.nnf ./tree-exa2-10_low.nnf ./tree-exa2-10.prob
 EVAL LOG: Time limit 1000 seconds
@@ -99,10 +99,8 @@ GEN OUTCOME: normal
 GEN: LOG: size ./tree-exa2-10_low.cpog 115 lines 4398 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-10.sdimacs ./tree-exa2-10_low.cpog
 FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 20 variables and 12 clauses
-ERROR. File ./tree-exa2-10_low.cpog. Line 2. Function node_new. Invalid operation id 20
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK ERROR: Return code = -11
+FCHECK LOG: Elapsed time = 0.046 seconds
 FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.004 seconds
+OVERALL LOG: Elapsed time = 0.052 seconds
 OVERALL OUTCOME: failed
