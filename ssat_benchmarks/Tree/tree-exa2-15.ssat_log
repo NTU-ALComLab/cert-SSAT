@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 17/13/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	30/30/0
 clauses (all/long/binary/unit): 16/13/3/0
-Maximum cache size:	70878 MB
+Maximum cache size:	66748 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,7 +31,7 @@ number of edges in trace 	121
 
 # END
 
-time: 0.002371s
+time: 0.002607s
 
 upper trace written to ./tree-exa2-15_up.nnf
 lower trace written to ./tree-exa2-15_low.nnf
@@ -55,14 +55,14 @@ c GEN:   Monolithic mode: no
 c GEN:   DRAT threshold:  1000
 c GEN:   Clause limit:    2147483647
 c GEN:   BCP limit:       1
-c GEN: Time = 0.00.  Read input file with 29 variables and 17 clauses
+c GEN: Time = 0.00.  Read input file with 30 variables and 17 clauses
 c Read D4 NNF file with 184 nodes (63 explicit) and 121 edges
-c Compressed POG has 176 nodes, root literal 205, and 660 defining clauses
+c Compressed POG has 176 nodes, root literal 206, and 660 defining clauses
 c GEN: Time = 0.00.  Generated POG representation
 c GEN: Time = 0.00.  Deleted asserted clauses
 c GEN: Time = 0.00.  Deleted input clauses
 c GEN: Formula
-c GEN:    input variables: 29
+c GEN:    input variables: 30
 c GEN:    input clauses  : 17
 c GEN: POG nodes
 c GEN:    product   : 116
@@ -94,13 +94,18 @@ c GEN: Time
 c GEN:   SAT execution  : 0.00
 c GEN:   other execution: 0.00
 c GEN:   time TOTAL     : 0.00
-GEN LOG: Elapsed time = 0.001 seconds
+GEN LOG: Elapsed time = 0.002 seconds
 GEN OUTCOME: normal
-GEN: LOG: size ./tree-exa2-15_low.cpog 195 lines 9628 bytes
+GEN: LOG: size ./tree-exa2-15_low.cpog 195 lines 9630 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-15.sdimacs ./tree-exa2-15_low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.045 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.051 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 30 variables and 17 clauses
+CHECK: Read CPOG file with 176 operations,  1 asserted + 660 defining = 661 clauses
+CHECK: Deleted 17 input and asserted clauses
+CHECK: Final root literal 206
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: normal

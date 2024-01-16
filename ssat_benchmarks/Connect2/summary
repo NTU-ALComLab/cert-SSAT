@@ -107,16 +107,16 @@ OVERALL LOG: Elapsed time = 0.069 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x3_w_.ssat_log
-GEN LOG: Elapsed time = 0.030 seconds
-GEN OUTCOME: normal
-GEN: LOG: size ./cf_2_3x3_w__low.cpog 3721 lines 877201 bytes
-FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x3_w_.sdimacs ./cf_2_3x3_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.045 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.106 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 94309 variables and 3330 clauses
+CHECK: Read CPOG file with 155 operations,  3529 asserted + 2325 defining = 5854 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 94420
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.259 seconds
+OVERALL OUTCOME: normal
 
 cf_2_3x4_w_.ssat_log
 FCHECK LOG: Time limit 2500 seconds
@@ -131,16 +131,16 @@ OVERALL LOG: Elapsed time = 0.628 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x5_w_.ssat_log
-GEN LOG: Elapsed time = 0.126 seconds
-GEN OUTCOME: normal
-GEN: LOG: size ./cf_2_3x5_w__low.cpog 9811 lines 4166538 bytes
-FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x5_w_.sdimacs ./cf_2_3x5_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.046 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.215 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 96315 variables and 9146 clauses
+CHECK: Read CPOG file with 134 operations,  22494 asserted + 3563 defining = 26057 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 96447
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.010 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 1.818 seconds
+OVERALL OUTCOME: normal
 
 cf_2_3x6_w_.ssat_log
 FCHECK LOG: Time limit 2500 seconds
@@ -155,16 +155,16 @@ OVERALL LOG: Elapsed time = 4.220 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x7_w_.ssat_log
-GEN LOG: Elapsed time = 0.330 seconds
-GEN OUTCOME: normal
-GEN: LOG: size ./cf_2_3x7_w__low.cpog 18780 lines 10808497 bytes
-FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x7_w_.sdimacs ./cf_2_3x7_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.049 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.432 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 98321 variables and 17842 clauses
+CHECK: Read CPOG file with 1856 operations,  65360 asserted + 13843 defining = 79203 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 98474
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.403 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 7.938 seconds
+OVERALL OUTCOME: normal
 
 cf_2_3x8_w_.ssat_log
 FCHECK LOG: Time limit 2500 seconds
@@ -179,16 +179,16 @@ OVERALL LOG: Elapsed time = 22.244 seconds
 OVERALL OUTCOME: normal
 
 cf_2_3x9_w_.ssat_log
-GEN LOG: Elapsed time = 0.720 seconds
-GEN OUTCOME: normal
-GEN: LOG: size ./cf_2_3x9_w__low.cpog 30644 lines 24192969 bytes
-FCHECK LOG: Running ../../src/cpog-check -1 -S ./cf_2_3x9_w_.sdimacs ./cf_2_3x9_w__low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.051 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 1.045 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 910327 variables and 29418 clauses
+CHECK: Read CPOG file with 2914 operations,  249986 asserted + 20957 defining = 270943 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 910516
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 8.978 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 59.307 seconds
+OVERALL OUTCOME: normal
 
 16
 16

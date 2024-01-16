@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 22/18/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	40/40/0
 clauses (all/long/binary/unit): 21/18/3/0
-Maximum cache size:	70874 MB
+Maximum cache size:	66748 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,7 +31,7 @@ number of edges in trace 	171
 
 # END
 
-time: 0.00238s
+time: 0.002467s
 
 upper trace written to ./tree-exa2-20_up.nnf
 lower trace written to ./tree-exa2-20_low.nnf
@@ -55,14 +55,14 @@ c GEN:   Monolithic mode: no
 c GEN:   DRAT threshold:  1000
 c GEN:   Clause limit:    2147483647
 c GEN:   BCP limit:       1
-c GEN: Time = 0.00.  Read input file with 39 variables and 22 clauses
+c GEN: Time = 0.00.  Read input file with 40 variables and 22 clauses
 c Read D4 NNF file with 259 nodes (88 explicit) and 171 edges
-c Compressed POG has 251 nodes, root literal 290, and 946 defining clauses
+c Compressed POG has 251 nodes, root literal 291, and 946 defining clauses
 c GEN: Time = 0.00.  Generated POG representation
 c GEN: Time = 0.00.  Deleted asserted clauses
 c GEN: Time = 0.00.  Deleted input clauses
 c GEN: Formula
-c GEN:    input variables: 39
+c GEN:    input variables: 40
 c GEN:    input clauses  : 22
 c GEN: POG nodes
 c GEN:    product   : 166
@@ -96,11 +96,16 @@ c GEN:   other execution: 0.00
 c GEN:   time TOTAL     : 0.00
 GEN LOG: Elapsed time = 0.001 seconds
 GEN OUTCOME: normal
-GEN: LOG: size ./tree-exa2-20_low.cpog 275 lines 16384 bytes
+GEN: LOG: size ./tree-exa2-20_low.cpog 275 lines 16386 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-20.sdimacs ./tree-exa2-20_low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.046 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.052 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 40 variables and 22 clauses
+CHECK: Read CPOG file with 251 operations,  1 asserted + 946 defining = 947 clauses
+CHECK: Deleted 22 input and asserted clauses
+CHECK: Final root literal 291
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: normal

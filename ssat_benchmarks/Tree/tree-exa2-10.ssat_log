@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 12/8/3/1
 Preprocessing .. DONE
 variables (all/used/free): 	20/20/0
 clauses (all/long/binary/unit): 11/8/3/0
-Maximum cache size:	70880 MB
+Maximum cache size:	66755 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,7 +31,7 @@ number of edges in trace 	71
 
 # END
 
-time: 0.002434s
+time: 0.002261s
 
 upper trace written to ./tree-exa2-10_up.nnf
 lower trace written to ./tree-exa2-10_low.nnf
@@ -55,14 +55,14 @@ c GEN:   Monolithic mode: no
 c GEN:   DRAT threshold:  1000
 c GEN:   Clause limit:    2147483647
 c GEN:   BCP limit:       1
-c GEN: Time = 0.00.  Read input file with 19 variables and 12 clauses
+c GEN: Time = 0.00.  Read input file with 20 variables and 12 clauses
 c Read D4 NNF file with 109 nodes (38 explicit) and 71 edges
-c Compressed POG has 101 nodes, root literal 120, and 371 defining clauses
+c Compressed POG has 101 nodes, root literal 121, and 371 defining clauses
 c GEN: Time = 0.00.  Generated POG representation
 c GEN: Time = 0.00.  Deleted asserted clauses
 c GEN: Time = 0.00.  Deleted input clauses
 c GEN: Formula
-c GEN:    input variables: 19
+c GEN:    input variables: 20
 c GEN:    input clauses  : 12
 c GEN: POG nodes
 c GEN:    product   : 66
@@ -96,11 +96,76 @@ c GEN:   other execution: 0.00
 c GEN:   time TOTAL     : 0.00
 GEN LOG: Elapsed time = 0.001 seconds
 GEN OUTCOME: normal
-GEN: LOG: size ./tree-exa2-10_low.cpog 115 lines 4398 bytes
+GEN: LOG: size ./tree-exa2-10_low.cpog 115 lines 4400 bytes
 FCHECK LOG: Running ../../src/cpog-check -1 -S ./tree-exa2-10.sdimacs ./tree-exa2-10_low.cpog
 FCHECK LOG: Time limit 2500 seconds
-FCHECK ERROR: Return code = -11
-FCHECK LOG: Elapsed time = 0.046 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.052 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 20 variables and 12 clauses
+CHECK: Read CPOG file with 101 operations,  1 asserted + 371 defining = 372 clauses
+CHECK: Deleted 12 input and asserted clauses
+CHECK: Final root literal 121
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./tree-exa2-10.sdimacs ./tree-exa2-10_up.nnf ./tree-exa2-10_up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 20 variables and 12 clauses
+c Read D4 NNF file with 109 nodes (38 explicit) and 71 edges
+c Compressed POG has 101 nodes, root literal 121, and 324 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c Time = 0.00.  Justifications of 160 nodes, including root, completed.  765 total clauses
+c GEN: Formula
+c GEN:    input variables: 20
+c GEN:    input clauses  : 12
+c GEN: POG nodes
+c GEN:    product   : 66
+c GEN:    sum       : 34
+c GEN:    node TOTAL: 100
+c GEN: Other nodes
+c GEN:    aux product: 19
+c GEN: Node visits
+c GEN:    product/BCP: 93
+c GEN:    product/SAT: 0
+c GEN:    sum        : 67
+c GEN:    visit TOTAL: 160
+c GEN: Lemmas
+c GEN:    definitions : 45
+c GEN:    applications: 66
+c GEN:    duplicates  : 33
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 324
+c GEN:    AUX definition       : 85
+c GEN:    product justification: 93
+c GEN:    sum justification    : 112
+c GEN:    literal justification: 41
+c GEN:    lemma application    : 132
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 787
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+GEN LOG: Elapsed time = 0.001 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./tree-exa2-10_up.cpog 477 lines 16158 bytes
+FCHECK LOG: Running ../../src/cpog-check -S ./tree-exa2-10.sdimacs ./tree-exa2-10_up.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 20 variables and 12 clauses
+CHECK: Read CPOG file with 120 operations,  356 asserted + 409 defining = 765 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 121
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: normal
