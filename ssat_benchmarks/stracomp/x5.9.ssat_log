@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 362/68/294/0
 Preprocessing .. DONE
 variables (all/used/free): 	149/149/0
 clauses (all/long/binary/unit): 362/68/294/0
-Maximum cache size:	95675 MB
+Maximum cache size:	116831 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,7 +31,7 @@ number of edges in trace 	86
 
 # END
 
-time: 0.001878s
+time: 0.001813s
 
 upper trace written to ./x5.9_up.nnf
 lower trace written to ./x5.9_low.nnf
@@ -42,9 +42,88 @@ EVAL LOG: Running ../../src/evalSSAT ./x5.9.sdimacs ./x5.9_up.nnf ./x5.9_low.nnf
 EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
 c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
-c ERROR: Failed in get_lit_decision(153).
-EVAL ERROR: Return code = 1
 EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.004 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./x5.9.sdimacs ./x5.9_low.nnf ./x5.9_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 149 variables and 362 clauses
+c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
+c Compressed POG has 72 nodes, root literal 221, and 1302 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c GEN: Time = 0.00.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 149
+c GEN:    input clauses  : 362
+c GEN: POG nodes
+c GEN:    product   : 48
+c GEN:    sum       : 23
+c GEN:    node TOTAL: 71
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 1302
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 1
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 1303
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+GEN LOG: Elapsed time = 0.002 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./x5.9_low.cpog 436 lines 52456 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./x5.9.sdimacs ./x5.9_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 149 variables and 362 clauses
+CHECK: Read CPOG file with 72 operations,  1 asserted + 1302 defining = 1303 clauses
+CHECK: Deleted 362 input and asserted clauses
+CHECK: Final root literal 221
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./x5.9.sdimacs ./x5.9_up.nnf ./x5.9_up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 149 variables and 362 clauses
+c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
+c Compressed POG has 90 nodes, root literal 239, and 588 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+GEN ERROR: Return code = -6
+GEN LOG: Elapsed time = 0.082 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x5.9_up.cpog 630 lines 28672 bytes
+OVERALL LOG: Elapsed time = 0.089 seconds
 OVERALL OUTCOME: failed

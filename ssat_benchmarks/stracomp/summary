@@ -1,367 +1,367 @@
 x10.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x10.14.sdimacs ./x10.14_up.nnf ./x10.14_low.nnf ./x10.14.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 1771 nodes (607 explicit) and 1211 edges
-c Read D4 NNF file with 1771 nodes (607 explicit) and 1211 edges
-c ERROR: Failed in get_lit_decision(318).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.003 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.012 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 314 variables and 876 clauses
+CHECK: Read CPOG file with 1201 operations,  1 asserted + 20840 defining = 20841 clauses
+CHECK: Deleted 876 input and asserted clauses
+CHECK: Final root literal 1515
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.009 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.084 seconds
+OVERALL OUTCOME: normal
 
 x10.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x10.19.sdimacs ./x10.19_up.nnf ./x10.19_low.nnf ./x10.19.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 314 variables and 862 clauses
 c Read D4 NNF file with 903 nodes (339 explicit) and 745 edges
-c Read D4 NNF file with 903 nodes (339 explicit) and 745 edges
-c ERROR: Failed in get_lit_decision(318).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.002 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.007 seconds
+c Compressed POG has 808 nodes, root literal 1122, and 4880 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2500.101 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./x10.19_up.cpog 873 lines 36864 bytes
+OVERALL LOG: Elapsed time = 2500.154 seconds
 OVERALL OUTCOME: failed
 
 x10.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x10.4.sdimacs ./x10.4_up.nnf ./x10.4_low.nnf ./x10.4.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 627 nodes (211 explicit) and 417 edges
-c Read D4 NNF file with 627 nodes (211 explicit) and 417 edges
-c ERROR: Failed in get_lit_decision(314).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.006 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 310 variables and 871 clauses
+CHECK: Read CPOG file with 559 operations,  1 asserted + 9747 defining = 9748 clauses
+CHECK: Deleted 871 input and asserted clauses
+CHECK: Final root literal 869
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.004 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.046 seconds
+OVERALL OUTCOME: normal
 
 x10.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x10.9.sdimacs ./x10.9_up.nnf ./x10.9_low.nnf ./x10.9.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 314 variables and 872 clauses
 c Read D4 NNF file with 1563 nodes (565 explicit) and 1201 edges
-c Read D4 NNF file with 1563 nodes (565 explicit) and 1201 edges
-c ERROR: Failed in get_lit_decision(318).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.003 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.009 seconds
+c Compressed POG has 1261 nodes, root literal 1575, and 7608 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+GEN ERROR: Return code = -11
+GEN LOG: Elapsed time = 0.066 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x10.9_up.cpog 1510 lines 69632 bytes
+OVERALL LOG: Elapsed time = 0.137 seconds
 OVERALL OUTCOME: failed
 
 x15.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x15.14.sdimacs ./x15.14_up.nnf ./x15.14_low.nnf ./x15.14.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 469 variables and 1335 clauses
 c Read D4 NNF file with 3447 nodes (1251 explicit) and 2505 edges
-c Read D4 NNF file with 3447 nodes (1251 explicit) and 2505 edges
-c ERROR: Failed in get_lit_decision(473).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.006 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.020 seconds
+c Compressed POG has 3367 nodes, root literal 3836, and 20194 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2500.102 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./x15.14_up.cpog 4017 lines 204800 bytes
+OVERALL LOG: Elapsed time = 2500.415 seconds
 OVERALL OUTCOME: failed
 
 x15.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x15.19.sdimacs ./x15.19_up.nnf ./x15.19_low.nnf ./x15.19.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 9536 nodes (3440 explicit) and 7086 edges
-c Read D4 NNF file with 9536 nodes (3440 explicit) and 7086 edges
-c ERROR: Failed in get_lit_decision(469).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.016 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.047 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 465 variables and 1326 clauses
+CHECK: Read CPOG file with 8923 operations,  1 asserted + 205526 defining = 205527 clauses
+CHECK: Deleted 1326 input and asserted clauses
+CHECK: Final root literal 9388
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.088 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.855 seconds
+OVERALL OUTCOME: normal
 
 x15.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x15.4.sdimacs ./x15.4_up.nnf ./x15.4_low.nnf ./x15.4.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 469 variables and 1342 clauses
 c Read D4 NNF file with 13836 nodes (5012 explicit) and 10391 edges
-c Read D4 NNF file with 13836 nodes (5012 explicit) and 10391 edges
-c ERROR: Failed in get_lit_decision(473).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.022 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.063 seconds
+c Compressed POG has 12297 nodes, root literal 12766, and 74361 defining clauses
+c GEN: Time = 0.02.  Generated POG representation
+GEN ERROR: Return code = -6
+GEN LOG: Elapsed time = 0.068 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x15.4_up.cpog 12508 lines 540672 bytes
+OVERALL LOG: Elapsed time = 1.208 seconds
 OVERALL OUTCOME: failed
 
 x15.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x15.9.sdimacs ./x15.9_up.nnf ./x15.9_low.nnf ./x15.9.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 469 variables and 1349 clauses
 c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
-c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
-c ERROR: Failed in get_lit_decision(473).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.033 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.086 seconds
+c Compressed POG has 20467 nodes, root literal 20936, and 95891 defining clauses
+c GEN: Time = 0.02.  Generated POG representation
+GEN ERROR: Return code = -6
+GEN LOG: Elapsed time = 0.075 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x15.9_up.cpog 20689 lines 761856 bytes
+OVERALL LOG: Elapsed time = 1.741 seconds
 OVERALL OUTCOME: failed
 
 x20.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x20.14.sdimacs ./x20.14_up.nnf ./x20.14_low.nnf ./x20.14.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 24870 nodes (9292 explicit) and 18757 edges
-c Read D4 NNF file with 24870 nodes (9292 explicit) and 18757 edges
-c ERROR: Failed in get_lit_decision(628).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.041 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.125 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 624 variables and 1809 clauses
+CHECK: Read CPOG file with 24468 operations,  1 asserted + 576716 defining = 576717 clauses
+CHECK: Deleted 1809 input and asserted clauses
+CHECK: Final root literal 25092
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.288 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 3.097 seconds
+OVERALL OUTCOME: normal
 
 x20.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x20.19.sdimacs ./x20.19_up.nnf ./x20.19_low.nnf ./x20.19.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 80231 nodes (28793 explicit) and 58395 edges
-c Read D4 NNF file with 80231 nodes (28793 explicit) and 58395 edges
-c ERROR: Failed in get_lit_decision(628).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.137 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.401 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 624 variables and 1811 clauses
+CHECK: Read CPOG file with 76055 operations,  1 asserted + 1935647 defining = 1935648 clauses
+CHECK: Deleted 1811 input and asserted clauses
+CHECK: Final root literal 76679
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 1.108 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 10.882 seconds
+OVERALL OUTCOME: normal
 
 x20.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x20.4.sdimacs ./x20.4_up.nnf ./x20.4_low.nnf ./x20.4.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 624 variables and 1798 clauses
 c Read D4 NNF file with 36844 nodes (13784 explicit) and 27828 edges
-c Read D4 NNF file with 36844 nodes (13784 explicit) and 27828 edges
-c ERROR: Failed in get_lit_decision(628).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.056 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.159 seconds
+c Compressed POG has 35777 nodes, root literal 36401, and 185543 defining clauses
+c GEN: Time = 0.04.  Generated POG representation
+GEN ERROR: Return code = -6
+GEN LOG: Elapsed time = 0.098 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x20.4_up.cpog 36085 lines 1495040 bytes
+OVERALL LOG: Elapsed time = 3.840 seconds
 OVERALL OUTCOME: failed
 
 x20.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x20.9.sdimacs ./x20.9_up.nnf ./x20.9_low.nnf ./x20.9.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 41586 nodes (14380 explicit) and 30368 edges
-c Read D4 NNF file with 41586 nodes (14380 explicit) and 30368 edges
-c ERROR: Failed in get_lit_decision(626).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.075 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.232 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 622 variables and 1800 clauses
+CHECK: Read CPOG file with 41144 operations,  1 asserted + 1127327 defining = 1127328 clauses
+CHECK: Deleted 1800 input and asserted clauses
+CHECK: Final root literal 41766
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.571 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 5.821 seconds
+OVERALL OUTCOME: normal
 
 x25.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x25.14.sdimacs ./x25.14_up.nnf ./x25.14_low.nnf ./x25.14.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 362624 nodes (124422 explicit) and 251420 edges
-c Read D4 NNF file with 362624 nodes (124422 explicit) and 251420 edges
-c ERROR: Failed in get_lit_decision(783).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.661 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 1.845 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 779 variables and 2290 clauses
+CHECK: Read CPOG file with 356569 operations,  1 asserted + 7537345 defining = 7537346 clauses
+CHECK: Deleted 2290 input and asserted clauses
+CHECK: Final root literal 357348
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 7.997 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 71.879 seconds
+OVERALL OUTCOME: normal
 
 x25.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x25.19.sdimacs ./x25.19_up.nnf ./x25.19_low.nnf ./x25.19.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 651673 nodes (247315 explicit) and 507850 edges
-c Read D4 NNF file with 651673 nodes (247315 explicit) and 507850 edges
-c ERROR: Failed in get_lit_decision(783).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 1.494 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 4.045 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 779 variables and 2283 clauses
+CHECK: Read CPOG file with 611029 operations,  1 asserted + 18699309 defining = 18699310 clauses
+CHECK: Deleted 2283 input and asserted clauses
+CHECK: Final root literal 611808
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 19.874 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 164.402 seconds
+OVERALL OUTCOME: normal
 
 x25.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x25.4.sdimacs ./x25.4_up.nnf ./x25.4_low.nnf ./x25.4.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 1343642 nodes (527700 explicit) and 1079096 edges
-c Read D4 NNF file with 1343642 nodes (527700 explicit) and 1079096 edges
-c ERROR: Failed in get_lit_decision(783).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 2.989 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 7.726 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 779 variables and 2274 clauses
+CHECK: Read CPOG file with 1222843 operations,  1 asserted + 34770889 defining = 34770890 clauses
+CHECK: Deleted 2274 input and asserted clauses
+CHECK: Final root literal 1223622
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 39.826 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 324.681 seconds
+OVERALL OUTCOME: normal
 
 x25.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x25.9.sdimacs ./x25.9_up.nnf ./x25.9_low.nnf ./x25.9.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 843976 nodes (319364 explicit) and 664957 edges
-c Read D4 NNF file with 843976 nodes (319364 explicit) and 664957 edges
-c ERROR: Failed in get_lit_decision(783).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 1.947 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 5.293 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 779 variables and 2278 clauses
+CHECK: Read CPOG file with 774783 operations,  1 asserted + 24231240 defining = 24231241 clauses
+CHECK: Deleted 2278 input and asserted clauses
+CHECK: Final root literal 775562
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 27.000 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 211.638 seconds
+OVERALL OUTCOME: normal
 
 x30.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x30.14.sdimacs ./x30.14_up.nnf ./x30.14_low.nnf ./x30.14.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 1840441 nodes (721059 explicit) and 1450934 edges
-c Read D4 NNF file with 1840441 nodes (721059 explicit) and 1450934 edges
-c ERROR: Failed in get_lit_decision(938).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 4.508 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 12.358 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 934 variables and 2741 clauses
+CHECK: Read CPOG file with 1763248 operations,  1 asserted + 57389762 defining = 57389763 clauses
+CHECK: Deleted 2741 input and asserted clauses
+CHECK: Final root literal 1764182
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 75.040 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 618.959 seconds
+OVERALL OUTCOME: normal
 
 x30.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x30.19.sdimacs ./x30.19_up.nnf ./x30.19_low.nnf ./x30.19.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 2568829 nodes (858015 explicit) and 1717834 edges
-c Read D4 NNF file with 2568829 nodes (858015 explicit) and 1717834 edges
-c ERROR: Failed in get_lit_decision(938).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 5.057 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 13.259 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 934 variables and 2744 clauses
+CHECK: Read CPOG file with 2561744 operations,  1 asserted + 47097870 defining = 47097871 clauses
+CHECK: Deleted 2744 input and asserted clauses
+CHECK: Final root literal 2562678
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 78.915 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 653.209 seconds
+OVERALL OUTCOME: normal
 
 x30.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x30.4.sdimacs ./x30.4_up.nnf ./x30.4_low.nnf ./x30.4.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3701607 nodes (1448441 explicit) and 2910818 edges
-c Read D4 NNF file with 3701607 nodes (1448441 explicit) and 2910818 edges
-c ERROR: Failed in get_lit_decision(938).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 9.050 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 23.993 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 934 variables and 2745 clauses
+CHECK: Read CPOG file with 3454779 operations,  1 asserted + 109942739 defining = 109942740 clauses
+CHECK: Deleted 2745 input and asserted clauses
+CHECK: Final root literal 3455713
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 145.112 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 1250.785 seconds
+OVERALL OUTCOME: normal
 
 x30.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x30.9.sdimacs ./x30.9_up.nnf ./x30.9_low.nnf ./x30.9.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 6347608 nodes (2630900 explicit) and 5316631 edges
-c Read D4 NNF file with 6347608 nodes (2630900 explicit) and 5316631 edges
-c ERROR: Failed in get_lit_decision(938).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 16.331 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 43.926 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 934 variables and 2754 clauses
+CHECK: Read CPOG file with 6127446 operations,  1 asserted + 208692078 defining = 208692079 clauses
+CHECK: Deleted 2754 input and asserted clauses
+CHECK: Final root literal 6128380
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 284.148 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 2352.199 seconds
+OVERALL OUTCOME: normal
 
 x35.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x35.14.sdimacs ./x35.14_up.nnf ./x35.14_low.nnf ./x35.14.prob
-EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 16696831 nodes (5566035 explicit) and 11132542 edges
-c Read D4 NNF file with 16696831 nodes (5566035 explicit) and 11132542 edges
-c ERROR: Failed in get_lit_decision(1093).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 33.584 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 92.844 seconds
+c Compressed POG has 16672384 nodes, root literal 16673473, and 330136543 defining clauses
+c GEN: Time = 56.40.  Generated POG representation
+c GEN: Time = 57.29.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2500.674 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./x35.14_low.cpog 16674217 lines 15867502592 bytes
+OVERALL LOG: Elapsed time = 2611.006 seconds
 OVERALL OUTCOME: failed
 
 x35.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x35.19.sdimacs ./x35.19_up.nnf ./x35.19_low.nnf ./x35.19.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 1089 variables and 3214 clauses
 c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
-c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
-c ERROR: Failed in get_lit_decision(1093).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 128.969 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 374.148 seconds
+c Compressed POG has 40610338 nodes, root literal 40611427, and 1675754538 defining clauses
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 242.943 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x35.19_low.cpog 37278837 lines 8667336704 bytes
+OVERALL LOG: Elapsed time = 639.494 seconds
 OVERALL OUTCOME: failed
 
 x35.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x35.4.sdimacs ./x35.4_up.nnf ./x35.4_low.nnf ./x35.4.prob
-EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 28475733 nodes (10528895 explicit) and 22203186 edges
-c Read D4 NNF file with 28475733 nodes (10528895 explicit) and 22203186 edges
-c ERROR: Failed in get_lit_decision(1093).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 84.720 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 250.640 seconds
+c Compressed POG has 27203726 nodes, root literal 27204815, and 1148867342 defining clauses
+c GEN: Time = 166.70.  Generated POG representation
+c GEN: Time = 168.24.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2501.564 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./x35.4_low.cpog 27204426 lines 27744473088 bytes
+OVERALL LOG: Elapsed time = 2778.649 seconds
 OVERALL OUTCOME: failed
 
 x35.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x35.9.sdimacs ./x35.9_up.nnf ./x35.9_low.nnf ./x35.9.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 1089 variables and 3227 clauses
 c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
-c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
-c ERROR: Failed in get_lit_decision(1093).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 244.859 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 666.213 seconds
+c Compressed POG has 83992864 nodes, root literal 83993953, and -1253736586 defining clauses
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 325.738 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x35.9_low.cpog 38852539 lines 8090329088 bytes
+OVERALL LOG: Elapsed time = 1019.057 seconds
 OVERALL OUTCOME: failed
 
 x40.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x40.14.sdimacs ./x40.14_up.nnf ./x40.14_low.nnf ./x40.14.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 1244 variables and 3692 clauses
 c Read D4 NNF file with 146396391 nodes (52770761 explicit) and 107444226 edges
-c Read D4 NNF file with 146396391 nodes (52770761 explicit) and 107444226 edges
-c ERROR: Failed in get_lit_decision(1248).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 429.488 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 1281.163 seconds
+c Compressed POG has 138792381 nodes, root literal 138793625, and 1328943498 defining clauses
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 455.392 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x40.14_low.cpog 26778945 lines 6124081152 bytes
+OVERALL LOG: Elapsed time = 1774.580 seconds
 OVERALL OUTCOME: failed
 
 x40.19.ssat_log
 SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x40.19.sdimacs
 SSAT LOG: Time limit 1000 seconds
 SSAT ERROR: Timeout after 1000 seconds
-SSAT LOG: Elapsed time = 1001.283 seconds
+SSAT LOG: Elapsed time = 1001.365 seconds
 SSAT OUTCOME: Timeout
-OVERALL LOG: Elapsed time = 1001.283 seconds
+OVERALL LOG: Elapsed time = 1001.366 seconds
 OVERALL OUTCOME: failed
 
 x40.9.ssat_log
 SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./x40.9.sdimacs
 SSAT LOG: Time limit 1000 seconds
 SSAT ERROR: Timeout after 1000 seconds
-SSAT LOG: Elapsed time = 1001.188 seconds
+SSAT LOG: Elapsed time = 1001.311 seconds
 SSAT OUTCOME: Timeout
-OVERALL LOG: Elapsed time = 1001.189 seconds
+OVERALL LOG: Elapsed time = 1001.311 seconds
 OVERALL OUTCOME: failed
 
 x5.14.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x5.14.sdimacs ./x5.14_up.nnf ./x5.14_low.nnf ./x5.14.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 133 nodes (51 explicit) and 97 edges
-c Read D4 NNF file with 133 nodes (51 explicit) and 97 edges
-c ERROR: Failed in get_lit_decision(151).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.005 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 147 variables and 368 clauses
+CHECK: Read CPOG file with 81 operations,  1 asserted + 1525 defining = 1526 clauses
+CHECK: Deleted 368 input and asserted clauses
+CHECK: Final root literal 228
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.013 seconds
+OVERALL OUTCOME: normal
 
 x5.19.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x5.19.sdimacs ./x5.19_up.nnf ./x5.19_low.nnf ./x5.19.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 109 nodes (41 explicit) and 77 edges
-c Read D4 NNF file with 109 nodes (41 explicit) and 77 edges
-c ERROR: Failed in get_lit_decision(159).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.004 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 155 variables and 387 clauses
+CHECK: Read CPOG file with 62 operations,  1 asserted + 1255 defining = 1256 clauses
+CHECK: Deleted 387 input and asserted clauses
+CHECK: Final root literal 217
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: normal
 
 x5.4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x5.4.sdimacs ./x5.4_up.nnf ./x5.4_low.nnf ./x5.4.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 105 nodes (37 explicit) and 69 edges
-c Read D4 NNF file with 105 nodes (37 explicit) and 69 edges
-c ERROR: Failed in get_lit_decision(149).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.004 seconds
-OVERALL OUTCOME: failed
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 145 variables and 358 clauses
+CHECK: Read CPOG file with 119 operations,  521 asserted + 881 defining = 1402 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 223
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 0.015 seconds
+OVERALL OUTCOME: normal
 
 x5.9.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./x5.9.sdimacs ./x5.9_up.nnf ./x5.9_low.nnf ./x5.9.prob
-EVAL LOG: Time limit 1000 seconds
+c GEN: Time = 0.00.  Read input file with 149 variables and 362 clauses
 c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
-c Read D4 NNF file with 130 nodes (46 explicit) and 87 edges
-c ERROR: Failed in get_lit_decision(153).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.004 seconds
+c Compressed POG has 90 nodes, root literal 239, and 588 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+GEN ERROR: Return code = -6
+GEN LOG: Elapsed time = 0.082 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x5.9_up.cpog 630 lines 28672 bytes
+OVERALL LOG: Elapsed time = 0.089 seconds
 OVERALL OUTCOME: failed
 
 31

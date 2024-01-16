@@ -38,9 +38,9 @@ noCL:
 
 eval:
 	cd Adder;               make eval
-	cd stracomp;            make eval
-	cd tlc;                 make eval
 	cd Tree;                make eval
+	cd tlc;                 make eval
+	cd stracomp;            make eval
 
 invalidOP:
 	cd Connect2;            make invalidOP

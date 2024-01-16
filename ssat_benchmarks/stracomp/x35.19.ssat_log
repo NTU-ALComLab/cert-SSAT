@@ -7,32 +7,32 @@ clauses (all/long/binary/unit): 3214/493/2721/0
 Preprocessing .. DONE
 variables (all/used/free): 	1089/1089/0
 clauses (all/long/binary/unit): 3214/493/2721/0
-Maximum cache size:	107859 MB
+Maximum cache size:	28707 MB
 
 
-time elapsed: 60.2124s
+time elapsed: 60.7528s
 conflict clauses (all / bin / unit) 	4/0/0
 
-cache size 1268MB
-components (stored / hits) 		4726037/5011900
-avg. variable count (stored / hits) 	146.94/4.24057
-cache miss rate 43.3294%
+cache size 1235MB
+components (stored / hits) 		4598933/4882473
+avg. variable count (stored / hits) 	146.866/4.2605
+cache miss rate 43.1492%
 
-time elapsed: 121.212s
+time elapsed: 121.753s
 conflict clauses (all / bin / unit) 	4/0/0
 
-cache size 2476MB
-components (stored / hits) 		9313950/9550907
-avg. variable count (stored / hits) 	147.575/4.37923
-cache miss rate 46.8357%
+cache size 2417MB
+components (stored / hits) 		9085080/9349264
+avg. variable count (stored / hits) 	147.707/4.35514
+cache miss rate 46.6804%
 
-time elapsed: 182.212s
+time elapsed: 182.753s
 conflict clauses (all / bin / unit) 	5/0/0
 
-cache size 3639MB
-components (stored / hits) 		13730000/13512005
-avg. variable count (stored / hits) 	148.469/4.50456
-cache miss rate 48.7054%
+cache size 3555MB
+components (stored / hits) 		13413502/13216981
+avg. variable count (stored / hits) 	148.345/4.52607
+cache miss rate 48.6329%
 End of Solving
 Start Generating Certificate...
 
@@ -55,20 +55,36 @@ number of edges in trace 	31790966
 
 # END
 
-time: 183.5059s
+time: 188.6316s
 
 upper trace written to ./x35.19_up.nnf
 lower trace written to ./x35.19_low.nnf
 maximum satisfying probability written to ./x35.19.prob
-SSAT LOG: Elapsed time = 245.179 seconds
+SSAT LOG: Elapsed time = 247.983 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./x35.19.sdimacs ./x35.19_up.nnf ./x35.19_low.nnf ./x35.19.prob
 EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
 c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
-c ERROR: Failed in get_lit_decision(1093).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 128.969 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 374.148 seconds
+EVAL LOG: Elapsed time = 141.077 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./x35.19.sdimacs ./x35.19_low.nnf ./x35.19_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 1089 variables and 3214 clauses
+c Read D4 NNF file with 44595846 nodes (17017062 explicit) and 35018633 edges
+c Compressed POG has 40610338 nodes, root literal 40611427, and 1675754538 defining clauses
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 242.943 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x35.19_low.cpog 37278837 lines 8667336704 bytes
+OVERALL LOG: Elapsed time = 639.494 seconds
 OVERALL OUTCOME: failed

@@ -71,75 +71,75 @@ OVERALL LOG: Elapsed time = 0.083 seconds
 OVERALL OUTCOME: failed
 
 tlc01-nonuniform-depth-2.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-2.sdimacs ./tlc01-nonuniform-depth-2_up.nnf ./tlc01-nonuniform-depth-2_low.nnf ./tlc01-nonuniform-depth-2.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(1055).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.003 seconds
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.003 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-2_low.cpog 1123 lines 26218 bytes
+OVERALL LOG: Elapsed time = 0.006 seconds
 OVERALL OUTCOME: failed
 
 tlc01-nonuniform-depth-3.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-3.sdimacs ./tlc01-nonuniform-depth-3_up.nnf ./tlc01-nonuniform-depth-3_low.nnf ./tlc01-nonuniform-depth-3.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(1406).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.008 seconds
-OVERALL OUTCOME: failed
-
-tlc01-nonuniform-depth-4.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-4.sdimacs ./tlc01-nonuniform-depth-4_up.nnf ./tlc01-nonuniform-depth-4_low.nnf ./tlc01-nonuniform-depth-4.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(1757).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.004 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-3_low.cpog 1919 lines 45977 bytes
 OVERALL LOG: Elapsed time = 0.007 seconds
 OVERALL OUTCOME: failed
 
-tlc01-nonuniform-depth-5.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-5.sdimacs ./tlc01-nonuniform-depth-5_up.nnf ./tlc01-nonuniform-depth-5_low.nnf ./tlc01-nonuniform-depth-5.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(2108).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
+tlc01-nonuniform-depth-4.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.005 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-4_low.cpog 2415 lines 58372 bytes
 OVERALL LOG: Elapsed time = 0.008 seconds
 OVERALL OUTCOME: failed
 
+tlc01-nonuniform-depth-5.ssat_log
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.01
+c GEN:   time TOTAL     : 0.01
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.013 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-5_low.cpog 2937 lines 71411 bytes
+OVERALL LOG: Elapsed time = 0.018 seconds
+OVERALL OUTCOME: failed
+
 tlc01-nonuniform-depth-7.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-7.sdimacs ./tlc01-nonuniform-depth-7_up.nnf ./tlc01-nonuniform-depth-7_low.nnf ./tlc01-nonuniform-depth-7.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(2810).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.002 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.014 seconds
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.01
+c GEN:   time TOTAL     : 0.01
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.014 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-7_low.cpog 3881 lines 94975 bytes
+OVERALL LOG: Elapsed time = 0.018 seconds
 OVERALL OUTCOME: failed
 
 tlc01-nonuniform-depth-8.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-8.sdimacs ./tlc01-nonuniform-depth-8_up.nnf ./tlc01-nonuniform-depth-8_low.nnf ./tlc01-nonuniform-depth-8.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(3161).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.004 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.017 seconds
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.02
+c GEN:   time TOTAL     : 0.02
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.018 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-8_low.cpog 4887 lines 123712 bytes
+OVERALL LOG: Elapsed time = 0.026 seconds
 OVERALL OUTCOME: failed
 
 tlc01-nonuniform-depth-9.ssat_log

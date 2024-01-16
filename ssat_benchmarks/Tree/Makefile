@@ -12,11 +12,11 @@ srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
 eval:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-10.sdimacs
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-15.sdimacs
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-20.sdimacs
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-25.sdimacs
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-30sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-30.sdimacs
+#   $(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-10.sdimacs
+#	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-15.sdimacs
+#	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-20.sdimacs
+#	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa10-25.sdimacs
 
 invalidOP:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) tree-exa2-10.sdimacs

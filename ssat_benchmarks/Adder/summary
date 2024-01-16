@@ -1,13 +1,13 @@
 Adder2-2-c.ssat_log
-GEN: LOG: size ./Adder2-2-c_low.cpog 16692 lines 5864451 bytes
-FCHECK LOG: Running ../../src/cpog-check -1 -S ./Adder2-2-c.sdimacs ./Adder2-2-c_low.cpog
-FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 517 variables and 291 clauses
-ERROR. File ./Adder2-2-c_low.cpog. Line 3648. Function cpog_add_product. Can't add literal 4163 to node 4164 children.  Overlapping dependency sets
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 0.005 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.248 seconds
+c GEN: Time = 0.00.  Read input file with 517 variables and 291 clauses
+c Read D4 NNF file with 15713 nodes (6602 explicit) and 14034 edges
+c Compressed POG has 14558 nodes, root literal 15075, and 68198 defining clauses
+c GEN: Time = 0.02.  Generated POG representation
+GEN ERROR: Return code = -11
+GEN LOG: Elapsed time = 0.077 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./Adder2-2-c_up.cpog 15491 lines 745472 bytes
+OVERALL LOG: Elapsed time = 0.335 seconds
 OVERALL OUTCOME: failed
 
 Adder2-2-s.ssat_log
@@ -23,40 +23,40 @@ OVERALL LOG: Elapsed time = 0.016 seconds
 OVERALL OUTCOME: normal
 
 adder-2-sat.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./adder-2-sat.sdimacs ./adder-2-sat_up.nnf ./adder-2-sat_low.nnf ./adder-2-sat.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 2221 nodes (767 explicit) and 1529 edges
-c Read D4 NNF file with 2221 nodes (767 explicit) and 1529 edges
-c ERROR: Failed in get_lit_decision(2553).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.002 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.008 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 332 variables and 109 clauses
+CHECK: Read CPOG file with 1736 operations,  1 asserted + 7002 defining = 7003 clauses
+CHECK: Deleted 109 input and asserted clauses
+CHECK: Final root literal 2068
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.003 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.027 seconds
+OVERALL OUTCOME: normal
 
 adder-2-unsat.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./adder-2-unsat.sdimacs ./adder-2-unsat_up.nnf ./adder-2-unsat_low.nnf ./adder-2-unsat.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 78889 nodes (26505 explicit) and 53019 edges
-c Read D4 NNF file with 78889 nodes (26505 explicit) and 53019 edges
-c ERROR: Failed in get_lit_decision(338).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.062 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.160 seconds
-OVERALL OUTCOME: failed
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 334 variables and 110 clauses
+CHECK: Read CPOG file with 75415 operations,  595342 asserted + 230826 defining = 826168 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 75394
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.461 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 21.205 seconds
+OVERALL OUTCOME: normal
 
 adder-4-sat.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./adder-4-sat.sdimacs ./adder-4-sat_up.nnf ./adder-4-sat_low.nnf ./adder-4-sat.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 606196 nodes (204686 explicit) and 409394 edges
-c Read D4 NNF file with 606196 nodes (204686 explicit) and 409394 edges
-c ERROR: Failed in get_lit_decision(606922).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.770 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 1.656 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 726 variables and 530 clauses
+CHECK: Read CPOG file with 566476 operations,  1 asserted + 2430407 defining = 2430408 clauses
+CHECK: Deleted 530 input and asserted clauses
+CHECK: Final root literal 567202
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 1.410 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 16.125 seconds
+OVERALL OUTCOME: normal
 
 5
 5

@@ -7,48 +7,48 @@ clauses (all/long/binary/unit): 3227/493/2734/0
 Preprocessing .. DONE
 variables (all/used/free): 	1089/1089/0
 clauses (all/long/binary/unit): 3227/493/2734/0
-Maximum cache size:	88624 MB
+Maximum cache size:	93082 MB
 
 
-time elapsed: 60.4248s
+time elapsed: 60.6044s
 conflict clauses (all / bin / unit) 	104/0/0
 
-cache size 1363MB
-components (stored / hits) 		5151038/7383061
-avg. variable count (stored / hits) 	137.885/4.06045
-cache miss rate 36.558%
+cache size 1357MB
+components (stored / hits) 		5130429/7353792
+avg. variable count (stored / hits) 	137.883/4.06076
+cache miss rate 36.5379%
 
-time elapsed: 121.425s
+time elapsed: 121.604s
 conflict clauses (all / bin / unit) 	104/0/0
 
-cache size 2657MB
-components (stored / hits) 		10098963/14245515
-avg. variable count (stored / hits) 	138.794/4.36579
-cache miss rate 39.2377%
+cache size 2646MB
+components (stored / hits) 		10056306/14181713
+avg. variable count (stored / hits) 	138.774/4.36436
+cache miss rate 39.2339%
 
-time elapsed: 182.425s
+time elapsed: 182.604s
 conflict clauses (all / bin / unit) 	104/0/0
 
-cache size 3930MB
-components (stored / hits) 		14998517/20851274
-avg. variable count (stored / hits) 	138.731/4.2642
-cache miss rate 40.3396%
+cache size 3911MB
+components (stored / hits) 		14926767/20765856
+avg. variable count (stored / hits) 	138.747/4.27006
+cache miss rate 40.3156%
 
-time elapsed: 243.425s
+time elapsed: 243.604s
 conflict clauses (all / bin / unit) 	104/0/0
 
-cache size 5191MB
-components (stored / hits) 		19928479/26911525
-avg. variable count (stored / hits) 	138.375/3.9461
-cache miss rate 41.4205%
+cache size 5168MB
+components (stored / hits) 		19836049/26799626
+avg. variable count (stored / hits) 	138.377/3.95073
+cache miss rate 41.4035%
 
-time elapsed: 304.425s
+time elapsed: 304.604s
 conflict clauses (all / bin / unit) 	104/0/0
 
-cache size 6437MB
-components (stored / hits) 		24784568/32898680
-avg. variable count (stored / hits) 	138.145/3.73134
-cache miss rate 42.0629%
+cache size 6408MB
+components (stored / hits) 		24672531/32757432
+avg. variable count (stored / hits) 	138.147/3.73477
+cache miss rate 42.0532%
 End of Solving
 Start Generating Certificate...
 
@@ -71,20 +71,36 @@ number of edges in trace 	63081772
 
 # END
 
-time: 318.8318s
+time: 320.5283s
 
 upper trace written to ./x35.9_up.nnf
 lower trace written to ./x35.9_low.nnf
 maximum satisfying probability written to ./x35.9.prob
-SSAT LOG: Elapsed time = 421.355 seconds
+SSAT LOG: Elapsed time = 424.325 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./x35.9.sdimacs ./x35.9_up.nnf ./x35.9_low.nnf ./x35.9.prob
 EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
 c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
-c ERROR: Failed in get_lit_decision(1093).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 244.859 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 666.213 seconds
+EVAL LOG: Elapsed time = 261.924 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./x35.9.sdimacs ./x35.9_low.nnf ./x35.9_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 1089 variables and 3227 clauses
+c Read D4 NNF file with 88382505 nodes (36653267 explicit) and 73870417 edges
+c Compressed POG has 83992864 nodes, root literal 83993953, and -1253736586 defining clauses
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 325.738 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x35.9_low.cpog 38852539 lines 8090329088 bytes
+OVERALL LOG: Elapsed time = 1019.057 seconds
 OVERALL OUTCOME: failed

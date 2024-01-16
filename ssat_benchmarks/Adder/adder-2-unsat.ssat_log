@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 110/109/1/0
 Preprocessing .. DONE
 variables (all/used/free): 	334/334/0
 clauses (all/long/binary/unit): 110/109/1/0
-Maximum cache size:	95651 MB
+Maximum cache size:	55746 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,20 +31,168 @@ number of edges in trace 	52709
 
 # END
 
-time: 0.078491s
+time: 0.080054s
 
 upper trace written to ./adder-2-unsat_up.nnf
 lower trace written to ./adder-2-unsat_low.nnf
 maximum satisfying probability written to ./adder-2-unsat.prob
-SSAT LOG: Elapsed time = 0.097 seconds
+SSAT LOG: Elapsed time = 0.100 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./adder-2-unsat.sdimacs ./adder-2-unsat_up.nnf ./adder-2-unsat_low.nnf ./adder-2-unsat.prob
 EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 78889 nodes (26505 explicit) and 53019 edges
 c Read D4 NNF file with 78889 nodes (26505 explicit) and 53019 edges
-c ERROR: Failed in get_lit_decision(338).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.062 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.160 seconds
-OVERALL OUTCOME: failed
+EVAL LOG: Elapsed time = 0.068 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./adder-2-unsat.sdimacs ./adder-2-unsat_low.nnf ./adder-2-unsat_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 334 variables and 110 clauses
+c Read D4 NNF file with 78889 nodes (26505 explicit) and 53019 edges
+c Compressed POG has 74880 nodes, root literal 75214, and 285182 defining clauses
+c GEN: Time = 0.07.  Generated POG representation
+c GEN: Time = 0.07.  Deleted asserted clauses
+c GEN: Time = 0.42.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 334
+c GEN:    input clauses  : 110
+c GEN: POG nodes
+c GEN:    product   : 50387
+c GEN:    sum       : 24492
+c GEN:    node TOTAL: 74879
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 285182
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 1
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 285183
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.42
+c GEN:   time TOTAL     : 0.42
+GEN LOG: Elapsed time = 0.425 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./adder-2-unsat_low.cpog 74992 lines 49477519 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./adder-2-unsat.sdimacs ./adder-2-unsat_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 334 variables and 110 clauses
+CHECK: Read CPOG file with 74880 operations,  1 asserted + 285182 defining = 285183 clauses
+CHECK: Deleted 110 input and asserted clauses
+CHECK: Final root literal 75214
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.237 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./adder-2-unsat.sdimacs ./adder-2-unsat_up.nnf ./adder-2-unsat_up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 334 variables and 110 clauses
+c Read D4 NNF file with 78889 nodes (26505 explicit) and 53019 edges
+c Compressed POG has 75060 nodes, root literal 75394, and 229021 defining clauses
+c GEN: Time = 0.06.  Generated POG representation
+c Time = 0.72.  Justifications of 7506 nodes completed.  262300 total clauses.  146 SAT calls
+c Time = 1.63.  Justifications of 15012 nodes completed.  296525 total clauses.  304 SAT calls
+c Time = 2.56.  Justifications of 22518 nodes completed.  328922 total clauses.  457 SAT calls
+c Time = 3.65.  Justifications of 30024 nodes completed.  362335 total clauses.  614 SAT calls
+c Time = 4.49.  Justifications of 37530 nodes completed.  393836 total clauses.  768 SAT calls
+c Time = 5.08.  Justifications of 45036 nodes completed.  427122 total clauses.  905 SAT calls
+c Time = 5.99.  Justifications of 52542 nodes completed.  461258 total clauses.  1047 SAT calls
+c Time = 7.87.  Justifications of 60048 nodes completed.  498741 total clauses.  1330 SAT calls
+c Time = 8.77.  Justifications of 67554 nodes completed.  541125 total clauses.  1487 SAT calls
+c Time = 10.10.  Justifications of 75060 nodes completed.  575982 total clauses.  1647 SAT calls
+c Time = 11.11.  Justifications of 82566 nodes completed.  602943 total clauses.  1795 SAT calls
+c Time = 12.35.  Justifications of 90072 nodes completed.  629962 total clauses.  1957 SAT calls
+c Time = 13.57.  Justifications of 97578 nodes completed.  663839 total clauses.  2117 SAT calls
+c Time = 14.46.  Justifications of 105084 nodes completed.  693084 total clauses.  2259 SAT calls
+c Time = 15.49.  Justifications of 112590 nodes completed.  717743 total clauses.  2420 SAT calls
+c Time = 16.99.  Justifications of 120096 nodes completed.  748162 total clauses.  2618 SAT calls
+c Time = 18.09.  Justifications of 127602 nodes completed.  774605 total clauses.  2781 SAT calls
+c Time = 19.14.  Justifications of 135108 nodes completed.  805427 total clauses.  2952 SAT calls
+c Time = 19.79.  Justifications of 139583 nodes, including root, completed.  826168 total clauses
+c GEN: Formula
+c GEN:    input variables: 334
+c GEN:    input clauses  : 110
+c GEN: POG nodes
+c GEN:    product   : 50387
+c GEN:    sum       : 24672
+c GEN:    node TOTAL: 75059
+c GEN: Other nodes
+c GEN:    aux product: 355
+c GEN: Node visits
+c GEN:    product/BCP: 82644
+c GEN:    product/SAT: 3034
+c GEN:    sum        : 53905
+c GEN:    visit TOTAL: 139583
+c GEN: Lemmas
+c GEN:    definitions : 23283
+c GEN:    applications: 52858
+c GEN:    duplicates  : 19073
+c GEN:    merged args : 61670
+c GEN: SAT Problem Clause Counts (3034 instances)
+c GEN:    PROBLEM TOTAL : 125714
+c GEN:    PROBLEM MIN   : 18
+c GEN:    PROBLEM AVG   : 41.44
+c GEN:    PROBLEM MAX   : 69
+c GEN: SAT Proof Clause Counts
+c GEN:    PROOF TOTAL : 16137
+c GEN:    PROOF MIN   : 5
+c GEN:    PROOF AVG   : 5.32
+c GEN:    PROOF MAX   : 17
+c GEN: Clauses
+c GEN:    POG definition       : 229021
+c GEN:    AUX definition       : 1805
+c GEN:    product justification: 85678
+c GEN:    sum justification    : 95399
+c GEN:    literal justification: 35860
+c GEN:    lemma application    : 390816
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 838579
+c GEN: Time
+c GEN:   SAT execution  : 11.41
+c GEN:   other execution: 8.38
+c GEN:   time TOTAL     : 19.79
+GEN LOG: Elapsed time = 19.798 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./adder-2-unsat_up.cpog 670758 lines 85603756 bytes
+FCHECK LOG: Running ../../src/cpog-check -S ./adder-2-unsat.sdimacs ./adder-2-unsat_up.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 334 variables and 110 clauses
+CHECK: Read CPOG file with 75415 operations,  595342 asserted + 230826 defining = 826168 clauses
+CHECK: Deleted 0 input and asserted clauses
+CHECK: Final root literal 75394
+CHECK: UPPER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.461 seconds
+FCHECK OUTCOME: normal
+OVERALL LOG: Elapsed time = 21.205 seconds
+OVERALL OUTCOME: normal

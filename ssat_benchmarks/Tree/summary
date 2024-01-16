@@ -1,62 +1,74 @@
 tree-exa10-10.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-10.sdimacs ./tree-exa10-10_up.nnf ./tree-exa10-10_low.nnf ./tree-exa10-10.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 35 nodes (15 explicit) and 25 edges
-c Read D4 NNF file with 35 nodes (15 explicit) and 25 edges
-c ERROR: Failed in get_lit_decision(24).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
+CHECK: Read CNF file with 20 variables and 18 clauses
+CHECK: Read CPOG file with 28 operations,  1 asserted + 102 defining = 103 clauses
+CHECK: Deleted 18 input and asserted clauses
+CHECK: Final root literal 48
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
 OVERALL LOG: Elapsed time = 0.008 seconds
-OVERALL OUTCOME: failed
+OVERALL OUTCOME: normal
 
 tree-exa10-15.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-15.sdimacs ./tree-exa10-15_up.nnf ./tree-exa10-15_low.nnf ./tree-exa10-15.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 50 nodes (20 explicit) and 35 edges
-c Read D4 NNF file with 50 nodes (20 explicit) and 35 edges
-c ERROR: Failed in get_lit_decision(34).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.003 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 30 variables and 28 clauses
+CHECK: Read CPOG file with 43 operations,  1 asserted + 157 defining = 158 clauses
+CHECK: Deleted 28 input and asserted clauses
+CHECK: Final root literal 73
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.007 seconds
+OVERALL OUTCOME: normal
 
 tree-exa10-20.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-20.sdimacs ./tree-exa10-20_up.nnf ./tree-exa10-20_low.nnf ./tree-exa10-20.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 65 nodes (25 explicit) and 45 edges
-c Read D4 NNF file with 65 nodes (25 explicit) and 45 edges
-c ERROR: Failed in get_lit_decision(44).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.003 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 40 variables and 38 clauses
+CHECK: Read CPOG file with 58 operations,  1 asserted + 212 defining = 213 clauses
+CHECK: Deleted 38 input and asserted clauses
+CHECK: Final root literal 98
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.000 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.006 seconds
+OVERALL OUTCOME: normal
 
 tree-exa10-25.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-25.sdimacs ./tree-exa10-25_up.nnf ./tree-exa10-25_low.nnf ./tree-exa10-25.prob
+CHECK: Read CNF file with 50 variables and 48 clauses
+CHECK: Read CPOG file with 73 operations,  1 asserted + 267 defining = 268 clauses
+CHECK: Deleted 48 input and asserted clauses
+CHECK: Final root literal 123
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.009 seconds
+OVERALL OUTCOME: normal
+
+tree-exa10-30sdimacs.ssat_log
+SSAT LOG: Elapsed time = 0.001 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-30sdimacs.sdimacs ./tree-exa10-30sdimacs_up.nnf ./tree-exa10-30sdimacs_low.nnf ./tree-exa10-30sdimacs.prob
 EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 80 nodes (30 explicit) and 55 edges
-c Read D4 NNF file with 80 nodes (30 explicit) and 55 edges
-c ERROR: Failed in get_lit_decision(54).
+Can't open './tree-exa10-30sdimacs.sdimacs'
 EVAL ERROR: Return code = 1
 EVAL LOG: Elapsed time = 0.001 seconds
 EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.003 seconds
+OVERALL LOG: Elapsed time = 0.001 seconds
 OVERALL OUTCOME: failed
 
 tree-exa10-30.ssat_log
-EVAL LOG: Running ../../src/evalSSAT ./tree-exa10-30.sdimacs ./tree-exa10-30_up.nnf ./tree-exa10-30_low.nnf ./tree-exa10-30.prob
-EVAL LOG: Time limit 1000 seconds
-c Read D4 NNF file with 95 nodes (35 explicit) and 65 edges
-c Read D4 NNF file with 95 nodes (35 explicit) and 65 edges
-c ERROR: Failed in get_lit_decision(64).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.003 seconds
-OVERALL OUTCOME: failed
+CHECK: Read CNF file with 60 variables and 58 clauses
+CHECK: Read CPOG file with 88 operations,  1 asserted + 322 defining = 323 clauses
+CHECK: Deleted 58 input and asserted clauses
+CHECK: Final root literal 148
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.001 seconds
+FCHECK OUTCOME: normal
+LOWER BOUND: lower bound=1.0.  Skipped UPPER BOUND
+OVERALL LOG: Elapsed time = 0.008 seconds
+OVERALL OUTCOME: normal
 
 tree-exa2-10.ssat_log
 GEN: LOG: size ./tree-exa2-10_low.cpog 115 lines 4398 bytes
@@ -167,4 +179,4 @@ OVERALL LOG: Elapsed time = 0.007 seconds
 OVERALL OUTCOME: failed
 
 14
-14
+15

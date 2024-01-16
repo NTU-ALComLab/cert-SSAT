@@ -7,7 +7,7 @@ clauses (all/long/binary/unit): 1349/213/1136/0
 Preprocessing .. DONE
 variables (all/used/free): 	469/469/0
 clauses (all/long/binary/unit): 1349/213/1136/0
-Maximum cache size:	112913 MB
+Maximum cache size:	55185 MB
 
 End of Solving
 Start Generating Certificate...
@@ -31,20 +31,99 @@ number of edges in trace 	17123
 
 # END
 
-time: 0.037275s
+time: 0.039831s
 
 upper trace written to ./x15.9_up.nnf
 lower trace written to ./x15.9_low.nnf
 maximum satisfying probability written to ./x15.9.prob
-SSAT LOG: Elapsed time = 0.053 seconds
+SSAT LOG: Elapsed time = 0.055 seconds
 SSAT OUTCOME: normal
 EVAL LOG: Running ../../src/evalSSAT ./x15.9.sdimacs ./x15.9_up.nnf ./x15.9_low.nnf ./x15.9.prob
 EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
 c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
-c ERROR: Failed in get_lit_decision(473).
-EVAL ERROR: Return code = 1
-EVAL LOG: Elapsed time = 0.033 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.086 seconds
+EVAL LOG: Elapsed time = 0.034 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./x15.9.sdimacs ./x15.9_low.nnf ./x15.9_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 469 variables and 1349 clauses
+c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
+c Compressed POG has 18959 nodes, root literal 19428, and 378032 defining clauses
+c GEN: Time = 0.06.  Generated POG representation
+c GEN: Time = 0.06.  Deleted asserted clauses
+c GEN: Time = 1.39.  Deleted input clauses
+c GEN: Formula
+c GEN:    input variables: 469
+c GEN:    input clauses  : 1349
+c GEN: POG nodes
+c GEN:    product   : 12909
+c GEN:    sum       : 6049
+c GEN:    node TOTAL: 18958
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 378032
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 1
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 378033
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 1.39
+c GEN:   time TOTAL     : 1.39
+GEN LOG: Elapsed time = 1.388 seconds
+GEN OUTCOME: normal
+GEN: LOG: size ./x15.9_low.cpog 20310 lines 27614610 bytes
+FCHECK LOG: Running ../../src/cpog-check -1 -S ./x15.9.sdimacs ./x15.9_low.cpog
+FCHECK LOG: Time limit 2500 seconds
+CHECK: Read CNF file with 469 variables and 1349 clauses
+CHECK: Read CPOG file with 18959 operations,  1 asserted + 378032 defining = 378033 clauses
+CHECK: Deleted 1349 input and asserted clauses
+CHECK: Final root literal 19428
+CHECK: LOWER-TRACE VALID.  CPOG representation partially verified
+FCHECK LOG: Elapsed time = 0.177 seconds
+FCHECK OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -S -C 2147483647 -L d2p.log ./x15.9.sdimacs ./x15.9_up.nnf ./x15.9_up.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       no
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 469 variables and 1349 clauses
+c Read D4 NNF file with 23827 nodes (8711 explicit) and 18273 edges
+c Compressed POG has 20467 nodes, root literal 20936, and 95891 defining clauses
+c GEN: Time = 0.02.  Generated POG representation
+GEN ERROR: Return code = -6
+GEN LOG: Elapsed time = 0.075 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./x15.9_up.cpog 20689 lines 761856 bytes
+OVERALL LOG: Elapsed time = 1.741 seconds
 OVERALL OUTCOME: failed

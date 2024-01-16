@@ -29,7 +29,7 @@ number of edges in trace 	1
 
 # END
 
-time: 0.001213s
+time: 0.00093s
 
 upper trace written to ./tlc01-nonuniform-depth-2_up.nnf
 lower trace written to ./tlc01-nonuniform-depth-2_low.nnf
@@ -40,9 +40,63 @@ EVAL LOG: Running ../../src/evalSSAT ./tlc01-nonuniform-depth-2.sdimacs ./tlc01-
 EVAL LOG: Time limit 1000 seconds
 c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
 c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
-c ERROR: Failed in get_lit_decision(1055).
-EVAL ERROR: Return code = 1
 EVAL LOG: Elapsed time = 0.001 seconds
-EVAL OUTCOME: failed
-OVERALL LOG: Elapsed time = 0.003 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./tlc01-nonuniform-depth-2.sdimacs ./tlc01-nonuniform-depth-2_low.nnf ./tlc01-nonuniform-depth-2_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 1053 variables and 2796 clauses
+c Read D4 NNF file with 3 nodes (3 explicit) and 1 edges
+c Compressed POG has 1 nodes, root literal -1, and 0 defining clauses
+c GEN: Time = 0.00.  Generated POG representation
+c GEN: Time = 0.00.  Deleted asserted clauses
+c ERROR: Unknown POG type 1 for node N1054
+c WARNING: Execution incomplete.  Here's the results so far:
+c GEN: Formula
+c GEN:    input variables: 1053
+c GEN:    input clauses  : 2796
+c GEN: POG nodes
+c GEN:    product   : -1
+c GEN:    sum       : 0
+c GEN:    node TOTAL: -1
+c GEN: Other nodes
+c GEN:    aux product: 0
+c GEN: Node visits
+c GEN:    product/BCP: 0
+c GEN:    product/SAT: 0
+c GEN:    sum        : 0
+c GEN:    visit TOTAL: 0
+c GEN: Lemmas
+c GEN:    definitions : 0
+c GEN:    applications: 0
+c GEN:    duplicates  : 0
+c GEN:    merged args : 0
+c GEN: SAT Problem Clause Counts (0 instances)
+c GEN: Clauses
+c GEN:    POG definition       : 1
+c GEN:    AUX definition       : 0
+c GEN:    product justification: 0
+c GEN:    sum justification    : 0
+c GEN:    literal justification: 561
+c GEN:    lemma application    : 0
+c GEN:    monolithic proof     : 0
+c GEN:    clause TOTAL         : 562
+c GEN: Time
+c GEN:   SAT execution  : 0.00
+c GEN:   other execution: 0.00
+c GEN:   time TOTAL     : 0.00
+c WARNING: Results not valid
+GEN ERROR: Return code = 1
+GEN LOG: Elapsed time = 0.003 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./tlc01-nonuniform-depth-2_low.cpog 1123 lines 26218 bytes
+OVERALL LOG: Elapsed time = 0.006 seconds
 OVERALL OUTCOME: failed
