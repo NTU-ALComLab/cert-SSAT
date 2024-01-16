@@ -11,7 +11,7 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-noCL:
+gen11:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) Adder2-2-c.sdimacs
 
 eval:

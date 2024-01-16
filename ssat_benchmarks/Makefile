@@ -28,40 +28,39 @@ srun:
 	cd sand-castle;         make srun  
 	cd stracomp;            make srun 
 
-#### Check Errors
-noCL:
-	cd Adder;               make noCL
-	cd MPEC;                make noCL
-	cd Counter;             make noCL
-	cd PEC;                 make noCL
-	cd tiger;               make noCL
-
-eval:
-	cd Adder;               make eval
-	cd Tree;                make eval
-	cd tlc;                 make eval
-	cd stracomp;            make eval
-
-invalidOP:
-	cd Connect2;            make invalidOP
-	cd Tree;                make invalidOP
+#### SSAT Errors
+ssatTO:
+	cd PEC;                 make ssatTO
+	cd Counter;             make ssatTO 
+	cd sand-castle;         make ssatTO  
+	cd stracomp;            make ssatTO 
 
 #### Gen Errors
 
+gen1:
+	cd tlc;                 make gen1
+
+gen6:
+	cd stracomp;            make gen6
+
 gen9:
 	cd MPEC;                make gen9
+	cd stracomp;            make gen9
 	cd sand-castle;         make gen9  
 
 gen11:
 	cd k_ph_p;              make gen11
+	cd Adder;               make gen11 
+	cd stracomp;            make gen11
 
 genTO:
 	cd RobotsD2;            make genTO
 	cd conformant;          make genTO
 	cd sand-castle;         make genTO  
+	cd stracomp;            make genTO
 
-genInvalid: 
-	cd tlc;                 make genInvalid
+undone:
+	cd ToiletA;             make undone  
                                      
 .SUFFIXES: .cnf .log .lean_log
 

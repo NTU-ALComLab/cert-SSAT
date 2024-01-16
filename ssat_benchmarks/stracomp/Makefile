@@ -11,8 +11,29 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-eval:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
+gen6:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x15.4.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x15.9.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x20.4.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x5.9.sdimacs
+
+gen9:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x35.19.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x35.9.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x40.14.sdimacs
+
+gen11:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x10.9.sdimacs
+
+genTO:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x10.19.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x15.14.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x35.14.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x35.4.sdimacs
+
+ssatTO:
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x40.19.sdimacs
+	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) x40.9.sdimacs
 
 .SUFFIXES: .cnf .log .lean_log
 

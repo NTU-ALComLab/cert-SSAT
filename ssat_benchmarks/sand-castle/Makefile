@@ -17,6 +17,8 @@ gen9:
 genTO:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-22.sdimacs
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-23.sdimacs
+
+ssatTO:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) SC-24.sdimacs
 
 .SUFFIXES: .cnf .log .lean_log
