@@ -1,0 +1,180 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./toilet_a_08_01.14.sdimacs
+SSAT LOG: Time limit 1000 seconds
+Solving ./toilet_a_08_01.14.sdimacs
+variables (all/used/free): 	372/372/0
+clauses (all/long/binary/unit): 3549/2274/1258/17
+
+Preprocessing .. DONE
+variables (all/used/free): 	372/372/0
+clauses (all/long/binary/unit): 3505/2257/1248/0
+Maximum cache size:	1781 MB
+
+
+time elapsed: 60.6254s
+conflict clauses (all / bin / unit) 	3255/0/0
+
+cache size 1051MB
+components (stored / hits) 		2320703/1798184
+avg. variable count (stored / hits) 	37.7412/19.9182
+cache miss rate 45.348%
+
+time elapsed: 121.625s
+conflict clauses (all / bin / unit) 	3616/0/0
+
+cache size 1151MB
+components (stored / hits) 		4445234/3383125
+avg. variable count (stored / hits) 	21.7903/20.5934
+cache miss rate 51.2386%
+
+time elapsed: 182.625s
+conflict clauses (all / bin / unit) 	3623/0/0
+
+cache size 1252MB
+components (stored / hits) 		4663163/4922601
+avg. variable count (stored / hits) 	21.8287/20.8017
+cache miss rate 53.109%
+
+time elapsed: 243.625s
+conflict clauses (all / bin / unit) 	3625/0/0
+
+cache size 1336MB
+components (stored / hits) 		4823983/6359595
+avg. variable count (stored / hits) 	22.5458/21.1792
+cache miss rate 54.3149%
+
+time elapsed: 304.625s
+conflict clauses (all / bin / unit) 	3626/0/0
+
+cache size 1455MB
+components (stored / hits) 		5079698/7754371
+avg. variable count (stored / hits) 	23.5056/21.5125
+cache miss rate 55.2452%
+
+time elapsed: 365.625s
+conflict clauses (all / bin / unit) 	3630/0/0
+
+cache size 1531MB
+components (stored / hits) 		5258283/9186795
+avg. variable count (stored / hits) 	23.7789/21.5551
+cache miss rate 55.6214%
+
+time elapsed: 426.625s
+conflict clauses (all / bin / unit) 	3630/0/0
+
+cache size 1620MB
+components (stored / hits) 		5474012/10585475
+avg. variable count (stored / hits) 	23.8991/21.4785
+cache miss rate 56.0998%
+
+time elapsed: 487.625s
+conflict clauses (all / bin / unit) 	3630/0/0
+
+cache size 1670MB
+components (stored / hits) 		5696007/12033183
+avg. variable count (stored / hits) 	25.4279/21.673
+cache miss rate 56.4916%
+
+time elapsed: 548.625s
+conflict clauses (all / bin / unit) 	3633/0/0
+
+cache size 1750MB
+components (stored / hits) 		5782436/13447340
+avg. variable count (stored / hits) 	26.6982/21.6726
+cache miss rate 56.8299%
+
+time elapsed: 609.625s
+conflict clauses (all / bin / unit) 	3633/0/0
+
+cache size 944MB
+components (stored / hits) 		4053206/14851785
+avg. variable count (stored / hits) 	20.5328/21.8025
+cache miss rate 57.0553%
+
+time elapsed: 670.625s
+conflict clauses (all / bin / unit) 	3635/0/0
+
+cache size 1020MB
+components (stored / hits) 		4238337/16300536
+avg. variable count (stored / hits) 	21.3612/21.8641
+cache miss rate 57.2787%
+
+time elapsed: 731.625s
+conflict clauses (all / bin / unit) 	3635/0/0
+
+cache size 1103MB
+components (stored / hits) 		4383459/17722504
+avg. variable count (stored / hits) 	21.7993/21.8243
+cache miss rate 57.4852%
+
+time elapsed: 792.625s
+conflict clauses (all / bin / unit) 	3635/0/0
+
+cache size 1187MB
+components (stored / hits) 		4530074/19159079
+avg. variable count (stored / hits) 	22.4686/21.8641
+cache miss rate 57.6086%
+
+time elapsed: 853.625s
+conflict clauses (all / bin / unit) 	3635/0/0
+
+cache size 1301MB
+components (stored / hits) 		4786359/20599245
+avg. variable count (stored / hits) 	23.021/21.9074
+cache miss rate 57.7027%
+End of Solving
+Start Generating Certificate...
+
+
+variables (total / active / free)	372/372/0
+clauses (removed) 			3549 (44)
+decisions 				30642849
+conflicts 				86837
+conflict clauses (all/bin/unit) 	3635/0/0
+
+cache size 1088MB	
+cache (stores / hits) 			4516751/21610497
+cache miss rate 57.918%
+avg. variable count (stores / hits) 	22.0852/21.7897
+
+number of nodes in trace 	30639558
+number of edges in trace 	67486149
+
+# satisfying probability = 0.5
+
+# END
+
+time: 898.89s
+
+upper trace written to ./toilet_a_08_01.14_up.nnf
+lower trace written to ./toilet_a_08_01.14_low.nnf
+maximum satisfying probability written to ./toilet_a_08_01.14.prob
+SSAT LOG: Elapsed time = 966.082 seconds
+SSAT OUTCOME: normal
+EVAL LOG: Running ../../src/evalSSAT ./toilet_a_08_01.14.sdimacs ./toilet_a_08_01.14_up.nnf ./toilet_a_08_01.14_low.nnf ./toilet_a_08_01.14.prob
+EVAL LOG: Time limit 1000 seconds
+c Read D4 NNF file with 94702694 nodes (33423589 explicit) and 70270183 edges
+c Read D4 NNF file with 94702694 nodes (33423589 explicit) and 70270183 edges
+EVAL LOG: Elapsed time = 233.152 seconds
+EVAL OUTCOME: normal
+GEN LOG: Running ../../src/cpog-gen -1 -S -C 2147483647 -L d2p.log ./toilet_a_08_01.14.sdimacs ./toilet_a_08_01.14_low.nnf ./toilet_a_08_01.14_low.cpog
+GEN LOG: Time limit 2500 seconds
+c GEN: Program options
+c GEN:   Multi-literal:   yes
+c GEN:   Use lemmas:      yes
+c GEN:   Delete files:    yes
+c GEN:   One-sided:       yes
+c GEN:   Monolithic mode: no
+c GEN:   DRAT threshold:  1000
+c GEN:   Clause limit:    2147483647
+c GEN:   BCP limit:       1
+c GEN: Time = 0.00.  Read input file with 372 variables and 3549 clauses
+c Read D4 NNF file with 94702694 nodes (33423589 explicit) and 70270183 edges
+c Compressed POG has 94533228 nodes, root literal 94533600, and 974952628 defining clauses
+c GEN: Time = 221.70.  Generated POG representation
+c GEN: Time = 226.11.  Deleted asserted clauses
+GEN ERROR: Timeout after 2500 seconds
+GEN LOG: Elapsed time = 2502.984 seconds
+GEN OUTCOME: Timeout
+GEN: LOG: size ./toilet_a_08_01.14_low.cpog 94533515 lines 205886918656 bytes
+OVERALL LOG: Elapsed time = 3867.266 seconds
+OVERALL OUTCOME: failed
