@@ -1,0 +1,6 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+Adder2-2-s.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+adder-2-sat.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+adder-4-sat.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+Adder2-2-c.ssat_log,  0.8824521,  1, 1, 1, 1, 0, 0, 0
+adder-2-unsat.ssat_log,  0.9998473,  1, 1, 1, 1, 1, 1, 1

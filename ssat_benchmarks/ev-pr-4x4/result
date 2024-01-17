@@ -1,0 +1,8 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+ev-pr-4x4-11-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+ev-pr-4x4-13-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+ev-pr-4x4-5-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+ev-pr-4x4-15-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+ev-pr-4x4-17-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+ev-pr-4x4-7-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+ev-pr-4x4-9-3-0-0-1-lg.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1

@@ -1,0 +1,15 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+tree-exa10-30.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-35.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa10-15.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-45.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa10-20.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-10.ssat_log,  0.999989,  1, 1, 1, 1, 1, 1, 1
+tree-exa2-25.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-40.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa10-25.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa10-10.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-20.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-15.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-50.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+tree-exa2-30.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1

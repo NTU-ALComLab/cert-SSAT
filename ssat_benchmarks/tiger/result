@@ -1,0 +1,6 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+Tiger-15.ssat_log,  0.5,  1, 1, 1, 1, 1, 1, 1
+Tiger-20.ssat_log,  0.5,  1, 1, 1, 1, 1, 1, 1
+Tiger-5.ssat_log,  0.5,  1, 1, 1, 1, 1, 1, 1
+Tiger-25.ssat_log,  0.5,  1, 1, 1, 1, 1, 1, 1
+Tiger-10.ssat_log,  0.5,  1, 1, 1, 1, 1, 1, 1

@@ -1,0 +1,4 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+cube_c3_ser--opt-6_.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+emptyroom_e3_ser--opt-20_.ssat_log,  1,  1, 1, 0, 0, 0, 0, 0
+ring_r3_ser--opt-8_.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1

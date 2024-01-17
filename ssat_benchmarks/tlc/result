@@ -1,0 +1,14 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+tlc01-nonuniform-depth-18.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-19.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-4.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-5.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-9.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-8.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-20.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-3.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-2.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-7.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-10.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-16.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0
+tlc01-nonuniform-depth-17.ssat_log,  0,  1, 1, 0, 0, 0, 0, 0

@@ -1,0 +1,9 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+cnt03r.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+cnt03re.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+cnt02r.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+cnt03e.ssat_log,  -1,  0, 0, 0, 0, 0, 0, 0
+cnt02.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+cnt03.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+cnt02re.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
+cnt02e.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1

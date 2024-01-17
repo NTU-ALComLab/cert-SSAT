@@ -1,0 +1,5 @@
+prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+c3540_re.ssat_log,  0.003417969,  1, 1, 1, 1, 1, 1, 1
+c432_re.ssat_log,  -1,  0, 0, 0, 0, 0, 0, 0
+c1908_re.ssat_log,  0.0007446408,  1, 1, 1, 1, 1, 1, 1
+c499_re.ssat_log,  3.410605,  1, 1, 1, 1, 1, 1, 1
