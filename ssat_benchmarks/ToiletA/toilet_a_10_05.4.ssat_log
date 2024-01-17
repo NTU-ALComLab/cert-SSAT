@@ -1,0 +1,7 @@
+SSAT LOG: Running ../../tools/SharpSSAT -l -p -s ./toilet_a_10_05.4.sdimacs
+SSAT LOG: Time limit 1000 seconds
+SSAT ERROR: Timeout after 1000 seconds
+SSAT LOG: Elapsed time = 1000.092 seconds
+SSAT OUTCOME: Timeout
+OVERALL LOG: Elapsed time = 1000.092 seconds
+OVERALL OUTCOME: failed
