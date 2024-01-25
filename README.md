@@ -12,8 +12,6 @@ Running the toolchain using prototype (unverified) tools requires the following:
 
 ## Directories
 
-* **VerifiedChecker:**
-    Code for the verified checker and counter
 * **ssat_benchmarks:**
     SSAT benchmark set
 * **src:**
