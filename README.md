@@ -31,23 +31,15 @@ In addition, running the toolchain using formally verified tools requires the fo
 * **test:**
     Two very simple test problems
 * **tools:**
-    Code for a scripting program that runs the entire toolchain
+    Code for a scripting program that runs the entire toolchain (put SharpSSAT, cadical, drat-trim here)
 
 
 # Make Options
 
 * **install:**
     Compiles the CPOG generator and prototype checker.
-* **linstall:**
-    Compiles the Lean verifier
-* **ptest:**
-    Runs the prototype tools on two simple test problems
-* **ltest:**
-    Runs the verified tools on two simple test problems
-* **run:**
-    Runs the generator, prototype checker, and prototype counter on 30 benchmark files
-* **lrun:**
-    Runs the verified checker/counter on 30 benchmark files
+* **srun:**
+    Runs SharpSSAT, EvalSSAT, cpog-gen, cpog-check on ssat_benchmark files
 * **clean:**
     Removes intermediate files
 * **superclean:**
