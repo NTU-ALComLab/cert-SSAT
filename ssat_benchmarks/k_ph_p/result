@@ -1,5 +1,0 @@
-prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
-k_ph_p-4.ssat_log,  0.9681007,  1, 1, 1, 1, 1, 1, 1
-k_ph_p-5.ssat_log,  0.9997981,  1, 1, 1, 1, 0, 0, 0
-k_ph_p-3.ssat_log,  0.9997026,  1, 1, 1, 1, 1, 1, 1
-k_ph_p-2.ssat_log,  0.924964,  1, 1, 1, 1, 1, 1, 1

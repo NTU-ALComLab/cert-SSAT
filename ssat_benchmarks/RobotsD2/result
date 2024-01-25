@@ -1,6 +1,0 @@
-prob,  SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
-robots_1_5_2_1.5.ssat_log,  1,  1, 1, 0, 0, 0, 0, 0
-robots_1_5_2_1.4.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
-robots_1_5_2_1.2.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
-robots_1_5_2_1.3.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
-robots_1_5_2_1.1.ssat_log,  1,  1, 1, 1, 1, 0, 0, 1
