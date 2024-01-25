@@ -28,40 +28,6 @@ srun:
 	cd sand-castle;         make srun  
 	cd stracomp;            make srun 
 
-#### SSAT Errors
-ssatTO:
-	cd PEC;                 make ssatTO
-	cd Counter;             make ssatTO 
-	cd sand-castle;         make ssatTO  
-	cd stracomp;            make ssatTO 
-
-#### Gen Errors
-
-gen1: # both up.nnf and low.nnf are unsat
-	cd tlc;                 make gen1
-
-gen6:
-	cd stracomp;            make gen6
-
-gen9:
-	cd MPEC;                make gen9
-	cd stracomp;            make gen9
-	cd sand-castle;         make gen9  
-
-gen11:
-	cd k_ph_p;              make gen11
-	cd Adder;               make gen11 
-	cd stracomp;            make gen11
-
-genTO:
-	cd RobotsD2;            make genTO
-	cd conformant;          make genTO
-	cd sand-castle;         make genTO  
-	cd stracomp;            make genTO
-
-undone:
-	cd ToiletA;             make undone  
-                                     
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

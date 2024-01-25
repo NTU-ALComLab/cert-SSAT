@@ -11,9 +11,6 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-genTO:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) robots_1_5_2_1.5.sdimacs
-
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

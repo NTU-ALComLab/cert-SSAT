@@ -11,9 +11,6 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-noCL:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) Tiger-25.sdimacs
-
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

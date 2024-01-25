@@ -11,14 +11,6 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-gen11:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) Adder2-2-c.sdimacs
-
-eval:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) adder-2-sat.sdimacs
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) adder-2-unsat.sdimacs
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) adder-4-sat.sdimacs
-
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

@@ -11,9 +11,6 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-genTO:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) emptyroom_e3_ser--opt-20_.sdimacs
-
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:

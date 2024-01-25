@@ -11,9 +11,6 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-noCL:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) cnt03e.sdimacs
-
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:
@@ -25,7 +22,7 @@ noCL:
 clean:
 	rm -f *~ d2p.log
 
-extraclean:
+extraclean: clean
 	rm -f *.nnf *.cpog *.prob
 
 superclean: clean

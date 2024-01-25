@@ -11,12 +11,6 @@ lrun:
 srun:
 	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
 
-gen1:
-	$(INTERP) $(TCHAIN) -S -v $(VLEVEL) *.sdimacs
-
-debug:
-	$(INTERP) $(TCHAIN) -S -v 5 tlc01-nonuniform-depth-3.sdimacs
-	
 .SUFFIXES: .cnf .log .lean_log
 
 .cnf.log:
