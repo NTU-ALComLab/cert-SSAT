@@ -1,0 +1,6 @@
+file path, sdimacs, lowNNF, upNNF, lowCpog, upCpog
+Adder2-2-s.ssat_log, 292, 4795, 0, 4802, 0
+adder-2-sat.ssat_log, 109, 7002, 0, 7003, 0
+adder-4-sat.ssat_log, 530, 2430407, 0, 2430408, 0
+Adder2-2-c.ssat_log, 291, 111699, 68198, 111700, 0
+adder-2-unsat.ssat_log, 110, 285182, 229021, 285183, 826168

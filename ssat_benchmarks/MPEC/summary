@@ -23,15 +23,15 @@ OVERALL LOG: Elapsed time = 0.150 seconds
 OVERALL OUTCOME: normal
 
 c432-er.ssat_log
-GEN: LOG: size ./c432-er_low.cpog 28539657 lines 63004013519 bytes
-FCHECK LOG: Running ../../src/cpog-check -1 -S ./c432-er.sdimacs ./c432-er_low.cpog
-FCHECK LOG: Time limit 2500 seconds
-CHECK: Read CNF file with 333 variables and 883 clauses
-ERROR. File ./c432-er_low.cpog. Line 5346757. Function cpog_add_product. Can't add literal 5347087 to node 5347088 children.  Overlapping dependency sets
-FCHECK ERROR: Return code = 1
-FCHECK LOG: Elapsed time = 8.009 seconds
-FCHECK OUTCOME: failed
-OVERALL LOG: Elapsed time = 2008.503 seconds
+c Read D4 NNF file with 58121138 nodes (20606849 explicit) and 41442908 edges
+c Compressed POG has 39290732 nodes, root literal 39291065, and 423281532 defining clauses
+c GEN: Time = 109.06.  Generated POG representation
+c Time = 854.79.  Justifications of 3929073 nodes completed.  672128556 total clauses.  3434 SAT calls
+GEN ERROR: Return code = -9
+GEN LOG: Elapsed time = 907.237 seconds
+GEN OUTCOME: failed
+GEN: LOG: size ./c432-er_up.cpog 307726773 lines 83047243776 bytes
+OVERALL LOG: Elapsed time = 4153.551 seconds
 OVERALL OUTCOME: failed
 
 c499-er.ssat_log
@@ -46,5 +46,5 @@ FCHECK OUTCOME: normal
 OVERALL LOG: Elapsed time = 0.028 seconds
 OVERALL OUTCOME: normal
 
-4
-4
+       4
+       4

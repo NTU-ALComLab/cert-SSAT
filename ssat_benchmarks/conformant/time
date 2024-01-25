@@ -1,0 +1,4 @@
+SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
+cube_c3_ser--opt-6_.ssat_log, 0.022, 0.009, 0.214, 0.068, 0, 0, 0.316
+emptyroom_e3_ser--opt-20_.ssat_log, 304.874, 103.711, 2501.991, 0, 0, 0, 3029.605
+ring_r3_ser--opt-8_.ssat_log, 6.32, 2.066, 85.908, 37.91, 0, 0, 133.688

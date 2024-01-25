@@ -1,0 +1,12 @@
+file path, sdimacs, lowNNF, upNNF, lowCpog, upCpog
+SyGuS-GuidanceService.ssat_log, 11616, 51814367, 0, 51814368, 0
+QIF-CVE-2007-2875.ssat_log, 1740, 1557, 0, 1561, 0
+SyGuS-GuidanceService2.ssat_log, 11616, 51814367, 0, 51814368, 0
+QIF-pwd-backdoor.ssat_log, 609, 16453, 0, 16457, 0
+QIF-reverse2.ssat_log, 293, 76931, 0, 76935, 0
+QIF-backdoor-2x16-8.ssat_log, 272, 2717, 2768, 2721, 6161
+QIF-bin-search-16.ssat_log, 5825, 85529017, 0, 85529021, 0
+SyGuS-sign_correct.ssat_log, 419, 37403054, 0, 37403055, 0
+SyGuS-sign.ssat_log, 465, 41202230, 40344667, 41202231, 108112880
+QIF-backdoor-32-24.ssat_log, 76, 451, 0, 455, 0
+QIF-reverse.ssat_log, 293, 76931, 0, 76935, 0

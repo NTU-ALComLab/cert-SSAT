@@ -50,4 +50,3 @@ tools/drat-trim
 # test files
 test*/
 *test/
-ssat_benchmarks/
