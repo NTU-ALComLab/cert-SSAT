@@ -37,8 +37,8 @@ gen_x = gen_check_dataset.iloc[:,1 ]
 gen_y = gen_check_dataset.iloc[:,5 ]
 
 # Create scatter plot with log scales
-plt.scatter(overall_x, overall_y, color='orange', s=32, label="complete (tight bound) verification")
-plt.scatter(low_x, low_y, color='blue', s=16, marker='^', label="partial (lower bound) verification")
+plt.scatter(overall_x, overall_y, color='orange', s=32, label="tight bound verification")
+plt.scatter(low_x, low_y, color='blue', s=16, marker='^', label="lower bound verification")
 
 #plt.scatter(gen_x, gen_y, color='darkblue',  s=32, marker='s',label="cpog-gen" )
 #plt.scatter(check_x, check_y, color='dodgerblue', s=16, marker='^', label="cpog-check")
@@ -75,7 +75,7 @@ plt.text(100, 10000, r'$100 \times$', color='black', fontsize=10, ha='center', v
 plt.text(10, 10000, r'$1000 \times$', color='black', fontsize=10, ha='center', va='center')
 
 # Show the plot with legend
-plt.legend(fontsize=10, loc='lower right')
+plt.legend(fontsize=10)
 
 # Show the plot
 plt.show()
