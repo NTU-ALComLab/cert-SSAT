@@ -16,8 +16,6 @@ Running the toolchain using prototype (unverified) tools requires the following:
     SSAT benchmark set
 * **src:**
     Code for the CPOG generator and prototype checker
-* **test:**
-    Two very simple test problems
 * **tools:**
     Code for a scripting program that runs the entire toolchain (put SharpSSAT, cadical, drat-trim here)
 
