@@ -1,8 +1,14 @@
 install:
 	cd src ; make install
 
+linstall:
+	cd VerifiedChecker ; make install
+
 srun:
 	cd ssat_benchmarks ; make srun
+
+lrun:
+	cd ssat_benchmarks ; make lrun
 
 clean:
 	rm -f *~
