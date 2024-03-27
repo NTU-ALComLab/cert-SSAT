@@ -8,10 +8,15 @@ Running the toolchain using prototype (unverified) tools requires the following:
 * A python3 interpreter
 * An installed version of the [CaDiCal SAT solver](https://github.com/arminbiere/cadical)
 * An installed version of the [Drat-trim proof checker](https://github.com/marijnheule/drat-trim)
-* SharpSSAT (attached)
+* SharpSSAT (included)
+
+In addition, running the toolchain using formally verified tools requires the following:
+
+* An installed version of the Lean [Elan version manager](https://github.com/leanprover/elan)
 
 ## Directories
-
+* **VerifiedChecker:**
+    Code for the verified checker and counter
 * **ssat_benchmarks:**
     SSAT benchmark set
 * **src:**
