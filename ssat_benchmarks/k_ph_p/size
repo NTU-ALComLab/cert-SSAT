@@ -1,0 +1,5 @@
+file path, sdimacs, lowNNF, upNNF, lowCpog, upCpog
+k_ph_p-4.ssat_log, 552, 129196, 133726, 129199, 839887
+k_ph_p-5.ssat_log, 1104, 32710717, 32636819, 32710720, 0
+k_ph_p-3.ssat_log, 252, 2519, 2823, 2522, 8911
+k_ph_p-2.ssat_log, 95, 160, 205, 163, 352
