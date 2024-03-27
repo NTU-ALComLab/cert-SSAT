@@ -28,8 +28,12 @@ In addition, running the toolchain using formally verified tools requires the fo
 
 * **install:**
     Compiles evalSSAT, cpog-gen, cpog-check
+* **linstall:**
+    Compiles the Lean verifier
 * **srun:**
     Runs SharpSSAT, evalSSAT, cpog-gen, cpog-check on ssat_benchmark files
+* **lrun:**
+    Runs the verified checker/counter on ssat_benchmark files
 * **clean:**
     Removes intermediate files
 * **superclean:**
