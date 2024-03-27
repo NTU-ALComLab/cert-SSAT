@@ -46,7 +46,9 @@ tools/d4
 tools/SharpSSAT
 tools/cadical
 tools/drat-trim
-
 # test files
 test*/
 *test/
+# ignore
+.DS_Store
+.gitignore
