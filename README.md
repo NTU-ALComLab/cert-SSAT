@@ -1,4 +1,5 @@
 # cert-SSAT 
+A stochastic Boolean satisfiability(SSAT) verification framework implemented on top of the model counting verification framework [CPOG](https://github.com/rebryant/cpog.git)
 
 ## Installation:
 
