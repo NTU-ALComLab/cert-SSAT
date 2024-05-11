@@ -1,6 +1,0 @@
-SSAT, eval, lowGen, lowCheck, upGen, upCheck, overall
-Adder2-2-s.ssat_log, 0.004, 0.002, 0.008, 0.002, 0, 0, 0.016
-adder-2-sat.ssat_log, 0.006, 0.004, 0.014, 0.003, 0, 0, 0.027
-adder-4-sat.ssat_log, 0.892, 0.843, 12.85, 1.41, 0, 0, 16.125
-Adder2-2-c.ssat_log, 0.028, 0.02, 0.165, 0.04, 0.077, 0, 0.335
-adder-2-unsat.ssat_log, 0.1, 0.068, 0.425, 0.237, 19.798, 0.461, 21.205

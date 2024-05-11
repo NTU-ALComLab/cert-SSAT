@@ -1,8 +1,0 @@
-file path, sdimacs, lowNNF, upNNF, lowCpog, upCpog
-ev-pr-4x4-11-3-0-0-1-lg.ssat_log, 12973, 2596, 0, 2786, 0
-ev-pr-4x4-13-3-0-0-1-lg.ssat_log, 15282, 2660, 0, 2850, 0
-ev-pr-4x4-5-3-0-0-1-lg.ssat_log, 6046, 2404, 0, 2594, 0
-ev-pr-4x4-15-3-0-0-1-lg.ssat_log, 17591, 2724, 0, 2914, 0
-ev-pr-4x4-17-3-0-0-1-lg.ssat_log, 19900, 2788, 0, 2978, 0
-ev-pr-4x4-7-3-0-0-1-lg.ssat_log, 8355, 2468, 0, 2658, 0
-ev-pr-4x4-9-3-0-0-1-lg.ssat_log, 10664, 2532, 0, 2722, 0
