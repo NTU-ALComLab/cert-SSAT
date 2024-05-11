@@ -1,0 +1,9 @@
+[submodule "tools/SharpSSAT"]
+	path = tools/SharpSSAT
+	url = git@github.com:NTU-ALComLab/SharpSSAT.git
+[submodule "tools/cadical"]
+	path = tools/cadical
+	url = git@github.com:arminbiere/cadical.git
+[submodule "tools/drat-trim"]
+	path = tools/drat-trim
+	url = git@github.com:marijnheule/drat-trim.git
