@@ -6,17 +6,9 @@ Running the toolchain using prototype (unverified) tools requires the following:
 
 * A C and C++ compiler
 * A python3 interpreter
-* An installed version of the [CaDiCal SAT solver](https://github.com/arminbiere/cadical)
-* An installed version of the [Drat-trim proof checker](https://github.com/marijnheule/drat-trim)
-* SharpSSAT (included)
-
-In addition, running the toolchain using formally verified tools requires the following:
-
-* An installed version of the Lean [Elan version manager](https://github.com/leanprover/elan)
+* Compiled CaDiCal SAT solver, Drat-trim proof checker, and SharpSSAT SSAT solver (included in tools as submodules)
 
 ## Directories
-* **VerifiedChecker:**
-    Code for the verified checker and counter
 * **ssat_benchmarks:**
     SSAT benchmark set
 * **src:**
@@ -28,12 +20,8 @@ In addition, running the toolchain using formally verified tools requires the fo
 
 * **install:**
     Compiles evalSSAT, cpog-gen, cpog-check
-* **linstall:**
-    Compiles the Lean verifier
 * **srun:**
     Runs SharpSSAT, evalSSAT, cpog-gen, cpog-check on ssat_benchmark files
-* **lrun:**
-    Runs the verified checker/counter on ssat_benchmark files
 * **clean:**
     Removes intermediate files
 * **superclean:**
